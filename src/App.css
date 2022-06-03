@@ -19,14 +19,14 @@
   --black: #292c34;
 }
 
-.App {
-  width: 100vw;
-}
-
 .flex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.App {
+  background-color: var(--beige);
 }
 
 a:link,

@@ -5,6 +5,7 @@
 
   flex-direction: row;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .span__green {
@@ -72,6 +73,5 @@
 .home__img > img {
   padding-top: 100px;
 
-  width: 829px;
   height: 585px;
 }

@@ -2,11 +2,12 @@
   height: 100vh;
 
   flex-direction: column;
+  background-color: #ffffff;
 }
 
 .nuestro-equipo-cards {
   flex-direction: row;
-  width: 90%;
+  min-width: 90%;
   justify-content: space-evenly;
 }
 
