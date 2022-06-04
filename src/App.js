@@ -1,12 +1,14 @@
+import React from 'react'
+import './App.css'
 
-import './App.css';
+import Calendario from './pages/Calendario'
 
-function App() {
+function App () {
   return (
     <div className="App">
-      <h1>hhh</h1>
+      <Calendario/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
