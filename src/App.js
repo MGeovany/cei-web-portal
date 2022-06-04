@@ -13,6 +13,7 @@ import { LandingPage } from './pages/LandingPage'
 import { Calendario } from './pages/Calendario'
 import { Casos } from './pages/Casos'
 import { Recursos } from './pages/Recursos'
+import { Footer } from './componentes/Footer'
 
 function App () {
   return (
@@ -25,6 +26,7 @@ function App () {
           <Route path="/casos-de-exito" element={<Casos/>} />
           <Route path="/recursos" element={<Recursos/>} />
         </Routes>
+        <Footer/>
       </Router>
 
     </div>

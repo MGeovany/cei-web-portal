@@ -36,32 +36,30 @@ const events = [
   {
     title: 'Celebracion del dia del emprendedor',
     allDay: true,
-    start: new Date(2022, 6, 2),
-    end: new Date(2022, 6, 2)
+    start: new Date(2022, 5, 15),
+    end: new Date(2022, 5, 17)
   },
   {
     title: 'Feriado Nacional',
     allDay: true,
-    start: new Date(2022, 0, 2),
+    start: new Date(2022, 5, 23),
     end: new Date(2022, 0, 2)
   }
 ]
 
-function Calendario () {
+export const Calendario = () => {
   return (
     <div className="calendario">
-      <div className="calendario-title">CALENDARIO DE EVENTOS🎯</div>
-      <div className='caleandario-container'>
-      <Calendar
-        localizer={localizer}
-        events={events}
-        startAccessor="start"
-        endAccessor="end"
-        style={{ height: 500, margin: '50px', width: '100%' }}
-      />
+      <div className="section-title calendario-title">CALENDARIO DE <span style={{ color: '#7ac678' }}> EVENTOS🎯</span></div>
+      <div className='calendario-container flex'>
+        <Calendar
+          localizer={localizer}
+          events={events}
+          startAccessor="start"
+          endAccessor="end"
+          style={{ height: '600px', margin: '50px', width: '100%' }}
+        />
       </div>
     </div>
   )
 }
-
-export default Calendario

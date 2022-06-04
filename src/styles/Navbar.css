@@ -1,15 +1,17 @@
 .navbar {
   font-family: var(--sen-bold);
   height: 100px;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  padding-right: 60px;
+  background-color: transparent;
 
-  background-color: var(--beige);
+  position: fixed;
+  z-index: 1;
 }
 
 .navbar-links {
