@@ -1,0 +1,57 @@
+.nuestro-equipo {
+  height: 100vh;
+
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.nuestro-equipo-cards {
+  flex-direction: row;
+  min-width: 90%;
+  justify-content: space-evenly;
+}
+
+.nuestro-equipo-card {
+  min-width: 380px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #fff;
+  box-shadow: 12px 14px 41px #00000029;
+  margin-bottom: 20px;
+  padding: 30px 0 40px;
+}
+
+.card-img {
+  margin: 20px 0 30px 0;
+}
+
+.card-name {
+  font-size: 14px;
+  font-family: var(--sen-bold);
+  color: var(--black);
+}
+
+.card-cargo {
+  font-size: 18px;
+  font-family: var(--poppins-regular);
+  color: var(--gray);
+  opacity: 0.95;
+
+  width: 300px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.card-cargo > hr {
+  border: 1px solid var(--gray);
+  opacity: 0.6;
+
+  margin: 50px 0 20px 0;
+}
+.card-read-more {
+  cursor: pointer;
+  font-weight: bold;
+}

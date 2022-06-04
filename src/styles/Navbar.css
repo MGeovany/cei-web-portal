@@ -1,0 +1,58 @@
+.navbar {
+  font-family: var(--sen-bold);
+  height: 100px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 60px;
+
+  background-color: var(--beige);
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 400px;
+}
+
+.navbar__link {
+  margin: 0 60px 0 0;
+
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.btn__contactanos {
+  color: var(--green-regular) !important;
+}
+
+.btn__postulate {
+  color: var(--white) !important;
+  background-color: var(--green-regular);
+
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 11px;
+  opacity: 1;
+
+  width: 120px;
+  height: 43px;
+  margin-left: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-btns {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 40px;
+}

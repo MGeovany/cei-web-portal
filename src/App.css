@@ -1,0 +1,38 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@800&display=swap");
+
+:root {
+  /* Fonts: */
+  --poppins-regular: "Poppins", sans-serif;
+  --sen-bold: "Sen", sans-serif;
+
+  /* Colors: */
+  --white: #f8f9fb;
+  --beige: #fff9f2;
+  --gray: #b1b1b1;
+  --pink: #ee8b9a;
+  --orange: #fe7649;
+  --green-light: #9acd32;
+  --green-regular: #7ac678;
+  --green-dark: #00674b;
+  --green-extra-dark: #014421;
+  --black: #292c34;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  background-color: var(--beige);
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--black);
+}

@@ -1,0 +1,48 @@
+.quienes-somos {
+  background-color: var(--white);
+
+  height: 100vh;
+
+  font-family: var(--sen-bold);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+
+  margin-bottom: 100px;
+}
+
+.quienes-somos-text-cnt {
+  font-family: var(--poppins-regular);
+  color: var(--gray);
+  opacity: 0.9;
+  width: 40%;
+  line-height: 40px;
+  font-size: 18px;
+
+  padding-left: 60px;
+}
+
+.quienes-somos-text-title > h1 {
+  font-size: 34px;
+}
+.quienes-somos-text-title {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+.quienes-somos-text-title > div > hr {
+  width: 120px;
+  border-radius: 5px;
+  border: 2px solid var(--green-regular);
+}
+.b {
+  font-weight: bolder;
+}
