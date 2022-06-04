@@ -1,6 +1,6 @@
 .navbar {
   font-family: var(--sen-bold);
-  height: 100px;
+  height: 80px;
   width: 100%;
 
   display: flex;
@@ -8,10 +8,11 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: transparent;
+  background-color: white;
+  box-shadow: #00000029 0px 0px 10px;
 
   position: fixed;
-  z-index: 1;
+  z-index: 100;
 }
 
 .navbar-links {

@@ -10,7 +10,7 @@ import './App.css'
 
 import { Navbar } from './componentes/Navbar'
 import { LandingPage } from './pages/LandingPage'
-import { Calendario } from './pages/Calendario'
+import { CalendarioPage } from './pages/CalendarioPage'
 import { Casos } from './pages/Casos'
 import { Recursos } from './pages/Recursos'
 import { Footer } from './componentes/Footer'
@@ -22,7 +22,7 @@ function App () {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage/>} />
-          <Route path="/calendario" element={<Calendario/>} />
+          <Route path="/calendario" element={<CalendarioPage/>} />
           <Route path="/casos-de-exito" element={<Casos/>} />
           <Route path="/recursos" element={<Recursos/>} />
         </Routes>
