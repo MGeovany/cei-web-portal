@@ -6,10 +6,10 @@ export const CasoTecnologia = (props) => {
   const casosTec = props.casosTec
 
   return (
-    <div>
+    <div className='casos-tecnologia'>
       <div className="casos-container-section">
-        <div className="casos-tec-title">TECNOLOGIA</div>
-        <div className="casos-tec-content">
+        <div className="casos-section-title">TECNOLOGIA</div>
+        <div className="casos-section-content">
         {
           casosTec.map((caso, index) =>
           <div key={index}> <CasoCard caso={caso}/>
@@ -23,5 +23,5 @@ export const CasoTecnologia = (props) => {
 }
 
 CasoTecnologia.propTypes = {
-  casosTec: PropTypes.string.isRequired
+  casosTec: PropTypes.array.isRequired
 }

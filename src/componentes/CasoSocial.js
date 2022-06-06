@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { CasoCard } from './CasoCard'
 
 export const CasoSocial = (props) => {
-  const casosTec = props.casosTec
+  const casosSoc = props.casosSoc
   return (
-    <div>
+    <div className='casos-social'>
     <div className="casos-container-section">
-      <div className="casos-tec-title">SOCIAL</div>
-      <div className="casos-tec-content">
+      <div className="casos-section-title">SOCIAL</div>
+      <div className="casos-section-content">
       {
-        casosTec.map((caso, index) =>
+        casosSoc.map((caso, index) =>
         <div key={index}> <CasoCard caso={caso}/>
         </div>
         )
@@ -22,5 +22,5 @@ export const CasoSocial = (props) => {
 }
 
 CasoSocial.propTypes = {
-  casosTec: PropTypes.string.isRequired
+  casosSoc: PropTypes.array.isRequired
 }

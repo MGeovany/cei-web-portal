@@ -3,14 +3,14 @@ import { CasoCard } from './CasoCard'
 import PropTypes from 'prop-types'
 
 export const CasoComercial = (props) => {
-  const casosTec = props.casosTec
+  const casosCom = props.casosCom
   return (
-    <div>
+    <div className='casos-comercial'>
       <div className="casos-container-section">
-        <div className="casos-tec-title">COMERCIAL</div>
-        <div className="casos-tec-content">
+        <div className="casos-section-title">COMERCIAL</div>
+        <div className="casos-section-content">
         {
-          casosTec.map((caso, index) =>
+          casosCom.map((caso, index) =>
           <div key={index}> <CasoCard caso={caso}/>
           </div>
           )
@@ -22,5 +22,5 @@ export const CasoComercial = (props) => {
 }
 
 CasoComercial.propTypes = {
-  casosTec: PropTypes.string.isRequired
+  casosCom: PropTypes.string.isRequired
 }

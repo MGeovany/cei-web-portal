@@ -1,51 +1,36 @@
 import React from 'react'
-import {
-  Card,
-  Image,
-  Text,
-  Button,
-  Group,
-  useMantineTheme
-} from '@mantine/core'
+import { Card, Image, Group, useMantineTheme } from '@mantine/core'
 
 import PropTypes from 'prop-types'
 
 export const CasoCard = (props) => {
   const theme = useMantineTheme()
 
-  const secondaryColor = theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[7]
-
-  // const casosC = props.casosTec
-
   return (
     <div>
-     <div style={{ width: 400, margin: '10px', height: '100%' }}>
-      <Card shadow="sm" p="lg">
-        <Card.Section>
-          <Image src={props.caso.img} height={160} alt="Norway" />
-        </Card.Section>
+      <div style={{ width: 400, margin: '10px 0 10px', height: '100%' }}>
+        <Card shadow="sm" p="lg">
+          <Card.Section>
+            <Image src={props.caso.img} height={160} alt="Norway" />
+          </Card.Section>
 
-        <Group
-          position="apart"
-          style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
-        >
-          <Text weight={500}>{props.caso.titulo}</Text>
-        </Group>
+          <Group
+            position="apart"
+            style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
+          >
+            <div className="casos__card__content__title">
+              {props.caso.titulo}
+            </div>
+          </Group>
 
-        <Text size="sm" style={{ color: secondaryColor, lineHeight: 1.5 }}>
-          {props.caso.descripcion}
-        </Text>
+          <div className="casos__card__content__desc">
+            {props.caso.descripcion}
+          </div>
 
-        <Button
-          variant="light"
-          color="blue"
-          fullWidth
-          style={{ marginTop: 14 }}
-        >
-          Leer Mas
-        </Button>
-      </Card>
-    </div>
+          <hr />
+          <div className="casos__card__content__button">Leer Mas</div>
+        </Card>
+      </div>
     </div>
   )
 }

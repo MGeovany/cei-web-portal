@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { CasoCard } from './CasoCard'
 
 export const CasoSalud = (props) => {
-  const casosTec = props.casosTec
+  const casosSal = props.casosSal
   return (
-    <div>
-      <div className="casos-container-section">
-        <div className="casos-tec-title">SALUD</div>
-        <div className="casos-tec-content">
+    <div className='casos-tecnologia'>
+    <div className="casos-container-section">
+      <div className="casos-section-title">SALUD</div>
+      <div className="casos-section-content">
         {
-          casosTec.map((caso, index) =>
+          casosSal.map((caso, index) =>
           <div key={index}> <CasoCard caso={caso}/>
           </div>
           )
@@ -22,5 +22,5 @@ export const CasoSalud = (props) => {
 }
 
 CasoSalud.propTypes = {
-  casosTec: PropTypes.string.isRequired
+  casosSal: PropTypes.array.isRequired
 }
