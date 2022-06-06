@@ -1,0 +1,35 @@
+.casos {
+  height: 100vh;
+  color: var(--black);
+  font-family: var(--sen-bold);
+  background-color: var(--white);
+}
+
+.casos-container {
+  padding-top: 150px;
+  flex-direction: column;
+}
+
+.casos-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 95vw;
+
+  padding-left: 40px;
+}
+
+.casos-tec-title {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+  margin-bottom: 50px;
+}
+
+.casos-tec-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}

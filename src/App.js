@@ -11,9 +11,9 @@ import './App.css'
 import { Navbar } from './componentes/Navbar'
 import { LandingPage } from './pages/LandingPage'
 import { CalendarioPage } from './pages/CalendarioPage'
-import { Casos } from './pages/Casos'
 import { Recursos } from './pages/Recursos'
 import { Footer } from './componentes/Footer'
+import { Casos } from './pages/Casos'
 
 function App () {
   return (
