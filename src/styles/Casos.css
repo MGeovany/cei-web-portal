@@ -1,0 +1,64 @@
+.casos {
+  color: var(--black);
+  font-family: var(--sen-bold);
+  background-color: var(--white);
+}
+
+.casos-container {
+  padding-top: 150px;
+  flex-direction: column;
+}
+
+.casos-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 95vw;
+
+  padding-left: 40px;
+}
+
+.casos-section-title {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+  margin-bottom: 50px;
+}
+
+.casos-section-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 50px;
+}
+
+.casos__card__content__title {
+  font-size: 24px;
+  padding: 18px 0 12px 0;
+}
+
+.casos__card__content__desc {
+  font-size: 16px;
+  padding: 22px 0 22px 0;
+
+  font-family: var(--poppins-regular);
+  color: var(--gray);
+  line-height: 28px;
+}
+
+hr {
+  border: 1px solid var(--gray);
+  opacity: 0.2;
+}
+
+.casos__card__content__button {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--green-regular);
+
+  cursor: pointer;
+}
