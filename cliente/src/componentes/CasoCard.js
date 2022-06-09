@@ -1,10 +1,33 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { Card, Image, Group, useMantineTheme } from '@mantine/core'
-
 import PropTypes from 'prop-types'
+import { useModals } from '@mantine/modals'
 
 export const CasoCard = (props) => {
+  const modals = useModals()
+
   const theme = useMantineTheme()
+
+  const openCasoModal = () =>
+    modals.openContextModal('casoModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'xl',
+      size: '1580px',
+      innerProps: {
+        titulo: props.caso.titulo,
+        subtitulo: props.caso.subtitulo,
+        desc: props.caso.descripcion,
+        img: props.caso.img,
+        integrantes: props.caso.integrantes
+      }
+    })
 
   return (
     <div>
@@ -24,11 +47,16 @@ export const CasoCard = (props) => {
           </Group>
 
           <div className="casos__card__content__desc">
-            {props.caso.descripcion}
+            {props.caso.desc}
           </div>
 
-          <hr />
-          <div className="casos__card__content__button">Leer Mas</div>
+          <hr className='hr__gray' id='hr__gray' />
+          <button
+            className="casos__card__content__button"
+            onClick={openCasoModal}
+          >
+            Leer Mas
+          </button>
         </Card>
       </div>
     </div>

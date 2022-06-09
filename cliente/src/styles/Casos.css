@@ -1,0 +1,155 @@
+.casos {
+  color: var(--black);
+  font-family: var(--sen-bold);
+  background-color: var(--white);
+}
+
+.casos-container {
+  padding-top: 150px;
+  flex-direction: column;
+}
+
+.casos-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 95vw;
+
+  padding-left: 40px;
+}
+
+.casos-section-title {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+  margin-bottom: 50px;
+}
+
+.casos-section-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 50px;
+}
+
+.casos__card__content__title {
+  font-size: 24px;
+  padding: 18px 0 12px 0;
+}
+
+.casos__card__content__desc {
+  font-size: 16px;
+  padding: 22px 0 22px 0;
+
+  font-family: var(--poppins-regular);
+  color: var(--gray);
+  line-height: 28px;
+}
+
+#hr__gray {
+  border: 1px solid var(--gray);
+  opacity: 0.2;
+}
+
+.casos__card__content__button {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--green-regular);
+  width: 100%;
+
+  cursor: pointer;
+}
+
+.asset__modal__title {
+  font-size: 20px;
+  font-family: var(--sen-bold);
+  color: var(--black);
+}
+.add__asset__modal {
+  font-family: var(--sen-bold);
+
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 300px);
+  padding: 20px;
+}
+.asset__content {
+  width: 90%;
+  padding: 0 20px;
+}
+
+.asset__modal__subtitle {
+  margin: 10px 0 30px;
+  color: var(--gray);
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.asset__modal__body {
+  font-family: var(--poppins-regular);
+  line-height: 30px;
+  font-size: 15px;
+}
+
+.asset__modal__integrantes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-left: 3px solid rgba(201, 215, 248, 0.5);
+  padding: 0 0 0 30px;
+  width: 900px;
+}
+#hr__green {
+  border: 0.115rem solid var(--green-regular);
+  background-color: var(--green-regular);
+
+  width: 80px;
+  margin: 10px 0 45px;
+}
+
+.integrantes__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 550px;
+  justify-content: space-between;
+}
+
+.integrante {
+  flex-direction: column;
+  margin: 20px;
+  text-align: center;
+
+  width: 230px;
+  height: 230px;
+}
+
+.integrante__img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.integrante__img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.integrante__email {
+  margin-top: 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: var(--poppins-regular);
+  font-weight: 600;
+}
+
+.integrante__name {
+  width: 200px;
+}
