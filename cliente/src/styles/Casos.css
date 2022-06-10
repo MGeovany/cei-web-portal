@@ -77,6 +77,7 @@
   height: calc(100vh - 300px);
   padding: 20px;
 }
+
 .asset__content {
   width: 90%;
   padding: 0 20px;
@@ -109,7 +110,7 @@
   background-color: var(--green-regular);
 
   width: 80px;
-  margin: 10px 0 45px;
+  margin: 10px 0 20px;
 }
 
 .integrantes__list {
@@ -152,4 +153,33 @@
 
 .integrante__name {
   width: 200px;
+}
+
+.casos-admin-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 350px;
+}
+
+.admin__asset__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.admin__asset__modal__body {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.asset__m10 {
+  margin-left: 30px;
 }
