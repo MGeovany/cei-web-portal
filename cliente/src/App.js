@@ -12,11 +12,14 @@ import { Recursos } from './pages/Recursos'
 import { Footer } from './componentes/Footer'
 import { Casos } from './pages/Casos'
 import { casoModal } from './modals/casoModal'
+import { CalendarioEvents } from './modals/CalendarioEvents'
+import { AgregarEventos } from './modals/AgregarEventos'
+import { Postulate } from './pages/Postulate'
 
 function App () {
   return (
     <MantineProvider>
-      <ModalsProvider modals={{ casoModal }}>
+      <ModalsProvider modals={{ casoModal, CalendarioEvents, AgregarEventos}}>
         <div className="App">
           <Router>
             <Navbar />
@@ -25,6 +28,7 @@ function App () {
               <Route path="/calendario" element={<CalendarioPage />} />
               <Route path="/casos-de-exito" element={<Casos />} />
               <Route path="/recursos" element={<Recursos />} />
+              <Route path="/postulate" element={<Postulate />} />
             </Routes>
             <Footer />
           </Router>

@@ -1,0 +1,41 @@
+.postulate {
+    color: var(--black);
+  font-family: var(--sen-bold);
+  background-color: var(--white);
+  padding-top: 20px;
+  }
+  
+  .container_postulate{
+    padding-top: 150px;
+  flex-direction: column;
+  }
+
+  .form_postulate{
+    margin-top: 20px;
+  }
+
+  .titulo_postulate{
+    font-size: 24px;
+    text-transform: capitalize;
+    font-family: var(--sen-bold);
+    margin-bottom: 50px;
+
+  width: 620px;
+  }
+
+  .btn__postulate {
+    color: var(--white) !important;
+    background-color: var(--green-regular);
+  
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 11px;
+    opacity: 1;
+  
+    width: 120px;
+    height: 43px;
+    margin-left: 20px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
