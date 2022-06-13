@@ -9,7 +9,7 @@ export const agregarCasoModal = ({ context, id, innerProps }) => (
       <div className="asset__modal__title">
         Agregar Nuevo <span style={{ color: '#7AC678' }}>Caso de Exito</span>
       </div>
-      <CasoForm/>
+      <CasoForm />
     </div>
   </>
 )

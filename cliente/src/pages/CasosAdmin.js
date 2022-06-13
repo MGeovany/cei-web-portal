@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { CasoComercial } from '../componentes/CasoComercial'
@@ -231,22 +232,28 @@ export const CasosAdmin = () => {
   const modals = useModals()
   const theme = useMantineTheme()
 
-  const openAgregarCaso = () =>
-    modals.openContextModal('agregarCasoModal', {
+  const agregarCasoModal = () => {
+    const id = modals.openContextModal('agregarCasoModal', {
       overlayColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[9]
-          : theme.colors.gray[2],
+      theme.colorScheme === 'dark'
+        ? theme.colors.dark[9]
+        : theme.colors.gray[2],
       overlayOpacity: 0.55,
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
       size: '1580px',
       innerProps: {
+        // eslint-disable-next-line no-use-before-define
+      },
+      children: (
+        <>
+          <Button onClick={() => modals.closeContextModal(id)}>Submit</Button>
+        </>
+      )
 
-      }
     })
-
+  }
   return (
     <div>
       <div className="casos">
@@ -260,7 +267,7 @@ export const CasosAdmin = () => {
                 uppercase
                 variant="gradient"
                 gradient={{ from: 'teal', to: 'lime', deg: 105 }}
-                onClick={openAgregarCaso}
+                onClick={agregarCasoModal}
               >
                 Agregar Casos
               </Button>

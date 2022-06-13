@@ -183,3 +183,9 @@
 .asset__m10 {
   margin-left: 30px;
 }
+
+.form__caso,
+.form__proyecto,
+.mantine-Modal-body {
+  font-family: var(--poppins-regular) !important;
+}

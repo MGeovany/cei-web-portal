@@ -10,7 +10,7 @@ const useAuth = () => {
 const PrivateRoute = () => {
   const isLogged = useAuth()
   return (
-    isLogged ? <Outlet /> : <Navigate to="/home" />
+    isLogged ? <Outlet /> : <Navigate to="/" />
   )
 }
 

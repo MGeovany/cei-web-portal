@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import {
   NativeSelect,
@@ -6,18 +8,18 @@ import {
   Textarea,
   TextInput
 } from '@mantine/core'
-
+import { useModals } from '@mantine/modals'
 import { useForm } from '@mantine/form'
 
-export const CasoForm = () => {
+export const CasoForm = (props) => {
+  const modals = useModals()
   const form = useForm({
     initialValues: {
       email: '',
       termsOfService: false
     },
-
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email')
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Correo Invalido')
     }
   })
 
@@ -54,8 +56,15 @@ export const CasoForm = () => {
               />
             </InputWrapper>
           </div>
-          <div className="form__main__section s2">
-            <input className="file-btn" type="file" name="archivosubido" />
+          <div className="form__main__section s1">
+            <div className='form__main__file'>
+              <label htmlFor="file-btn-main">Imagen de proyecto <span style={{ color: 'red' }}>*</span> </label>
+              <input
+                className="file-btn-main"
+                type="file"
+                name="archivosubido"
+              />
+            </div>
           </div>
 
           <div className="form__main__section s3">
@@ -77,7 +86,10 @@ export const CasoForm = () => {
           <div className="form__int">
             <div className="form__int__section s1">
               <InputWrapper id="input-int-1" required label="Nombre">
-                <Input id="input-nombre-proyecto" placeholder="Mi Proyecto" />
+                <Input
+                  id="input-nombre-proyecto"
+                  placeholder="Nombre de integrante"
+                />
               </InputWrapper>
             </div>
             <div className="form__int__section s2">
@@ -88,9 +100,69 @@ export const CasoForm = () => {
                 {...form.getInputProps('email')}
               />
             </div>
-            <div className="form__main__section s2">
+            <div className="form__main__section">
               <input className="file-btn" type="file" name="archivosubido" />
             </div>
+            <div className="form__int__section s1">
+              <InputWrapper id="input-int-1" required label="Nombre">
+                <Input
+                  id="input-nombre-proyecto"
+                  placeholder="Nombre de integrante"
+                />
+              </InputWrapper>
+            </div>
+            <div className="form__int__section s2">
+              <TextInput
+                required
+                label="Email"
+                placeholder="your@email.com"
+                {...form.getInputProps('email')}
+              />
+            </div>
+            <div className="form__main__section">
+              <input className="file-btn" type="file" name="archivosubido" />
+            </div>
+            <div className="form__int__section s1">
+              <InputWrapper id="input-int-1" required label="Nombre">
+                <Input
+                  id="input-nombre-proyecto"
+                  placeholder="Nombre de integrante"
+                />
+              </InputWrapper>
+            </div>
+            <div className="form__int__section s2">
+              <TextInput
+                required
+                label="Email"
+                placeholder="your@email.com"
+                {...form.getInputProps('email')}
+              />
+            </div>
+            <div className="form__main__section">
+              <input className="file-btn" type="file" name="archivosubido" />
+            </div>
+            <div className="form__int__section s1">
+              <InputWrapper id="input-int-1" required label="Nombre">
+                <Input
+                  id="input-nombre-proyecto"
+                  placeholder="Nombre de integrante"
+                />
+              </InputWrapper>
+            </div>
+            <div className="form__int__section s2">
+              <TextInput
+                required
+                label="Email"
+                placeholder="your@email.com"
+                {...form.getInputProps('email')}
+              />
+            </div>
+            <div className="form__main__section">
+              <input className="file-btn" type="file" name="archivosubido" />
+            </div>
+          </div>
+          <div className="form__int__section form__int__btns">
+            <div className="form__caso__button">Agregar Caso</div>
           </div>
         </div>
       </div>

@@ -1,28 +1,32 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import './App.css'
+
 import { MantineProvider } from '@mantine/core'
 import { ModalsProvider } from '@mantine/modals'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import './App.css'
-
 import { Navbar } from './componentes/Navbar'
+import { Footer } from './componentes/Footer'
+
+// Pages
 import { LandingPage } from './pages/LandingPage'
 import { CalendarioPage } from './pages/CalendarioPage'
-import { Recursos } from './pages/Recursos'
-import { Footer } from './componentes/Footer'
 import { Casos } from './pages/Casos'
-import { casoModal } from './modals/casoModal'
-import { agregarCasoModal } from './modals/agregarCasoModal'
-import PrivateRoute from './componentes/PrivateRoute'
 import { CasosAdmin } from './pages/CasosAdmin'
+import { Recursos } from './pages/Recursos'
+
+// Modals
+import { agregarCasoModal } from './modals/agregarCasoModal'
+import { casoModal } from './modals/casoModal'
+import { verCasoModal } from './modals/verCasoModal'
+
+import PrivateRoute from './componentes/PrivateRoute'
 
 function App () {
-  // const islogged = localStorage.getItem('token')
-
   return (
     <MantineProvider>
-      <ModalsProvider modals={{ casoModal, agregarCasoModal }}>
+      <ModalsProvider modals={{ casoModal, agregarCasoModal, verCasoModal }}>
         <div className="App">
           <Router>
             <Navbar />

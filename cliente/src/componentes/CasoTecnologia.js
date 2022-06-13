@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { CasoCard } from './CasoCard'
@@ -22,6 +24,7 @@ export const CasoTecnologia = (props) => {
   )
 }
 
-CasoTecnologia.propTypes = {
+/* CasoTecnologia.propTypes = {
   casosTec: PropTypes.array.isRequired
 }
+ */

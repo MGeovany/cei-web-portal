@@ -1,4 +1,5 @@
 import React from 'react'
+
 import PropTypes from 'prop-types'
 
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
@@ -23,19 +24,19 @@ const localizer = dateFnsLocalizer({
 export const Calendario = (props) => {
   return (
     <div>
-       <div className='calendario-container flex'>
-        <Calendar
-          localizer={localizer}
-          events={props.events}
-          startAccessor="start"
-          endAccessor="end"
-          style={{ height: '600px', margin: '50px', width: '100%' }}
-        />
+      <div className="calendario-container flex">
+      <Calendar
+      localizer={localizer}
+      events={props.events}
+      startAccessor="start"
+      endAccessor="end"
+      style={{ height: '600px', margin: '50px', width: '100%' }}
+    />
       </div>
     </div>
   )
 }
 
 Calendario.propTypes = {
-  events: PropTypes.array.isRequired
+  events: PropTypes.array
 }
