@@ -70,11 +70,9 @@
   color: var(--black);
 }
 .add__asset__modal {
-  font-family: var(--sen-bold);
-
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 300px);
+  min-height: calc(100vh - 300px);
   padding: 20px;
 }
 
@@ -188,4 +186,40 @@
 .form__proyecto,
 .mantine-Modal-body {
   font-family: var(--poppins-regular) !important;
+}
+
+.tabla__w__auto > th {
+  width: 200px;
+}
+
+.th__title {
+  font-size: 18px;
+  font-family: var(--sen-bold);
+  color: var(--black);
+  width: max-content;
+  margin-top: 40px; /* Mala práctica */
+}
+
+.td__content {
+  font-size: 16px;
+  font-family: var(--poppins-regular);
+  color: var(--gray);
+  max-width: 400px;
+}
+
+.btn__editar,
+.btn__eliminar {
+  font-size: 16px;
+  font-family: var(--sen-bold);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn__editar {
+  color: var(--green-regular);
+  margin-right: 10px;
+}
+
+.btn__eliminar {
+  color: var(--orange);
 }

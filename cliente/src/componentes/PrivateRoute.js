@@ -9,9 +9,7 @@ const useAuth = () => {
 
 const PrivateRoute = () => {
   const isLogged = useAuth()
-  return (
-    isLogged ? <Outlet /> : <Navigate to="/" />
-  )
+  return isLogged ? <Outlet /> : <Navigate to='/' />
 }
 
 export default PrivateRoute

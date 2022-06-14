@@ -226,11 +226,11 @@ const casosSoc = [
 export const Casos = () => {
   return (
     <div>
-      <div className="casos">
-        <div className="casos-container flex">
-          <div className="casos-title section-title">Casos que Inspiran🥇</div>
-          <div className="casos-content">
-            <div className="casos-section">
+      <div className='casos'>
+        <div className='casos-container flex'>
+          <div className='casos-title section-title'>Casos que Inspiran🥇</div>
+          <div className='casos-content'>
+            <div className='casos-section'>
               <CasoTecnologia casosTec={casosTec} />
               <CasoComercial casosCom={casosCom} />
               <CasoSocial casosSoc={casosSoc} />
