@@ -70,13 +70,12 @@
   color: var(--black);
 }
 .add__asset__modal {
-  font-family: var(--sen-bold);
-
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 300px);
+  min-height: calc(100vh - 300px);
   padding: 20px;
 }
+
 .asset__content {
   width: 90%;
   padding: 0 20px;
@@ -109,7 +108,7 @@
   background-color: var(--green-regular);
 
   width: 80px;
-  margin: 10px 0 45px;
+  margin: 10px 0 20px;
 }
 
 .integrantes__list {
@@ -152,4 +151,75 @@
 
 .integrante__name {
   width: 200px;
+}
+
+.casos-admin-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 350px;
+}
+
+.admin__asset__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.admin__asset__modal__body {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.asset__m10 {
+  margin-left: 30px;
+}
+
+.form__caso,
+.form__proyecto,
+.mantine-Modal-body {
+  font-family: var(--poppins-regular) !important;
+}
+
+.tabla__w__auto > th {
+  width: 200px;
+}
+
+.th__title {
+  font-size: 18px;
+  font-family: var(--sen-bold);
+  color: var(--black);
+  width: max-content;
+  margin-top: 40px; /* Mala práctica */
+}
+
+.td__content {
+  font-size: 16px;
+  font-family: var(--poppins-regular);
+  color: var(--gray);
+  max-width: 400px;
+}
+
+.btn__editar,
+.btn__eliminar {
+  font-size: 16px;
+  font-family: var(--sen-bold);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn__editar {
+  color: var(--green-regular);
+  margin-right: 10px;
+}
+
+.btn__eliminar {
+  color: var(--orange);
 }
