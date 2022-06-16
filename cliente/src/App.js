@@ -20,13 +20,16 @@ import { Blog } from './pages/Blog'
 import { agregarCasoModal } from './modals/agregarCasoModal'
 import { casoModal } from './modals/casoModal'
 import { verCasoModal } from './modals/verCasoModal'
+import { blogModal } from './modals/blogModal'
 
 import PrivateRoute from './componentes/PrivateRoute'
 
 function App() {
   return (
     <MantineProvider>
-      <ModalsProvider modals={{ casoModal, agregarCasoModal, verCasoModal }}>
+      <ModalsProvider
+        modals={{ casoModal, agregarCasoModal, verCasoModal, blogModal }}
+      >
         <div className='App'>
           <Router>
             <Navbar />
