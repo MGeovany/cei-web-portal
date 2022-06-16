@@ -1,19 +1,57 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
+import React, { useState } from 'react'
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState('home')
+
   return (
     <div className='navbar'>
       <div className='navbar-links'>
-        <Link to='/' className='navbar__link'>Home</Link>
-        <Link to='/calendario' className='navbar__link'>Calendario</Link>
-        <Link to='/casos-de-exito' className='navbar__link'>Casos de exito</Link>
-        <Link to='/recursos' className='navbar__link'>Recursos</Link>
+        <Link
+          to='/'
+          className={isOpen === 'home' ? 'navbar__link dot' : 'navbar__link'}
+          onClick={() => setIsOpen('home')}
+        >
+          Home
+        </Link>
+        <Link
+          to='/calendario'
+          className={isOpen === 'cal' ? 'navbar__link dot' : 'navbar__link'}
+          onClick={() => setIsOpen('cal')}
+        >
+          Calendario
+        </Link>
+        <Link
+          to='/casos-de-exito'
+          className={isOpen === 'casos' ? 'navbar__link dot' : 'navbar__link'}
+          onClick={() => setIsOpen('casos')}
+        >
+          Casos de exito
+        </Link>
+        <Link
+          to='/blog'
+          className={isOpen === 'blog' ? 'navbar__link dot' : 'navbar__link'}
+          onClick={() => setIsOpen('blog')}
+        >
+          Blog
+        </Link>
       </div>
       <div className='navbar-btns'>
-        <Link to='/contactanos' className='btn__contactanos'>Contactanos</Link>
-        <Link to='/postulate' className='btn__postulate'>Postulate</Link>
+        <Link
+          to='/contactanos'
+          className='btn__contactanos'
+          onClick={() => setIsOpen('contact')}
+        >
+          Contactanos
+        </Link>
+        <Link
+          to='/postulate'
+          className='btn__postulate'
+          onClick={() => setIsOpen('postulate')}
+        >
+          Postulate
+        </Link>
       </div>
     </div>
   )

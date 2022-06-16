@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sen:wght@800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@800&display=swap');
 
 :root {
   /* Fonts: */
-  --poppins-regular: "Poppins", sans-serif;
-  --sen-bold: "Sen", sans-serif;
+  --poppins-regular: 'Poppins', sans-serif;
+  --sen-bold: 'Sen', sans-serif;
 
   /* Colors: */
   --white: #f8f9fb;
@@ -32,8 +32,8 @@ a:active {
   color: var(--black);
 }
 button,
-input[type="submit"],
-input[type="reset"] {
+input[type='submit'],
+input[type='reset'] {
   background: none;
   color: inherit;
   border: none;
