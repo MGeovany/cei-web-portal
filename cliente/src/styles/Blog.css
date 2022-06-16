@@ -1,0 +1,82 @@
+.blog {
+  color: var(--black);
+  font-family: var(--sen-bold);
+  background-color: var(--white);
+}
+
+.blog-container {
+  padding-top: 150px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.casos-subtitle {
+  padding-top: 25px;
+  font-size: 34px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+  color: #333;
+  margin-bottom: 50px;
+
+  align-items: center;
+}
+
+.blog-section-title {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+  margin-bottom: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.blog__card__content__title {
+  color: var(--black);
+  font-size: 20px;
+  line-height: 29px;
+  padding: 18px 0 5px 0;
+  text-align: start;
+}
+
+.card-50 {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog__card__content__button {
+  text-align: left;
+  padding: 10px;
+  color: var(--green-regular);
+  width: 100%;
+
+  font-family: var(--sen-bold);
+  font-weight: 600;
+  cursor: pointer;
+  font: normal normal bold 17px/20px Sen;
+}
+
+.card-container:hover {
+  box-shadow: 0 40px 130px rgba(153, 152, 160, 0.6);
+  transform: scale(1.1, 1.1);
+  transition: all 1s ease;
+}
+
+.card-container {
+  cursor: pointer;
+}
+
+.title-50 {
+  width: 50%;
+  line-height: 30px;
+
+  font-size: 25px;
+  color: #333;
+}
+
+.lh-2 {
+  line-height: 38px;
+}

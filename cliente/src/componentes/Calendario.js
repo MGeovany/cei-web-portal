@@ -24,14 +24,14 @@ const localizer = dateFnsLocalizer({
 export const Calendario = (props) => {
   return (
     <div>
-      <div className="calendario-container flex">
-      <Calendar
-      localizer={localizer}
-      events={props.events}
-      startAccessor="start"
-      endAccessor="end"
-      style={{ height: '600px', margin: '50px', width: '100%' }}
-    />
+      <div className='calendario-container flex'>
+        <Calendar
+          localizer={localizer}
+          events={props.events}
+          startAccessor='start'
+          endAccessor='end'
+          style={{ height: '600px', margin: '50px', width: '100%' }}
+        />
       </div>
     </div>
   )

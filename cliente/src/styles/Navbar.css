@@ -8,10 +8,9 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: white;
-  box-shadow: #00000029 0px 0px 10px;
+  background-color: transparent;
 
-  position: fixed;
+  position: absolute;
   z-index: 100;
 }
 
@@ -27,6 +26,8 @@
 
   font-weight: 700;
   font-size: 18px;
+
+  position: relative;
 }
 
 .btn__contactanos {
@@ -58,4 +59,26 @@
   align-items: center;
 
   padding-right: 40px;
+}
+
+.dot {
+  transition: all 0.3s ease;
+  color: var(--green-regular) !important;
+}
+
+.dot::after {
+  position: absolute;
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  left: 45%;
+  top: 2rem;
+  background-color: var(--green-regular);
+}
+
+.navbar__link:hover {
+  transition: all 0.5s ease;
+
+  position: relative;
 }

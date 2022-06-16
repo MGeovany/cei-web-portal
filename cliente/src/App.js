@@ -14,32 +14,34 @@ import { LandingPage } from './pages/LandingPage'
 import { CalendarioPage } from './pages/CalendarioPage'
 import { Casos } from './pages/Casos'
 import { CasosAdmin } from './pages/CasosAdmin'
-import { Recursos } from './pages/Recursos'
+import { Blog } from './pages/Blog'
 
 // Modals
 import { agregarCasoModal } from './modals/agregarCasoModal'
 import { casoModal } from './modals/casoModal'
 import { verCasoModal } from './modals/verCasoModal'
+import { blogModal } from './modals/blogModal'
 
 import PrivateRoute from './componentes/PrivateRoute'
 
-function App () {
+function App() {
   return (
     <MantineProvider>
-      <ModalsProvider modals={{ casoModal, agregarCasoModal, verCasoModal }}>
-        <div className="App">
+      <ModalsProvider
+        modals={{ casoModal, agregarCasoModal, verCasoModal, blogModal }}
+      >
+        <div className='App'>
           <Router>
             <Navbar />
             <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/calendario" element={<CalendarioPage />} />
-              <Route path="/casos-de-exito" element={<Casos />} />
-              <Route path="/recursos" element={<Recursos />} />
+              <Route path='/' element={<LandingPage />} />
+              <Route path='/calendario' element={<CalendarioPage />} />
+              <Route path='/casos-de-exito' element={<Casos />} />
+              <Route path='/blog' element={<Blog />} />
 
-              <Route path="/admin" element={<PrivateRoute/>}>
-                <Route path="/admin/casos" element={<CasosAdmin />} />
+              <Route path='/admin' element={<PrivateRoute />}>
+                <Route path='/admin/casos' element={<CasosAdmin />} />
               </Route>
-
             </Routes>
             <Footer />
           </Router>

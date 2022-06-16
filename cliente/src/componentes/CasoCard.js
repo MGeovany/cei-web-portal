@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { Card, Image, Group, useMantineTheme } from '@mantine/core'
-import PropTypes from 'prop-types'
 import { useModals } from '@mantine/modals'
 
 export const CasoCard = (props) => {
@@ -30,29 +29,32 @@ export const CasoCard = (props) => {
     })
 
   return (
-    <div>
+    <div className='card-container'>
       <div style={{ width: 400, margin: '10px 0 10px', height: '100%' }}>
-        <Card shadow="sm" p="lg">
+        <Card shadow='sm' p='lg'>
           <Card.Section>
-            <Image src={props.caso.img} height={160} alt="Norway" />
+            <Image
+              withPlaceholder
+              src={props.caso.img}
+              height={160}
+              alt='Norway'
+            />
           </Card.Section>
 
           <Group
-            position="apart"
+            position='apart'
             style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
           >
-            <div className="casos__card__content__title">
+            <div className='casos__card__content__title'>
               {props.caso.titulo}
             </div>
           </Group>
 
-          <div className="casos__card__content__desc">
-            {props.caso.desc}
-          </div>
+          <div className='casos__card__content__desc'>{props.caso.desc}</div>
 
           <hr className='hr__gray' id='hr__gray' />
           <button
-            className="casos__card__content__button"
+            className='casos__card__content__button'
             onClick={openCasoModal}
           >
             Leer Mas
@@ -62,7 +64,7 @@ export const CasoCard = (props) => {
     </div>
   )
 }
-
+/*
 CasoCard.propTypes = {
   img: PropTypes.string.isRequired,
   titulo: PropTypes.string.isRequired,
@@ -71,3 +73,4 @@ CasoCard.propTypes = {
   casosTec: PropTypes.array.isRequired,
   caso: PropTypes.object.isRequired
 }
+ */
