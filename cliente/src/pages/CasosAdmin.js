@@ -6,10 +6,9 @@ import { CasoSocial } from '../componentes/CasoSocial'
 import { CasoSalud } from '../componentes/CasoSalud'
 import { CasoTecnologia } from '../componentes/CasoTecnologia'
 import { Button, MantineProvider, useMantineTheme } from '@mantine/core'
+import { useModals } from '@mantine/modals'
 
 import '../styles/Casos.css'
-
-import { useModals } from '@mantine/modals'
 
 // static data
 

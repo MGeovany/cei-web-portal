@@ -3,11 +3,11 @@ import { Table } from '@mantine/core'
 
 const elements = [
   {
-    nombre:
+    titulo:
       'Lorem Ipsum is simply dummy text of the printing and typesetting' +
       ' industry. Lorem Ipsum has been the industrys standard dummy text ever since',
     fecha: 'Sun Jun 12',
-    seccion: 'Tecnologia',
+    autor: 'Marlon G Castro',
     detalles:
       'Lorem Ipsum is simply dummy text of the printing and typesetting' +
       ' industry. Lorem Ipsum has been the industrys standard dummy text ever since' +
@@ -19,10 +19,10 @@ const elements = [
       ' PageMaker including versions of Lorem Ipsum.'
   },
   {
-    nombre:
+    titulo:
       'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
     fecha: 'Sun Jun 12',
-    seccion: 'Tecnologia',
+    autor: 'CEI Ceutec',
     detalles:
       'Lorem Ipsum is simply dummy text of the printing and typesetting' +
       ' industry. Lorem Ipsum has been the industrys standard dummy text ever since' +
@@ -34,24 +34,24 @@ const elements = [
       ' PageMaker including versions of Lorem Ipsum.'
   },
   {
-    nombre: 'Proyect331',
-    fecha: 'Sun Jun 14',
-    seccion: 'Comercial',
+    titulo: 'Proyect331',
+    fecha: 'Aurelion Sol',
+    autor: 'Comercial',
     detalles: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
   }
 ]
 
-export const CasoTabla = () => {
+export const BlogTabla = () => {
   const rows = elements.map((element) => (
-    <tr key={element.nombre}>
+    <tr key={element.titulo}>
       <td>
-        <div className='td__content'>{element.nombre}</div>
+        <div className='td__content'>{element.titulo}</div>
+      </td>
+      <td>
+        <div className='td__content'>{element.autor}</div>
       </td>
       <td>
         <div className='td__content'>{element.fecha}</div>
-      </td>
-      <td>
-        <div className='td__content'>{element.seccion}</div>
       </td>
       <td>
         <div className='td__content'>{element.detalles}</div>
@@ -70,13 +70,13 @@ export const CasoTabla = () => {
       <thead>
         <tr>
           <th>
-            <div className='th__title'>Nombre</div>
+            <div className='th__title'>Titulo</div>
           </th>
           <th>
-            <div className='th__title'>Fecha de Registro</div>
+            <div className='th__title'>Autor</div>
           </th>
           <th>
-            <div className='th__title'>Sección de Casos</div>
+            <div className='th__title'>Fecha</div>
           </th>
           <th>
             <div className='th__title'>Detalles</div>
