@@ -21,14 +21,24 @@ import { agregarCasoModal } from './modals/agregarCasoModal'
 import { casoModal } from './modals/casoModal'
 import { verCasoModal } from './modals/verCasoModal'
 import { blogModal } from './modals/blogModal'
+import { agregarBlogModal } from './modals/agregarBlogModal'
+import { verBlogModal } from './modals/verBlogModal'
 
 import PrivateRoute from './componentes/PrivateRoute'
+import { BlogAdmin } from './pages/BlogAdmin'
 
 function App() {
   return (
     <MantineProvider>
       <ModalsProvider
-        modals={{ casoModal, agregarCasoModal, verCasoModal, blogModal }}
+        modals={{
+          casoModal,
+          agregarCasoModal,
+          verCasoModal,
+          blogModal,
+          agregarBlogModal,
+          verBlogModal
+        }}
       >
         <div className='App'>
           <Router>
@@ -41,6 +51,7 @@ function App() {
 
               <Route path='/admin' element={<PrivateRoute />}>
                 <Route path='/admin/casos' element={<CasosAdmin />} />
+                <Route path='/admin/blog' element={<BlogAdmin />} />
               </Route>
             </Routes>
             <Footer />

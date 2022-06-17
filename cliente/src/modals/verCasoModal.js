@@ -6,8 +6,8 @@ export const verCasoModal = ({ context, id, innerProps }) => (
   <>
     <div className='add__asset__modal asset__col'>
       <div className='asset__modal__title'>
-        Ver
-        <span style={{ color: '#7AC678' }}> Caso de Exito</span>
+        VER
+        <span style={{ color: '#7AC678' }}> CASOS DE EXITO</span>
       </div>
       <CasoTabla />
     </div>
