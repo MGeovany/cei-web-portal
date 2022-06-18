@@ -1,0 +1,19 @@
+
+@api = http://localhost:4000/contactanos
+
+
+GET {{api}}
+
+
+###
+POST {{api}}
+
+Content-Type: application/json
+
+{
+    "nombre": "marlon",
+    "email": "marlon@gmail.com",
+    "celular": "77889944",
+    "comentario": "marlon",
+    "fecha_registro": "20220618"
+}
