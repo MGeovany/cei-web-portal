@@ -1,12 +1,25 @@
-.text{
-    margin-top: 15px;
-    font-family: var(--sen-bold);
-    font-size: 12spx;
+.text {
+  margin-top: 15px;
+  font-family: var(--sen-bold);
+  font-size: 12spx;
 }
 
-.titulo_modal_agregarEventos{
-    margin-top: 15px;
-    font-family: var(--sen-bold);
-    font-size: 22px;
-    align-items: center;
+.titulo_modal_agregarEventos {
+  margin-top: 15px;
+  font-family: var(--sen-bold);
+  font-size: 22px;
+  align-items: center;
+}
+
+.cal__table__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  margin: 0 2rem;
+  height: 100%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 15px;
+  opacity: 1;
 }

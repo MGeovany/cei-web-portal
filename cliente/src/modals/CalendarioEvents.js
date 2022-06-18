@@ -33,19 +33,25 @@ export const CalendarioEvents = () => {
   ))
 
   return (
-    <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
-      <thead>
-        <tr className='text'>
-          <th>
-            <div className='th__title'>Fecha</div>
-          </th>
-          <th>
-            <div className='th__title'>Evento</div>
-          </th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </Table>
+    <div className='cal__table__container '>
+      <div className='cal__modal__title'>
+        VER PROXIMOS <span style={{ color: '#7AC678' }}>EVENTOS</span>
+      </div>
+
+      <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
+        <thead>
+          <tr className='text'>
+            <th>
+              <div className='th__title'>Fecha</div>
+            </th>
+            <th>
+              <div className='th__title'>Evento</div>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </Table>
+    </div>
   )
 }

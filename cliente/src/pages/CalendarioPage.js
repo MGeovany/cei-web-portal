@@ -2,6 +2,7 @@
 import React from 'react'
 import { Calendario } from '../componentes/Calendario'
 import '../styles/Calendario.css'
+import { Navbar } from '../componentes/Navbar'
 
 // static data, this will be loaded from a server in production.
 
@@ -34,11 +35,15 @@ const events = [
 
 export const CalendarioPage = () => {
   return (
-    <div className='calendario'>
-      <div className='section-title calendario-title'>
-        CALENDARIO DE <span style={{ color: '#7ac678' }}> EVENTOS🎯</span>
+    <>
+      <Navbar />
+
+      <div className='calendario'>
+        <div className='section-title calendario-title'>
+          CALENDARIO DE <span style={{ color: '#7ac678' }}> EVENTOS🎯</span>
+        </div>
+        <Calendario events={events} />
       </div>
-      <Calendario events={events} />
-    </div>
+    </>
   )
 }

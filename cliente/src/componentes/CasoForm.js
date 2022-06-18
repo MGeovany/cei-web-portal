@@ -34,12 +34,14 @@ export const CasoForm = (props) => {
             <NativeSelect
               data={['Tecnologia', 'Comercial', 'Social', 'Salud']}
               placeholder='Select'
+              className='font-sen'
               label='Seccion de Caso'
               required
             />
           </div>
           <div className='form__main__section asset__m10 s1'>
             <InputWrapper
+              className='font-sen'
               id='input-nombre-proyecto'
               required
               label='Nombre del Proyecto'
@@ -49,7 +51,12 @@ export const CasoForm = (props) => {
           </div>
 
           <div className='form__main__section s2'>
-            <InputWrapper id='input-demo' required label='Breve Descripcion'>
+            <InputWrapper
+              className='font-sen'
+              id='input-demo'
+              required
+              label='Breve Descripcion'
+            >
               <Input
                 id='input-demo'
                 placeholder='Este es mi proyecto sobre tecnologia'
@@ -58,11 +65,11 @@ export const CasoForm = (props) => {
           </div>
           <div className='form__main__section s1'>
             <div className='form__main__file'>
-              <label htmlFor='file-btn-main'>
+              <label htmlFor='file-btn-main' className='font-sen'>
                 Imagen de proyecto <span style={{ color: 'red' }}>*</span>{' '}
               </label>
               <input
-                className='file-btn-main'
+                className='file-btn-main '
                 type='file'
                 name='archivosubido'
               />
@@ -73,6 +80,7 @@ export const CasoForm = (props) => {
             <Textarea
               minRows={10}
               maxRows={15}
+              className='font-sen'
               placeholder='Mas Detalles'
               label='Detalles'
               required
@@ -87,21 +95,12 @@ export const CasoForm = (props) => {
           </div>
           <div className='form__int'>
             <div className='form__int__section s1'>
-              <InputWrapper id='input-int-1' required label='Nombre'>
-                <Input
-                  id='input-nombre-proyecto'
-                  placeholder='Nombre de integrante'
-                />
-              </InputWrapper>
-            </div>
-            <div className='form__int__section s2'>
-              <TextInput required label='Email' placeholder='your@email.com' />
-            </div>
-            <div className='form__main__section'>
-              <input className='file-btn' type='file' name='archivosubido' />
-            </div>
-            <div className='form__int__section s1'>
-              <InputWrapper id='input-int-1' required label='Nombre'>
+              <InputWrapper
+                className='font-sen'
+                id='input-int-1'
+                required
+                label='Nombre'
+              >
                 <Input
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
@@ -110,6 +109,31 @@ export const CasoForm = (props) => {
             </div>
             <div className='form__int__section s2'>
               <TextInput
+                className='font-sen'
+                required
+                label='Email'
+                placeholder='your@email.com'
+              />
+            </div>
+            <div className='form__main__section'>
+              <input className='file-btn' type='file' name='archivosubido' />
+            </div>
+            <div className='form__int__section s1'>
+              <InputWrapper
+                className='font-sen'
+                id='input-int-1'
+                required
+                label='Nombre'
+              >
+                <Input
+                  id='input-nombre-proyecto'
+                  placeholder='Nombre de integrante'
+                />
+              </InputWrapper>
+            </div>
+            <div className='form__int__section s2'>
+              <TextInput
+                className='font-sen'
                 required
                 label='Email'
                 placeholder='your@email.com'
@@ -120,7 +144,12 @@ export const CasoForm = (props) => {
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
             <div className='form__int__section s1'>
-              <InputWrapper id='input-int-1' required label='Nombre'>
+              <InputWrapper
+                className='font-sen'
+                id='input-int-1'
+                required
+                label='Nombre'
+              >
                 <Input
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
@@ -128,13 +157,23 @@ export const CasoForm = (props) => {
               </InputWrapper>
             </div>
             <div className='form__int__section s2'>
-              <TextInput required label='Email' placeholder='your@email.com' />
+              <TextInput
+                className='font-sen'
+                required
+                label='Email'
+                placeholder='your@email.com'
+              />
             </div>
             <div className='form__main__section'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
             <div className='form__int__section s1'>
-              <InputWrapper id='input-int-1' required label='Nombre'>
+              <InputWrapper
+                className='font-sen'
+                id='input-int-1'
+                required
+                label='Nombre'
+              >
                 <Input
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
@@ -142,7 +181,11 @@ export const CasoForm = (props) => {
               </InputWrapper>
             </div>
             <div className='form__int__section s2'>
-              <TextInput required placeholder='your@email.com' />
+              <TextInput
+                className='font-sen'
+                required
+                placeholder='your@email.com'
+              />
             </div>
             <div className='form__main__section'>
               <input className='file-btn' type='file' name='archivosubido' />
@@ -150,6 +193,7 @@ export const CasoForm = (props) => {
           </div>
           <div className='form__int__section form__int__btns'>
             <div className='form__caso__button'>Agregar Caso</div>
+            <div className='form__desc__button'>Descartar</div>
           </div>
         </div>
       </div>

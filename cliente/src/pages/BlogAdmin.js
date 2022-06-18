@@ -6,6 +6,7 @@ import { BlogsRecientes } from '../componentes/BlogsRecientes'
 import { useModals } from '@mantine/modals'
 
 import '../styles/Blog.css'
+import { NavbarAdmin } from '../componentes/NavbarAdmin'
 
 import { Button, MantineProvider, useMantineTheme } from '@mantine/core'
 
@@ -45,6 +46,8 @@ export const BlogAdmin = () => {
 
   return (
     <div>
+      <NavbarAdmin />
+
       <MantineProvider
         theme={{ fontFamily: 'Poppins, sans-serif' }}
         withGlobalStyles

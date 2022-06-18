@@ -86,9 +86,11 @@
   padding-top: 100px;
   color: var(--green-regular);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .form__caso__button:hover {
-  color: var(--green-dark);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.6;
 }
 
 .file-btn {
@@ -104,4 +106,17 @@
 }
 .form__main__file > input {
   padding-top: 10px;
+}
+
+.form__desc__button {
+  padding-top: 100px;
+  color: var(--orange);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding-left: 20px;
+}
+
+.form__desc__button:hover {
+  transition: all 0.3s ease-in-out;
+  opacity: 0.6;
 }

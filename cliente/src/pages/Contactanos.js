@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Contactanos.css'
 import { TextInput, Textarea } from '@mantine/core'
 import { useForm } from '@mantine/form'
+import { Navbar } from '../componentes/Navbar'
 
 export const Contactanos = () => {
   const form = useForm({
@@ -15,6 +16,7 @@ export const Contactanos = () => {
 
   return (
     <div>
+      <Navbar />
       <div className='contactanos'>
         <div className='container_contactanos flex'>
           <div className='section-title titulo_contactanos'>

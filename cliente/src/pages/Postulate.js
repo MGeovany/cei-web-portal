@@ -10,6 +10,7 @@ import {
   NativeSelect,
   MultiSelect
 } from '@mantine/core'
+import { Navbar } from '../componentes/Navbar'
 
 const data = [
   {
@@ -35,6 +36,7 @@ export const Postulate = () => {
 
   return (
     <div>
+      <Navbar />
       <div className='postulate'>
         <div className='container_postulate flex'>
           <div className='section-title '>

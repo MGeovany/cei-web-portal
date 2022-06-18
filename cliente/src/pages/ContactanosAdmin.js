@@ -1,113 +1,181 @@
 import React from 'react'
 import '../styles/ContactanosAdmin.css'
 import { Table } from '@mantine/core'
+import { NavbarAdmin } from '../componentes/NavbarAdmin'
 
 const elements = [
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+    correo: 'valeria587@gmail.com',
+    celular: '+005 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   },
   {
-    nombre_completo: 'Valeria Sofia Figueroa',
-    correo: 'valeriafigueroa587@gmail.com',
-    celular: '95583206',
-    mensaje: 'Quisiera contactarme con el CEI...'
+    nombre: 'Valeria Sofia ',
+    apellido: 'Figueroa',
+
+    correo: 'valeria587@gmail.com',
+    celular: '+504 9558 3206',
+    mensaje: 'Quisiera contactarme con el CEI',
+    fecha: 'Sun Jun 21 2019'
   }
 ]
 
 export const ContactanosAdmin = () => {
-  const rows = elements.map((element) => (
-    <tr key={element.nombre_completo}>
-      <td horizontalSpacing='lg'>{element.nombre_completo}</td>
-      <td horizontalSpacing='xs'>{element.correo}</td>
-      <td horizontalSpacing='xs'>{element.celular}</td>
-      <td horizontalSpacing='xs'>{element.mensaje}</td>
+  const rows = elements.map((element, index) => (
+    <tr key={index}>
+      <td>
+        <div className='td__content'>{element.nombre}</div>
+      </td>
+      <td>
+        <div className='td__content'>{element.apellido}</div>
+      </td>
+      <td>
+        <div className='td__content'>{element.correo}</div>
+      </td>
+      <td>
+        <div className='td__content'>{element.celular}</div>
+      </td>
+      <td>
+        <div className='td__content'>{element.mensaje}</div>
+      </td>
+      <td>
+        <div className='td__content'>{element.fecha}</div>
+      </td>
     </tr>
   ))
 
   return (
-    <div className='postulate_admin'>
-      <div className='container_postulate_admin flex'>
-        <div className='section-title contactanos-admin-title' align='center'>
-          PERSONAS QUE SE{' '}
-          <span style={{ color: '#7ac678' }}> CONTACTARON🎯</span>
-        </div>
-        <div className='tabla_contacto_admin'>
-          <Table highlightOnHover>
-            <thead>
-              <tr className='text'>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Telefono</th>
-                <th>Mensaje</th>
-              </tr>
-            </thead>
-            <tbody className='textBody'>{rows}</tbody>
-          </Table>
+    <>
+      <NavbarAdmin />
+
+      <div className='casos'>
+        <div className='casos-container flex'>
+          <div className='casos-title section-title'>
+            PERSONAS QUE SE{' '}
+            <span style={{ color: '#7ac678' }}>CONTACTARON</span>
+          </div>
+          <div className='contactanos__table__container'>
+            <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
+              <thead>
+                <tr>
+                  <th>
+                    <div className='th__title'>Nombre</div>
+                  </th>
+                  <th>
+                    <div className='th__title'>Apellido</div>
+                  </th>
+                  <th>
+                    <div className='th__title'>Correo</div>
+                  </th>
+                  <th>
+                    <div className='th__title'>Celular</div>
+                  </th>
+                  <th>
+                    <div className='th__title'>Mensaje</div>
+                  </th>
+                  <th>
+                    <div className='th__title'>Fecha</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>{rows}</tbody>
+            </Table>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

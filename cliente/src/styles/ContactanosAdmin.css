@@ -1,45 +1,60 @@
-.postulate_admin{
-    color: var(--black);
-    font-family: var(--sen-bold);
-    background-color: var(--white);
-    padding-top: 10px;
+.postulate_admin {
+  color: var(--black);
+  font-family: var(--sen-bold);
+  background-color: var(--white);
+  padding-top: 10px;
 }
 
-.contactanos-admin-title{
-    font-size: 24px;
-    text-transform: capitalize;
-    font-family: var(--sen-bold);
-    margin-bottom: 20px;
+.contactanos-admin-title {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+  margin-bottom: 20px;
 
   width: 500px;
 }
 
-.container_postulate_admin{
-    padding-top: 150px;
-    flex-direction: column;
-    text-align: center;
+.container_postulate_admin {
+  padding-top: 150px;
+  flex-direction: column;
+  text-align: center;
 }
 
-.tabla_contacto_admin{
-    align-content: center;
-    width: 1000px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 14px;
-    width: 90vw;
-    font-family: var(--poppins-regular);
+.tabla_contacto_admin {
+  align-content: center;
+  width: 1000px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 14px;
+  width: 90vw;
+  font-family: var(--poppins-regular);
   background-color: white;
   box-shadow: 12px 14px 41px #00000029;
 }
 
 .text {
-    margin-top: 15px;
-    font-family: var(--sen-bold);
-    font-size: 14px;
+  margin-top: 15px;
+  font-family: var(--sen-bold);
+  font-size: 14px;
 }
 
-.textBody{
-    margin-top: 15px;
-    font-family: var(--sen);
-    font-size: 14px;
+.textBody {
+  margin-top: 15px;
+  font-family: var(--sen);
+  font-size: 14px;
+}
+
+.contactanos__table__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 320px);
+  padding: 0 2rem;
+  margin: 0 2rem;
+  height: 100%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 27px #00000029;
+  border-radius: 15px;
+  opacity: 1;
 }

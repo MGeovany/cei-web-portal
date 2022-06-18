@@ -4,6 +4,7 @@ import { Calendario } from '../componentes/Calendario'
 import '../styles/Calendario.css'
 import { Button, Group, useMantineTheme, MantineProvider } from '@mantine/core'
 import { useModals } from '@mantine/modals'
+import { NavbarAdmin } from '../componentes/NavbarAdmin'
 
 // static data, this will be loaded from a server in production.
 
@@ -48,7 +49,7 @@ export const CalendarioAdmin = () => {
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
-      size: '1580px',
+      size: '1080px',
       innerProps: {}
     })
 
@@ -67,6 +68,8 @@ export const CalendarioAdmin = () => {
 
   return (
     <div>
+      <NavbarAdmin />
+
       <MantineProvider
         theme={{ fontFamily: 'Poppins, sans-serif' }}
         withGlobalStyles

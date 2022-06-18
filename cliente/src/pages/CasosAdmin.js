@@ -7,6 +7,7 @@ import { CasoSalud } from '../componentes/CasoSalud'
 import { CasoTecnologia } from '../componentes/CasoTecnologia'
 import { Button, MantineProvider, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
+import { NavbarAdmin } from '../componentes/NavbarAdmin'
 
 import '../styles/Casos.css'
 
@@ -44,7 +45,7 @@ const casosTec = [
     ]
   },
   {
-    img: 'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    img: 'https://images.pexels.com/photos/12406415/pexels-photo-12406415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     titulo: 'Cerebro de confianza',
     subtitulo: 'Tecnologia',
     desc: 'Save hundreds of admin hours by reducing back and forth',
@@ -73,7 +74,7 @@ const casosTec = [
     ]
   },
   {
-    img: 'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    img: 'https://images.pexels.com/photos/4151965/pexels-photo-4151965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     titulo: 'Xchematic',
     subtitulo: 'Tecnologia',
     desc: 'Save hundreds of admin hours by reducing back and forth',
@@ -81,7 +82,7 @@ const casosTec = [
     integrantes: [
       {
         nombre: 'Juan',
-        img: 'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        img: 'https://images.pexels.com/photos/4151965/pexels-photo-4151965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         email: 'marlongeo1999@gmail.com'
       },
       {
@@ -102,7 +103,7 @@ const casosTec = [
     ]
   },
   {
-    img: 'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    img: 'https://images.pexels.com/photos/6942818/pexels-photo-6942818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     titulo: 'Planets Friend',
     subtitulo: 'Tecnologia',
     desc: 'Save hundreds of admin hours by reducing back and forth',
@@ -263,6 +264,7 @@ export const CasosAdmin = () => {
   }
   return (
     <div>
+      <NavbarAdmin />
       <MantineProvider
         theme={{ fontFamily: 'Poppins, sans-serif' }}
         withGlobalStyles

@@ -17,8 +17,11 @@ import { casoModal } from './modals/casoModal'
 import { Blog } from './pages/Blog'
 import { Postulate } from './pages/Postulate'
 import { Contactanos } from './pages/Contactanos'
+import { PageNotFound } from './pages/PageNotFound'
 
 // Private Route
+import PrivateRoute from './componentes/PrivateRoute'
+import { Dashboard } from './pages/Dashboard'
 import { CasosAdmin } from './pages/CasosAdmin'
 import { BlogAdmin } from './pages/BlogAdmin'
 import { PostulateAdmin } from './pages/PostulateAdmin'
@@ -33,9 +36,6 @@ import { agregarBlogModal } from './modals/agregarBlogModal'
 import { verBlogModal } from './modals/verBlogModal'
 import { CalendarioEvents } from './modals/CalendarioEvents'
 import { AgregarEventos } from './modals/AgregarEventos'
-
-import PrivateRoute from './componentes/PrivateRoute'
-import { PageNotFound } from './pages/PageNotFound'
 
 function App() {
   return (
@@ -54,7 +54,6 @@ function App() {
       >
         <div className='App'>
           <Router>
-            <Navbar />
             <Routes>
               <Route path='/' element={<LandingPage />} />
               <Route path='/calendario' element={<CalendarioPage />} />
@@ -64,7 +63,8 @@ function App() {
               <Route path='/postulate' element={<Postulate />} />
 
               <Route path='/admin' element={<PrivateRoute />}>
-                <Route path='/admin/casos' element={<CasosAdmin />} />
+                <Route path='/admin/' element={<Dashboard />} />
+                <Route path='/admin/casos-de-exito' element={<CasosAdmin />} />
                 <Route path='/admin/calendario' element={<CalendarioAdmin />} />
                 <Route path='/admin/blog' element={<BlogAdmin />} />
                 <Route path='/admin/postulate' element={<PostulateAdmin />} />

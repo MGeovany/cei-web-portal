@@ -222,3 +222,7 @@
 .btn__eliminar {
   color: var(--orange);
 }
+
+.font-sen {
+  font-family: var(--sen-bold);
+}

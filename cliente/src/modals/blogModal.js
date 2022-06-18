@@ -9,11 +9,10 @@ export const blogModal = ({ context, id, innerProps }) => (
           <div className='title-50'>{innerProps.titulo}</div>
         </div>
         <div className='asset__modal__subtitle'>
-          <span style={{ color: '#7ac678', 'font-weight': 'bold' }}>
+          <span style={{ color: '#7ac678', fonWeight: 'bold' }}>
             {innerProps.autor}
           </span>
           <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-            {' '}
             • {innerProps.fecha}
           </span>
         </div>
