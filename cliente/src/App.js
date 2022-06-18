@@ -14,7 +14,14 @@ import { Casos } from './pages/Casos'
 import { casoModal } from './modals/casoModal'
 import { CalendarioEvents } from './modals/CalendarioEvents'
 import { AgregarEventos } from './modals/AgregarEventos'
+<<<<<<< Updated upstream
 import { Postulate } from './pages/Postulate'
+//import { PostulateAdmin } from './pages/PostulateAdmin'
+import { Contactanos } from './pages/Contactanos'
+//import { ContactanosAdmin } from './pages/ContactanosAdmin'
+=======
+import { PostulateAdmin } from './pages/PostulateAdmin'
+>>>>>>> Stashed changes
 
 function App () {
   return (
@@ -28,7 +35,12 @@ function App () {
               <Route path="/calendario" element={<CalendarioPage />} />
               <Route path="/casos-de-exito" element={<Casos />} />
               <Route path="/recursos" element={<Recursos />} />
+<<<<<<< Updated upstream
               <Route path="/postulate" element={<Postulate />} />
+              <Route path="/contactanos" element={<Contactanos />} />
+=======
+              <Route path="/postulate" element={<PostulateAdmin />} />
+>>>>>>> Stashed changes
             </Routes>
             <Footer />
           </Router>

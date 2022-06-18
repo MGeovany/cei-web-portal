@@ -50,7 +50,7 @@ export const CalendarioPage = () => {
       : theme.colors.gray[2],
       overlayOpacity:0.55,
       overlayBlur:3,
-      title:"Lista de Eventos"
+      title: <div className='titulo_modal_agregarEventos'>Eventos</div>
     })
 
     const OpenAddEventos = () =>
@@ -64,7 +64,7 @@ export const CalendarioPage = () => {
       : theme.colors.gray[2],
       overlayOpacity:0.55,
       overlayBlur:3,
-      title:"Lista de Eventos"
+      title: <div className='titulo_modal_agregarEventos'> Agregar Eventos</div>
     })
 
   return (

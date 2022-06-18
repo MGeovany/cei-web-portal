@@ -1,0 +1,12 @@
+.text{
+    margin-top: 15px;
+    font-family: var(--sen-bold);
+    font-size: 12spx;
+}
+
+.titulo_modal_agregarEventos{
+    margin-top: 15px;
+    font-family: var(--sen-bold);
+    font-size: 22px;
+    align-items: center;
+}

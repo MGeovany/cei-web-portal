@@ -1,38 +1,36 @@
-.postulate {
+.contactanos{
     color: var(--black);
   font-family: var(--sen-bold);
   background-color: var(--white);
   padding-top: 10px;
-  }
-  
-  .container_postulate{
+}
+
+.container_contactanos{
     padding-top: 150px;
     flex-direction: column;
     text-align: center;
-  }
+}
 
-  .form_postulate{
-    margin-top: 5px;
+.form_contactanos{
+    align-content: center;
     width: 600px;
   }
 
-  .text {
-    margin-top: 25px;
+.text {
+    margin-top: 15px;
     font-family: var(--sen-bold);
     font-size: 14px;
 
-  }
+}
 
-  .titulo_postulate{
+.titulo_contactanos{
     font-size: 24px;
     text-transform: capitalize;
-    font-family: var(--sen-bold);
-    margin-bottom: 50px;
-
+    margin-bottom: 40px;
   width: 500px;
   }
 
-  .btn__postulate {
+.btn_contacto{
     color: var(--white) !important;
     background-color: var(--green-regular);
     font-family: var(--sen-bold);
@@ -47,4 +45,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
+  
