@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { CasoCard } from './CasoCard'
 import PropTypes from 'prop-types'
@@ -20,7 +22,8 @@ export const CasoComercial = (props) => {
     </div>
   )
 }
-
+/*
 CasoComercial.propTypes = {
   casosCom: PropTypes.string.isRequired
 }
+ */

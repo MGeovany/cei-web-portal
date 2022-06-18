@@ -1,8 +1,12 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { CasoComercial } from '../componentes/CasoComercial'
 import { CasoSocial } from '../componentes/CasoSocial'
 import { CasoSalud } from '../componentes/CasoSalud'
 import { CasoTecnologia } from '../componentes/CasoTecnologia'
+import { Button, MantineProvider, useMantineTheme } from '@mantine/core'
+import { useModals } from '@mantine/modals'
 
 import '../styles/Casos.css'
 
@@ -223,24 +227,89 @@ const casosSoc = [
   }
 ]
 
-export const Casos = () => {
+export const CasosAdmin = () => {
+  const modals = useModals()
+  const theme = useMantineTheme()
+
+  const agregarCasoModal = () => {
+    const id = modals.openContextModal('agregarCasoModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'xl',
+      size: '1580px',
+      innerProps: {}
+    })
+  }
+  const verCasoModal = () => {
+    const id = modals.openContextModal('verCasoModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'xl',
+      overflow: 'outside',
+      size: '1580px',
+
+      innerProps: {}
+    })
+  }
   return (
     <div>
-      <div className='casos'>
-        <div className='casos-container flex'>
-          <div className='casos-title section-title'>
-            CASOS QUE <span style={{ color: '#7AC678' }}>INSPIRAN🥇</span>
-          </div>
-          <div className='casos-content'>
-            <div className='casos-section'>
-              <CasoTecnologia casosTec={casosTec} />
-              <CasoComercial casosCom={casosCom} />
-              <CasoSocial casosSoc={casosSoc} />
-              <CasoSalud casosSal={casosSal} />
+      <MantineProvider
+        theme={{ fontFamily: 'Poppins, sans-serif' }}
+        withGlobalStyles
+      >
+        <div className='casos'>
+          <div className='casos-container flex'>
+            <div className='casos-title section-title'>
+              Casos que Inspiran🥇
+            </div>
+            <div className='casos-admin-btns'>
+              <div>
+                <Button
+                  radius='xs'
+                  size='md'
+                  uppercase
+                  variant='gradient'
+                  gradient={{ from: 'teal', to: 'lime', deg: 105 }}
+                  onClick={agregarCasoModal}
+                >
+                  Agregar Casos
+                </Button>
+              </div>
+              <div>
+                <Button
+                  radius='xs'
+                  size='md'
+                  uppercase
+                  variant='outline'
+                  color='green'
+                  onClick={verCasoModal}
+                >
+                  Ver Casos
+                </Button>
+              </div>
+            </div>
+
+            <div className='casos-content'>
+              <div className='casos-section'>
+                <CasoTecnologia casosTec={casosTec} />
+                <CasoComercial casosCom={casosCom} />
+                <CasoSocial casosSoc={casosSoc} />
+                <CasoSalud casosSal={casosSal} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </MantineProvider>
     </div>
   )
 }

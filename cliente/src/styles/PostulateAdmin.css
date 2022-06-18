@@ -1,63 +1,45 @@
-.postulate_admin{
-<<<<<<< Updated upstream
-    color: var(--black);
-    font-family: var(--sen-bold);
-    background-color: var(--white);
-    padding-top: 10px;
+.postulate_admin {
+  color: var(--black);
+  font-family: var(--sen-bold);
+  background-color: var(--white);
+  padding-top: 10px;
 }
 
-.postulate-admin-title{
-    font-size: 24px;
-    text-transform: capitalize;
-    font-family: var(--sen-bold);
-    margin-bottom: 20px;
+.postulate-admin-title {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+  margin-bottom: 20px;
 
   width: 500px;
 }
 
-.container_postulate_admin{
-    padding-top: 150px;
-    flex-direction: column;
-    text-align: center;
+.container_postulate_admin {
+  padding-top: 150px;
+  flex-direction: column;
+  text-align: center;
 }
 
-.tabla_postulate_admin{
-    align-content: center;
-    width: 1000px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 14px;
-    width: 90vw;
-    font-family: var(--poppins-regular);
+.tabla_postulate_admin {
+  align-content: center;
+  width: 1000px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 14px;
+  width: 90vw;
+  font-family: var(--poppins-regular);
   background-color: white;
   box-shadow: 12px 14px 41px #00000029;
 }
 
 .text {
-    margin-top: 15px;
-    font-family: var(--sen-bold);
-    font-size: 14px;
+  margin-top: 15px;
+  font-family: var(--sen-bold);
+  font-size: 14px;
 }
 
-.textBody{
-    margin-top: 15px;
-    font-family: var(--sen);
-    font-size: 14px;
-=======
-    margin-top: 50px;
-}
-
-.section-title{
-    margin-top: 50px;
-    align-items: center;
-    font-size: 24px;
-    text-transform: capitalize;
-    font-family: var(--sen-bold);
-    margin-bottom: 50px;
-}
-
-
-.calendario-title{
-    padding-top: 50px;
->>>>>>> Stashed changes
+.textBody {
+  margin-top: 15px;
+  font-family: var(--sen);
+  font-size: 14px;
 }
