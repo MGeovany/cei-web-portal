@@ -1,11 +1,11 @@
 .navbar {
   font-family: var(--sen-bold);
-  height: 80px;
+  height: 7%;
   width: 100%;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 
   background-color: transparent;
@@ -18,16 +18,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 400px;
 }
 
 .navbar__link {
-  margin: 0 110px 0 0;
+  margin: 0 8rem 0 0;
 
   font-weight: 700;
   font-size: 18px;
 
   position: relative;
+  width: 130px;
+  text-align: center;
+}
+
+.navbar > div:first-child {
+  padding-right: 150px;
 }
 
 .btn__contactanos {
