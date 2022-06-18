@@ -1,0 +1,43 @@
+.notfound {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+
+  background-color: white;
+  z-index: 100;
+}
+
+.notfound__container {
+  margin-top: 5rem;
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.notfound__container > img {
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notfound__title {
+  margin: 5rem 0 0rem 0;
+  font-size: 4rem;
+  font-family: 'Sen', sans-serif;
+  color: #333;
+}
+
+.notfound__container > span {
+  font-size: 4rem;
+  font-family: 'Sen', sans-serif;
+  color: #333;
+}

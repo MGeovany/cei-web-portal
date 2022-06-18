@@ -1,7 +1,7 @@
 .navbar {
   font-family: var(--sen-bold);
-  height: 7%;
-  width: 100%;
+  height: 70px;
+  min-width: 1900px;
 
   display: flex;
   flex-direction: row;

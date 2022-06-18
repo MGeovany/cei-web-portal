@@ -35,6 +35,7 @@ import { CalendarioEvents } from './modals/CalendarioEvents'
 import { AgregarEventos } from './modals/AgregarEventos'
 
 import PrivateRoute from './componentes/PrivateRoute'
+import { PageNotFound } from './pages/PageNotFound'
 
 function App() {
   return (
@@ -59,8 +60,8 @@ function App() {
               <Route path='/calendario' element={<CalendarioPage />} />
               <Route path='/casos-de-exito' element={<Casos />} />
               <Route path='/blog' element={<Blog />} />
-              <Route path='/postulate' element={<Postulate />} />
               <Route path='/contactanos' element={<Contactanos />} />
+              <Route path='/postulate' element={<Postulate />} />
 
               <Route path='/admin' element={<PrivateRoute />}>
                 <Route path='/admin/casos' element={<CasosAdmin />} />
@@ -72,6 +73,7 @@ function App() {
                   element={<ContactanosAdmin />}
                 />
               </Route>
+              <Route path='*' element={<PageNotFound />} />
             </Routes>
             <Footer />
           </Router>

@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Contactanos.css'
-import { TextInput, Button, Group, Box } from '@mantine/core'
+import { TextInput, Textarea } from '@mantine/core'
 import { useForm } from '@mantine/form'
 
 export const Contactanos = () => {
@@ -18,46 +18,53 @@ export const Contactanos = () => {
       <div className='contactanos'>
         <div className='container_contactanos flex'>
           <div className='section-title titulo_contactanos'>
-            FORMULARIO DE <span style={{ color: '#7ac678' }}> CONTACTO🎯</span>
+            PONTE EN <span style={{ color: '#7ac678' }}>CONTACTO📢</span>
           </div>
-          <Box sx={{ maxWidth: 800 }} mx='auto'>
+          <div className='contactanos-form'>
             <form
-              className='form_contactanos'
+              className='form-contactanos'
               onSubmit={form.onSubmit((values) => console.log(values))}
             >
-              <TextInput
-                className='text'
-                required
-                label='Nombres:'
-                placeholder='Ingrese su nombre completo'
-                {...form.getInputProps('apellidos_postulante')}
-              />
-              <TextInput
-                className='text'
-                required
-                label='Correo Electronico: '
-                placeholder='Ingrese su correo'
-                {...form.getInputProps('correo')}
-              />
-              <TextInput
-                className='text'
-                required
-                label='Numero de Telefono / Celular:'
-                placeholder='Ingrese su numero de telefono'
-                {...form.getInputProps('Celular:')}
-              />
-              <TextInput
-                className='text'
-                required
-                label='Comentario:'
-                placeholder='Comentario adicional'
-                {...form.getInputProps('Comentario')}
-              />
-              <Group position='right' mt='md'>
-                <Button className='btn_contacto'>Enviar</Button>
-              </Group>
+              <div className='form-input'>
+                <div className='form-seccion'>
+                  <TextInput
+                    className='text'
+                    required
+                    label='Tu Nombre:'
+                    placeholder='Ingresa tu nombre'
+                  />
+                  <TextInput
+                    className='text'
+                    required
+                    label='Correo Electronico: '
+                    placeholder='Ingrese su correo'
+                  />
+                  <TextInput
+                    className='text'
+                    required
+                    label='Tu Numero:'
+                    placeholder='Ingrese su numero de telefono'
+                  />
+                </div>
+                <div className='form-seccion'>
+                  <Textarea
+                    placeholder='Tus Comentarios Aqui'
+                    label='Comentarios:'
+                    className='contactanos-textarea'
+                    required
+                    minRows={7}
+                  />
+                  <div className='contactanos-btns'>
+                    <div className='btne'>Enviar</div>
+                    <div className='btnd'>Descartar</div>
+                  </div>
+                </div>
+              </div>
+              <div className='form-socials'>
+                <div className='form-social-seccion'></div>
+              </div>
             </form>
-          </Box>
+          </div>
         </div>
       </div>
     </div>

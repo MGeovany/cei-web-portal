@@ -1,7 +1,8 @@
 import React from 'react'
-import { TextInput, Button, Group, Box } from '@mantine/core'
+import { TextInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
 import { DatePicker } from '@mantine/dates'
+import '../styles/Calendario.css'
 
 export const AgregarEventos = () => {
   const form = useForm({
@@ -13,30 +14,34 @@ export const AgregarEventos = () => {
   })
 
   return (
-    <Box sm={{ maxWidth: 300 }} mx='auto'>
-      <form onSubmit={form.onSubmit((values) => console.log(values))}>
-        <TextInput
-          required
-          label='Evento'
-          placeholder='Nombre del evento'
-          {...form.getInputProps('evento')}
-        />
-        <TextInput
-          required
-          label='Descripcion'
-          placeholder='Descripcion del evento'
-          {...form.getInputProps('descrip_event')}
-        />
-        <DatePicker
-          placeholder='Fecha del Evento'
-          label='Fecha_evento'
-          required
-        />
-
-        <Group position='right' mt='md'>
-          <Button type='submit'>Agregar</Button>
-        </Group>
-      </form>
-    </Box>
+    <>
+      <div className='cal__asset__modal '>
+        <div className='cal__modal__title'>
+          AGREGAR NUEVO <span style={{ color: '#7AC678' }}>EVENTO</span>
+        </div>
+        <form className='calendario__form'>
+          <div>
+            <TextInput
+              required
+              label='Evento'
+              placeholder='Nombre del evento'
+              {...form.getInputProps('evento')}
+            />
+          </div>
+          <TextInput
+            required
+            label='Descripcion'
+            placeholder='Descripcion del evento'
+            {...form.getInputProps('descrip_event')}
+          />
+          <DatePicker
+            placeholder='Fecha del Evento'
+            label='Fecha_evento'
+            required
+          />
+          <div className='cal__caso__button'>Agregar Caso</div>
+        </form>
+      </div>
+    </>
   )
 }

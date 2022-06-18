@@ -59,23 +59,51 @@
   opacity: 0.2;
 }
 
-.grupo_btn_calendar{
+.grupo_btn_calendar {
   padding-top: 40px;
 }
 
-.btn_modals{
+.btn_modals {
   color: var(--white) !important;
-    background-color: var(--green-regular);
-  
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 11px;
-    opacity: 1;
-    font-size: medium;
-    width: 120px;
-    height: 43px;
-    margin-left: 20px;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--green-regular);
+
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 11px;
+  opacity: 1;
+  font-size: medium;
+  width: 120px;
+  height: 43px;
+  margin-left: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cal__asset__modal {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+}
+
+.calendario__form {
+  width: 100%;
+}
+
+.cal__modal__title {
+  font-family: var(--sen-bold);
+  font-size: 20px;
+  color: var(--black);
+
+  text-align: start;
+  margin-bottom: 30px;
+}
+
+.calendario__form > div {
+  padding-bottom: 15px;
+}
+.cal__caso__button {
+  cursor: pointer;
+  color: var(--green-regular);
+  font-family: var(--sen-bold);
 }

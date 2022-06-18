@@ -270,7 +270,7 @@ export const CasosAdmin = () => {
         <div className='casos'>
           <div className='casos-container flex'>
             <div className='casos-title section-title'>
-              Casos que Inspiran🥇
+              CASOS QUE <span style={{ color: '#7ac678' }}>INSPIRAN🥇</span>
             </div>
             <div className='casos-admin-btns'>
               <div>

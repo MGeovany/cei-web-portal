@@ -29,7 +29,7 @@ export const CasoCard = (props) => {
     })
 
   return (
-    <div className='card-container'>
+    <div className='card-container' onClick={openCasoModal}>
       <div style={{ width: 400, margin: '10px 0 10px', height: '100%' }}>
         <Card shadow='sm' p='lg'>
           <Card.Section>
