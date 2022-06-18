@@ -11,9 +11,9 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    "nombre": "marlon",
-    "email": "marlon@gmail.com",
-    "celular": "77889944",
-    "comentario": "marlon",
-    "fecha_registro": "20220618"
+    "nombre": "diego",
+    "email": "diego@gmail.com",
+    "celular": "77887799",
+    "comentario": "diego montoya",
+    "fecha_registro": "2022-06-18 00:00:00.000"
 }
