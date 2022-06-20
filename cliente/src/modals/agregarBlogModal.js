@@ -7,7 +7,7 @@ export const agregarBlogModal = ({ context, id, innerProps }) => (
   <>
     <div className='add__asset__modal asset__col'>
       <div className='asset__modal__title'>
-        COMPARTIR NUEVO <span style={{ color: '#7AC678' }}>RECURSO</span>
+        COMPARTIR NUEVO <span style={{ color: '#4A79CB' }}>RECURSO</span>
       </div>
       <BlogForm />
     </div>

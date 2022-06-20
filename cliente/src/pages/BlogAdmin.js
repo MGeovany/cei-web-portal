@@ -55,7 +55,7 @@ export const BlogAdmin = () => {
         <div className='blog casos'>
           <div className='blog-container flex'>
             <div className='casos-title section-title'>
-              NUESTRO<span style={{ color: '#7AC678' }}> BlOG 🛸</span>
+              NUESTRO<span style={{ color: '#4A79CB' }}> BlOG 🛸</span>
               <div className='casos-subtitle'>RECURSOS & CONOCIMIENTOS</div>
               <div className='casos-admin-btns'>
                 <div>
@@ -64,7 +64,7 @@ export const BlogAdmin = () => {
                     size='md'
                     uppercase
                     variant='gradient'
-                    gradient={{ from: 'teal', to: 'lime', deg: 105 }}
+                    gradient={{ from: '#90b7e3', to: '#4A79CB', deg: 105 }}
                     onClick={agregarBlogModal}
                   >
                     Agregar Blog
@@ -76,7 +76,7 @@ export const BlogAdmin = () => {
                     size='md'
                     uppercase
                     variant='outline'
-                    color='green'
+                    color='#4A79CB'
                     onClick={verBlogModal}
                   >
                     Ver Blogs

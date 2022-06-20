@@ -24,7 +24,7 @@ export const casoModal = ({ context, id, innerProps }) => (
                 </div>
 
                 <div className='integrante__name flex'>{integrante.nombre}</div>
-                <div className='integrante__email' style={{ color: '#6BBF68' }}>
+                <div className='integrante__email' style={{ color: '#4A79CB' }}>
                   {integrante.email}
                 </div>
               </div>
