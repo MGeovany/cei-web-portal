@@ -19,7 +19,7 @@ export const NuestroEquipo = () => {
               <p>Save hundreds of admin hours by reducing back and forth</p>
               <hr />
               <div className="card-read-more">
-                <span style={{ color: '#7AC678' }}>Leer Mas</span>
+                <span style={{ color: '#4A79CB' }}>Leer Mas</span>
               </div>
             </div>
           </div>
@@ -35,7 +35,7 @@ export const NuestroEquipo = () => {
               <p>Save hundreds of admin hours by reducing back and forth</p>
               <hr />
               <div className="card-read-more">
-                <span style={{ color: '#7AC678' }}>Leer Mas</span>
+                <span style={{ color: '#4A79CB' }}>Leer Mas</span>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ export const NuestroEquipo = () => {
               <p>Save hundreds of admin hours by reducing back and forth</p>
               <hr />
               <div className="card-read-more">
-                <span style={{ color: '#7AC678' }}>Leer Mas</span>
+                <span style={{ color: '#4A79CB' }}>Leer Mas</span>
               </div>
             </div>
           </div>

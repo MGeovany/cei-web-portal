@@ -6,7 +6,7 @@ export const QuienesSomos = () => {
     <div>
       <div className="quienes-somos flex">
         <div className="section-title">
-          QUIENES <span style={{ color: '#7AC678' }}>SOMOS</span>🍃
+          QUIENES <span style={{ color: '#4A79CB' }}>SOMOS</span>🍃
         </div>
         <div className="quienes-somos-text flex">
           <div className="quienes-somos-text-title">
@@ -16,7 +16,7 @@ export const QuienesSomos = () => {
             </div>
           </div>
           <div className="quienes-somos-text-cnt">
-            Es un espacio <span style={{ color: '#7AC678' }}>creativo</span>{' '}
+            Es un espacio <span style={{ color: '#4A79CB' }}>creativo</span>{' '}
             ideal para que emprendedores, soñadores y personas innovadoras se
             conecten y a través de procesos de incubación y aceleración puedan
             <span style={{ color: '#4166DE' }}> hacer realidad sus sueños.</span>{' '}
@@ -27,7 +27,7 @@ export const QuienesSomos = () => {
               mentores certificados
             </span>{' '}
             ayudan a estudiantes a{' '}
-            <span className="b" style={{ color: '#7AC678' }}>
+            <span className="b" style={{ color: '#4A79CB' }}>
               crecer {''}
             </span>
             con sus proyectos, a que no se desmotiven y sigan luchando por sus

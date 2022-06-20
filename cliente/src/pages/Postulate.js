@@ -41,7 +41,7 @@ export const Postulate = () => {
         <div className='container_postulate flex'>
           <div className='section-title '>
             POSTULA TU
-            <span style={{ color: '#7ac678' }}> IDEA💡</span>
+            <span style={{ color: '#4A79CB' }}> IDEA💡</span>
           </div>
           <form className='form-postulate'>
             <div className='postulate-grid'>

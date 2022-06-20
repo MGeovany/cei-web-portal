@@ -84,7 +84,7 @@ export const BlogsRecientes = () => {
         <div className='blog-section-title'>
           Blog recientemente publicados
           <span>
-            <Arrow height={32} width={30} fill='#7ac678' />
+            <Arrow height={32} width={30} fill='#4A79CB' />
           </span>
         </div>
 

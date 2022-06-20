@@ -11,10 +11,10 @@
   --beige: #fff9f2;
   --gray: #b1b1b1;
   --pink: #ee8b9a;
-  --orange: #fe7649;
-  --green-light: #9acd32;
-  --green-regular: #7ac678;
-  --green-dark: #00674b;
+  --orange: rgb(231, 109, 109);
+  --blue-light: #90b7e3;
+  --green-regular: #4A79CB;
+  --blue-dark: #072958;
   --green-extra-dark: #014421;
   --black: #292c34;
 }

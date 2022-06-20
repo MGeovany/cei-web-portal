@@ -153,7 +153,7 @@ export const PostulateAdmin = () => {
       <div className='casos'>
         <div className='casos-container flex'>
           <div className='casos-title section-title'>
-            IDEAS <span style={{ color: '#7ac678' }}>POSTULADAS</span>
+            IDEAS <span style={{ color: '#4A79CB' }}>POSTULADAS</span>
           </div>
           <div className='table__container'>
             <Table fontSize='md' highlightOnHover verticalSpacing='xl'>

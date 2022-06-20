@@ -232,7 +232,7 @@ export const Casos = () => {
       <div className='casos'>
         <div className='casos-container flex'>
           <div className='casos-title section-title'>
-            CASOS QUE <span style={{ color: '#7AC678' }}>INSPIRAN🥇</span>
+            CASOS QUE <span style={{ color: '#4A79CB' }}>INSPIRAN🥇</span>
           </div>
           <div className='casos-content'>
             <div className='casos-section'>

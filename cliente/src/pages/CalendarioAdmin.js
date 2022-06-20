@@ -77,7 +77,7 @@ export const CalendarioAdmin = () => {
         <div className='casos '>
           <div className='casos-container flex'>
             <div className='casos-title section-title'>
-              CALENDARIO DE <span style={{ color: '#7ac678' }}> EVENTOS🎯</span>{' '}
+              CALENDARIO DE <span style={{ color: '#4A79CB' }}> EVENTOS🎯</span>{' '}
             </div>
             <div className='casos-admin-btns'>
               <div>
@@ -86,7 +86,7 @@ export const CalendarioAdmin = () => {
                   size='md'
                   uppercase
                   variant='gradient'
-                  gradient={{ from: 'teal', to: 'lime', deg: 105 }}
+                  gradient={{ from: '#90b7e3', to: '#4A79CB', deg: 105 }}
                   onClick={OpenAddEventos}
                 >
                   Agregar Evento
@@ -98,7 +98,7 @@ export const CalendarioAdmin = () => {
                   size='md'
                   uppercase
                   variant='outline'
-                  color='green'
+                  color='#4A79CB'
                   onClick={OpenEventosCalendar}
                 >
                   Ver Eventos

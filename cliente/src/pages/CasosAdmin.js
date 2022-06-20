@@ -272,7 +272,7 @@ export const CasosAdmin = () => {
         <div className='casos'>
           <div className='casos-container flex'>
             <div className='casos-title section-title'>
-              CASOS QUE <span style={{ color: '#7ac678' }}>INSPIRAN🥇</span>
+              CASOS QUE <span style={{ color: '#4A79CB' }}>INSPIRAN🥇</span>
             </div>
             <div className='casos-admin-btns'>
               <div>
@@ -281,7 +281,7 @@ export const CasosAdmin = () => {
                   size='md'
                   uppercase
                   variant='gradient'
-                  gradient={{ from: 'teal', to: 'lime', deg: 105 }}
+                  gradient={{ from: '#90b7e3', to: '#4A79CB', deg: 105 }}
                   onClick={agregarCasoModal}
                 >
                   Agregar Casos
@@ -293,7 +293,7 @@ export const CasosAdmin = () => {
                   size='md'
                   uppercase
                   variant='outline'
-                  color='green'
+                  color='#4A79CB'
                   onClick={verCasoModal}
                 >
                   Ver Casos

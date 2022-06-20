@@ -20,7 +20,7 @@ export const Home = () => {
             </Link>
             <Link to='/blog'>
               <div className='home__btn__blog'>
-                Ver Nuestro Blog <Arrow fill='#7ac678' />{' '}
+                Ver Nuestro Blog <Arrow fill='#4a79cb' />{' '}
               </div>
             </Link>
           </div>

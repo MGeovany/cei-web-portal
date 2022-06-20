@@ -17,7 +17,7 @@ export const AgregarEventos = () => {
     <>
       <div className='cal__asset__modal '>
         <div className='cal__modal__title'>
-          AGREGAR NUEVO <span style={{ color: '#7AC678' }}>EVENTO</span>
+          AGREGAR NUEVO <span style={{ color: '#4A79CB' }}>EVENTO</span>
         </div>
         <form className='calendario__form'>
           <div>

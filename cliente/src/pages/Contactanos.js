@@ -20,7 +20,7 @@ export const Contactanos = () => {
       <div className='contactanos'>
         <div className='container_contactanos flex'>
           <div className='section-title titulo_contactanos'>
-            PONTE EN <span style={{ color: '#7ac678' }}>CONTACTO📢</span>
+            PONTE EN <span style={{ color: '#4A79CB' }}>CONTACTO📢</span>
           </div>
           <div className='contactanos-form'>
             <form

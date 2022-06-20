@@ -50,12 +50,12 @@
   font-size: 15px;
   white-space: wrap;
 
-  background-color: var(--green-dark) !important;
+  background-color: var(--blue-dark) !important;
   opacity: 0.8;
 }
 
 .rbc-today {
-  background-color: var(--green-light) !important;
+  background-color: var(--blue-light) !important;
   opacity: 0.2;
 }
 

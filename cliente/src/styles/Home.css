@@ -67,8 +67,7 @@
 }
 
 .home__btn__blog {
-  color: var(--green-regular);
-
+  color: #4A79CB;
   margin: 10px 5px;
   font-size: 18px;
   font-family: var(--sen-bold);
