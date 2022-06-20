@@ -18,7 +18,7 @@ export const CasoCard = (props) => {
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
-      size: '1580px',
+      size: 'calc(100% - 6rem)',
       innerProps: {
         titulo: props.caso.titulo,
         subtitulo: props.caso.subtitulo,

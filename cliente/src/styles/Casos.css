@@ -89,7 +89,14 @@
   margin: 10px 0 30px;
   color: var(--gray);
   opacity: 0.6;
+  font-weight: 500;
   font-size: 16px;
+}
+
+@media screen and (max-width: 1270px) {
+  .casos-section-content {
+    justify-content: space-around;
+  }
 }
 
 .asset__modal__body {

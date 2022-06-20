@@ -86,7 +86,7 @@ export const CalendarioAdmin = () => {
                   size='md'
                   uppercase
                   variant='gradient'
-                  gradient={{ from: '#90b7e3', to: '#4A79CB', deg: 105 }}
+                  gradient={{ from: 'indigo', to: 'cyan' }}
                   onClick={OpenAddEventos}
                 >
                   Agregar Evento
@@ -98,7 +98,6 @@ export const CalendarioAdmin = () => {
                   size='md'
                   uppercase
                   variant='outline'
-                  color='#4A79CB'
                   onClick={OpenEventosCalendar}
                 >
                   Ver Eventos

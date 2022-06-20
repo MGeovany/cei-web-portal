@@ -96,3 +96,9 @@
 
   position: relative;
 }
+
+@media screen and (max-width: 990px) {
+  .navbar {
+    justify-content: center;
+  }
+}

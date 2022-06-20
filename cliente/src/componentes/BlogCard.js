@@ -21,7 +21,7 @@ export const BlogCard = ({ blog }) => {
       padding: 'xl',
       overflow: 'outside',
 
-      size: '1580px',
+      size: 'calc(100% - 6rem)',
       innerProps: {
         titulo: blog.title,
         autor: blog.autor,
@@ -39,7 +39,7 @@ export const BlogCard = ({ blog }) => {
           <div className='card-50'>
             <div className='blog__card__content__title'>{blog.title}</div>
             <button className='blog__card__content__button '>
-              <span style={{ color: '#4A79CB' }}>{blog.autor} </span>
+              <span style={{ color: '#4a79cb' }}>{blog.autor} </span>
               <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
                 • {blog.fecha}
               </span>

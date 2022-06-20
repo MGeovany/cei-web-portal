@@ -242,7 +242,7 @@ export const CasosAdmin = () => {
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
-      size: '1580px',
+      size: 'calc(100% - 6rem)',
       innerProps: {}
     })
   }
@@ -257,7 +257,7 @@ export const CasosAdmin = () => {
       centered: true,
       padding: 'xl',
       overflow: 'outside',
-      size: '1580px',
+      size: 'calc(100% - 6rem)',
 
       innerProps: {}
     })
@@ -281,7 +281,7 @@ export const CasosAdmin = () => {
                   size='md'
                   uppercase
                   variant='gradient'
-                  gradient={{ from: '#90b7e3', to: '#4A79CB', deg: 105 }}
+                  gradient={{ from: 'indigo', to: 'cyan' }}
                   onClick={agregarCasoModal}
                 >
                   Agregar Casos

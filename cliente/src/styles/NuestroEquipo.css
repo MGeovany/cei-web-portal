@@ -9,6 +9,11 @@
   flex-direction: row;
   min-width: 90%;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.nuestro-equipo-cards > div {
+  margin: 0.5rem;
 }
 
 .nuestro-equipo-card {
@@ -54,4 +59,12 @@
 .card-read-more {
   cursor: pointer;
   font-weight: bold;
+}
+
+@media screen and (max-width: 1210px) {
+  .nuestro-equipo {
+    flex-direction: column;
+    height: 100%;
+    padding-top: 5rem;
+  }
 }
