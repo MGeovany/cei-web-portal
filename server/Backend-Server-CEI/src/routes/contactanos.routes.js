@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { createNewContactanos, getContactanos } from "../controllers/contactanos.controller";
+import { createNewContactanos, getContactanos, getContactanosByID, deleteContactanos, updateContactanos } from "../controllers/contactanos.controller";
 
 const router = Router();
 
@@ -9,10 +9,10 @@ router.get("/contactanos", getContactanos);
 router.post("/contactanos", createNewContactanos);
 
 //Este sera para obtener productos por ID
-router.get("/contactanos");
+router.get("/contactanos/:id", getContactanosByID);
 
-router.delete("/contactanos");
+router.delete("/contactanos/:id", deleteContactanos);
 
-router.put("/contactanos");
+router.put("/contactanos/:id", updateContactanos);
 
 export default router;

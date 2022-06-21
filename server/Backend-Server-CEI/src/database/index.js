@@ -1,2 +1,2 @@
 export * from './connection'
-export {queries} from './querys'
+export {queries,queries2} from './querys'

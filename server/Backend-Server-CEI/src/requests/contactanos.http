@@ -1,9 +1,12 @@
 
-@api = http://localhost:4000/contactanos
+@api = http://localhost:4000/acceso
 
 
 GET {{api}}
 
+###
+
+GET {{api}}/2
 
 ###
 POST {{api}}
@@ -11,9 +14,19 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    "nombre": "diego",
-    "email": "diego@gmail.com",
-    "celular": "77887799",
-    "comentario": "diego montoya",
-    "fecha_registro": "2022-06-18 00:00:00.000"
+    
+    "id_user": "1",
+    "token": "dadadjkndkenekhsdksdfsf506464608461630adadadsaas"
+}
+
+###
+DELETE  {{api}}/1
+
+###
+PUT {{api}}/2
+Content-Type: application/json
+
+{
+    "name_rol": "Admin",
+    "estado": "N"
 }
