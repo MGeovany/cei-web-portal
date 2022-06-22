@@ -41,7 +41,7 @@ export const Postulate = () => {
         <div className='container_postulate flex'>
           <div className='section-title '>
             POSTULA TU
-            <span style={{ color: '#4A79CB' }}> IDEA💡</span>
+            <span style={{ color: '#e1575f' }}> IDEA💡</span>
           </div>
           <form className='form-postulate'>
             <div className='postulate-grid'>
@@ -192,7 +192,7 @@ export const Postulate = () => {
               <div className='postulate-grid-item'></div>
               <div className='postulate-grid-item'>
                 <Group position='right' mt='md'>
-                  <Button className='btn__postulate'>Postularse</Button>
+                  <Button className='btn__postulatef'>Postularse</Button>
                   <div className='btn__descartar'>Descartar</div>
                 </Group>
               </div>

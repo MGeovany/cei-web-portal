@@ -11,7 +11,7 @@ export const CasoTecnologia = (props) => {
     <div className='casos-tecnologia'>
       <div className='casos-container-section'>
         <div className='casos-section-title'>TECNOLOGIA</div>
-        <div className='casos-section-content'>
+        <div className='casos-section-content slides'>
           {casosTec.map((caso, index) => (
             <div key={index}>
               <CasoCard caso={caso} />

@@ -272,7 +272,7 @@ export const CasosAdmin = () => {
         <div className='casos'>
           <div className='casos-container flex'>
             <div className='casos-title section-title'>
-              CASOS QUE <span style={{ color: '#4A79CB' }}>INSPIRAN🥇</span>
+              CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
             </div>
             <div className='casos-admin-btns'>
               <div>
@@ -293,7 +293,7 @@ export const CasosAdmin = () => {
                   size='md'
                   uppercase
                   variant='outline'
-                  color='#4A79CB'
+                  color='#e1575f'
                   onClick={verCasoModal}
                 >
                   Ver Casos

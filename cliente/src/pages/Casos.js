@@ -34,9 +34,9 @@ const casosTec = [
         email: 'araceli.cro@hotmail.com'
       },
       {
-        nombre: 'Donnie B Mitchell',
-        img: 'https://www.fakepersongenerator.com/Face/male/male1084960869262.jpg',
-        email: 'alex_altenw@gmail.com'
+        nombre: 'Idell J Thomas',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
+        email: 'araceli.cro@hotmail.com'
       }
     ]
   },
@@ -232,7 +232,7 @@ export const Casos = () => {
       <div className='casos'>
         <div className='casos-container flex'>
           <div className='casos-title section-title'>
-            CASOS QUE <span style={{ color: '#4A79CB' }}>INSPIRAN🥇</span>
+            CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
           </div>
           <div className='casos-content'>
             <div className='casos-section'>

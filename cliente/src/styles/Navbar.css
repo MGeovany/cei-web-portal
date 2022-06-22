@@ -45,12 +45,12 @@
 }
 
 .btn__contactanos {
-  color: var(--green-regular) !important;
+  color: var(--secondary-color) !important;
 }
 
 .btn__postulate {
   color: var(--white) !important;
-  background-color: var(--green-regular);
+  background-color: var(--secondary-color);
 
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 11px;
@@ -77,7 +77,7 @@
 
 .dot {
   transition: all 0.3s ease;
-  color: var(--green-regular) !important;
+  color: var(--secondary-color) !important;
 }
 
 .dot::after {
@@ -88,7 +88,7 @@
   border-radius: 100%;
   left: 45%;
   top: 2rem;
-  background-color: var(--green-regular);
+  background-color: var(--secondary-color);
 }
 
 .navbar__link:hover {
