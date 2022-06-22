@@ -77,7 +77,7 @@ export const CalendarioAdmin = () => {
         <div className='casos '>
           <div className='casos-container flex'>
             <div className='casos-title section-title'>
-              CALENDARIO DE <span style={{ color: '#4A79CB' }}> EVENTOS🎯</span>{' '}
+              CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>{' '}
             </div>
             <div className='casos-admin-btns'>
               <div>

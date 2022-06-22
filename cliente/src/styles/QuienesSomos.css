@@ -41,7 +41,7 @@
 .quienes-somos-text-title > div > hr {
   width: 120px;
   border-radius: 5px;
-  border: 2px solid var(--green-regular);
+  border: 2px solid var(--secondary-color);
 }
 .b {
   font-weight: bolder;

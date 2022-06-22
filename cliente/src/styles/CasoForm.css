@@ -84,7 +84,7 @@
 
 .form__caso__button {
   padding-top: 100px;
-  color: var(--green-regular);
+  color: var(--secondary-color);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }

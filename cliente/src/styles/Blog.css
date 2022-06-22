@@ -50,7 +50,7 @@
 .blog__card__content__button {
   text-align: left;
   padding: 10px;
-  color: var(--green-regular);
+  color: var(--primary-color);
   width: 100%;
 
   font-family: var(--sen-bold);
@@ -106,7 +106,7 @@
   font-family: var(--poppins-regular);
   font-weight: 900;
   font-size: 17px;
-  color: var(--green-regular);
+  color: var(--secondary-color);
   cursor: pointer;
   margin-top: 20px;
 }

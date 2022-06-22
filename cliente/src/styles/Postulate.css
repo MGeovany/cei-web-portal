@@ -40,12 +40,18 @@
 }
 
 .btn__postulate {
+  background-color: var(--secondary-color);
+}
+.btn__postulatef {
+  background-color: var(--primary-color);
+}
+
+.btn__postulate,
+.btn__postulatef {
   color: var(--white) !important;
-  background-color: var(--green-regular);
   font-family: var(--sen-bold);
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 5px;
-  opacity: 1;
 
   width: 120px;
   height: 43px;
@@ -53,10 +59,11 @@
   transition: all 0.5s ease-in-out;
 }
 
-.btn__postulate:hover {
-  transition: all 0.5s ease-in-out;
-  background-color: var(--green-regular);
-  opacity: 0.7;
+.btn__postulate:hover,
+.btn__postulatef:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  box-shadow: #00000029 10px 10px 12px;
 }
 
 .postulate-grid {
