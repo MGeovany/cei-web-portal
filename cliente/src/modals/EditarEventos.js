@@ -5,14 +5,13 @@ import { DatePicker } from '@mantine/dates'
 import '../styles/Calendario.css'
 
 export const EditarEventos = () => {
-
-    const form = useForm({
-        initialValues: {
-          evento: '',
-          descrip_event: '',
-          fecha: Date
-        }
-      })
+  const form = useForm({
+    initialValues: {
+      evento: '',
+      descrip_event: '',
+      fecha: Date
+    }
+  })
 
   return (
     <>

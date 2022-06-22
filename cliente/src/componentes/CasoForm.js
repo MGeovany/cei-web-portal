@@ -32,7 +32,7 @@ export const CasoForm = (props) => {
         <div className='form__main'>
           <div className='form__main__section s1'>
             <NativeSelect
-              data={['Tecnologia', 'Comercial', 'Social', 'Salud']}
+              data={['Tecnología', 'Comercial', 'Social', 'Salud']}
               placeholder='Select'
               className='font-sen'
               label='Seccion de Caso'
@@ -59,7 +59,7 @@ export const CasoForm = (props) => {
             >
               <Input
                 id='input-demo'
-                placeholder='Este es mi proyecto sobre tecnologia'
+                placeholder='Este es mi proyecto sobre tecnología'
               />
             </InputWrapper>
           </div>

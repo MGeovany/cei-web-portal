@@ -1,11 +1,10 @@
-import React from 'react'
-import { Table } from '@mantine/core'
-import { useMantineTheme } from '@mantine/core'
+import React, { useEffect, useState } from 'react'
+
+import { Table, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
+import { showNotification } from '@mantine/notifications'
 
 const elements = [
-
-
   {
     nombre:
       'Lorem Ipsum is simply dummy text of the printing and typesetting' +
@@ -46,7 +45,6 @@ const elements = [
 ]
 
 export const CasoTabla = () => {
-
   const modals = useModals()
   const theme = useMantineTheme()
 
@@ -67,6 +65,26 @@ export const CasoTabla = () => {
     })
   }
 
+  const [events, setEvents] = useState(elements)
+  const deleteElement = (name, e) => {
+    e.preventDefault()
+    const newEvents = [...events]
+    newEvents.splice(name, 1)
+    setEvents(newEvents)
+
+    showNotification({
+      title: 'Eliminado',
+      color: 'blue',
+      message: `Caso eliminado correctamente! Nombre: ${name}`
+    })
+
+    elements.splice(name, 1)
+  }
+
+  useEffect(() => {
+    setEvents(elements)
+  }, [events])
+
   const rows = elements.map((element) => (
     <tr key={element.nombre}>
       <td>
@@ -83,8 +101,15 @@ export const CasoTabla = () => {
       </td>
       <td>
         <div className='tab__btns flex'>
-          <div className='btn__editar' onClick={EditarCasoModal}>Editar</div>
-          <div className='btn__eliminar' >Eliminar</div>
+          <div className='btn__editar' onClick={EditarCasoModal}>
+            Editar
+          </div>
+          <div
+            className='btn__eliminar'
+            onClick={(e) => deleteElement(element.nombre, e)}
+          >
+            Eliminar
+          </div>
         </div>
       </td>
     </tr>

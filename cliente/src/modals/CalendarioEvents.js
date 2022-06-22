@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/CalendarioEvents.css'
-import { Table } from '@mantine/core'
-import { useMantineTheme } from '@mantine/core'
+import { Table, useMantineTheme } from '@mantine/core'
+import { showNotification } from '@mantine/notifications'
 import { useModals } from '@mantine/modals'
 
 const elements = [
@@ -20,7 +20,7 @@ export const CalendarioEvents = () => {
   const modals = useModals()
   const theme = useMantineTheme()
 
-  const OpenEditEventos = () =>
+  const OpenEditEventos = () => {
     modals.openContextModal('EditarEventos', {
       overflow: 'inside',
       centered: true,
@@ -32,9 +32,29 @@ export const CalendarioEvents = () => {
       overlayOpacity: 0.55,
       overlayBlur: 3
     })
+  }
+  const [events, setEvents] = useState(elements)
+  const deleteElement = (name, e) => {
+    e.preventDefault()
+    const newEvents = [...events]
+    newEvents.splice(name, 1)
+    setEvents(newEvents)
 
-  const rows = elements.map((element) => (
-    <tr key={element.fecha}>
+    showNotification({
+      title: 'Eliminado',
+      color: 'blue',
+      message: `Evento eliminado correctamente! ${name}`
+    })
+
+    elements.splice(name, 1)
+  }
+
+  useEffect(() => {
+    setEvents(elements)
+  }, [events])
+
+  const rows = elements.map((element, index) => (
+    <tr key={index}>
       <td>
         <div className='td__content'>{element.fecha}</div>
       </td>
@@ -46,7 +66,12 @@ export const CalendarioEvents = () => {
           <div className='btn__editar' onClick={OpenEditEventos}>
             Editar
           </div>
-          <div className='btn__eliminar'>Eliminar</div>
+          <div
+            className='btn__eliminar'
+            onClick={(e) => deleteElement(element.titulo, e)}
+          >
+            Eliminar
+          </div>
         </div>
       </td>
     </tr>

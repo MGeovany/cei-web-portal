@@ -1,7 +1,8 @@
-import React from 'react'
 import '../styles/ContactanosAdmin.css'
 import { Table } from '@mantine/core'
 import { NavbarAdmin } from '../componentes/NavbarAdmin'
+import { showNotification } from '@mantine/notifications'
+import React, { useEffect, useState } from 'react'
 
 const elements = [
   {
@@ -114,6 +115,26 @@ const elements = [
 ]
 
 export const ContactanosAdmin = () => {
+  const [events, setEvents] = useState(elements)
+  const deleteElement = (name, e) => {
+    e.preventDefault()
+    const newEvents = [...events]
+    newEvents.splice(name, 1)
+    setEvents(newEvents)
+
+    showNotification({
+      title: 'Eliminado',
+      color: 'blue',
+      message: `Contacto de ${name} eliminado!`
+    })
+
+    elements.splice(name, 1)
+  }
+
+  useEffect(() => {
+    setEvents(elements)
+  }, [events])
+
   const rows = elements.map((element, index) => (
     <tr key={index}>
       <td>
@@ -137,7 +158,12 @@ export const ContactanosAdmin = () => {
       <td>
         <div className='tab__btns flex'>
           <div className='btn__editar'>Aceptar</div>
-          <div className='btn__eliminar'>Eliminar</div>
+          <div
+            className='btn__eliminar'
+            onClick={(e) => deleteElement(element.nombre, e)}
+          >
+            Rechazar
+          </div>
         </div>
       </td>
     </tr>

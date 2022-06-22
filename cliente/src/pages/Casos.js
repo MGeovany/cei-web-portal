@@ -29,13 +29,13 @@ const casosTec = [
         email: 'marifer@gmail.com'
       },
       {
-        nombre: 'Idell J Thomas',
+        nombre: 'Pauline L Revilla',
         img: 'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
-        email: 'araceli.cro@hotmail.com'
+        email: 'Pauline.cro@hotmail.com'
       },
       {
         nombre: 'Idell J Thomas',
-        img: 'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
         email: 'araceli.cro@hotmail.com'
       }
     ]
