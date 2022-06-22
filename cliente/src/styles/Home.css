@@ -1,5 +1,5 @@
 .home {
-  background-color: var(--beige);
+  background-color: white;
   height: 100vh;
   display: flex;
   width: calc(100% - var(0));
@@ -9,10 +9,20 @@
   padding-top: 150px;
 
   flex-wrap: wrap;
+
+  animation: emerge-down 1200ms ease-in-out forwards;
+}
+@keyframes emerge-down {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .span__green {
-  color: var(--green-regular) !important;
+  color: var(--secondary-color) !important;
 }
 
 .home__title {
@@ -39,7 +49,7 @@
 }
 
 .home__btn__propuesta {
-  background-color: var(--green-regular);
+  background-color: var(--secondary-color);
   color: var(--white);
   box-shadow: 0px 3px 6px #00000029;
 
@@ -56,7 +66,6 @@
 
 .home__btn__propuesta:hover {
   transition: all 0.3s ease-in-out;
-  opacity: 0.8;
   box-shadow: #00000029 10px 10px 12px;
 }
 
@@ -67,7 +76,7 @@
 }
 
 .home__btn__blog {
-  color: #4a79cb;
+  color: #e1575f;
   margin: 10px 5px;
   font-size: 18px;
   font-family: var(--sen-bold);

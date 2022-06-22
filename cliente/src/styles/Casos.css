@@ -9,6 +9,17 @@
   flex-direction: column;
 }
 
+@media screen and (max-width: 1300px) {
+  .add__asset__modal {
+    flex-wrap: wrap;
+  }
+  .asset__modal__integrantes {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
 .casos-content {
   display: flex;
   flex-direction: column;
@@ -62,7 +73,7 @@
   text-align: center;
   padding: 10px;
   font-size: 18px;
-  color: var(--green-regular);
+  color: var(--primary-color);
   width: 100%;
 
   cursor: pointer;
@@ -115,8 +126,8 @@
   width: 900px;
 }
 #hr__green {
-  border: 0.115rem solid var(--green-regular);
-  background-color: var(--green-regular);
+  border: 0.115rem solid var(--secondary-color);
+  background-color: var(--secondary-color);
 
   width: 80px;
   margin: 10px 0 20px;
@@ -158,6 +169,7 @@
   margin-bottom: 10px;
   font-family: var(--poppins-regular);
   font-weight: 600;
+  color: var(--primary-color);
 }
 
 .integrante__name {
@@ -222,7 +234,7 @@
 }
 
 .btn__editar {
-  color: var(--green-regular);
+  color: var(--secondary-color);
   margin-right: 10px;
 }
 

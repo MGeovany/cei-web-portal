@@ -145,7 +145,7 @@ export const ContactanosAdmin = () => {
         <div className='casos-container flex'>
           <div className='casos-title section-title'>
             PERSONAS QUE SE{' '}
-            <span style={{ color: '#4A79CB' }}>CONTACTARON</span>
+            <span style={{ color: '#e1575f' }}>CONTACTARON</span>
           </div>
           <div className='contactanos__table__container'>
             <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
