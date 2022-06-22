@@ -36,6 +36,9 @@ import { agregarBlogModal } from './modals/agregarBlogModal'
 import { verBlogModal } from './modals/verBlogModal'
 import { CalendarioEvents } from './modals/CalendarioEvents'
 import { AgregarEventos } from './modals/AgregarEventos'
+import { EditarEventos } from './modals/EditarEventos'
+import { EditarCasoModal } from './modals/EditarCasoModal'
+import { EditarBlogModal } from './modals/EditarBlogModal'
 
 function App() {
   return (
@@ -49,7 +52,10 @@ function App() {
           agregarBlogModal,
           verBlogModal,
           CalendarioEvents,
-          AgregarEventos
+          AgregarEventos,
+          EditarEventos,
+          EditarCasoModal,
+          EditarBlogModal
         }}
       >
         <div className='App'>

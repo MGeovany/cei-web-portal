@@ -1,6 +1,8 @@
 import React from 'react'
 import '../styles/CalendarioEvents.css'
 import { Table } from '@mantine/core'
+import { useMantineTheme } from '@mantine/core'
+import { useModals } from '@mantine/modals'
 
 const elements = [
   { fecha: 'Sun Jun 12', titulo: 'Jaula de Jaguares' },
@@ -15,8 +17,30 @@ const elements = [
 ]
 
 export const CalendarioEvents = () => {
+<<<<<<< Updated upstream
   const rows = elements.map((element, index) => (
     <tr key={index}>
+=======
+
+  const modals = useModals()
+  const theme = useMantineTheme()
+
+  const OpenEditEventos = () =>
+    modals.openContextModal('EditarEventos', {
+      overflow: 'inside',
+      centered: true,
+      size: 'sm',
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3
+    })
+
+  const rows = elements.map((element) => (
+    <tr key={element.fecha}>
+>>>>>>> Stashed changes
       <td>
         <div className='td__content'>{element.fecha}</div>
       </td>
@@ -25,7 +49,7 @@ export const CalendarioEvents = () => {
       </td>
       <td>
         <div className='tab__btns flex'>
-          <div className='btn__editar'>Editar</div>
+          <div className='btn__editar' onClick={OpenEditEventos}>Editar</div>
           <div className='btn__eliminar'>Eliminar</div>
         </div>
       </td>

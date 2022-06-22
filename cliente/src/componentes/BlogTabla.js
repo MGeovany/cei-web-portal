@@ -1,5 +1,7 @@
 import React from 'react'
 import { Table } from '@mantine/core'
+import { useMantineTheme } from '@mantine/core'
+import { useModals } from '@mantine/modals'
 
 const elements = [
   {
@@ -42,6 +44,22 @@ const elements = [
 ]
 
 export const BlogTabla = () => {
+
+  const modals = useModals()
+  const theme = useMantineTheme()
+
+  const EditarBlogModal = () =>
+    modals.openContextModal('EditarBlogModal', {
+      centered: true,
+      size: 'mg',
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3
+    })
+
   const rows = elements.map((element) => (
     <tr key={element.titulo}>
       <td>
@@ -58,7 +76,7 @@ export const BlogTabla = () => {
       </td>
       <td>
         <div className='tab__btns flex'>
-          <div className='btn__editar'>Editar</div>
+          <div className='btn__editar' onClick={EditarBlogModal}>Editar</div>
           <div className='btn__eliminar'>Eliminar</div>
         </div>
       </td>

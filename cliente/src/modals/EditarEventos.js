@@ -4,21 +4,21 @@ import { useForm } from '@mantine/form'
 import { DatePicker } from '@mantine/dates'
 import '../styles/Calendario.css'
 
-export const AgregarEventos = () => {
-  const form = useForm({
-    initialValues: {
-      evento: '',
-      descrip_event: '',
-      fecha: Date
-    }
-  })
+export const EditarEventos = () => {
 
+    const form = useForm({
+        initialValues: {
+          evento: '',
+          descrip_event: '',
+          fecha: Date
+        }
+      })
 
   return (
     <>
       <div className='cal__asset__modal '>
         <div className='cal__modal__title'>
-          AGREGAR NUEVO <span style={{ color: '#e1575f' }}>EVENTO</span>
+          EDITAR <span style={{ color: '#4A79CB' }}>EVENTO</span>
         </div>
         <form className='calendario__form'>
           <div>
@@ -31,8 +31,8 @@ export const AgregarEventos = () => {
           </div>
           <TextInput
             required
-            label='Descripcion'
-            placeholder='Descripcion del evento'
+            label='Descripción'
+            placeholder='Descripción del evento'
             {...form.getInputProps('descrip_event')}
           />
           <DatePicker
@@ -40,11 +40,7 @@ export const AgregarEventos = () => {
             label='Fecha_evento'
             required
           />
-<<<<<<< Updated upstream
-          <div className='cal__caso__button'>Agregar Evento</div>
-=======
-          <div className='cal__caso__button' >Editar Evento</div>
->>>>>>> Stashed changes
+          <div className='cal__caso__button'>Editar Evento</div>
         </form>
       </div>
     </>

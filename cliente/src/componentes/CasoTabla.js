@@ -1,7 +1,11 @@
 import React from 'react'
 import { Table } from '@mantine/core'
+import { useMantineTheme } from '@mantine/core'
+import { useModals } from '@mantine/modals'
 
 const elements = [
+
+
   {
     nombre:
       'Lorem Ipsum is simply dummy text of the printing and typesetting' +
@@ -42,6 +46,27 @@ const elements = [
 ]
 
 export const CasoTabla = () => {
+
+  const modals = useModals()
+  const theme = useMantineTheme()
+
+  const EditarCasoModal = () => {
+    modals.openContextModal('EditarCasoModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'xl',
+      overflow: 'outside',
+      size: 'calc(100% - 6rem)',
+
+      innerProps: {}
+    })
+  }
+
   const rows = elements.map((element) => (
     <tr key={element.nombre}>
       <td>
@@ -58,8 +83,8 @@ export const CasoTabla = () => {
       </td>
       <td>
         <div className='tab__btns flex'>
-          <div className='btn__editar'>Editar</div>
-          <div className='btn__eliminar'>Eliminar</div>
+          <div className='btn__editar' onClick={EditarCasoModal}>Editar</div>
+          <div className='btn__eliminar' >Eliminar</div>
         </div>
       </td>
     </tr>
