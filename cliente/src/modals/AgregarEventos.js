@@ -13,7 +13,6 @@ export const AgregarEventos = () => {
     }
   })
 
-
   return (
     <>
       <div className='cal__asset__modal '>
@@ -40,11 +39,7 @@ export const AgregarEventos = () => {
             label='Fecha_evento'
             required
           />
-<<<<<<< Updated upstream
           <div className='cal__caso__button'>Agregar Evento</div>
-=======
-          <div className='cal__caso__button' >Editar Evento</div>
->>>>>>> Stashed changes
         </form>
       </div>
     </>
