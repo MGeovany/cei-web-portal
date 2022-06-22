@@ -22,7 +22,7 @@ export const BlogForm = () => {
         <div className='form__proyecto'>
           <div className='form__main__center'>
             <div className='form__main__section s1'>
-              <InputWrapper id='input-nombre-proyecto' required label='Titulo'>
+              <InputWrapper id='input-nombre-proyecto' required label='Título'>
                 <Input id='input-nombre-proyecto' placeholder='Mi Blog' />
               </InputWrapper>
             </div>
@@ -36,7 +36,7 @@ export const BlogForm = () => {
               <Textarea
                 minRows={2}
                 maxRows={15}
-                placeholder='Mas Detalles...'
+                placeholder='Más Detalles...'
                 label='Detalles'
                 required
               />
@@ -58,7 +58,7 @@ export const BlogForm = () => {
               <Textarea
                 minRows={13}
                 maxRows={15}
-                placeholder='Mas Detalles'
+                placeholder='Más Detalles'
                 label='Detalles'
                 required
               />

@@ -70,7 +70,7 @@ export const BlogTabla = () => {
       <thead>
         <tr>
           <th>
-            <div className='th__title'>Titulo</div>
+            <div className='th__title'>Título</div>
           </th>
           <th>
             <div className='th__title'>Autor</div>

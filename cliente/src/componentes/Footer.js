@@ -10,7 +10,7 @@ export const Footer = () => {
           <span>CEI</span> de CEUTEC
         </div>
         <div className='footer-txt'>
-          Centro de Emprendimiento e Innovacion
+          Centro de Emprendimiento e Innovación
           <br />
           CEUTEC | Centro Universitario Tecnologico
         </div>

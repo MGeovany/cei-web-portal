@@ -32,7 +32,7 @@ export const Contactanos = () => {
                   <TextInput
                     className='text'
                     required
-                    label='Tu Nombre:'
+                    label='Tú Nombre:'
                     placeholder='Ingresa tu nombre'
                   />
                   <TextInput
@@ -44,8 +44,8 @@ export const Contactanos = () => {
                   <TextInput
                     className='text'
                     required
-                    label='Tu Numero:'
-                    placeholder='Ingrese su numero de telefono'
+                    label='Tú Numero:'
+                    placeholder='Ingrese su número de telefono'
                   />
                 </div>
                 <div className='form-seccion'>
