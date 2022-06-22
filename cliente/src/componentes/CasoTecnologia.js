@@ -10,7 +10,7 @@ export const CasoTecnologia = (props) => {
   return (
     <div className='casos-tecnologia'>
       <div className='casos-container-section'>
-        <div className='casos-section-title'>TECNOLOGIA</div>
+        <div className='casos-section-title'>TECNOLOGÍA</div>
         <div className='casos-section-content'>
           {casosTec.map((caso, index) => (
             <div key={index}>

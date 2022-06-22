@@ -160,7 +160,7 @@ export const PostulateAdmin = () => {
               <thead>
                 <tr>
                   <th>
-                    <div className='th__title'>Titulo</div>
+                    <div className='th__title'>Título</div>
                   </th>
                   <th>
                     <div className='th__title'>Nombre</div>
@@ -175,7 +175,7 @@ export const PostulateAdmin = () => {
                     <div className='th__title'>Celular</div>
                   </th>
                   <th>
-                    <div className='th__title'>Genero</div>
+                    <div className='th__title'>Género</div>
                   </th>
                   <th>
                     <div className='th__title'>Equipo</div>

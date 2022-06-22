@@ -18,12 +18,12 @@ const data = [
     label: 'Mentoria para el desarrollo de la idea de negocio.'
   },
   {
-    value: 'formacion',
-    label: 'Formacion/asesoramiento en temas de emprendimiento'
+    value: 'formación',
+    label: 'Formación/asesoramiento en temas de emprendimiento'
   },
   { value: 'networking', label: 'Networking y presencia de marca' },
   { value: 'testeo', label: 'Testeo de mi prototipo' },
-  { value: 'formalizacion', label: 'Formalizar legalmente mi emprendimiento' },
+  { value: 'formalización', label: 'Formalizar legalmente mi emprendimiento' },
   {
     value: 'conexiones',
     label: 'Conectar con otros programas del ecosistema emprendedor'
@@ -66,9 +66,9 @@ export const Postulate = () => {
               <div className='postulate-grid-item'>
                 <TextInput
                   required
-                  label='Numero de cuenta:'
+                  label='Número de cuenta:'
                   className='text'
-                  placeholder='Ingrese su numero de cuenta'
+                  placeholder='Ingrese su número de cuenta'
                   size='md'
                 />
               </div>
@@ -77,7 +77,7 @@ export const Postulate = () => {
                   required
                   className='text'
                   label='Celular: '
-                  placeholder='Ingrese su numero de telefono'
+                  placeholder='Ingrese su número de teléfono'
                   size='md'
                 />
               </div>
@@ -86,8 +86,8 @@ export const Postulate = () => {
                 <NativeSelect
                   className='text'
                   data={['Seleccione...', 'Masculino', 'Femenino', 'Otro']}
-                  placeholder='Genero'
-                  label='Genero: '
+                  placeholder='Género'
+                  label='Género: '
                   required
                   size='md'
                 />
@@ -162,15 +162,15 @@ export const Postulate = () => {
                 >
                   <Radio
                     value='comercial'
-                    label='Comercial (Compra y comercializacion de productos o servicios.)'
+                    label='Comercial (Compra y comercialización de productos o servicios.)'
                   />
                   <Radio
                     value='social'
-                    label="Social (Fundaciones, ONG's, empresas con mision social)"
+                    label="Social (Fundaciones, ONG's, empresas con misión social)"
                   />
                   <Radio
                     value='emprendimiento'
-                    label='Emprendimiento tecnologico'
+                    label='Emprendimiento tecnológico'
                   />
                   <Radio value='healt_care' label='Healt Care (Salud)' />
                   <Radio
@@ -184,7 +184,7 @@ export const Postulate = () => {
                   className='text'
                   size='md'
                   data={data}
-                  label='¿Que esperas del proceso de pre-incubacion del CEI de CEUTEC?'
+                  label='¿Que esperas del proceso de pre-incubación del CEI de CEUTEC?'
                   placeholder='Elige...'
                 />
               </div>

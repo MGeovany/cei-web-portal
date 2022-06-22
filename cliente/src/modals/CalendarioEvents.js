@@ -35,7 +35,7 @@ export const CalendarioEvents = () => {
   return (
     <div className='cal__table__container '>
       <div className='cal__modal__title'>
-        VER PROXIMOS <span style={{ color: '#4A79CB' }}>EVENTOS</span>
+        VER PRÓXIMOS <span style={{ color: '#4A79CB' }}>EVENTOS</span>
       </div>
 
       <Table fontSize='md' highlightOnHover verticalSpacing='xl'>

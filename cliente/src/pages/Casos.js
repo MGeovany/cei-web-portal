@@ -13,7 +13,7 @@ const casosTec = [
   {
     img: 'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     titulo: 'BeLeaf',
-    subtitulo: 'Tecnologia',
+    subtitulo: 'Tecnología',
     desc: 'Save hundreds of admin hours by reducing back and forth',
     descripcion:
       'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
@@ -43,7 +43,7 @@ const casosTec = [
   {
     img: 'https://images.pexels.com/photos/12406415/pexels-photo-12406415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     titulo: 'Cerebro de confianza',
-    subtitulo: 'Tecnologia',
+    subtitulo: 'Tecnología',
     desc: 'Save hundreds of admin hours by reducing back and forth',
     descripcion: 'Save hundreds of admin hours by reducing back and forth',
     integrantes: [
@@ -72,7 +72,7 @@ const casosTec = [
   {
     img: 'https://images.pexels.com/photos/4151965/pexels-photo-4151965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     titulo: 'Xchematic',
-    subtitulo: 'Tecnologia',
+    subtitulo: 'Tecnología',
     desc: 'Save hundreds of admin hours by reducing back and forth',
     descripcion: 'Save hundreds of admin hours by reducing back and forth',
     integrantes: [
@@ -101,7 +101,7 @@ const casosTec = [
   {
     img: 'https://images.pexels.com/photos/6942818/pexels-photo-6942818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     titulo: 'Planets Friend',
-    subtitulo: 'Tecnologia',
+    subtitulo: 'Tecnología',
     desc: 'Save hundreds of admin hours by reducing back and forth',
     descripcion: 'Save hundreds of admin hours by reducing back and forth',
     integrantes: [

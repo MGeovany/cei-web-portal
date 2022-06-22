@@ -37,7 +37,7 @@ export const Navbar = () => {
               }
               onClick={() => setIsOpen('casos')}
             >
-              Casos de exito
+              Casos de éxito
             </Link>
           </div>
           <div>
@@ -58,7 +58,7 @@ export const Navbar = () => {
             className='btn__contactanos'
             onClick={() => setIsOpen('contact')}
           >
-            Contactanos
+            Contáctanos
           </Link>
           <Link
             to='/postulate'

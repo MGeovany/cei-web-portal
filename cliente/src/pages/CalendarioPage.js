@@ -20,7 +20,7 @@ const events = [
     end: new Date(2022, 6, 2)
   },
   {
-    title: 'Celebracion del dia del emprendedor',
+    title: 'Celebración del dia del emprendedor',
     allDay: false,
     start: new Date(2022, 5, 14),
     end: new Date(2022, 5, 17)
