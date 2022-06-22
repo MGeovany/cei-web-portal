@@ -15,8 +15,8 @@ const elements = [
 ]
 
 export const CalendarioEvents = () => {
-  const rows = elements.map((element) => (
-    <tr key={element.fecha}>
+  const rows = elements.map((element, index) => (
+    <tr key={index}>
       <td>
         <div className='td__content'>{element.fecha}</div>
       </td>
@@ -35,7 +35,7 @@ export const CalendarioEvents = () => {
   return (
     <div className='cal__table__container '>
       <div className='cal__modal__title'>
-        VER PROXIMOS <span style={{ color: '#e1575f' }}>EVENTOS</span>
+        VER PRÓXIMOS <span style={{ color: '#e1575f' }}>EVENTOS</span>
       </div>
 
       <Table fontSize='md' highlightOnHover verticalSpacing='xl'>

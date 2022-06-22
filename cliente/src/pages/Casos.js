@@ -131,7 +131,7 @@ const casosTec = [
 
 const casosCom = [
   {
-    img: 'https://images.pexels.com/photos/11987412/pexels-photo-11987412.jpeg',
+    img: 'https://images.pexels.com/photos/12168556/pexels-photo-12168556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     titulo: 'Kubernets',
     subtitulo: 'Comercial',
     desc: 'Save hundreds of admin hours by reducing back and forth',
@@ -151,22 +151,64 @@ const casosCom = [
     ]
   },
   {
-    img: 'https://images.pexels.com/photos/11405496/pexels-photo-11405496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    titulo: 'Salubet',
+    img: 'https://images.pexels.com/photos/4221068/pexels-photo-4221068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    titulo: 'Clive',
+    subtitulo: 'Comercial',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   },
   {
-    img: 'https://images.pexels.com/photos/3371355/pexels-photo-3371355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    titulo: 'Day One',
+    img: 'https://images.pexels.com/photos/11577405/pexels-photo-11577405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    titulo: 'Kim',
+    subtitulo: 'Comercial',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   },
   {
-    img: 'https://images.pexels.com/photos/3864605/pexels-photo-3864605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    titulo: 'Rentie',
+    img: 'https://images.pexels.com/photos/11987412/pexels-photo-11987412.jpeg',
+    titulo: 'Fausto',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   }
 ]
 
@@ -175,52 +217,163 @@ const casosSal = [
     img: 'https://images.pexels.com/photos/11258764/pexels-photo-11258764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     titulo: 'Salubet',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   },
   {
     img: 'https://images.pexels.com/photos/9771524/pexels-photo-9771524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     titulo: 'Guiran',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   },
   {
     img: 'https://images.pexels.com/photos/9726492/pexels-photo-9726492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     titulo: 'Salubit',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   },
   {
     img: 'https://images.pexels.com/photos/5535714/pexels-photo-5535714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     titulo: 'Salud & More',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   }
 ]
-
 const casosSoc = [
   {
     img: 'https://images.pexels.com/photos/2102632/pexels-photo-2102632.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     titulo: 'Dame la mano HN',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   },
   {
     img: 'https://images.pexels.com/photos/7900687/pexels-photo-7900687.jpeg?cs=srgb&dl=pexels-efecan-efe-7900687.jpg&fm=jpg',
     titulo: 'CJOL',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   },
   {
     img: 'https://images.pexels.com/photos/9277357/pexels-photo-9277357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     titulo: 'Chilas',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   },
   {
     img: 'https://images.pexels.com/photos/10572220/pexels-photo-10572220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     titulo: 'XCHEMATIC',
     desc: 'Save hundreds of admin hours by reducing back and forth',
-    link: 'https://www.grupomar.com/'
+    subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
   }
 ]
 

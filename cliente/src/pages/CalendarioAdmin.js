@@ -49,7 +49,7 @@ export const CalendarioAdmin = () => {
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
-      size: '1080px',
+      size: 'calc(90% - 6rem)',
       innerProps: {}
     })
 

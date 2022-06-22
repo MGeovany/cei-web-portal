@@ -1,8 +1,13 @@
 .nuestro-equipo {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 3rem 0 3rem 0back;
 
   flex-direction: column;
   background-color: #ffffff;
+}
+
+hr {
+  border: 1px solid green;
 }
 
 .nuestro-equipo-cards {
@@ -51,7 +56,7 @@
 }
 
 .card-cargo > hr {
-  border: 1px solid var(--gray);
+  border: 1px solid var(--blue-light);
   opacity: 0.6;
 
   margin: 40px 0 20px 0;

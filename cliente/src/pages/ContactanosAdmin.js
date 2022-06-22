@@ -134,6 +134,12 @@ export const ContactanosAdmin = () => {
       <td>
         <div className='td__content'>{element.fecha}</div>
       </td>
+      <td>
+        <div className='tab__btns flex'>
+          <div className='btn__editar'>Aceptar</div>
+          <div className='btn__eliminar'>Eliminar</div>
+        </div>
+      </td>
     </tr>
   ))
 
@@ -144,8 +150,8 @@ export const ContactanosAdmin = () => {
       <div className='casos'>
         <div className='casos-container flex'>
           <div className='casos-title section-title'>
-            PERSONAS QUE SE{' '}
-            <span style={{ color: '#e1575f' }}>CONTACTARON</span>
+            PERSONAS QUE SE
+            <span style={{ color: '#e1575f' }}> CONTACTARON</span>
           </div>
           <div className='contactanos__table__container'>
             <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
@@ -169,6 +175,7 @@ export const ContactanosAdmin = () => {
                   <th>
                     <div className='th__title'>Fecha</div>
                   </th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>{rows}</tbody>

@@ -8,15 +8,15 @@ export const CasoComercial = (props) => {
   const casosCom = props.casosCom
   return (
     <div className='casos-comercial'>
-      <div className="casos-container-section">
-        <div className="casos-section-title">COMERCIAL</div>
-        <div className="casos-section-content">
-        {
-          casosCom.map((caso, index) =>
-          <div key={index}> <CasoCard caso={caso}/>
-          </div>
-          )
-        }
+      <div className='casos-container-section'>
+        <div className='casos-section-title'>COMERCIAL</div>
+        <div className='casos-section-content'>
+          {casosCom.map((caso, index) => (
+            <div key={index}>
+              {' '}
+              <CasoCard caso={caso} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

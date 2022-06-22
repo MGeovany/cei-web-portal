@@ -39,7 +39,7 @@ export const AgregarEventos = () => {
             label='Fecha_evento'
             required
           />
-          <div className='cal__caso__button'>Agregar Caso</div>
+          <div className='cal__caso__button'>Agregar Evento</div>
         </form>
       </div>
     </>
