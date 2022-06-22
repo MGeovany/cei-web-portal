@@ -3,7 +3,7 @@
   font-family: var(--sen-bold);
   background-color: var(--white);
   padding-top: 10px;
-  height: 100vh;
+  padding-bottom: 10rem;
 }
 
 .container_contactanos {

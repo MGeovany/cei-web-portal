@@ -9,6 +9,17 @@
   flex-direction: column;
 }
 
+@media screen and (max-width: 1300px) {
+  .add__asset__modal {
+    flex-wrap: wrap;
+  }
+  .asset__modal__integrantes {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
 .casos-content {
   display: flex;
   flex-direction: column;

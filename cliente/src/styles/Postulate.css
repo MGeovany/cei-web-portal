@@ -21,7 +21,7 @@
   box-shadow: 3px 3px 27px #00000029;
   border-radius: 15px;
   opacity: 1;
-  width: calc(100% - 450px);
+  width: calc(100% - 200px);
 }
 
 .text {
