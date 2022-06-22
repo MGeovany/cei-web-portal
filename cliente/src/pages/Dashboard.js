@@ -10,7 +10,8 @@ export const Dashboard = () => {
           height: '100vh',
           padding: '150px 0',
           fontSize: '5rem',
-          fontFamily: 'Sen'
+          fontFamily: 'Sen',
+          color: '#333'
         }}
       >
         Dashboard

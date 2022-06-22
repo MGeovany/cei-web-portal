@@ -1,7 +1,8 @@
-import React from 'react'
 import '../styles/ContactanosAdmin.css'
 import { Table } from '@mantine/core'
 import { NavbarAdmin } from '../componentes/NavbarAdmin'
+import { showNotification } from '@mantine/notifications'
+import React, { useEffect, useState } from 'react'
 
 const elements = [
   {
@@ -114,6 +115,26 @@ const elements = [
 ]
 
 export const ContactanosAdmin = () => {
+  const [events, setEvents] = useState(elements)
+  const deleteElement = (name, e) => {
+    e.preventDefault()
+    const newEvents = [...events]
+    newEvents.splice(name, 1)
+    setEvents(newEvents)
+
+    showNotification({
+      title: 'Eliminado',
+      color: 'blue',
+      message: `Contacto de ${name} eliminado!`
+    })
+
+    elements.splice(name, 1)
+  }
+
+  useEffect(() => {
+    setEvents(elements)
+  }, [events])
+
   const rows = elements.map((element, index) => (
     <tr key={index}>
       <td>
@@ -134,6 +155,17 @@ export const ContactanosAdmin = () => {
       <td>
         <div className='td__content'>{element.fecha}</div>
       </td>
+      <td>
+        <div className='tab__btns flex'>
+          <div className='btn__editar'>Aceptar</div>
+          <div
+            className='btn__eliminar'
+            onClick={(e) => deleteElement(element.nombre, e)}
+          >
+            Rechazar
+          </div>
+        </div>
+      </td>
     </tr>
   ))
 
@@ -144,8 +176,8 @@ export const ContactanosAdmin = () => {
       <div className='casos'>
         <div className='casos-container flex'>
           <div className='casos-title section-title'>
-            PERSONAS QUE SE{' '}
-            <span style={{ color: '#e1575f' }}>CONTACTARON</span>
+            PERSONAS QUE SE
+            <span style={{ color: '#e1575f' }}> CONTACTARON</span>
           </div>
           <div className='contactanos__table__container'>
             <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
@@ -169,6 +201,7 @@ export const ContactanosAdmin = () => {
                   <th>
                     <div className='th__title'>Fecha</div>
                   </th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>{rows}</tbody>

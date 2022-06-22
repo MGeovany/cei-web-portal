@@ -4,7 +4,7 @@ import { useForm } from '@mantine/form'
 import { DatePicker } from '@mantine/dates'
 import '../styles/Calendario.css'
 
-export const AgregarEventos = () => {
+export const EditarEventos = () => {
   const form = useForm({
     initialValues: {
       evento: '',
@@ -17,7 +17,7 @@ export const AgregarEventos = () => {
     <>
       <div className='cal__asset__modal '>
         <div className='cal__modal__title'>
-          AGREGAR NUEVO <span style={{ color: '#e1575f' }}>EVENTO</span>
+          EDITAR <span style={{ color: '#4A79CB' }}>EVENTO</span>
         </div>
         <form className='calendario__form'>
           <div>
@@ -39,7 +39,7 @@ export const AgregarEventos = () => {
             label='Fecha_evento'
             required
           />
-          <div className='cal__caso__button'>Agregar Evento</div>
+          <div className='cal__caso__button'>Editar Evento</div>
         </form>
       </div>
     </>

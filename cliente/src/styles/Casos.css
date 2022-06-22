@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1310px) {
   .add__asset__modal {
     flex-wrap: wrap;
   }
@@ -234,7 +234,7 @@
 }
 
 .btn__editar {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-right: 10px;
 }
 
@@ -244,4 +244,14 @@
 
 .font-sen {
   font-family: var(--sen-bold);
+}
+
+.tab__btns {
+  width: 220px;
+}
+
+.add-blog {
+  padding-right: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
 }

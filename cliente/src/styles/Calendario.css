@@ -104,6 +104,6 @@
 }
 .cal__caso__button {
   cursor: pointer;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-family: var(--sen-bold);
 }

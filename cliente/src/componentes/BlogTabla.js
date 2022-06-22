@@ -1,5 +1,8 @@
-import React from 'react'
-import { Table } from '@mantine/core'
+import React, { useEffect, useState } from 'react'
+
+import { Table, useMantineTheme } from '@mantine/core'
+import { useModals } from '@mantine/modals'
+import { showNotification } from '@mantine/notifications'
 
 const elements = [
   {
@@ -42,6 +45,45 @@ const elements = [
 ]
 
 export const BlogTabla = () => {
+  const modals = useModals()
+  const theme = useMantineTheme()
+
+  const EditarBlogModal = () =>
+    modals.openContextModal('EditarBlogModal', {
+      centered: true,
+      size: 'mg',
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3
+    })
+
+  const [events, setEvents] = useState(elements)
+
+  const deleteElement = (name, e) => {
+    e.preventDefault()
+
+    showNotification({
+      id: 'load-data',
+
+      title: 'Eliminado',
+      color: 'blue',
+      message: `Blog eliminado correctamente! Blog de ${name}`
+    })
+
+    const newEvents = [...events]
+    newEvents.splice(name, 1)
+    setEvents(newEvents)
+
+    elements.splice(name, 1)
+  }
+
+  useEffect(() => {
+    setEvents(elements)
+  }, [events])
+
   const rows = elements.map((element) => (
     <tr key={element.titulo}>
       <td>
@@ -58,8 +100,15 @@ export const BlogTabla = () => {
       </td>
       <td>
         <div className='tab__btns flex'>
-          <div className='btn__editar'>Editar</div>
-          <div className='btn__eliminar'>Eliminar</div>
+          <div className='btn__editar' onClick={EditarBlogModal}>
+            Editar
+          </div>
+          <div
+            className='btn__eliminar'
+            onClick={(e) => deleteElement(element.autor, e)}
+          >
+            Eliminar
+          </div>
         </div>
       </td>
     </tr>

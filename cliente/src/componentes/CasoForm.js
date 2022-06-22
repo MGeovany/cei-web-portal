@@ -193,7 +193,7 @@ export const CasoForm = (props) => {
             </div>
           </div>
           <div className='form__int__section form__int__btns'>
-            <div className='form__caso__button'>Agregar Caso</div>
+            <div className='form__caso__button'>Enviar</div>
             <div className='form__desc__button'>Descartar</div>
           </div>
         </div>

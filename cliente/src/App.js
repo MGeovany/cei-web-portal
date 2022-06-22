@@ -36,49 +36,64 @@ import { agregarBlogModal } from './modals/agregarBlogModal'
 import { verBlogModal } from './modals/verBlogModal'
 import { CalendarioEvents } from './modals/CalendarioEvents'
 import { AgregarEventos } from './modals/AgregarEventos'
+import { EditarEventos } from './modals/EditarEventos'
+import { EditarCasoModal } from './modals/EditarCasoModal'
+import { EditarBlogModal } from './modals/EditarBlogModal'
+import { NotificationsProvider } from '@mantine/notifications'
 
 function App() {
   return (
     <MantineProvider>
-      <ModalsProvider
-        modals={{
-          casoModal,
-          agregarCasoModal,
-          verCasoModal,
-          blogModal,
-          agregarBlogModal,
-          verBlogModal,
-          CalendarioEvents,
-          AgregarEventos
-        }}
-      >
-        <div className='App'>
-          <Router>
-            <Routes>
-              <Route path='/' element={<LandingPage />} />
-              <Route path='/calendario' element={<CalendarioPage />} />
-              <Route path='/casos-de-exito' element={<Casos />} />
-              <Route path='/blog' element={<Blog />} />
-              <Route path='/contactanos' element={<Contactanos />} />
-              <Route path='/postulate' element={<Postulate />} />
+      <NotificationsProvider>
+        <ModalsProvider
+          modals={{
+            casoModal,
+            agregarCasoModal,
+            verCasoModal,
+            blogModal,
+            agregarBlogModal,
+            verBlogModal,
+            CalendarioEvents,
+            AgregarEventos,
+            EditarEventos,
+            EditarCasoModal,
+            EditarBlogModal
+          }}
+        >
+          <div className='App'>
+            <Router>
+              <Routes>
+                <Route path='/' element={<LandingPage />} />
+                <Route path='/calendario' element={<CalendarioPage />} />
+                <Route path='/casos-de-exito' element={<Casos />} />
+                <Route path='/blog' element={<Blog />} />
+                <Route path='/contactanos' element={<Contactanos />} />
+                <Route path='/postulate' element={<Postulate />} />
 
-              <Route path='/admin' element={<PrivateRoute />}>
-                <Route path='/admin/' element={<Dashboard />} />
-                <Route path='/admin/casos-de-exito' element={<CasosAdmin />} />
-                <Route path='/admin/calendario' element={<CalendarioAdmin />} />
-                <Route path='/admin/blog' element={<BlogAdmin />} />
-                <Route path='/admin/postulate' element={<PostulateAdmin />} />
-                <Route
-                  path='/admin/contactanos'
-                  element={<ContactanosAdmin />}
-                />
-              </Route>
-              <Route path='*' element={<PageNotFound />} />
-            </Routes>
-            <Footer />
-          </Router>
-        </div>
-      </ModalsProvider>
+                <Route path='/admin' element={<PrivateRoute />}>
+                  <Route path='/admin/' element={<Dashboard />} />
+                  <Route
+                    path='/admin/casos-de-exito'
+                    element={<CasosAdmin />}
+                  />
+                  <Route
+                    path='/admin/calendario'
+                    element={<CalendarioAdmin />}
+                  />
+                  <Route path='/admin/blog' element={<BlogAdmin />} />
+                  <Route path='/admin/postulate' element={<PostulateAdmin />} />
+                  <Route
+                    path='/admin/contactanos'
+                    element={<ContactanosAdmin />}
+                  />
+                </Route>
+                <Route path='*' element={<PageNotFound />} />
+              </Routes>
+              <Footer />
+            </Router>
+          </div>
+        </ModalsProvider>
+      </NotificationsProvider>
     </MantineProvider>
   )
 }
