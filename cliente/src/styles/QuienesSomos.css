@@ -1,8 +1,8 @@
 .quienes-somos {
   background-color: var(--white);
 
-  height: 100vh;
-
+  min-height: 100vh;
+  padding: 4rem;
   font-family: var(--sen-bold);
 
   display: flex;

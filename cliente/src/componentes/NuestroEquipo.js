@@ -38,7 +38,9 @@ export const NuestroEquipo = () => {
               <h2>Claudia Pagoaga </h2>
             </div>
             <div className='card-cargo'>
-              <p>Coordinador de Emprendimiento e Innovación.</p>
+              <p>
+                Docente en CEUTEC y Coordinadora de Emprendimiento e Innovación.
+              </p>
               <hr />
               <div className='card-read-more'>
                 <span style={{ color: '#4a79cb' }}>
@@ -56,7 +58,9 @@ export const NuestroEquipo = () => {
               <h2>Carlos Alberto Cabrera</h2>
             </div>
             <div className='card-cargo'>
-              <p>Coordinador de Emprendimiento e Innovación.</p>
+              <p>
+                Docente en CEUTEC y Coordinador de Emprendimiento e Innovación.
+              </p>
               <hr />
               <div className='card-read-more'>
                 <span style={{ color: '#4a79cb', fontWeight: 'bolder' }}>
