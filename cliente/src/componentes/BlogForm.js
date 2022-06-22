@@ -28,6 +28,7 @@ export const BlogForm = () => {
                 required
                 label='Título'
               >
+
                 <Input id='input-nombre-proyecto' placeholder='Mi Blog' />
               </InputWrapper>
             </div>
@@ -69,7 +70,7 @@ export const BlogForm = () => {
               <Textarea
                 minRows={13}
                 maxRows={15}
-                placeholder='Mas Detalles'
+                placeholder='Más Detalles'
                 label='Detalles'
                 className='font-sen'
                 required

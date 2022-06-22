@@ -30,8 +30,8 @@ export const AgregarEventos = () => {
           </div>
           <TextInput
             required
-            label='Descripcion'
-            placeholder='Descripcion del evento'
+            label='Descripción'
+            placeholder='Descripción del evento'
             {...form.getInputProps('descrip_event')}
           />
           <DatePicker

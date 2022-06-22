@@ -33,9 +33,9 @@ export const CasoForm = (props) => {
           <div className='form__main__section s1'>
             <NativeSelect
               data={['Tecnología', 'Comercial', 'Social', 'Salud']}
-              placeholder='Select'
+              placeholder='Select...'
               className='font-sen'
-              label='Seccion de Caso'
+              label='Sección de Caso'
               required
             />
           </div>
@@ -55,7 +55,7 @@ export const CasoForm = (props) => {
               className='font-sen'
               id='input-demo'
               required
-              label='Breve Descripcion'
+              label='Breve Descripción'
             >
               <Input
                 id='input-demo'
@@ -81,7 +81,7 @@ export const CasoForm = (props) => {
               minRows={10}
               maxRows={15}
               className='font-sen'
-              placeholder='Mas Detalles'
+              placeholder='Más Detalles'
               label='Detalles'
               required
             />
@@ -184,6 +184,7 @@ export const CasoForm = (props) => {
               <TextInput
                 className='font-sen'
                 required
+                label='Email'
                 placeholder='your@email.com'
               />
             </div>
