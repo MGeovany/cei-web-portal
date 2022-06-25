@@ -1,12 +1,10 @@
 import React from 'react'
 import { BlogsRecientes } from '../componentes/BlogsRecientes'
 import '../styles/Blog.css'
-import { Navbar } from '../componentes/Navbar'
 
 export const Blog = () => {
   return (
     <div>
-      <Navbar />
       <div className='blog'>
         <div className='blog-container flex'>
           <div className='casos-title section-title'>

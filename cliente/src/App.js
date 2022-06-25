@@ -40,6 +40,8 @@ import { EditarEventos } from './modals/EditarEventos'
 import { EditarCasoModal } from './modals/EditarCasoModal'
 import { EditarBlogModal } from './modals/EditarBlogModal'
 import { NotificationsProvider } from '@mantine/notifications'
+import { Login } from './pages/Login'
+import { NavbarAdmin } from './componentes/NavbarAdmin'
 
 function App() {
   return (
@@ -60,38 +62,32 @@ function App() {
             EditarBlogModal
           }}
         >
-          <div className='App'>
-            <Router>
-              <Routes>
-                <Route path='/' element={<LandingPage />} />
-                <Route path='/calendario' element={<CalendarioPage />} />
-                <Route path='/casos-de-exito' element={<Casos />} />
-                <Route path='/blog' element={<Blog />} />
-                <Route path='/contactanos' element={<Contactanos />} />
-                <Route path='/postulate' element={<Postulate />} />
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<LandingPage />} />
+              <Route path='/calendario' element={<CalendarioPage />} />
+              <Route path='/casos-de-exito' element={<Casos />} />
+              <Route path='/blog' element={<Blog />} />
+              <Route path='/contactanos' element={<Contactanos />} />
+              <Route path='/postulate' element={<Postulate />} />
+              <Route path='/login' element={<Login />} />
 
-                <Route path='/admin' element={<PrivateRoute />}>
-                  <Route path='/admin/' element={<Dashboard />} />
-                  <Route
-                    path='/admin/casos-de-exito'
-                    element={<CasosAdmin />}
-                  />
-                  <Route
-                    path='/admin/calendario'
-                    element={<CalendarioAdmin />}
-                  />
-                  <Route path='/admin/blog' element={<BlogAdmin />} />
-                  <Route path='/admin/postulate' element={<PostulateAdmin />} />
-                  <Route
-                    path='/admin/contactanos'
-                    element={<ContactanosAdmin />}
-                  />
-                </Route>
-                <Route path='*' element={<PageNotFound />} />
-              </Routes>
-              <Footer />
-            </Router>
-          </div>
+              <Route path='/admin' element={<PrivateRoute />}>
+                <Route index element={<Dashboard />} />
+                <Route path='/admin/casos-de-exito' element={<CasosAdmin />} />
+                <Route path='/admin/calendario' element={<CalendarioAdmin />} />
+                <Route path='/admin/blog' element={<BlogAdmin />} />
+                <Route path='/admin/postulate' element={<PostulateAdmin />} />
+                <Route
+                  path='/admin/contactanos'
+                  element={<ContactanosAdmin />}
+                />
+              </Route>
+              <Route path='*' element={<PageNotFound />} />
+            </Routes>
+            <Footer />
+          </Router>
         </ModalsProvider>
       </NotificationsProvider>
     </MantineProvider>

@@ -1,10 +1,8 @@
 import React from 'react'
-import { NavbarAdmin } from '../componentes/NavbarAdmin'
 
 export const Dashboard = () => {
   return (
     <>
-      <NavbarAdmin />
       <div
         style={{
           height: '100vh',

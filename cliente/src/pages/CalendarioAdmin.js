@@ -68,8 +68,6 @@ export const CalendarioAdmin = () => {
 
   return (
     <div>
-      <NavbarAdmin />
-
       <MantineProvider
         theme={{ fontFamily: 'Poppins, sans-serif' }}
         withGlobalStyles

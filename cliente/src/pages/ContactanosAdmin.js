@@ -1,6 +1,5 @@
 import '../styles/ContactanosAdmin.css'
 import { Table } from '@mantine/core'
-import { NavbarAdmin } from '../componentes/NavbarAdmin'
 import { showNotification } from '@mantine/notifications'
 import React, { useEffect, useState } from 'react'
 
@@ -171,8 +170,6 @@ export const ContactanosAdmin = () => {
 
   return (
     <>
-      <NavbarAdmin />
-
       <div className='casos'>
         <div className='casos-container flex'>
           <div className='casos-title section-title'>

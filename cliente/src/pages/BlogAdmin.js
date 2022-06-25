@@ -46,8 +46,6 @@ export const BlogAdmin = () => {
 
   return (
     <div>
-      <NavbarAdmin />
-
       <MantineProvider
         theme={{ fontFamily: 'Poppins, sans-serif' }}
         withGlobalStyles
