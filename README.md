@@ -1,8 +1,6 @@
 <h1 align="center">Welcome to CEI | Centro de Emprendimiento e Innovación 👋</h1>
-<p>
-  <a href="https://github.com/MGeovany/cei-web-portal/blob/main/cliente/documentation/index.html" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
+<p align="center">
+  
      <a href="#" target="_blank">
     <img alt="deploy" src="https://img.shields.io/website?down_color=red&down_message=offline&label=Deploy&up_color=brightgreen&up_message=online&url=https%3A%2F%2Fcei-web-portal-mgeovany.vercel.app%2F" />
   </a>
