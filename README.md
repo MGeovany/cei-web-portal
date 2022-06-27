@@ -3,9 +3,15 @@
   <a href="https://github.com/MGeovany/cei-web-portal/blob/main/cliente/documentation/index.html" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+     <a href="#" target="_blank">
+    <img alt="deploy" src="https://img.shields.io/website?down_color=red&down_message=offline&label=Deploy&up_color=brightgreen&up_message=online&url=https%3A%2F%2Fcei-web-portal-mgeovany.vercel.app%2F" />
   </a>
+  
+
+  <a href="#" target="_blank">
+    <img alt="Github Stars" src="https://img.shields.io/github/stars/mgeovany/cei-web-portal?label=Repo%20Stars" />
+  </a>
+
 </p>
 
 > About
@@ -14,24 +20,12 @@
 
 ### ✨ [Demo](https://cei-web-portal-mgeovany.vercel.app/)
 
-## Install
-
-```sh
-npm install
-```
-
-## Usage
-
-```sh
-npm start
-```
-
 ## Author
 
 👤 **Marlon Castro, Valeria Figueroa, Kevin Avelar**
 
 * Website: https://github.com/MGeovany
-* Github: [@mgeovany, valeriafigueroas, AvelarXD13](https://github.com/mgeovany, valeriafigueroas, AvelarXD13)
+* Github: [@mgeovany, @valeriafigueroas, @AvelarXD13](https://github.com/mgeovany, https://github.com/valeriafigueroas, https://github.com/AvelarXD13)
 * LinkedIn: [@https:\/\/www.linkedin.com\/in\/m-geovany\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/m-geovany\/)
 
 ## 🤝 Contributing
@@ -40,7 +34,4 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+Give a ⭐️ if you liked this project!
