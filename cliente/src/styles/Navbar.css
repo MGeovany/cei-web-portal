@@ -76,7 +76,6 @@
 }
 
 .dot {
-  transition: all 0.3s ease;
   color: var(--secondary-color) !important;
 }
 
@@ -92,8 +91,6 @@
 }
 
 .navbar__link:hover {
-  transition: all 0.5s ease;
-
   position: relative;
 }
 
@@ -101,4 +98,7 @@
   .navbar {
     justify-content: center;
   }
+}
+
+@media screen and (max-width: 768px) {
 }

@@ -5,7 +5,6 @@ import { CasoSalud } from '../componentes/CasoSalud'
 import { CasoTecnologia } from '../componentes/CasoTecnologia'
 
 import '../styles/Casos.css'
-import { Navbar } from '../componentes/Navbar'
 
 // static data
 
@@ -380,8 +379,6 @@ const casosSoc = [
 export const Casos = () => {
   return (
     <div>
-      <Navbar />
-
       <div className='casos'>
         <div className='casos-container flex'>
           <div className='casos-title section-title'>

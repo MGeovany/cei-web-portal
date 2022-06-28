@@ -40,6 +40,7 @@ const blogs = [
     subtitle: 'Subtitulo del blog 333',
     autor: 'Autor del blog 33',
     fecha: '01/22/2020',
+    img: 'https://images.pexels.com/photos/7175611/pexels-photo-7175611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 3222'
   },
   {
@@ -48,6 +49,7 @@ const blogs = [
     subtitle: 'Subtitulo del blog 333',
     autor: 'Autor del blog 33',
     fecha: '01/22/2020',
+    img: 'https://images.pexels.com/photos/10970424/pexels-photo-10970424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 3222'
   },
   {
@@ -55,6 +57,7 @@ const blogs = [
     title: 'EN EL HUB DE UNITEC, CELEBRAMOS EL DÍA MUNDIAL DEL EMPRENDIMIENTO',
     autor: 'Autor del blog 33',
     fecha: '01/22/2020',
+    img: 'https://images.pexels.com/photos/12175850/pexels-photo-12175850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 3222'
   },
   {
@@ -63,6 +66,7 @@ const blogs = [
     subtitle: 'Subtitulo del blog 333',
     autor: 'Autor del blog 33',
     fecha: '01/22/2020',
+    img: 'https://images.pexels.com/photos/11763620/pexels-photo-11763620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 3222'
   },
   {
@@ -72,7 +76,7 @@ const blogs = [
     subtitle: 'Subtitulo del blog 4',
     autor: 'Autor del blog 4',
     fecha: '01/22/2020',
-    img: 'https://images.pexels.com/photos/7971174/pexels-photo-7971174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    img: 'https://images.pexels.com/photos/4151965/pexels-photo-4151965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 4'
   }
 ]

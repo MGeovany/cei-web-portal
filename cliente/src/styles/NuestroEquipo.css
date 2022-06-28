@@ -22,7 +22,8 @@ hr {
 }
 
 .nuestro-equipo-card {
-  min-width: 400px;
+  min-width: 350px;
+  min-height: 480px;
 
   display: flex;
   flex-direction: column;
@@ -31,7 +32,8 @@ hr {
   background-color: #fff;
   box-shadow: 12px 14px 41px #00000029;
   margin-bottom: 20px;
-  padding: 30px 0 40px;
+  padding: 30px 10px 30px;
+  border-top: 5px solid #ef4343;
 }
 
 .card-img {
@@ -47,8 +49,8 @@ hr {
 .card-cargo {
   font-size: 18px;
   font-family: var(--poppins-regular);
-  color: var(--gray);
-  opacity: 0.95;
+  color: #adb5bda6;
+  font-weight: bold;
 
   width: 340px;
   text-align: center;
@@ -56,14 +58,15 @@ hr {
 }
 
 .card-cargo > hr {
-  border: 1px solid var(--blue-light);
-  opacity: 0.6;
+  border: 1px solid var(--gray);
+  opacity: 0.4;
 
   margin: 40px 0 20px 0;
 }
 .card-read-more {
   cursor: pointer;
   font-weight: bold;
+  font: normal normal 800 22px/31px Sen;
 }
 
 @media screen and (max-width: 1270px) {
@@ -77,8 +80,8 @@ hr {
 /* circular image*/
 
 .card-img {
-  width: 290px;
-  height: 290px;
+  width: 200px;
+  height: 200px;
 }
 .card-img > img {
   width: 100%;

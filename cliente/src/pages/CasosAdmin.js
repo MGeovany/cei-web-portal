@@ -417,7 +417,6 @@ export const CasosAdmin = () => {
   }
   return (
     <div>
-      <NavbarAdmin />
       <MantineProvider
         theme={{ fontFamily: 'Poppins, sans-serif' }}
         withGlobalStyles

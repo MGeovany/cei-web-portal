@@ -2,15 +2,12 @@ import React from 'react'
 import { Home } from '../componentes/Home'
 import { NuestroEquipo } from '../componentes/NuestroEquipo'
 import { QuienesSomos } from '../componentes/QuienesSomos'
-import { Navbar } from '../componentes/Navbar'
 
 import '../styles/Home.css'
 
 export const LandingPage = () => {
   return (
     <div>
-      <Navbar />
-
       <div className='mobile-only'>
         <h1>
           AUN NO TENEMOS SOPORTE PARA

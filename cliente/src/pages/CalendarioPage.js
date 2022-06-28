@@ -36,8 +36,6 @@ const events = [
 export const CalendarioPage = () => {
   return (
     <>
-      <Navbar />
-
       <div className='calendario'>
         <div className='section-title calendario-title'>
           CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>

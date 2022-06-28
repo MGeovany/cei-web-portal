@@ -17,15 +17,10 @@ export const NuestroEquipo = () => {
               <h2>Dax Paz </h2>
             </div>
             <div className='card-cargo'>
-              <p>
-                Industrial Engineer & Master in International Business
-                management.
-              </p>
+              <p>Coordinador Emprendimiento e Innovación</p>
               <hr />
               <div className='card-read-more'>
-                <span style={{ color: '#4a79cb' }}>
-                  Coordinador | San Pedro Sula
-                </span>
+                <span style={{ color: '#4a79cb' }}>San Pedro Sula</span>
               </div>
             </div>
           </div>
@@ -38,14 +33,10 @@ export const NuestroEquipo = () => {
               <h2>Claudia Pagoaga </h2>
             </div>
             <div className='card-cargo'>
-              <p>
-                Docente en CEUTEC y Coordinadora de Emprendimiento e Innovación.
-              </p>
+              <p>Coordinador Emprendimiento e Innovación</p>
               <hr />
               <div className='card-read-more'>
-                <span style={{ color: '#4a79cb' }}>
-                  Coordinador | Tegucigalpa
-                </span>
+                <span style={{ color: '#4a79cb' }}>Tegucigalpa</span>
               </div>
             </div>
           </div>
@@ -58,13 +49,11 @@ export const NuestroEquipo = () => {
               <h2>Carlos Alberto Cabrera</h2>
             </div>
             <div className='card-cargo'>
-              <p>
-                Docente en CEUTEC y Coordinador de Emprendimiento e Innovación.
-              </p>
+              <p>Coordinador Emprendimiento e Innovación</p>
               <hr />
               <div className='card-read-more'>
                 <span style={{ color: '#4a79cb', fontWeight: 'bolder' }}>
-                  Coordinador | La Ceiba
+                  La Ceiba
                 </span>
               </div>
             </div>

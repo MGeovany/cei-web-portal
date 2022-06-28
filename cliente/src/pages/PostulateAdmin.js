@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/PostulateAdmin.css'
 import { Table } from '@mantine/core'
-import { NavbarAdmin } from '../componentes/NavbarAdmin'
 
 const elements = [
   {
@@ -149,7 +148,6 @@ export const PostulateAdmin = () => {
 
   return (
     <>
-      <NavbarAdmin />
       <div className='casos'>
         <div className='casos-container flex'>
           <div className='casos-title section-title'>
