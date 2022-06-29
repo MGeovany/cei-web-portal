@@ -86,7 +86,7 @@ function App() {
               </Route>
               <Route path='*' element={<PageNotFound />} />
             </Routes>
-            <Footer />
+            {/*  <Footer /> */}
           </Router>
         </ModalsProvider>
       </NotificationsProvider>

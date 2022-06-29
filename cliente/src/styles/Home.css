@@ -6,9 +6,10 @@
 
   flex-direction: row;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 8rem;
 
   flex-wrap: wrap;
+  padding-left: 3rem;
 
   animation: emerge-down 1200ms ease-in-out forwards;
 }
@@ -29,8 +30,6 @@
   font-size: 60px;
   color: var(--black);
   font-family: var(--sen-bold);
-
-  width: 620px;
 }
 
 .home__text {
@@ -39,6 +38,7 @@
   flex-direction: column;
 
   padding-left: 0px;
+  width: 50%;
 }
 
 .home__btns {
@@ -72,9 +72,9 @@
 @media screen and (max-width: 1430px) {
   .home {
     height: 100%;
+    padding-left: 20px;
   }
 }
-
 .home__btn__blog {
   color: #e1575f;
   margin: 10px 5px;
@@ -102,8 +102,8 @@
   font-family: var(--poppins-regular);
   line-height: 40px;
 
-  width: 520px;
   opacity: 0.93;
+  padding-right: 20%;
 }
 
 .home__img {
@@ -111,8 +111,6 @@
   margin-top: 50px;
 }
 .home__img > img {
-  padding-top: 100px;
-
   height: 30rem;
 }
 
@@ -120,45 +118,15 @@
   display: none;
 }
 
-@media screen and (max-width: 375px) {
-  .mobile-only {
-    display: flex;
-    display: flex;
-    display: flex;
-    display: flex;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-    z-index: 102;
-    height: 100vh;
-    width: 100vw;
+@media screen and (max-width: 932px) {
+  .home__text {
+    font-size: 1.3rem;
+    width: 100%;
   }
-  .desktop-only {
-    display: none;
+  .home__cnt {
+    width: 100%;
   }
-
-  .mobile-only {
-    font-size: large;
-    color: #333;
-    text-align: center;
-    font-family: var(--sen-bold);
-  }
-
-  .mobile-only > div {
-    font-size: large;
-    font-family: var(--poppins-regular);
-    color: #dddddd;
-    font-weight: 600;
-  }
-
-  .home__title {
-    font-size: 40px;
-  }
-
-  .navbar {
-    display: none;
+  .home__img > img {
+    height: 15rem;
   }
 }
