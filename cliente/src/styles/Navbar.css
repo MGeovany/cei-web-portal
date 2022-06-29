@@ -39,7 +39,7 @@ a {
 .nav__menu {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 3rem;
   z-index: 100;
 }
@@ -61,8 +61,6 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  padding-right: 40px;
 }
 
 .btn__contactanos {
@@ -98,6 +96,7 @@ a {
   top: 2rem;
   background-color: var(--secondary-color);
 }
+
 @media screen and (max-width: 932px) {
   .nav {
     background-color: #222222 !important;
@@ -118,6 +117,14 @@ a {
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
+  }
+  .nav__link {
+    transition: 0.5s ease-in;
+  }
+  .nav__link:hover {
+    transition: 0.5s ease-in;
+
+    color: white;
   }
 }
 /* Active Class */

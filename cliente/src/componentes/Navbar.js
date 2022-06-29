@@ -24,7 +24,7 @@ export const Navbar = () => {
           <Link
             to='/'
             className={isOpen === 'home' ? 'nav__link dot' : 'nav__link'}
-            onClick={() => setIsOpen('home')}
+            onClick={(() => setIsOpen('home'), navToggle)}
           >
             Home
           </Link>
@@ -33,7 +33,7 @@ export const Navbar = () => {
           <Link
             to='/calendario'
             className={isOpen === 'cal' ? 'nav__link dot' : 'nav__link'}
-            onClick={() => setIsOpen('cal')}
+            onClick={(() => setIsOpen('cal'), navToggle)}
           >
             Actividades
           </Link>
@@ -42,7 +42,7 @@ export const Navbar = () => {
           <Link
             to='/casos-de-exito'
             className={isOpen === 'casos' ? 'nav__link dot' : 'nav__link'}
-            onClick={() => setIsOpen('casos')}
+            onClick={(() => setIsOpen('casos'), navToggle)}
           >
             Casos de Éxito
           </Link>
@@ -51,7 +51,7 @@ export const Navbar = () => {
           <Link
             to='/blog'
             className={isOpen === 'blog' ? 'nav__link dot' : 'nav__link'}
-            onClick={() => setIsOpen('blog')}
+            onClick={(() => setIsOpen('blog'), navToggle)}
           >
             blog
           </Link>
@@ -61,14 +61,14 @@ export const Navbar = () => {
             <Link
               to='/contactanos'
               className='btn__contactanos'
-              onClick={() => setIsOpen('')}
+              onClick={(() => setIsOpen(''), navToggle)}
             >
               Contáctanos
             </Link>
             <Link
               to='/postulate'
               className='btn__postulate'
-              onClick={() => setIsOpen('')}
+              onClick={(() => setIsOpen(''), navToggle)}
             >
               Postulate
             </Link>
