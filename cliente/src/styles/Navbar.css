@@ -1,41 +1,33 @@
-.navbar {
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.nav {
+  height: 8vh;
+  background-color: transparent !important;
+
+  padding: 20px 0 0 20px;
   font-family: var(--sen-bold);
-  height: 70px;
-  width: 100%;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-
-  background-color: transparent;
-
-  position: absolute;
+  color: #333;
   z-index: 100;
+  font-size: 1.1rem;
 }
-
-.navbar-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding-left: calc(100vw * 0.1);
-
-  height: 100%;
-  flex-wrap: wrap;
+.nav__brand {
+  text-transform: uppercase;
 }
-
-.navbar-links > div {
-  width: calc(100vw * 0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar__link {
-  /* margin: 0 8rem 0 0;*/
-
+.nav__link {
+  color: #333;
   font-weight: 700;
   font-size: 18px;
 
@@ -44,10 +36,36 @@
   height: 100%;
 }
 
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3rem;
+  z-index: 100;
+}
+.nav__toggler {
+  display: none;
+}
+.nav__toggler div {
+  width: 1.8rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  transition: 0.3s ease-in;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.navbar-btns {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn__contactanos {
   color: var(--secondary-color) !important;
 }
-
 .btn__postulate {
   color: var(--white) !important;
   background-color: var(--secondary-color);
@@ -64,17 +82,6 @@
   justify-content: center;
   align-items: center;
 }
-
-.navbar-btns {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  padding-right: 40px;
-}
-
 .dot {
   color: var(--secondary-color) !important;
 }
@@ -90,15 +97,49 @@
   background-color: var(--secondary-color);
 }
 
-.navbar__link:hover {
-  position: relative;
-}
+@media screen and (max-width: 932px) {
+  .nav {
+    background-color: #222222 !important;
+    position: fixed;
+    width: 100%;
+  }
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    height: 93vh;
+    width: 100vw;
+    background: rgb(34, 34, 34);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+  .nav__link {
+    transition: 0.5s ease-in;
+  }
+  .nav__link:hover {
+    transition: 0.5s ease-in;
 
-@media screen and (max-width: 990px) {
-  .navbar {
-    justify-content: center;
+    color: white;
   }
 }
+/* Active Class */
+.nav__active {
+  transform: translateX(0%);
+}
 
-@media screen and (max-width: 768px) {
+/* Toggle Icon Animation */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-9px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-9px, -5px);
 }

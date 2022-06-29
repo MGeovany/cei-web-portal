@@ -3,72 +3,83 @@ import '../styles/Navbar.css'
 import React, { useState } from 'react'
 
 export const Navbar = () => {
+  const [active, setActive] = useState('nav__menu')
+  const [icon, setIcon] = useState('nav__toggler')
   const [isOpen, setIsOpen] = useState('')
 
+  const navToggle = () => {
+    if (active === 'nav__menu') {
+      setActive('nav__menu nav__active')
+    } else setActive('nav__menu')
+
+    if (icon === 'nav__toggler') {
+      setIcon('nav__toggler toggle')
+    } else setIcon('nav__toggler')
+  }
   return (
-    <>
-      <div className='navbar'>
-        <div className='navbar-links'>
-          <div>
-            <Link
-              to='/'
-              className={
-                isOpen === 'home' ? 'navbar__link dot' : 'navbar__link'
-              }
-              onClick={() => setIsOpen('home')}
-            >
-              Home
-            </Link>
-          </div>
-          <div>
-            <Link
-              to='/calendario'
-              className={isOpen === 'cal' ? 'navbar__link dot' : 'navbar__link'}
-              onClick={() => setIsOpen('cal')}
-            >
-              Calendario
-            </Link>
-          </div>
-          <div>
-            <Link
-              to='/casos-de-exito'
-              className={
-                isOpen === 'casos' ? 'navbar__link dot' : 'navbar__link'
-              }
-              onClick={() => setIsOpen('casos')}
-            >
-              Casos de éxito
-            </Link>
-          </div>
-          <div>
-            <Link
-              to='/blog'
-              className={
-                isOpen === 'blog' ? 'navbar__link dot' : 'navbar__link'
-              }
-              onClick={() => setIsOpen('blog')}
-            >
-              Blog
-            </Link>
-          </div>
-        </div>
-        <div className='navbar-btns'>
+    <nav className='nav'>
+      <ul className={active}>
+        <li className='nav__item'></li>
+        <li className='nav__item'>
           <Link
-            to='/contactanos'
-            className='btn__contactanos'
-            onClick={() => setIsOpen('contact')}
+            to='/'
+            className={isOpen === 'home' ? 'nav__link dot' : 'nav__link'}
+            onClick={(() => setIsOpen('home'), navToggle)}
           >
-            Contáctanos
+            Home
           </Link>
+        </li>
+        <li className='nav__item'>
           <Link
-            to='/postulate'
-            className='btn__postulate'
-            onClick={() => setIsOpen('postulate')}
+            to='/calendario'
+            className={isOpen === 'cal' ? 'nav__link dot' : 'nav__link'}
+            onClick={(() => setIsOpen('cal'), navToggle)}
           >
-            Postulate
+            Actividades
           </Link>
-        </div>
+        </li>
+        <li className='nav__item'>
+          <Link
+            to='/casos-de-exito'
+            className={isOpen === 'casos' ? 'nav__link dot' : 'nav__link'}
+            onClick={(() => setIsOpen('casos'), navToggle)}
+          >
+            Casos de Éxito
+          </Link>
+        </li>
+        <li className='nav__item'>
+          <Link
+            to='/blog'
+            className={isOpen === 'blog' ? 'nav__link dot' : 'nav__link'}
+            onClick={(() => setIsOpen('blog'), navToggle)}
+          >
+            blog
+          </Link>
+        </li>
+        <li>
+          <div className='navbar-btns'>
+            <Link
+              to='/contactanos'
+              className='btn__contactanos'
+              onClick={(() => setIsOpen(''), navToggle)}
+            >
+              Contáctanos
+            </Link>
+            <Link
+              to='/postulate'
+              className='btn__postulate'
+              onClick={(() => setIsOpen(''), navToggle)}
+            >
+              Postulate
+            </Link>
+          </div>
+        </li>
+      </ul>
+      <div onClick={navToggle} className={icon}>
+        <div className='line1'></div>
+        <div className='line2'></div>
+        <div className='line3'></div>
       </div>
-    </>
+    </nav>
   )
 }
