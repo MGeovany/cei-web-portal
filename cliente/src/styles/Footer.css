@@ -6,6 +6,7 @@
   font-family: var(--sen-bold);
   color: var(--white);
   margin-top: 80px;
+  z-index: -1;
 }
 
 .footer-title {

@@ -3,72 +3,47 @@ import '../styles/Navbar.css'
 import React, { useState } from 'react'
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState('')
+  const [active, setActive] = useState('nav__menu')
+  const [icon, setIcon] = useState('nav__toggler')
 
+  const navToggle = () => {
+    if (active === 'nav__menu') {
+      setActive('nav__menu nav__active')
+    } else setActive('nav__menu')
+
+    if (icon === 'nav__toggler') {
+      setIcon('nav__toggler toggle')
+    } else setIcon('nav__toggler')
+  }
   return (
-    <>
-      <div className='navbar'>
-        <div className='navbar-links'>
-          <div>
-            <Link
-              to='/'
-              className={
-                isOpen === 'home' ? 'navbar__link dot' : 'navbar__link'
-              }
-              onClick={() => setIsOpen('home')}
-            >
-              Home
-            </Link>
-          </div>
-          <div>
-            <Link
-              to='/calendario'
-              className={isOpen === 'cal' ? 'navbar__link dot' : 'navbar__link'}
-              onClick={() => setIsOpen('cal')}
-            >
-              Calendario
-            </Link>
-          </div>
-          <div>
-            <Link
-              to='/casos-de-exito'
-              className={
-                isOpen === 'casos' ? 'navbar__link dot' : 'navbar__link'
-              }
-              onClick={() => setIsOpen('casos')}
-            >
-              Casos de éxito
-            </Link>
-          </div>
-          <div>
-            <Link
-              to='/blog'
-              className={
-                isOpen === 'blog' ? 'navbar__link dot' : 'navbar__link'
-              }
-              onClick={() => setIsOpen('blog')}
-            >
-              Blog
-            </Link>
-          </div>
-        </div>
-        <div className='navbar-btns'>
-          <Link
-            to='/contactanos'
-            className='btn__contactanos'
-            onClick={() => setIsOpen('contact')}
-          >
-            Contáctanos
+    <nav className='nav'>
+      <ul className={active}>
+        <li className='nav__item'>
+          <Link to='/' className='nav__link'>
+            Home
           </Link>
-          <Link
-            to='/postulate'
-            className='btn__postulate'
-            onClick={() => setIsOpen('postulate')}
-          >
-            Postulate
+        </li>
+        <li className='nav__item'>
+          <Link to='/calendario' className='nav__link'>
+            Actividades
           </Link>
-        </div>
+        </li>
+        <li className='nav__item'>
+          <Link to='/casos-de-exito' className='nav__link'>
+            Casos de Éxito
+          </Link>
+        </li>
+        <li className='nav__item'>
+          <Link to='/blog' className='nav__link'>
+            blog
+          </Link>
+        </li>
+      </ul>
+      <div onClick={navToggle} className={icon}>
+        <div className='line1'></div>
+        <div className='line2'></div>
+        <div className='line3'></div>
       </div>
-    </>
+    </nav>
   )
 }

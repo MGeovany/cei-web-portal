@@ -20,9 +20,9 @@ export const LandingPage = () => {
         </div>
       </div>
       <div className='desktop-only'>
-        <Home />
+        {/* <Home />
         <QuienesSomos />
-        <NuestroEquipo />
+        <NuestroEquipo /> */}
       </div>
     </div>
   )
