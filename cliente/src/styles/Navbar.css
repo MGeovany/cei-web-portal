@@ -40,7 +40,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 3rem;
   z-index: 100;
 }
 .nav__toggler {
@@ -130,6 +129,7 @@ a {
 /* Active Class */
 .nav__active {
   transform: translateX(0%);
+  padding-left: 0;
 }
 
 /* Toggle Icon Animation */

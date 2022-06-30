@@ -108,6 +108,13 @@
   .casos-section-content {
     justify-content: space-around;
   }
+  .asset__content {
+    width: 100%;
+    padding: 0 0px;
+  }
+  .add__asset__modal {
+    padding: 0;
+  }
 }
 
 .asset__modal__body {
@@ -254,4 +261,16 @@
   padding-right: 20px;
   color: var(--primary-color);
   cursor: pointer;
+}
+
+@media screen and (max-width: 1270px) {
+  .casos-content {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .integrantes__list {
+    width: 100%;
+  }
 }

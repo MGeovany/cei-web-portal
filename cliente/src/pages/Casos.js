@@ -127,7 +127,6 @@ const casosTec = [
     ]
   }
 ]
-
 const casosCom = [
   {
     img: 'https://images.pexels.com/photos/12168556/pexels-photo-12168556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -210,7 +209,6 @@ const casosCom = [
     ]
   }
 ]
-
 const casosSal = [
   {
     img: 'https://images.pexels.com/photos/11258764/pexels-photo-11258764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
