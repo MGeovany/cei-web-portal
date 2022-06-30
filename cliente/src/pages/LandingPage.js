@@ -9,8 +9,8 @@ export const LandingPage = () => {
   return (
     <>
       <Home />
-      {/*  <QuienesSomos />
-        <NuestroEquipo /> */}
+      <QuienesSomos />
+      <NuestroEquipo />
     </>
   )
 }

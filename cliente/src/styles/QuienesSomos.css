@@ -46,3 +46,15 @@
 .b {
   font-weight: bolder;
 }
+
+@media screen and (max-width: 930px) {
+  .quienes-somos-text-cnt {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .quienes-somos-text {
+    flex-direction: column;
+  }
+}
