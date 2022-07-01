@@ -14,57 +14,55 @@ export const Contactanos = () => {
   })
 
   return (
-    <div>
-      <div className='contactanos'>
-        <div className='container_contactanos flex'>
-          <div className='section-title titulo_contactanos'>
-            PONTE EN <span style={{ color: '#e1575f' }}>CONTACTO📢</span>
-          </div>
-          <div className='contactanos-form'>
-            <form
-              className='form-contactanos'
-              onSubmit={form.onSubmit((values) => console.log(values))}
-            >
-              <div className='form-input'>
-                <div className='form-seccion'>
-                  <TextInput
-                    className='text'
-                    required
-                    label='Tú Nombre:'
-                    placeholder='Ingresa tu nombre'
-                  />
-                  <TextInput
-                    className='text'
-                    required
-                    label='Correo Electronico: '
-                    placeholder='Ingrese su correo'
-                  />
-                  <TextInput
-                    className='text'
-                    required
-                    label='Tú Numero:'
-                    placeholder='Ingrese su número de telefono'
-                  />
-                </div>
-                <div className='form-seccion'>
-                  <Textarea
-                    placeholder='Tus Comentarios Aqui'
-                    label='Comentarios:'
-                    className='contactanos-textarea'
-                    required
-                    minRows={7}
-                  />
-                  <div className='contactanos-btns'>
-                    <div className='btne'>Enviar</div>
-                    <div className='btnd'>Descartar</div>
-                  </div>
+    <div className='contactanos'>
+      <div className='container_contactanos flex'>
+        <div className='section-title titulo_contactanos'>
+          PONTE EN <span style={{ color: '#e1575f' }}>CONTACTO📢</span>
+        </div>
+        <div className='contactanos-form'>
+          <form
+            className='form-contactanos'
+            onSubmit={form.onSubmit((values) => console.log(values))}
+          >
+            <div className='form-input'>
+              <div className='form-seccion'>
+                <TextInput
+                  className='text'
+                  required
+                  label='Tú Nombre:'
+                  placeholder='Ingresa tu nombre'
+                />
+                <TextInput
+                  className='text'
+                  required
+                  label='Correo Electronico: '
+                  placeholder='Ingrese su correo'
+                />
+                <TextInput
+                  className='text'
+                  required
+                  label='Tú Numero:'
+                  placeholder='Ingrese su número de telefono'
+                />
+              </div>
+              <div className='form-seccion'>
+                <Textarea
+                  placeholder='Tus Comentarios Aqui'
+                  label='Comentarios:'
+                  className='contactanos-textarea'
+                  required
+                  minRows={7}
+                />
+                <div className='contactanos-btns'>
+                  <div className='btne'>Enviar</div>
+                  <div className='btnd'>Descartar</div>
                 </div>
               </div>
-              <div className='form-socials'>
-                <div className='form-social-seccion'></div>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div className='form-socials'>
+              <div className='form-social-seccion'></div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

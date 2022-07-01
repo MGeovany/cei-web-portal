@@ -3,7 +3,7 @@
   font-family: var(--sen-bold);
   background-color: var(--white);
   padding-top: 10px;
-  padding-bottom: 10rem;
+  height: 100vh;
 }
 
 .container_contactanos {
@@ -14,7 +14,6 @@
 
 .form-contactanos {
   align-content: center;
-  width: 600px;
 
   display: flex;
   flex-direction: column;
@@ -45,6 +44,7 @@
   display: flex;
   flex-direction: column;
   padding: 5rem;
+  width: 50%;
   margin-top: 50px;
 
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -67,7 +67,6 @@
   font-size: 24px;
   text-transform: capitalize;
   margin-bottom: 40px;
-  width: 500px;
 }
 
 .contactanos-textarea {
@@ -119,4 +118,24 @@
 
 .btnd {
   color: var(--orange);
+}
+
+@media screen and (max-width: 930px) {
+  .contactanos-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .form-input {
+    flex-direction: column;
+  }
+  .form-seccion {
+    width: 100%;
+  }
+  .form-seccion:last-child {
+    margin-left: 0px;
+  }
+  .form-postulate {
+    width: 100%;
+    padding: 1.5rem;
+  }
 }
