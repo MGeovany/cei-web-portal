@@ -115,3 +115,9 @@
   transition: all 0.5s ease;
   color: var(--green-dark);
 }
+
+@media screen and (max-width: 1930px) {
+  .title-50 {
+    width: 100%;
+  }
+}

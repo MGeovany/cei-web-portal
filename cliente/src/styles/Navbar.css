@@ -96,7 +96,7 @@ a {
   background-color: var(--secondary-color);
 }
 
-@media screen and (max-width: 932px) {
+@media screen and (max-width: 930px) {
   .nav {
     background-color: #222222 !important;
     position: fixed;
@@ -117,6 +117,7 @@ a {
     transform: translateX(100%);
     transition: 0.5s ease-in;
   }
+
   .nav__link {
     transition: 0.5s ease-in;
   }
@@ -125,15 +126,17 @@ a {
 
     color: white;
   }
+  .btn__postulate,
+  .btn__postulatef {
+    background-color: transparent;
+  }
 }
 /* Active Class */
 .nav__active {
   transform: translateX(0%);
   padding-left: 0;
 }
-
 /* Toggle Icon Animation */
-
 .toggle .line1 {
   transform: rotate(-45deg) translate(-9px, 5px);
 }

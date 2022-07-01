@@ -21,7 +21,7 @@ export const BlogCard = ({ blog }) => {
       padding: 'xl',
       overflow: 'outside',
 
-      size: 'calc(100% - 6rem)',
+      size: 'calc(100% - 2rem)',
       innerProps: {
         titulo: blog.title,
         autor: blog.autor,
