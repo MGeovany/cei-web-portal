@@ -7,7 +7,9 @@ export const Navbar = () => {
   const [icon, setIcon] = useState('nav__toggler')
   const [isOpen, setIsOpen] = useState('')
 
-  const navToggle = () => {
+  const navToggle = (e) => {
+    setIsOpen(e.target.value)
+    console.log('e', e.target.value)
     if (active === 'nav__menu') {
       setActive('nav__menu nav__active')
     } else setActive('nav__menu')
@@ -23,8 +25,9 @@ export const Navbar = () => {
         <li className='nav__item'>
           <Link
             to='/'
+            value='home'
             className={isOpen === 'home' ? 'nav__link dot' : 'nav__link'}
-            onClick={(() => setIsOpen('home'), navToggle)}
+            onClick={(e) => navToggle(e)}
           >
             Home
           </Link>
