@@ -2,17 +2,19 @@
   color: var(--black);
   font-family: var(--sen-bold);
   background-color: var(--white);
-  padding-top: 150px;
+  padding-top: 8rem;
 
   height: 100%;
+  padding-bottom: 4rem;
 }
 
 .container_postulate {
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 .form-postulate {
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   padding: 3rem;
@@ -82,4 +84,7 @@
 .btn__descartar:hover {
   transition: all 0.5s ease-in-out;
   opacity: 0.7;
+}
+.postulate-grid-item {
+  width: auto;
 }

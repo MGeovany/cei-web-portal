@@ -1,12 +1,12 @@
 .calendario {
-  height: 120vh;
+  height: 100vh;
 
   background-color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding-top: 150px;
+  padding-top: 8rem;
   font-family: var(--sen-bold);
 }
 

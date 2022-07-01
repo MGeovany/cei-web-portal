@@ -10,23 +10,22 @@ import {
   NativeSelect,
   MultiSelect
 } from '@mantine/core'
-import { Navbar } from '../componentes/Navbar'
 
 const data = [
   {
     value: 'mentorias',
-    label: 'Mentoria para el desarrollo de la idea de negocio.'
+    label: 'Mentoria para el desarrollo'
   },
   {
     value: 'formación',
-    label: 'Formación/asesoramiento en temas de emprendimiento'
+    label: 'Asesoramiento '
   },
   { value: 'networking', label: 'Networking y presencia de marca' },
   { value: 'testeo', label: 'Testeo de mi prototipo' },
-  { value: 'formalización', label: 'Formalizar legalmente mi emprendimiento' },
+  { value: 'formalización', label: 'Formalizarme legalmente' },
   {
     value: 'conexiones',
-    label: 'Conectar con otros programas del ecosistema emprendedor'
+    label: 'Conectar con otros'
   },
   { value: 'espacio_cei', label: 'Uso de espacio Co-working' }
 ]
