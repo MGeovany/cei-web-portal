@@ -16,10 +16,15 @@ export const QuienesSomos = () => {
             </div>
           </div>
           <div className='quienes-somos-text-cnt'>
-            Es un espacio <span style={{ color: '#e1575f' }}>creativo</span>{' '}
+            Es un espacio{' '}
+            <span className='b' style={{ color: '#e1575f' }}>
+              creativo
+            </span>{' '}
             ideal para que emprendedores, soñadores y personas innovadoras se
-            conecten y a través de procesos de incubación y aceleración puedan
-            <span style={{ color: '#4166DE' }}>hacer realidad sus sueños.</span>
+            conecten y a través de procesos de incubación y aceleración puedan{' '}
+            <span className='b' style={{ color: '#4166DE' }}>
+              hacer realidad sus sueños.
+            </span>
             <br />
             <br />
             Es un espacio en donde mentores certificados ayudan a estudiantes a{' '}
@@ -27,9 +32,9 @@ export const QuienesSomos = () => {
               crecer con sus proyectos,
             </span>{' '}
             a que no se desmotiven y sigan luchando por sus sueños, y en este
-            mismo espacio
-            <span style={{ color: '#4166DE' }}>
-              se capacitan constantemente
+            mismo espacio{' '}
+            <span className='b' style={{ color: '#4166DE' }}>
+              se capacitan constantemente{' '}
             </span>
             desde habilidades blandas, hasta el aprendizaje de las metodologías
             más avanzadas para emprender.
