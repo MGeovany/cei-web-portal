@@ -22,7 +22,9 @@ export const QuienesSomos = () => {
             </span>{' '}
             ideal para que emprendedores, soñadores y personas innovadoras se
             conecten y a través de procesos de incubación y aceleración puedan{' '}
-            <span style={{ color: '#4166DE' }}>hacer realidad sus sueños.</span>
+            <span className='b' style={{ color: '#4166DE' }}>
+              hacer realidad sus sueños.
+            </span>
             <br />
             <br />
             Es un espacio en donde mentores certificados ayudan a estudiantes a{' '}
