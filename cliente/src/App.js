@@ -10,6 +10,8 @@ import { Navbar } from './componentes/Navbar'
 import { Footer } from './componentes/Footer'
 
 // Pages
+import PublicRoute from './componentes/PublicRoute'
+
 import { LandingPage } from './pages/LandingPage'
 import { CalendarioPage } from './pages/CalendarioPage'
 import { Casos } from './pages/Casos'
@@ -40,6 +42,7 @@ import { EditarEventos } from './modals/EditarEventos'
 import { EditarCasoModal } from './modals/EditarCasoModal'
 import { EditarBlogModal } from './modals/EditarBlogModal'
 import { NotificationsProvider } from '@mantine/notifications'
+
 import { Login } from './pages/Login'
 import { NavbarAdmin } from './componentes/NavbarAdmin'
 
@@ -63,15 +66,16 @@ function App() {
           }}
         >
           <Router>
-            <Navbar />
             <Routes>
-              <Route path='/' element={<LandingPage />} />
-              <Route path='/calendario' element={<CalendarioPage />} />
-              <Route path='/casos-de-exito' element={<Casos />} />
-              <Route path='/blog' element={<Blog />} />
-              <Route path='/contactanos' element={<Contactanos />} />
-              <Route path='/postulate' element={<Postulate />} />
-              <Route path='/login' element={<Login />} />
+              <Route path='/' element={<PublicRoute />}>
+                <Route index element={<LandingPage />} />
+                <Route path='/calendario' element={<CalendarioPage />} />
+                <Route path='/casos-de-exito' element={<Casos />} />
+                <Route path='/blog' element={<Blog />} />
+                <Route path='/contactanos' element={<Contactanos />} />
+                <Route path='/postulate' element={<Postulate />} />
+                <Route path='/login' element={<Login />} />
+              </Route>
 
               <Route path='/admin' element={<PrivateRoute />}>
                 <Route index element={<Dashboard />} />
