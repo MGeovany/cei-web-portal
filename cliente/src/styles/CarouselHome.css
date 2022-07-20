@@ -1,0 +1,42 @@
+.carousel-home {
+  background-color: var(--white);
+  min-height: 100vh;
+  font-family: var(--sen-bold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.carousel-home-item {
+  width: 100%;
+  min-height: 530px;
+  width: 95vw;
+}
+
+.carousel-title {
+  padding-top: 1rem;
+  text-align: center;
+  line-height: 2;
+  width: 100%;
+}
+
+.carousel-card {
+  height: 630px;
+  width: 100%;
+}
+
+.carousel-card__img {
+  height: 528px;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.carousel-card img {
+  border-radius: 70px;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
