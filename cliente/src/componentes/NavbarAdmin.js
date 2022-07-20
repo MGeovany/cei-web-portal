@@ -31,7 +31,7 @@ export const NavbarAdmin = () => {
               onClick={(e) => navToggle(e)}
               value='home'
             >
-              Home
+              Inicio
             </div>
           </Link>
         </li>
@@ -71,7 +71,7 @@ export const NavbarAdmin = () => {
               }
               onClick={(e) => navToggle(e)}
             >
-              blog
+              Recursos
             </div>
           </Link>
         </li>

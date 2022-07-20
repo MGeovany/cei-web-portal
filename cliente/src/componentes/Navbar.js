@@ -20,7 +20,7 @@ export const Navbar = () => {
     setIsOpen(e.target.classList.value)
   }
   return (
-    <nav className='nav'>
+    <div className='nav'>
       <ul className={active}>
         <li className='nav__item'></li>
         <li className='nav__item'>
@@ -32,7 +32,7 @@ export const Navbar = () => {
               onClick={(e) => navToggle(e)}
               value='home'
             >
-              Home
+              Inicio
             </div>
           </Link>
         </li>
@@ -72,7 +72,7 @@ export const Navbar = () => {
               }
               onClick={(e) => navToggle(e)}
             >
-              blog
+              Recursos
             </div>
           </Link>
         </li>
@@ -101,6 +101,6 @@ export const Navbar = () => {
         <div className='line2'></div>
         <div className='line3'></div>
       </div>
-    </nav>
+    </div>
   )
 }

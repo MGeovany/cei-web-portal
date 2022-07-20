@@ -12,6 +12,7 @@
   padding-left: 3rem;
 
   animation: emerge-down 1200ms ease-in-out forwards;
+  z-index: -1 !important;
 }
 @keyframes emerge-down {
   0% {
@@ -28,8 +29,9 @@
 
 .home__title {
   font-size: 60px;
-  color: var(--black);
+  color: white;
   font-family: var(--sen-bold);
+  padding-top: 2rem;
 }
 
 .home__text {
@@ -42,14 +44,14 @@
 }
 
 .home__btns {
-  margin-top: 60px;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .home__btn__propuesta {
-  background-color: var(--secondary-color);
+  background-color: var(--blue-dark);
   color: var(--white);
   box-shadow: 0px 3px 6px #00000029;
 
@@ -76,7 +78,7 @@
   }
 }
 .home__btn__blog {
-  color: #e1575f;
+  color: white;
   margin: 10px 5px;
   font-size: 18px;
   font-family: var(--sen-bold);
@@ -93,14 +95,18 @@
   transition: all 0.3s ease-in-out;
   opacity: 0.8;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .home__cnt {
-  margin-top: 50px;
+  margin-top: 110px;
 
-  font-size: 18px;
-  color: var(--gray);
+  font-size: 19px;
+  font-style: italic;
+  color: var(--blue-dark);
+  font-weight: 900;
   font-family: var(--poppins-regular);
   line-height: 40px;
+  word-spacing: 2px;
 
   opacity: 0.93;
   padding-right: 20%;
@@ -129,4 +135,23 @@
   .home__img > img {
     height: 15rem;
   }
+  .home__btn__blog {
+    font-size: 1rem;
+  }
+  .home__btn__propuesta {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+  .home__btns {
+    margin-top: 70px;
+  }
+}
+
+.home__banner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1 !important;
 }
