@@ -19,18 +19,18 @@ a {
 
   padding: 20px 0 0 20px;
   font-family: var(--sen-bold);
-  color: #333;
-  z-index: 100;
+  color: white;
   font-size: 1.1rem;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  z-index: 1 !important;
 }
 .nav__brand {
   text-transform: uppercase;
 }
 .nav__link {
-  color: #333;
+  color: rgb(255, 255, 255);
   font-weight: 700;
   font-size: 18px;
-
   position: relative;
   text-align: center;
   height: 100%;
@@ -40,7 +40,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  z-index: 100;
 }
 .nav__toggler {
   display: none;
