@@ -7,8 +7,11 @@ export const CarouselCard = (item) => {
     <div className='carousel-card'>
       <div className='carousel-card__img'>
         <img src={item.image} alt={item.title} />
+        <div className='carousel-card__content carousel-card_title'>
+          {item.title} &bull; {item.category}
+          <div className=' carousel-card_description'>{item.desc}</div>
+        </div>
       </div>
-      {item.title}
     </div>
   )
 }
