@@ -13,6 +13,12 @@
 
 .calendario-title {
   margin-bottom: 60px;
+  text-align: center;
+}
+
+.actividades-title{
+  margin-top: 50px;
+  text-align: center;
 }
 
 .calendario-container {
@@ -106,5 +112,76 @@
 .cal__caso__button {
   cursor: pointer;
   color: var(--primary-color);
+  font-family: var(--sen-bold);
+}
+
+.actividades-section-title{
+  font-size: 20px;
+  font-family: var(--sen-bold);
+  color: var(--black);
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+.actividades-container-section{
+  width: 1600px;
+}
+
+.container-carrousel{
+  width: auto;
+  width: 1600px;
+  text-align: center;
+  margin-left: 100px;
+  
+}
+
+.card-container{
+  width: auto;
+  margin-left: 30px;
+  align-items: center;
+}
+
+.blog-section-title {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: var(--sen-bold);
+  margin-bottom: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.asset__modal__title {
+  font-size: 20px;
+  font-family: var(--sen-bold);
+  color: var(--black);
+}
+.add__asset__modal {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 300px);
+  padding: 20px;
+}
+
+.asset__content {
+  width: 90%;
+  padding: 0 20px;
+}
+
+.asset__modal__subtitle {
+  margin: 10px 0 30px;
+  color: var(--gray);
+  opacity: 0.6;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.actividad__card__content__title{
+  color: var(--black);
+  font-size: 20px;
+  line-height: 29px;
+  padding: 18px 0 5px 0;
+  text-align: start;
   font-family: var(--sen-bold);
 }
