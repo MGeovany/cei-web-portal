@@ -41,7 +41,7 @@
 }
 
 .card-50 {
-  min-height: 300px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,8 +67,9 @@
 
 .card-container {
   transition: all 1s ease;
-
+  width: 400px;
   cursor: pointer;
+  align-items: center;
 }
 
 .title-50 {

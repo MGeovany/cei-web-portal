@@ -45,7 +45,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-
+  width: auto;
   margin-bottom: 50px;
 }
 
