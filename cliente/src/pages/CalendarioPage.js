@@ -34,24 +34,22 @@ const events = [
 ]
 
 export const CalendarioPage = () => {
-
   return (
     <>
-    <div>
-      <div className='calendario'>
-        <div className='section-title calendario-title'>
-          CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
-        </div>
-        <Calendario events={events} />
-      </div>
       <div>
-      <div className='section-title actividades-title'>
-          ACTIVIDADES <span style={{ color: '#e1575f' }}> RECIENTES</span>
+        <div className='calendario'>
+          <div className='section-title calendario-title'>
+            CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
+          </div>
+          <Calendario events={events} />
         </div>
-        <Actividades/>
+        <div>
+          <div className='section-title actividades-title'>
+            ACTIVIDADES <span style={{ color: '#e1575f' }}> RECIENTES</span>
+          </div>
+          <Actividades />
+        </div>
       </div>
-    </div>
     </>
   )
 }
-

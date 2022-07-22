@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 
-
-export const ActividadesModal = ({context, id, innerProps}) => (
-    <>
+export const ActividadesModal = ({ context, id, innerProps }) => (
+  <>
     <div className='add__asset__modal'>
       <div className='asset__content'>
         <div className='asset__modal__title'>
