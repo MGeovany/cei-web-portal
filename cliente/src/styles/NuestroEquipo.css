@@ -6,10 +6,6 @@
   background-color: var(--white);
 }
 
-hr {
-  border: 1px solid green;
-}
-
 .nuestro-equipo-cards {
   flex-direction: row;
   min-width: 90%;

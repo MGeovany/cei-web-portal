@@ -160,3 +160,7 @@
   position: fixed;
   z-index: -1 !important;
 }
+
+.carousel-card_description {
+  margin-right: 2rem;
+}

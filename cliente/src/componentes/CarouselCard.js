@@ -9,7 +9,7 @@ export const CarouselCard = (item) => {
         <img src={item.image} alt={item.title} />
         <div className='carousel-card__content carousel-card_title'>
           {item.title} &bull; {item.category}
-          <div className=' carousel-card_description'>{item.desc}</div>
+          <div className='carousel-card_description'>{item.desc}</div>
         </div>
       </div>
     </div>
