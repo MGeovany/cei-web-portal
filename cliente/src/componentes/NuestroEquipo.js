@@ -41,7 +41,7 @@ export const NuestroEquipo = () => {
                 className='nuestro-equipo-item-name'
                 style={{ 'text-align': 'right' }}
               >
-                Dax Damian
+                Dax Paz
               </div>
               <div
                 className='nuestro-equipo-item-job'
@@ -53,30 +53,28 @@ export const NuestroEquipo = () => {
                 className='nuestro-equipo-item-description'
                 style={{ 'text-align': 'right' }}
               >
-                CEUTEC Tegucigalpa
+                CEUTEC San Pedro Sula
               </div>
               <hr style={{ border: '2px solid #5bf288' }} />
             </div>
           </div>
-          <div className='nuestro-equipo-item '>
-            <div className='nuestro-equipo-item flex'>
-              <div className='nuestro-equipo-item-img '>
-                <img
-                  src='/assets/team/Carlos.jpg'
-                  alt='equipo-1'
-                  style={{ border: '7px solid #5bddf2' }}
-                />
+          <div className='nuestro-equipo-item flex'>
+            <div className='nuestro-equipo-item-img '>
+              <img
+                src='/assets/team/Carlos.jpg'
+                alt='equipo-1'
+                style={{ border: '7px solid #5bddf2' }}
+              />
+            </div>
+            <div className='nuestro-equipo-item-container'>
+              <div className='nuestro-equipo-item-name'>Carlos Damian</div>
+              <div className='nuestro-equipo-item-job'>
+                Coordinador del Centro de Emprendimiento <br /> e Innovación
               </div>
-              <div className='nuestro-equipo-item-container'>
-                <div className='nuestro-equipo-item-name'>Carlos Damian</div>
-                <div className='nuestro-equipo-item-job'>
-                  Coordinador del Centro de Emprendimiento <br /> e Innovación
-                </div>
-                <div className='nuestro-equipo-item-description'>
-                  CEUTEC Tegucigalpa
-                </div>
-                <hr style={{ border: '2px solid #5bddf2' }} />
+              <div className='nuestro-equipo-item-description'>
+                CEUTEC La Ceiba
               </div>
+              <hr style={{ border: '2px solid #5bddf2' }} />
             </div>
           </div>
         </div>
