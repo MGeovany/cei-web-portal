@@ -14,6 +14,20 @@ export const ActividadesModal = ({ context, id, innerProps }) => (
           </span>
         </div>
         <div className='asset__modal__body lh-2'>{innerProps.desc}</div>
+        <div className='asset__modal__title'>
+          <div>Fotos del Evento</div>
+        </div>
+        <div className='fotos_list'>
+          {innerProps.photos.map((photo, index) => (
+            <div key={index}>
+              <div>
+                <div className='foto__img'>
+                  <img src={photo.img} alt={photo.descrip} />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </>

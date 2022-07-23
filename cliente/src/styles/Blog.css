@@ -40,6 +40,11 @@
   text-align: start;
 }
 
+.btn_descarga{
+  width: 20px;
+  height: 20px;
+}
+
 .card-50 {
   min-height: 200px;
   display: flex;
@@ -60,7 +65,7 @@
 }
 
 .card-container:hover {
-  box-shadow: 0 40px 130px rgba(153, 152, 160, 0.6);
+  box-shadow: 0 20px 90px rgba(252, 252, 255, 0.508);
   transform: scale(1.1, 1.1);
   transition: all 1s ease;
 }
@@ -121,4 +126,20 @@
   .title-50 {
     width: 100%;
   }
+}
+
+.foto__img > img{
+  width: 80%;
+  height: 80%;
+  margin: 10px;
+}
+
+.fotos_list{
+  display: flex;
+  flex-direction: row;
+}
+
+.foto__img{
+  display: flex;
+  flex-direction: row;
 }

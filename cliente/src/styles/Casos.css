@@ -83,6 +83,8 @@
   font-size: 20px;
   font-family: var(--sen-bold);
   color: var(--black);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .add__asset__modal {
   display: flex;

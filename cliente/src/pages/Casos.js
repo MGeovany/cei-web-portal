@@ -125,6 +125,66 @@ const casosTec = [
         email: 'marlongeo1999@gmail.com'
       }
     ]
+  },
+  {
+    img: 'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    titulo: 'BeLeaf',
+    subtitulo: 'Tecnología',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      },
+      {
+        nombre: 'Pauline L Revilla',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
+        email: 'Pauline.cro@hotmail.com'
+      },
+      {
+        nombre: 'Idell J Thomas',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
+        email: 'araceli.cro@hotmail.com'
+      }
+    ]
+  },
+  {
+    img: 'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    titulo: 'BeLeaf',
+    subtitulo: 'Tecnología',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      },
+      {
+        nombre: 'Pauline L Revilla',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
+        email: 'Pauline.cro@hotmail.com'
+      },
+      {
+        nombre: 'Idell J Thomas',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
+        email: 'araceli.cro@hotmail.com'
+      }
+    ]
   }
 ]
 const casosCom = [
@@ -193,6 +253,26 @@ const casosCom = [
     titulo: 'Fausto',
     desc: 'Save hundreds of admin hours by reducing back and forth',
     subtitulo: 'Comercial',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        img: 'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        img: 'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      }
+    ]
+  },
+  {
+    img: 'https://images.pexels.com/photos/12168556/pexels-photo-12168556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    titulo: 'Kubernets',
+    subtitulo: 'Comercial',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
     descripcion:
       'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
     integrantes: [

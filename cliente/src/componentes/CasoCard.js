@@ -30,8 +30,8 @@ export const CasoCard = (props) => {
 
   return (
     <div className='card-container' onClick={openCasoModal}>
-      <div style={{ width: 400, margin: '10px 0 10px', height: '100%' }}>
-        <Card shadow='sm' p='lg'>
+      <div style={{ width: 400, margin: '80px 0 80px', height: '100%' }}>
+        <Card >
           <Card.Section>
             <Image
               withPlaceholder

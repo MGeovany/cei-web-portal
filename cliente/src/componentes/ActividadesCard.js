@@ -25,7 +25,8 @@ export const ActividadesCard = ({ actividad }) => {
       innerProps: {
         titulo: actividad.title,
         fecha: actividad.fecha,
-        desc: actividad.contenido
+        desc: actividad.contenido,
+        photos: actividad.photos
       }
     })
 
@@ -34,7 +35,7 @@ export const ActividadesCard = ({ actividad }) => {
       <div
         style={{
           width: 400,
-          margin: '10px 0 120px',
+          margin: '80px 0 80px',
           height: '100%',
           alignItems: Center
         }}

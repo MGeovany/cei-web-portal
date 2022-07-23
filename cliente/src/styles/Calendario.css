@@ -130,26 +130,28 @@
 .container-carrousel{
   width: auto;
   width: 1600px;
+  height: 550px;
   text-align: center;
-  margin-left: 100px;
+  margin-left: 50px;
   
 }
 
 .card-container{
   width: auto;
-  margin-left: 30px;
+  margin-left: 60px;
   align-items: center;
 }
 
-.blog-section-title {
-  font-size: 20px;
+.actividades-section-title {
+  font-size: 25px;
   text-transform: capitalize;
   font-family: var(--sen-bold);
   margin-bottom: 50px;
+  margin-top: 50px;
   text-align: left;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  margin-left: 50px;
 }
 
 .asset__modal__title {
@@ -184,4 +186,16 @@
   padding: 18px 0 5px 0;
   text-align: start;
   font-family: var(--sen-bold);
+}
+
+.container-carrouselact{
+  width: auto;
+  width: 1600px;
+  height: 550px;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.container-actividades{
+  background-color: var(--white);
 }
