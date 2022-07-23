@@ -18,7 +18,7 @@ export const NuestroEquipo = () => {
               />
             </div>
             <div className='nuestro-equipo-item-container'>
-              <div className='nuestro-equipo-item-name'>Claudia Damian</div>
+              <div className='nuestro-equipo-item-name'>Claudia Pagoaga</div>
               <div className='nuestro-equipo-item-job'>
                 Coordinador del Centro de Emprendimiento <br /> e Innovación
               </div>
@@ -67,7 +67,7 @@ export const NuestroEquipo = () => {
               />
             </div>
             <div className='nuestro-equipo-item-container'>
-              <div className='nuestro-equipo-item-name'>Carlos Damian</div>
+              <div className='nuestro-equipo-item-name'>Carlos Cabrera</div>
               <div className='nuestro-equipo-item-job'>
                 Coordinador del Centro de Emprendimiento <br /> e Innovación
               </div>
