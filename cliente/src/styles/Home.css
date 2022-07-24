@@ -6,7 +6,7 @@
 
   flex-direction: row;
   justify-content: center;
-  padding-top: 8rem;
+  padding-top: 6rem;
 
   flex-wrap: wrap;
   padding-left: 3rem;
@@ -143,7 +143,12 @@
     padding: 15px;
   }
   .home__btns {
-    margin-top: 70px;
+    margin-top: 5rem !important;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .home__btns {
+    margin-top: 14px;
   }
 }
 
@@ -154,4 +159,8 @@
   height: 100%;
   position: fixed;
   z-index: -1 !important;
+}
+
+.carousel-card_description {
+  margin-right: 2rem;
 }
