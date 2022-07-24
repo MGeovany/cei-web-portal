@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { ActividadesCard } from './ActividadesCard'
 import { Arrow } from '../utils/svgIcons'
