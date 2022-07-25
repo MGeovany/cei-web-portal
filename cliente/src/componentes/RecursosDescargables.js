@@ -44,15 +44,15 @@ const descargables = [
 ]
 
 export const RecursosDescargables = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        arrows: true,
-        vertical: false
-      }
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    vertical: false
+  }
 
   return (
     <div className='casos-tecnologia'>
@@ -66,13 +66,13 @@ export const RecursosDescargables = () => {
 
         <div className='casos-section-content'>
           <div className='container-carrousel'>
-          <Slider {...settings}>
-          {descargables.map((descargables, index) => (
-            <div key={descargables.id}>
-              <DescargablesCard descargables={descargables} />
-            </div>
-          ))}
-          </Slider>
+            <Slider {...settings}>
+              {descargables.map((descargables, index) => (
+                <div key={descargables.id}>
+                  <DescargablesCard descargables={descargables} />
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export const CarouselHome = () => {
     autoplay: true,
     focusOnSelect: true,
     arrows: true,
-    fade: true,
+    fade: false,
     pauseOnHover: true,
     centerMode: true,
     centerPadding: '0px',
@@ -34,7 +34,7 @@ export const CarouselHome = () => {
     {
       title:
         'En el hub de unitec, celebramos el dia mundial del emprendimiento',
-      desc: '¿El gobierno y el sector económico, han comenzado a reconocer que el sector industrial está enfrentando muchos problemas. Por ello, se ha dado inicio a un proceso de desarrollo para reactivar la economía de la capital industrial con el lanzamiento de Bazar en línea y otros proyectos.',
+      desc: '¿El gobierno y el sector económico, han comenzado a reconocer que el sector industrial está enfrentando muchos problemas. Por ello, se ha dado inicio a un proceso de desarrollo para reactivar la economía de la capital industrial.',
       category: 'Blog',
       image:
         'https://images.pexels.com/photos/3876332/pexels-photo-3876332.jpeg'
@@ -42,7 +42,7 @@ export const CarouselHome = () => {
     {
       title:
         'En el hub de unitec, celebramos el dia mundial del emprendimiento',
-      desc: '¿El gobierno y el sector económico, han comenzado a reconocer que el sector industrial está enfrentando muchos problemas. Por ello, se ha dado inicio a un proceso de desarrollo para reactivar la economía de la capital industrial con el lanzamiento de Bazar en línea y otros proyectos.',
+      desc: '¿El gobierno y el sector económico, han comenzado a reconocer que el sector industrial está enfrentando muchos problemas. Por ello, se ha dado inicio a un proceso de desarrollo para reactivar la economía de la capital industrial.',
       category: 'Casos de éxito',
       image:
         'https://images.pexels.com/photos/5611139/pexels-photo-5611139.jpeg'
@@ -50,7 +50,7 @@ export const CarouselHome = () => {
     {
       title:
         'En el hub de unitec, celebramos el dia mundial del emprendimiento',
-      desc: '¿El gobierno y el sector económico, han comenzado a reconocer que el sector industrial está enfrentando muchos problemas. Por ello, se ha dado inicio a un proceso de desarrollo para reactivar la economía de la capital industrial con el lanzamiento de Bazar en línea y otros proyectos.',
+      desc: '¿El gobierno y el sector económico, han comenzado a reconocer que el sector industrial está enfrentando muchos problemas. Por ello, se ha dado inicio a un proceso de desarrollo para reactivar la economía de la capital industrial.',
       category: 'Blog',
       image:
         'https://images.pexels.com/photos/12879613/pexels-photo-12879613.jpeg'
