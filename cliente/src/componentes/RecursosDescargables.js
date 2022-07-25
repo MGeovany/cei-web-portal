@@ -11,7 +11,7 @@ const descargables = [
           'PLANTILLA PARA UN RESUMEN EJECUTIVO',
         autor: 'CEI CEUTEC',
         fecha: '18/05/2020',
-        img: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.pexels.com/photos/590037/pexels-photo-590037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         doc: 'hols'
       },
       {
@@ -20,7 +20,7 @@ const descargables = [
           'PLANTILLA PARA UN RESUMEN EJECUTIVO',
         autor: 'CEI CEUTEC',
         fecha: '18/05/2020',
-        img: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.pexels.com/photos/164686/pexels-photo-164686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         doc: 'hols'
       },
       {
@@ -29,7 +29,7 @@ const descargables = [
           'PLANTILLA PARA UN RESUMEN EJECUTIVO',
         autor: 'CEI CEUTEC',
         fecha: '18/05/2020',
-        img: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.pexels.com/photos/7680681/pexels-photo-7680681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         doc: 'hols'
       },
       {
@@ -38,7 +38,7 @@ const descargables = [
           'PLANTILLA PARA UN RESUMEN EJECUTIVO',
         autor: 'CEI CEUTEC',
         fecha: '18/05/2020',
-        img: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.pexels.com/photos/4968571/pexels-photo-4968571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         doc: 'hols'
       }
 ]
@@ -48,8 +48,8 @@ export const RecursosDescargables = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         arrows: true,
         vertical: false
       }

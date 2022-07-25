@@ -31,7 +31,7 @@ export const BlogCard = ({ blog }) => {
     })
   return (
     <div className='card-container' onClick={openBlogModal}>
-      <div style={{ width: 400, margin: '10px 0 120px', height: '100%' }}>
+      <div style={{ width: 350, margin: '10px 0 100px', height: '80%' }}>
         <Card shadow='sm' p='lg'>
           <Card.Section>
             <Image withPlaceholder src={blog.img} height={200} alt='blg' />

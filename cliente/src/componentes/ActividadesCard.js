@@ -25,30 +25,32 @@ export const ActividadesCard = ({ actividad }) => {
       innerProps: {
         titulo: actividad.title,
         fecha: actividad.fecha,
+        autor: actividad.autor,
         desc: actividad.contenido,
         photos: actividad.photos
       }
     })
 
   return (
-    <div className='card-container' onClick={openActividadesModal}>
+    <div className='card-actividades-container' onClick={openActividadesModal}>
       <div
         style={{
-          width: 400,
-          margin: '80px 0 80px',
+          width: 350,
+          margin: '10px 0 10px',
           height: '100%',
           alignItems: Center
         }}
       >
         <Card shadow='sm' p='sm'>
           <Card.Section>
-            <Image withPlaceholder src={actividad.img} height={150} alt='blg' />
+            <Image withPlaceholder src={actividad.img} height={150} alt='blg'/>
           </Card.Section>
-          <div className='card-50'>
+          <div className='card-actividades'>
             <div className='actividad__card__content__title'>
               {actividad.title}
             </div>
-            <button className='blog__card__content__button '>
+            <button className='actividad__card__content__button'>
+              <span style={{ color: '#4a79cb' }}>{actividad.autor} </span>
               <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
                 • {actividad.fecha}
               </span>

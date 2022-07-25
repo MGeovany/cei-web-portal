@@ -138,7 +138,6 @@
 
 .card-container{
   width: auto;
-  margin-left: 60px;
   align-items: center;
 }
 
@@ -191,11 +190,45 @@
 .container-carrouselact{
   width: auto;
   width: 1600px;
-  height: 550px;
-  text-align: center;
-  margin-left: 100px;
+  height: 480px;
+  margin-left: 120px;
 }
 
 .container-actividades{
+  width: auto;
   background-color: var(--white);
+}
+
+.card-actividades-container{
+  transition: all 1s ease;
+  width: 50px;
+  height: 420px;
+  cursor: pointer;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.card-actividades{
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-actividades-container:hover{
+  box-shadow: 0 20px 90px rgba(252, 252, 255, 0.508);
+  transform: scale(1.1, 1.1);
+  transition: all 1s ease;
+}
+
+.actividad__card__content__button{
+  text-align: left;
+  padding: 10px;
+  color: var(--primary-color);
+  width: 100%;
+
+  font-family: var(--sen-bold);
+  font-weight: 600;
+  cursor: pointer;
+  font: normal normal bold 17px/20px Sen;
 }

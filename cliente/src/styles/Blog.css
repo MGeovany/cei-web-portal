@@ -72,9 +72,11 @@
 
 .card-container {
   transition: all 1s ease;
-  width: 400px;
+  width: 200px;
+  height: 450px;
   cursor: pointer;
-  align-items: center;
+  align-items: flex-start;
+  margin-left: 20px;
 }
 
 .title-50 {

@@ -58,7 +58,7 @@
 .casos__card__content__desc {
   font-size: 16px;
   padding: 22px 0 22px 0;
-
+  text-align: left;
   font-family: var(--poppins-regular);
   color: var(--gray);
   line-height: 28px;

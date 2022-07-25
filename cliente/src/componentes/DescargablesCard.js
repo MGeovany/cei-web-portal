@@ -29,7 +29,7 @@ export const DescargablesCard = ({descargables}) => {
 
   return (
     <div className='card-container'>
-      <div style={{ width: 400, margin: '10px 0 120px', height: '100%' }}>
+      <div style={{ width: 350, margin: '10px 0 10px', height: '80%' }}>
         <Card shadow='sm' p='lg'>
           <Card.Section>
             <Image withPlaceholder src={descargables.img} height={200} alt='blg' />
