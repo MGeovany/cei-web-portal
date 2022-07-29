@@ -223,10 +223,9 @@
 
 .actividad__card__content__button{
   text-align: left;
-  padding: 10px;
+  padding: 5px;
   color: var(--primary-color);
   width: 100%;
-
   font-family: var(--sen-bold);
   font-weight: 600;
   cursor: pointer;

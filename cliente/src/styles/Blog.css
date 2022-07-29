@@ -136,12 +136,4 @@
   margin: 10px;
 }
 
-.fotos_list{
-  display: flex;
-  flex-direction: row;
-}
 
-.foto__img{
-  display: flex;
-  flex-direction: row;
-}
