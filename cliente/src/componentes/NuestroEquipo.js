@@ -37,22 +37,14 @@ export const NuestroEquipo = () => {
               />
             </div>
             <div className='nuestro-equipo-item-container'>
-              <div
-                className='nuestro-equipo-item-name'
-                style={{ 'text-align': 'right' }}
-              >
-                Dax Paz
-              </div>
+              <div className='nuestro-equipo-item-name'>Dax Paz</div>
               <div
                 className='nuestro-equipo-item-job'
-                style={{ 'text-align': 'right' }}
+                style={{ textAlign: 'right' }}
               >
                 Coordinador del Centro de Emprendimiento <br /> e Innovación
               </div>
-              <div
-                className='nuestro-equipo-item-description'
-                style={{ 'text-align': 'right' }}
-              >
+              <div className='nuestro-equipo-item-description'>
                 CEUTEC San Pedro Sula
               </div>
               <hr style={{ border: '2px solid #5bf288' }} />
