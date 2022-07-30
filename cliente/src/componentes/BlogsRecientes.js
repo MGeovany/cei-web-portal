@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Blog.css'
 import { Arrow } from '../utils/svgIcons'
 import { BlogCard } from './BlogCard'
+import Slider from 'react-slick'
 
 const blogs = [
   {
@@ -82,6 +83,16 @@ const blogs = [
 ]
 
 export const BlogsRecientes = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+    vertical: false
+  }
+
   return (
     <div className='casos-tecnologia'>
       <div className='casos-container-section'>
@@ -93,11 +104,15 @@ export const BlogsRecientes = () => {
         </div>
 
         <div className='casos-section-content'>
+          <div className='container-carrousel'>
+          <Slider {...settings}>
           {blogs.map((blog, index) => (
             <div key={blog.id}>
               <BlogCard blog={blog} />
             </div>
           ))}
+          </Slider>
+          </div>
         </div>
       </div>
     </div>

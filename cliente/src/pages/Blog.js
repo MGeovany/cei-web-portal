@@ -1,6 +1,7 @@
 import React from 'react'
 import { BlogsRecientes } from '../componentes/BlogsRecientes'
 import '../styles/Blog.css'
+import { RecursosDescargables } from '../componentes/RecursosDescargables'
 
 export const Blog = () => {
   return (
@@ -14,6 +15,7 @@ export const Blog = () => {
           <div className='casos-content'>
             <div className='casos-section'>
               <BlogsRecientes />
+              <RecursosDescargables/>
             </div>
           </div>
         </div>

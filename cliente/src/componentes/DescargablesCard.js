@@ -1,12 +1,11 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { Card, Image, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
+import { MdFileDownload } from 'react-icons/md'
 
-export const BlogCard = ({ blog }) => {
+export const DescargablesCard = ({ descargables }) => {
   const modals = useModals()
-
   const theme = useMantineTheme()
 
   const openBlogModal = () =>
@@ -23,25 +22,38 @@ export const BlogCard = ({ blog }) => {
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: blog.title,
-        autor: blog.autor,
-        fecha: blog.fecha,
-        desc: blog.contenido
+        titulo: descargables.title,
+        autor: descargables.autor,
+        fecha: descargables.fecha
       }
     })
+
   return (
-    <div className='card-container' onClick={openBlogModal}>
-      <div style={{ width: 350, margin: '10px 0 100px', height: '80%' }}>
+    <div className='card-container'>
+      <div style={{ width: 350, margin: '10px 0 10px', height: '80%' }}>
         <Card shadow='sm' p='lg'>
           <Card.Section>
-            <Image withPlaceholder src={blog.img} height={200} alt='blg' />
+            <Image
+              withPlaceholder
+              src={descargables.img}
+              height={200}
+              alt='blg'
+            />
           </Card.Section>
           <div className='card-50'>
-            <div className='blog__card__content__title'>{blog.title}</div>
+            <div className='blog__card__content__title'>
+              {descargables.title}
+            </div>
             <button className='blog__card__content__button '>
-              <span style={{ color: '#4a79cb' }}>{blog.autor} </span>
+              <span style={{ color: '#4a79cb' }}>{descargables.autor} </span>
               <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-                • {blog.fecha}
+                • {descargables.fecha}
+              </span>
+              <span
+                className='btn_descarga'
+                style={{ color: '#AAAEB8', opacity: '0.6' }}
+              >
+                • <MdFileDownload width={50} height={50} />
               </span>
             </button>
           </div>

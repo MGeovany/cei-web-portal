@@ -42,6 +42,7 @@ import { EditarEventos } from './modals/EditarEventos'
 import { EditarCasoModal } from './modals/EditarCasoModal'
 import { EditarBlogModal } from './modals/EditarBlogModal'
 import { NotificationsProvider } from '@mantine/notifications'
+import { ActividadesModal } from './modals/ActividadesModal'
 
 import { Login } from './pages/Login'
 import { NavbarAdmin } from './componentes/NavbarAdmin'
@@ -62,7 +63,8 @@ function App() {
             AgregarEventos,
             EditarEventos,
             EditarCasoModal,
-            EditarBlogModal
+            EditarBlogModal,
+            ActividadesModal
           }}
         >
           <Router>

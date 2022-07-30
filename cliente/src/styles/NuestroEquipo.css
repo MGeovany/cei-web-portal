@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 3rem;
-  width: 80vw;
+  width: 70vw;
 }
 
 .nuestro-equipo-item {
@@ -24,10 +24,6 @@
   justify-content: flex-start;
   flex-direction: row-reverse;
 }
-/* .nuestro-equipo-item-img {
-   width: 230px; 
-  height: 170px; 
-} */
 
 .nuestro-equipo-item-img > img {
   border-radius: 50%;

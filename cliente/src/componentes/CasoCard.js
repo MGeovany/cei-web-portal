@@ -29,9 +29,9 @@ export const CasoCard = (props) => {
     })
 
   return (
-    <div className='card-container' onClick={openCasoModal}>
-      <div style={{ width: 400, margin: '10px 0 10px', height: '100%' }}>
-        <Card shadow='sm' p='lg'>
+    <div className='card-container'>
+      <div style={{ width: 350, margin: '20px 0 20px', height: '60%' }}>
+        <Card >
           <Card.Section>
             <Image
               withPlaceholder
