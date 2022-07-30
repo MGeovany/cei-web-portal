@@ -9,7 +9,7 @@ const settings = {
   slidesToShow: 4,
   slidesToScroll: 4,
   arrows: true,
-  vertical: false,
+  vertical: false
 }
 
 export const ActividadesModal = ({ context, id, innerProps }) => (
@@ -28,21 +28,19 @@ export const ActividadesModal = ({ context, id, innerProps }) => (
         <div className='asset__modal__title'>
           <div>Fotos del Evento</div>
         </div>
-        
+
         <div className='fotos_list'>
-        <Slider {...settings}>
-          {innerProps.photos.map((photo, index) => (
-            <div key={index}>
-              {' '}
+          <Slider {...settings}>
+            {innerProps.photos.map((photo, index) => (
+              <div key={index}>
+                {' '}
                 <div className='foto__img'>
                   <img src={photo.img} alt={photo.descrip} />
                 </div>
-              
-            </div>
-          ))}
+              </div>
+            ))}
           </Slider>
         </div>
-        
       </div>
     </div>
   </>

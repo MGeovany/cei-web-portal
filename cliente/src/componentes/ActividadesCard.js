@@ -3,22 +3,22 @@ import React from 'react'
 import { Card, Center, Image, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import '../styles/Calendario.css'
-import {FacebookIcon, FacebookShareButton} from "react-share";
+import { FacebookIcon, FacebookShareButton } from 'react-share'
 
 const dataFromNextJS = {
   request: {
-    path: "https://cei-web-portal-mgeovany.vercel.app/"
+    path: 'https://cei-web-portal-mgeovany.vercel.app/'
   }
-};
+}
 const dataFromAEM = {
   pageproperties: {
-    title: "content page"
+    title: 'content page'
   },
   email: {
-    subject: "See this page: Centro de Emprendimiento CEI",
-    body: "Mira esto: "
+    subject: 'See this page: Centro de Emprendimiento CEI',
+    body: 'Mira esto: '
   }
-};
+}
 
 export const ActividadesCard = ({ actividad }) => {
   const modals = useModals()
@@ -48,7 +48,7 @@ export const ActividadesCard = ({ actividad }) => {
     })
 
   return (
-    <div className='card-actividades-container' >
+    <div className='card-actividades-container'>
       <div
         style={{
           width: 350,
@@ -59,27 +59,30 @@ export const ActividadesCard = ({ actividad }) => {
       >
         <Card shadow='sm' p='sm'>
           <Card.Section onClick={openActividadesModal}>
-            <Image withPlaceholder src={actividad.img} height={150} alt='blg'/>
+            <Image withPlaceholder src={actividad.img} height={150} alt='blg' />
           </Card.Section>
-          <div className='card-actividades' >
-            <div className='actividad__card__content__title' onClick={openActividadesModal}>
+          <div className='card-actividades'>
+            <div
+              className='actividad__card__content__title'
+              onClick={openActividadesModal}
+            >
               {actividad.title}
             </div>
-          
-          <div className='actividad__card__content__button'>
-            <button onClick={openActividadesModal}>
-              <span style={{ color: '#4a79cb' }}>{actividad.autor} </span>
-              <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-                • {actividad.fecha}
+
+            <div className='actividad__card__content__button'>
+              <button onClick={openActividadesModal}>
+                <span style={{ color: '#4a79cb' }}>{actividad.autor} </span>
+                <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
+                  • {actividad.fecha}
+                </span>
+              </button>
+              <span className='actividad__card__content__button'>
+                <FacebookShareButton url={dataFromNextJS.request.path}>
+                  • <FacebookIcon size={28} round={true} />
+                </FacebookShareButton>
               </span>
-            </button>
-            <span className='actividad__card__content__button'>
-            <FacebookShareButton url={dataFromNextJS.request.path}>
-            • <FacebookIcon size={28} round={true}/>
-            </FacebookShareButton>
-            </span>
             </div>
-            </div>
+          </div>
         </Card>
       </div>
     </div>

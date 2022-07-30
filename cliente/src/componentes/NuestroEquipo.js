@@ -37,12 +37,7 @@ export const NuestroEquipo = () => {
               />
             </div>
             <div className='nuestro-equipo-item-container'>
-              <div
-                className='nuestro-equipo-item-name'
-                style={{ textAlign: 'right' }}
-              >
-                Dax Paz
-              </div>
+              <div className='nuestro-equipo-item-name'>Dax Paz</div>
               <div
                 className='nuestro-equipo-item-job'
                 style={{ textAlign: 'right' }}
