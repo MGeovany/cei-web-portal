@@ -16,7 +16,6 @@ export const Navbar = () => {
       setIcon('nav__toggler toggle')
     } else setIcon('nav__toggler')
 
-    console.log('e', e.target.classList)
     setIsOpen(e.target.classList.value)
   }
   return (

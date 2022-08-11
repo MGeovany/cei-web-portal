@@ -10,7 +10,7 @@ export const LandingPage = () => {
   return (
     <>
       <Home />
-      <CarouselHome />
+      {/*  <CarouselHome /> */}
       <QuienesSomos />
       <NuestroEquipo />
     </>

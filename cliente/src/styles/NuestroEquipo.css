@@ -73,4 +73,11 @@
     height: 100%;
     padding-top: 5rem;
   }
+  .nuestro-equipo-item-img > img {
+    width: 150px;
+    height: 150px;
+  }
+  .nuestro-equipo-container {
+    align-items: center;
+  }
 }
