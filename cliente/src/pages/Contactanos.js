@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/Contactanos.css'
-import { TextInput, Textarea, NumberInput, Button } from '@mantine/core'
+import { TextInput, Textarea, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
 
 export const Contactanos = () => {
   const form = useForm({
     initialValues: {
-      nombre_postulante: '',
-      correo: '',
-      celular: '',
+      nombre: '',
+      email: '',
+      telefono: '',
       comentario: ''
     },
     validate: {
-      nombre_postulante: (value) =>
+      nombre: (value) =>
         value.length < 2 ? '*Nombre debe de contener mas de dos letras' : null,
-      correo: (value) => (/^\S+@\S+$/.test(value) ? null : '*Correo invalido'),
-      celular: (value) =>
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : '*email invalido'),
+      telefono: (value) =>
         value.length < 8
           ? '*Numero de telefono debe de contener mas de 8 digitos'
           : null,
@@ -25,6 +25,18 @@ export const Contactanos = () => {
           : null
     }
   })
+  const createPost = async (values) => {
+    console.log('Form submitted', values)
+    const response = await fetch('http://localhost:3055/1.0.0/contactanos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    })
+    const data = await response.json()
+    console.log(data)
+  }
 
   return (
     <div className='contactanos'>
@@ -35,7 +47,7 @@ export const Contactanos = () => {
         <div className='contactanos-form'>
           <form
             className='form-contactanos'
-            onSubmit={form.onSubmit(console.log)}
+            onSubmit={form.onSubmit((values) => createPost(values))}
           >
             <div className='form-input'>
               <div className='form-seccion'>
@@ -44,21 +56,21 @@ export const Contactanos = () => {
                   required
                   label='Tú Nombre:'
                   placeholder='Ingresa tu nombre'
-                  {...form.getInputProps('nombre_postulante')}
+                  {...form.getInputProps('nombre')}
                 />
                 <TextInput
                   className='text'
                   required
                   label='Correo Electronico: '
-                  placeholder='Ingrese su correo'
-                  {...form.getInputProps('correo')}
+                  placeholder='Ingrese su email'
+                  {...form.getInputProps('email')}
                 />
                 <TextInput
                   className='text'
                   required
                   label='Tú Numero:'
                   placeholder='Ingrese su número de telefono'
-                  {...form.getInputProps('celular')}
+                  {...form.getInputProps('telefono')}
                 />
               </div>
               <div className='form-seccion'>
@@ -75,6 +87,14 @@ export const Contactanos = () => {
                     type='submit'
                     mt='sm'
                     style={{ boxShadow: '3px 3px 17px #00000029' }}
+                    onClick={() =>
+                      form.setValues({
+                        nombre: '',
+                        email: '',
+                        telefono: '',
+                        comentario: ''
+                      })
+                    }
                   >
                     Enviar
                   </Button>
