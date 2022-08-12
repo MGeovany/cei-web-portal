@@ -104,6 +104,7 @@ export const Contactanos = () => {
                   <Button
                     type='submit'
                     mt='sm'
+                    size='md'
                     style={{ boxShadow: '3px 3px 17px #00000029' }}
                   >
                     Enviar
@@ -111,6 +112,7 @@ export const Contactanos = () => {
                   <Button
                     type='reset'
                     mt='sm'
+                    size='md'
                     color='red'
                     style={{ boxShadow: '3px 3px 17px #00000029' }}
                   >
