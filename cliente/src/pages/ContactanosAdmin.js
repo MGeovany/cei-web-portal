@@ -3,23 +3,29 @@ import '../styles/ContactanosAdmin.css'
 import { Table } from '@mantine/core'
 import { showNotification } from '@mantine/notifications'
 import React, { useEffect, useState } from 'react'
+import { IconCheck } from '@tabler/icons'
 
 export const ContactanosAdmin = () => {
   const [contactanos, setContactanos] = useState([])
 
-  const deleteElement = (name, e) => {
-    e.preventDefault()
-    const newEvents = [...contactanos]
-    newEvents.splice(name, 1)
-    setContactanos(newEvents)
-
-    showNotification({
-      title: 'Eliminado',
-      color: 'blue',
-      message: `Contacto de ${name} eliminado!`
-    })
-
-    contactanos.splice(name, 1)
+  const deleteContactanos = async (id) => {
+    try {
+      const deleteContactanos = await fetch(
+        `http://localhost:3055/1.0.0/contactanos/${id}`,
+        {
+          method: 'DELETE'
+        }
+      )
+      setContactanos(contactanos.filter((contactanos) => contactanos.id !== id))
+      showNotification({
+        icon: <IconCheck />,
+        title: 'Rechazado',
+        color: 'green',
+        message: 'Contacto eliminado correctamente!'
+      })
+    } catch (err) {
+      console.error(err.message)
+    }
   }
 
   useEffect(() => {
@@ -54,7 +60,7 @@ export const ContactanosAdmin = () => {
           <div className='btn__editar'>Aceptar</div>
           <div
             className='btn__eliminar'
-            onClick={(e) => deleteElement(element.nombre, e)}
+            onClick={(e) => deleteContactanos(element.id, e)}
           >
             Rechazar
           </div>

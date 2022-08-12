@@ -1,9 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/Contactanos.css'
 import { TextInput, Textarea, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
+import { showNotification } from '@mantine/notifications'
+import { IconCheck } from '@tabler/icons'
 
 export const Contactanos = () => {
+  const [dataF, setDataF] = useState({})
+
+  useEffect(() => {}, [dataF])
+
   const form = useForm({
     initialValues: {
       nombre: '',
@@ -26,7 +32,19 @@ export const Contactanos = () => {
     }
   })
   const createPost = async (values) => {
-    console.log('Form submitted', values)
+    showNotification({
+      icon: <IconCheck />,
+      title: 'Enviado',
+      color: 'green',
+      message:
+        'Gracias por contactarnos ! Nos pondremos en contacto contigo lo antes posible.'
+    })
+    form.setValues({
+      nombre: '',
+      email: '',
+      telefono: '',
+      comentario: ''
+    })
     const response = await fetch('http://localhost:3055/1.0.0/contactanos', {
       method: 'POST',
       headers: {
@@ -36,6 +54,7 @@ export const Contactanos = () => {
     })
     const data = await response.json()
     console.log(data)
+    setDataF(data)
   }
 
   return (
@@ -59,8 +78,8 @@ export const Contactanos = () => {
                   {...form.getInputProps('nombre')}
                 />
                 <TextInput
-                  className='text'
                   required
+                  className='text'
                   label='Correo Electronico: '
                   placeholder='Ingrese su email'
                   {...form.getInputProps('email')}
@@ -78,7 +97,6 @@ export const Contactanos = () => {
                   placeholder='Tus Comentarios Aqui'
                   label='Comentarios:'
                   className='contactanos-textarea'
-                  required
                   minRows={7}
                   {...form.getInputProps('comentario')}
                 />
@@ -87,14 +105,6 @@ export const Contactanos = () => {
                     type='submit'
                     mt='sm'
                     style={{ boxShadow: '3px 3px 17px #00000029' }}
-                    onClick={() =>
-                      form.setValues({
-                        nombre: '',
-                        email: '',
-                        telefono: '',
-                        comentario: ''
-                      })
-                    }
                   >
                     Enviar
                   </Button>
