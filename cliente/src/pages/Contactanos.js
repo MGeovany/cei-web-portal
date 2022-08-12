@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Contactanos.css'
-import { TextInput, Textarea } from '@mantine/core'
+import { TextInput, Textarea, NumberInput, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
 
 export const Contactanos = () => {
@@ -10,6 +10,19 @@ export const Contactanos = () => {
       correo: '',
       celular: '',
       comentario: ''
+    },
+    validate: {
+      nombre_postulante: (value) =>
+        value.length < 2 ? '*Nombre debe de contener mas de dos letras' : null,
+      correo: (value) => (/^\S+@\S+$/.test(value) ? null : '*Correo invalido'),
+      celular: (value) =>
+        value.length < 8
+          ? '*Numero de telefono debe de contener mas de 8 digitos'
+          : null,
+      comentario: (value) =>
+        value.length < 10
+          ? '*Comentario debe de contener mas de 10 letras'
+          : null
     }
   })
 
@@ -22,7 +35,7 @@ export const Contactanos = () => {
         <div className='contactanos-form'>
           <form
             className='form-contactanos'
-            onSubmit={form.onSubmit((values) => console.log(values))}
+            onSubmit={form.onSubmit(console.log)}
           >
             <div className='form-input'>
               <div className='form-seccion'>
@@ -31,18 +44,21 @@ export const Contactanos = () => {
                   required
                   label='Tú Nombre:'
                   placeholder='Ingresa tu nombre'
+                  {...form.getInputProps('nombre_postulante')}
                 />
                 <TextInput
                   className='text'
                   required
                   label='Correo Electronico: '
                   placeholder='Ingrese su correo'
+                  {...form.getInputProps('correo')}
                 />
                 <TextInput
                   className='text'
                   required
                   label='Tú Numero:'
                   placeholder='Ingrese su número de telefono'
+                  {...form.getInputProps('celular')}
                 />
               </div>
               <div className='form-seccion'>
@@ -52,15 +68,26 @@ export const Contactanos = () => {
                   className='contactanos-textarea'
                   required
                   minRows={7}
+                  {...form.getInputProps('comentario')}
                 />
                 <div className='contactanos-btns'>
-                  <div className='btne'>Enviar</div>
-                  <div className='btnd'>Descartar</div>
+                  <Button
+                    type='submit'
+                    mt='sm'
+                    style={{ boxShadow: '3px 3px 17px #00000029' }}
+                  >
+                    Enviar
+                  </Button>
+                  <Button
+                    type='reset'
+                    mt='sm'
+                    color='red'
+                    style={{ boxShadow: '3px 3px 17px #00000029' }}
+                  >
+                    Cancelar
+                  </Button>
                 </div>
               </div>
-            </div>
-            <div className='form-socials'>
-              <div className='form-social-seccion'></div>
             </div>
           </form>
         </div>

@@ -1,125 +1,17 @@
+/* eslint space-before-function-paren: ["error", { "anonymous": "never", "named": "always" }] */
 import '../styles/ContactanosAdmin.css'
 import { Table } from '@mantine/core'
 import { showNotification } from '@mantine/notifications'
 import React, { useEffect, useState } from 'react'
 
-const elements = [
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-    correo: 'valeria587@gmail.com',
-    celular: '+005 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  }
-]
-
 export const ContactanosAdmin = () => {
-  const [events, setEvents] = useState(elements)
+  const [contactanos, setContactanos] = useState([])
+
   const deleteElement = (name, e) => {
     e.preventDefault()
-    const newEvents = [...events]
+    const newEvents = [...contactanos]
     newEvents.splice(name, 1)
-    setEvents(newEvents)
+    setContactanos(newEvents)
 
     showNotification({
       title: 'Eliminado',
@@ -127,32 +19,35 @@ export const ContactanosAdmin = () => {
       message: `Contacto de ${name} eliminado!`
     })
 
-    elements.splice(name, 1)
+    contactanos.splice(name, 1)
   }
 
   useEffect(() => {
-    setEvents(elements)
-  }, [events])
+    setContactanos(contactanos)
+  }, [contactanos])
 
-  const rows = elements.map((element, index) => (
-    <tr key={index}>
+  useEffect(() => {
+    const fetchContactanos = async () => {
+      const response = await fetch('http://localhost:3055/1.0.0/contactanos')
+      const data = await response.json()
+      setContactanos(data)
+    }
+    fetchContactanos()
+  }, [])
+
+  const rows = contactanos.map((element, index) => (
+    <tr key={element.id}>
       <td>
         <div className='td__content'>{element.nombre}</div>
       </td>
       <td>
-        <div className='td__content'>{element.apellido}</div>
+        <div className='td__content'>{element.email}</div>
       </td>
       <td>
-        <div className='td__content'>{element.correo}</div>
+        <div className='td__content'>+504 {element.telefono}</div>
       </td>
       <td>
-        <div className='td__content'>{element.celular}</div>
-      </td>
-      <td>
-        <div className='td__content'>{element.mensaje}</div>
-      </td>
-      <td>
-        <div className='td__content'>{element.fecha}</div>
+        <div className='td__content'>{element.comentario}</div>
       </td>
       <td>
         <div className='tab__btns flex'>
@@ -170,7 +65,10 @@ export const ContactanosAdmin = () => {
 
   return (
     <>
-      <div className='casos'>
+      <div
+        className='casos'
+        style={{ paddingBottom: '2rem', minHeight: '100vh' }}
+      >
         <div className='casos-container flex'>
           <div className='casos-title section-title'>
             PERSONAS QUE SE
@@ -183,9 +81,7 @@ export const ContactanosAdmin = () => {
                   <th>
                     <div className='th__title'>Nombre</div>
                   </th>
-                  <th>
-                    <div className='th__title'>Apellido</div>
-                  </th>
+
                   <th>
                     <div className='th__title'>Correo</div>
                   </th>
@@ -195,9 +91,7 @@ export const ContactanosAdmin = () => {
                   <th>
                     <div className='th__title'>Mensaje</div>
                   </th>
-                  <th>
-                    <div className='th__title'>Fecha</div>
-                  </th>
+
                   <th></th>
                 </tr>
               </thead>
