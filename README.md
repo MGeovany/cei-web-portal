@@ -56,7 +56,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 Give a ⭐️ if you liked this project!
 
-<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="End_Points_0"></a>End Points</h1>
+## End Points 
 <h3 class="code-line" data-line-start=2 data-line-end=3 ><a id="Contactanos___100Contactanos_2"></a>Contactanos --&gt;  <code>/1.0.0/Contactanos</code></h3>
 <ul>
 <li class="has-line-data" data-line-start="3" data-line-end="4">id int IDENTITY(1,1) NOT NULL</li>
