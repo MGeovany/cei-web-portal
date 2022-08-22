@@ -3,7 +3,12 @@ import '../styles/Contactanos.css'
 import { TextInput, Textarea, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
 import { showNotification } from '@mantine/notifications'
-import { IconCheck } from '@tabler/icons'
+import {
+  IconCheck,
+  IconBrandTelegram,
+  IconBrandWhatsapp,
+  IconBrandFacebook
+} from '@tabler/icons'
 
 export const Contactanos = () => {
   const [dataF, setDataF] = useState({})
@@ -91,7 +96,32 @@ export const Contactanos = () => {
                   placeholder='Ingrese su número de telefono'
                   {...form.getInputProps('telefono')}
                 />
+                <div
+                  className='contact-icons'
+                  style={{
+                    marginTop: '1rem',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}
+                >
+                  <span>Encuentranos en:</span>
+                  <span
+                    style={{
+                      marginTop: '0.5rem',
+                      display: 'flex',
+                      width: '50%',
+                      justifyContent: 'space-around',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <IconBrandTelegram />
+                    <IconBrandWhatsapp />
+                    <IconBrandFacebook />
+                  </span>
+                </div>
               </div>
+
               <div className='form-seccion'>
                 <Textarea
                   placeholder='Tus Comentarios Aqui'
