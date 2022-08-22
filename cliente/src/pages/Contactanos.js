@@ -50,13 +50,16 @@ export const Contactanos = () => {
       telefono: '',
       comentario: ''
     })
-    const response = await fetch('http://localhost:3055/1.0.0/contactanos', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(values)
-    })
+    const response = await fetch(
+      'https://cei1.herokuapp.com/1.0.0/Contactanos/',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(values)
+      }
+    )
     const data = await response.json()
     console.log(data)
     setDataF(data)
@@ -121,7 +124,6 @@ export const Contactanos = () => {
                   </span>
                 </div>
               </div>
-
               <div className='form-seccion'>
                 <Textarea
                   placeholder='Tus Comentarios Aqui'

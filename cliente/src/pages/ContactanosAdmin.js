@@ -10,12 +10,9 @@ export const ContactanosAdmin = () => {
 
   const deleteContactanos = async (id) => {
     try {
-      const deleteContactanos = await fetch(
-        `http://localhost:3055/1.0.0/contactanos/${id}`,
-        {
-          method: 'DELETE'
-        }
-      )
+      await fetch(`https://cei1.herokuapp.com/1.0.0/Contactanos/${id}`, {
+        method: 'DELETE'
+      })
       setContactanos(contactanos.filter((contactanos) => contactanos.id !== id))
       showNotification({
         icon: <IconCheck />,
@@ -34,7 +31,9 @@ export const ContactanosAdmin = () => {
 
   useEffect(() => {
     const fetchContactanos = async () => {
-      const response = await fetch('http://localhost:3055/1.0.0/contactanos')
+      const response = await fetch(
+        'https://cei1.herokuapp.com/1.0.0/Contactanos/'
+      )
       const data = await response.json()
       setContactanos(data)
     }
