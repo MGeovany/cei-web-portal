@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import '../styles/Footer.css'
 import { Facebook, Instagram, LinkdIn } from '../utils/svgIcons'
+import {
+  IconBrandTelegram,
+  IconBrandInstagram,
+  IconBrandFacebook
+} from '@tabler/icons'
 import { Link } from 'react-router-dom'
 export const Footer = () => {
   const [toggle, setToggle] = useState(false)
@@ -21,14 +26,14 @@ export const Footer = () => {
             </Link>
             <div className='footer-content-right'>
               <span>Redes Sociales:</span>
-              <a href='https://www.facebook.com/cei.ceutec'>
-                <Facebook width={25} height={25} fill={'#fff'} />
-              </a>
               <a href='https://www.instagram.com/ceutec_hn/'>
-                <Instagram width={25} height={25} fill={'#fff'} />
+                <IconBrandInstagram fill='white' />
               </a>
               <a href='https://www.linkedin.com/school/ceutec/'>
-                <LinkdIn width={25} height={25} fill={'#fff'} />
+                <IconBrandTelegram fill='white' />
+              </a>
+              <a href='https://www.facebook.com/cei.ceutec'>
+                <IconBrandFacebook color='white' width={20} />
               </a>
             </div>
           </div>
