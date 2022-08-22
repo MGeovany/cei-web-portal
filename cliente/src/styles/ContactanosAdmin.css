@@ -22,11 +22,9 @@
 
 .tabla_contacto_admin {
   align-content: center;
-  width: 1000px;
   margin-top: 50px;
   margin-bottom: 50px;
   font-size: 14px;
-  width: 90vw;
   font-family: var(--poppins-regular);
   background-color: white;
   box-shadow: 12px 14px 41px #00000029;
@@ -49,7 +47,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: calc(100% - 320px);
   padding: 0 2rem 1.5rem;
   margin: 0 2rem;
   height: 100%;
@@ -57,4 +54,15 @@
   box-shadow: 3px 3px 27px #00000029;
   border-radius: 15px;
   opacity: 1;
+}
+@media screen and (max-width: 930px) {
+  .contactanos__table__container {
+    font-size: 14px;
+  }
+  .th__title {
+    font-size: 14px;
+  }
+  .td__content {
+    font-size: 14px;
+  }
 }
