@@ -110,7 +110,7 @@ export const Contactanos = () => {
                     style={{
                       marginTop: '0.5rem',
                       display: 'flex',
-                      width: '50%',
+                      width: '40%',
                       justifyContent: 'space-around',
                       cursor: 'pointer'
                     }}
@@ -135,7 +135,10 @@ export const Contactanos = () => {
                     type='submit'
                     mt='sm'
                     size='md'
-                    style={{ boxShadow: '3px 3px 17px #00000029' }}
+                    style={{
+                      boxShadow: '3px 3px 17px #00000029',
+                      backgroundColor: '#072958'
+                    }}
                   >
                     Enviar
                   </Button>
@@ -143,8 +146,10 @@ export const Contactanos = () => {
                     type='reset'
                     mt='sm'
                     size='md'
-                    color='red'
-                    style={{ boxShadow: '3px 3px 17px #00000029' }}
+                    style={{
+                      boxShadow: '3px 3px 17px #00000029',
+                      backgroundColor: '#e1575f'
+                    }}
                   >
                     Cancelar
                   </Button>
