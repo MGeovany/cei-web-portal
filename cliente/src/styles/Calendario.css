@@ -129,15 +129,24 @@
 
 .container-carrousel {
   width: auto;
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   height: 550px;
   text-align: center;
   margin-left: 50px;
 }
 
+
+@media screen and (max-width: 720px) {
+  .container-carrousel {
+    margin-left: 0px;
+  }
+}
+
 .card-container {
   width: auto;
   align-items: center;
+  
 }
 
 .actividades-section-title {

@@ -31,7 +31,7 @@ export const CasoCard = (props) => {
   return (
     <div className='card-container'>
       <div style={{ width: 350, margin: '20px 0 20px', height: '60%' }}>
-        <Card >
+        <Card style={{boxShadow: '0 1px 3px rgb(0 0 0 / 5%), rgb(0 0 0 / 5%) 0px 10px 15px -5px, rgb(0 0 0 / 4%) 0px 7px 7px -5px'}}>
           <Card.Section>
             <Image
               withPlaceholder
@@ -43,7 +43,7 @@ export const CasoCard = (props) => {
 
           <Group
             position='apart'
-            style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
+            style={{ marginBottom: 5, marginTop: theme.spacing.sm  }}
           >
             <div className='casos__card__content__title'>
               {props.caso.titulo}

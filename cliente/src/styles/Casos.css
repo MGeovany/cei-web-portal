@@ -20,6 +20,11 @@
   }
 }
 
+
+@media screen and (max-width: 720px) {
+
+}
+
 .casos-content {
   display: flex;
   flex-direction: column;
@@ -27,8 +32,8 @@
   align-content: space-between;
 
   width: 95vw;
-
-  padding-left: 40px;
+  
+  padding-left: 0px;
   margin-top: -50px;
 }
 
@@ -47,6 +52,7 @@
   justify-content: space-between;
   width: auto;
   margin-bottom: 50px;
+  
 }
 
 .casos__card__content__title {

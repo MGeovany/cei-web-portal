@@ -11,7 +11,18 @@ export const CasoSalud = (props) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     arrows: true,
-    vertical: false
+    vertical: false,
+    responsive:[
+      {breakpoint: 450,
+      settings: {slidesToShow: 1,  slidesToScroll: 1 }
+
+      },
+      {breakpoint: 1050,
+        settings: {slidesToShow: 2,  slidesToScroll: 2 }
+  
+      }
+      
+    ]
   }
 
   const casosSal = props.casosSal
