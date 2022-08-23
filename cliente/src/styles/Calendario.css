@@ -1,19 +1,26 @@
-.calendario {
-  height: 100vh;
 
-  background-color: var(--white);
+
+
+.calendario {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding-top: 8rem;
-  padding-bottom: 55rem;
-  font-family: var(--sen-bold);
+  background-color: var(--white);
+  font-family: var(--sen-bold); 
+  padding-bottom: 30px;
 }
 
-.calendario-title {
-  margin-bottom: 60px;
-  text-align: center;
+.titulo-calendario{
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding: 15px 15px;
+}
+.title-special{
+color: red;
 }
 
 .actividades-title {
@@ -22,10 +29,10 @@
 }
 
 .calendario-container {
-  width: 90vw;
+  z-index: 0;
+  width: 100%;
   font-size: 20px;
   font-family: var(--poppins-regular);
-
   background-color: white;
   border-radius: 20px;
   box-shadow: 12px 14px 41px #00000029;
@@ -124,10 +131,11 @@
 }
 
 .actividades-container-section {
-  width: 1600px;
+  width: 100%;
 }
 
 .container-carrousel {
+  
   width: auto;
   width: 1600px;
   height: 550px;
@@ -136,6 +144,7 @@
 }
 
 .card-container {
+  
   width: auto;
   align-items: center;
 }
@@ -187,18 +196,14 @@
 }
 
 .container-carrouselact {
-  width: auto;
-  width: 1600px;
+  width: 100%;
   height: 480px;
-  margin-left: 120px;
 }
 
-.container-actividades {
-  width: auto;
-  background-color: var(--white);
-}
+
 
 .card-actividades {
+  
   min-height: 230px;
   display: flex;
   flex-direction: column;
@@ -206,12 +211,15 @@
 }
 
 .card-actividades-container {
+  z-index: -2;
+  padding-top: 20px;
+  display: flex;
   transition: all 0.4s ease;
-  width: 50px;
-  height: 420px;
+  width: 100%;
+  height: 450px;
   cursor: pointer;
-  justify-content: space-between;
-  margin-left: 20px;
+  justify-content: space-around;
+  
 }
 
 .card-actividades-container:hover {
@@ -228,4 +236,21 @@
   font-weight: 600;
   cursor: pointer;
   font: normal normal bold 17px/20px Sen;
+}
+@media screen and (min-width: 1171px) {
+  .calendario-container {
+    
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1950px) {
+  .calendario-container {
+    
+    width: 50%;
+  }
+}
+@media screen and (max-width: 930px) {
+  .titulo-calendario{
+    margin-top: 10%;
+  }
 }

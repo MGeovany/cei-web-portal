@@ -3,7 +3,7 @@ import React from 'react'
 import { ActividadesCard } from './ActividadesCard'
 import { Arrow } from '../utils/svgIcons'
 import Slider from 'react-slick'
-import '../styles/Calendario.css'
+import '../styles/Actividades.css'
 
 export const Actividades = (props) => {
   const settings = {
@@ -11,20 +11,20 @@ export const Actividades = (props) => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
-    arrows: true,
+    arrows: false,
     vertical: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1500,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
+          infinite: false,
           dots: true
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 1075,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -32,7 +32,7 @@ export const Actividades = (props) => {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 711,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -44,15 +44,16 @@ export const Actividades = (props) => {
   const data = props.data
 
   return (
-    <div className='ctividades'>
-      <div className='actividades-container-section'>
-        <div className='actividades-section-title'>
-          Actividades celebradas por el CEI
-          <span style={{ marginLeft: '12px' }}>
-            <Arrow height={30} width={25} fill='#e1575f' />
+    
+      <div className='actividades-container'>
+        <div className='actividades-titulo'>
+          <h1>Actividades celebradas por el CEI
+          <span className='actividades-flecha'>
+            <Arrow  height={30} width={30} fill='#e1575f' />
           </span>
+          </h1>
         </div>
-        <div className='container-carrouselact'>
+        <div className='carrusel-actividades'>
           <Slider {...settings}>
             {data.map((actividad, index) => (
               <div key={index}>
@@ -62,6 +63,6 @@ export const Actividades = (props) => {
           </Slider>
         </div>
       </div>
-    </div>
+    
   )
 }

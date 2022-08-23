@@ -21,7 +21,7 @@ export const NavbarAdmin = () => {
   return (
     <nav className='nav'>
       <ul className={active}>
-        <li className='nav__item'></li>
+        
         <li className='nav__item'>
           <Link to='/admin'>
             <div

@@ -23,7 +23,7 @@ const localizer = dateFnsLocalizer({
 
 export const Calendario = (props) => {
   return (
-    <div>
+    
       <div className='calendario-container flex'>
         <Calendar
           localizer={localizer}
@@ -33,7 +33,7 @@ export const Calendario = (props) => {
           style={{ height: '600px', margin: '50px', width: '100%' }}
         />
       </div>
-    </div>
+    
   )
 }
 

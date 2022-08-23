@@ -290,17 +290,19 @@ const events = [
 export const CalendarioPage = () => {
   return (
     <>
-      <div className='container-actividades'>
+      
         <div className='calendario'>
-          <div className='section-title calendario-title'>
-            CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
+          <div className='titulo-calendario'>
+          <div>
+            CALENDARIO DE <span className='title-special'> EVENTOS🎯</span>
+          </div>
           </div>
           <Calendario events={events} />
         </div>
         <div >
           <Actividades data={data}/>
         </div>
-      </div>
+      
     </>
   )
 }

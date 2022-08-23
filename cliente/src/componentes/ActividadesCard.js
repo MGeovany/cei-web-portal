@@ -31,8 +31,8 @@ export const ActividadesCard = ({ actividad }) => {
         theme.colorScheme === 'dark'
           ? theme.colors.dark[9]
           : theme.colors.gray[2],
-      overlayOpacity: 0.55,
-      overlayBlur: 3,
+      overlayOpacity: 0,
+      overlayBlur: 0,
       centered: true,
       padding: 'xl',
       overflow: 'outside',
@@ -53,11 +53,11 @@ export const ActividadesCard = ({ actividad }) => {
         style={{
           width: 350,
           margin: '10px 0 10px',
-          height: '80%',
+          height: '100%',
           alignItems: Center
         }}
       >
-        <Card shadow='sm' p='sm'>
+        <Card shadow='lg' p='lg'>
           <Card.Section onClick={openActividadesModal}>
             <Image withPlaceholder src={actividad.img} height={150} alt='blg' />
           </Card.Section>
