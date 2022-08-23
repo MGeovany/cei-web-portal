@@ -1,165 +1,65 @@
+/* eslint space-before-function-paren: ["error", { "anonymous": "never", "named": "always" }] */
 import '../styles/ContactanosAdmin.css'
 import { Table } from '@mantine/core'
 import { showNotification } from '@mantine/notifications'
 import React, { useEffect, useState } from 'react'
-
-const elements = [
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-    correo: 'valeria587@gmail.com',
-    celular: '+005 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  },
-  {
-    nombre: 'Valeria Sofia ',
-    apellido: 'Figueroa',
-
-    correo: 'valeria587@gmail.com',
-    celular: '+504 9558 3206',
-    mensaje: 'Quisiera contactarme con el CEI',
-    fecha: 'Sun Jun 21 2019'
-  }
-]
+import { IconCheck } from '@tabler/icons'
 
 export const ContactanosAdmin = () => {
-  const [events, setEvents] = useState(elements)
-  const deleteElement = (name, e) => {
-    e.preventDefault()
-    const newEvents = [...events]
-    newEvents.splice(name, 1)
-    setEvents(newEvents)
+  const [contactanos, setContactanos] = useState([])
 
-    showNotification({
-      title: 'Eliminado',
-      color: 'blue',
-      message: `Contacto de ${name} eliminado!`
-    })
-
-    elements.splice(name, 1)
+  const deleteContactanos = async (id) => {
+    try {
+      await fetch(`https://cei1.herokuapp.com/1.0.0/Contactanos/${id}`, {
+        method: 'DELETE'
+      })
+      setContactanos(contactanos.filter((contactanos) => contactanos.id !== id))
+      showNotification({
+        icon: <IconCheck />,
+        title: 'Rechazado',
+        color: 'green',
+        message: 'Contacto eliminado correctamente!'
+      })
+    } catch (err) {
+      console.error(err.message)
+    }
   }
 
   useEffect(() => {
-    setEvents(elements)
-  }, [events])
+    setContactanos(contactanos)
+  }, [contactanos])
 
-  const rows = elements.map((element, index) => (
-    <tr key={index}>
+  useEffect(() => {
+    const fetchContactanos = async () => {
+      const response = await fetch(
+        'https://cei1.herokuapp.com/1.0.0/Contactanos/'
+      )
+      const data = await response.json()
+      setContactanos(data)
+    }
+    fetchContactanos()
+  }, [])
+
+  const rows = contactanos.map((element, index) => (
+    <tr key={element.id}>
       <td>
         <div className='td__content'>{element.nombre}</div>
       </td>
       <td>
-        <div className='td__content'>{element.apellido}</div>
+        <div className='td__content'>{element.email}</div>
       </td>
       <td>
-        <div className='td__content'>{element.correo}</div>
+        <div className='td__content'>+504 {element.telefono}</div>
       </td>
       <td>
-        <div className='td__content'>{element.celular}</div>
-      </td>
-      <td>
-        <div className='td__content'>{element.mensaje}</div>
-      </td>
-      <td>
-        <div className='td__content'>{element.fecha}</div>
+        <div className='td__content'>{element.comentario}</div>
       </td>
       <td>
         <div className='tab__btns flex'>
           <div className='btn__editar'>Aceptar</div>
           <div
             className='btn__eliminar'
-            onClick={(e) => deleteElement(element.nombre, e)}
+            onClick={(e) => deleteContactanos(element.id, e)}
           >
             Rechazar
           </div>
@@ -170,8 +70,11 @@ export const ContactanosAdmin = () => {
 
   return (
     <>
-      <div className='casos'>
-        <div className='casos-container flex'>
+      <div
+        className='contactanos-casos'
+        style={{ paddingBottom: '2rem', minHeight: '100vh' }}
+      >
+        <div className='casos-container'>
           <div className='casos-title section-title'>
             PERSONAS QUE SE
             <span style={{ color: '#e1575f' }}> CONTACTARON</span>
@@ -183,9 +86,7 @@ export const ContactanosAdmin = () => {
                   <th>
                     <div className='th__title'>Nombre</div>
                   </th>
-                  <th>
-                    <div className='th__title'>Apellido</div>
-                  </th>
+
                   <th>
                     <div className='th__title'>Correo</div>
                   </th>
@@ -195,9 +96,7 @@ export const ContactanosAdmin = () => {
                   <th>
                     <div className='th__title'>Mensaje</div>
                   </th>
-                  <th>
-                    <div className='th__title'>Fecha</div>
-                  </th>
+
                   <th></th>
                 </tr>
               </thead>

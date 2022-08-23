@@ -3,8 +3,11 @@ import React from 'react'
 import { Card, Center, Image, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import '../styles/Calendario.css'
-import { FacebookIcon, FacebookShareButton } from 'react-share'
-
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandYoutube
+} from '@tabler/icons'
 const dataFromNextJS = {
   request: {
     path: 'https://cei-web-portal-mgeovany.vercel.app/'
@@ -70,17 +73,12 @@ export const ActividadesCard = ({ actividad }) => {
             </div>
 
             <div className='actividad__card__content__button'>
-              <button onClick={openActividadesModal}>
-                <span style={{ color: '#4a79cb' }}>{actividad.autor} </span>
-                <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-                  • {actividad.fecha}
-                </span>
-              </button>
-              <span className='actividad__card__content__button'>
-                <FacebookShareButton url={dataFromNextJS.request.path}>
-                  • <FacebookIcon size={28} round={true} />
-                </FacebookShareButton>
-              </span>
+              <div>Compartir:</div>
+              <div className='actividad__socials'>
+                <IconBrandFacebook />
+                <IconBrandInstagram />
+                <IconBrandYoutube />
+              </div>
             </div>
           </div>
         </Card>

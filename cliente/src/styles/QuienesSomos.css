@@ -14,6 +14,7 @@
   font-family: var(--sen-bold);
 
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .quienes-somos-text-cnt {
@@ -40,9 +41,19 @@
   width: 120px;
   border-radius: 5px;
   border: 2px solid var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 .b {
   font-weight: bolder;
+}
+
+.contactanos-casos {
+  color: var(--black);
+  font-family: var(--sen-bold);
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 930px) {
@@ -54,5 +65,18 @@
 
   .quienes-somos-text {
     flex-direction: column;
+  }
+  .tab__btns {
+    flex-direction: column;
+    width: 40px;
+  }
+  .root {
+    width: fit-content;
+  }
+  .casos {
+    width: 'fit-content';
+  }
+  .contactanos-casos {
+    display: inline-block;
   }
 }

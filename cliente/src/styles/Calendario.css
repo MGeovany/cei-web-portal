@@ -229,13 +229,24 @@ color: red;
 
 .actividad__card__content__button {
   text-align: left;
-  padding: 5px;
-  color: var(--primary-color);
+  padding: 15px 5px 0px 5px;
   width: 100%;
-  font-family: var(--sen-bold);
-  font-weight: 600;
-  cursor: pointer;
-  font: normal normal bold 17px/20px Sen;
+  font-family: var(--poppins-regular);
+  font-weight: 500;
+  font-size: 12px;
+  color: rgb(157, 158, 158);
+  border-top: 1px solid #edeff1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actividad__socials > svg {
+  margin: 0 0px 0px 15px;
+}
+.actividad__socials > svg:hover {
+  color: #333;
 }
 @media screen and (min-width: 1171px) {
   .calendario-container {

@@ -50,7 +50,12 @@ export const NuestroEquipo = () => {
               >
                 CEUTEC San Pedro Sula
               </div>
-              <hr style={{ border: '2px solid #5bf288' }} />
+              <hr
+                style={{
+                  border: '2px solid #64f38f',
+                  backgroundColor: '#64f38f'
+                }}
+              />
             </div>
           </div>
           <div className='nuestro-equipo-item flex'>
@@ -69,7 +74,12 @@ export const NuestroEquipo = () => {
               <div className='nuestro-equipo-item-description'>
                 CEUTEC La Ceiba
               </div>
-              <hr style={{ border: '2px solid #5bddf2' }} />
+              <hr
+                style={{
+                  border: '2px solid #5bddf2',
+                  backgroundColor: '#5bddf2'
+                }}
+              />
             </div>
           </div>
         </div>

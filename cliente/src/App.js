@@ -1,5 +1,7 @@
 /* eslint-disable space-before-function-paren */
 /* eslint-disable no-unused-vars */
+/* eslint space-before-function-paren: ["error", { "anonymous": "never", "named": "always" }] */
+
 import React from 'react'
 import './App.css'
 

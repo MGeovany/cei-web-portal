@@ -46,11 +46,10 @@
   justify-content: space-between;
 }
 .footer-content-right > a {
-  margin-right: 1rem;
   opacity: 0.4;
+  padding-top: 0.3rem;
 }
 
 .footer-content-right > a:hover {
-  color: white;
   opacity: 1;
 }
