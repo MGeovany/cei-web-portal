@@ -1,3 +1,4 @@
+/* eslint-disable space-before-function-paren */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './App.css'

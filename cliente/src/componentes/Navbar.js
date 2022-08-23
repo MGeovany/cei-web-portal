@@ -21,7 +21,6 @@ export const Navbar = () => {
   return (
     <div className='nav'>
       <ul className={active}>
-        
         <li className='nav__item'>
           <Link to='/'>
             <div

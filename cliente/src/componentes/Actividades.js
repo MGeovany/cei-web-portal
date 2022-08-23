@@ -44,25 +44,24 @@ export const Actividades = (props) => {
   const data = props.data
 
   return (
-    
-      <div className='actividades-container'>
-        <div className='actividades-titulo'>
-          <h1>Actividades celebradas por el CEI
+    <div className='actividades-container'>
+      <div className='actividades-titulo'>
+        <h1>
+          Actividades celebradas por el CEI
           <span className='actividades-flecha'>
-            <Arrow  height={30} width={30} fill='#e1575f' />
+            <Arrow height={30} width={30} fill='#e1575f' />
           </span>
-          </h1>
-        </div>
-        <div className='carrusel-actividades'>
-          <Slider {...settings}>
-            {data.map((actividad, index) => (
-              <div key={index}>
-                <ActividadesCard actividad={actividad} />
-              </div>
-            ))}
-          </Slider>
-        </div>
+        </h1>
       </div>
-    
+      <div className='carrusel-actividades'>
+        <Slider {...settings}>
+          {data.map((actividad, index) => (
+            <div key={index}>
+              <ActividadesCard actividad={actividad} />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
   )
 }

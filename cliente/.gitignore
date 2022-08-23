@@ -7,7 +7,6 @@
 
 # testing
 /coverage
-.eslintrc.json
 
 # production
 /build
