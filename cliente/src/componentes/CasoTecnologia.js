@@ -14,14 +14,20 @@ export const CasoTecnologia = (props) => {
     slidesToScroll: 4,
     arrows: true,
     vertical: false,
+    
+    
 
     responsive:[
-      {breakpoint: 450,
+      {breakpoint: 690,
       settings: {slidesToShow: 1,  slidesToScroll: 1 }
 
       },
       {breakpoint: 1050,
         settings: {slidesToShow: 2,  slidesToScroll: 2 }
+  
+      },
+      {breakpoint: 1450,
+        settings: {slidesToShow: 3,  slidesToScroll: 3 }
   
       }
     ]

@@ -21,10 +21,6 @@
 }
 
 
-@media screen and (max-width: 720px) {
-
-}
-
 .casos-content {
   display: flex;
   flex-direction: column;
@@ -281,4 +277,14 @@
   .integrantes__list {
     width: 100%;
   }
+}
+
+
+
+/* Style Carousel buttons */
+.slick-prev:before, .slick-next:before
+{
+  color: #e1575f;
+
+
 }
