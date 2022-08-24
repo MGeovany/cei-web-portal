@@ -20,7 +20,7 @@ a {
   width: 100%;
   margin: 0;
   border: 0;
-  padding: 5px 0 15px 0;
+  padding: 20px 0 60px 0;
   font-family: var(--sen-bold);
   color: white;
   font-size: 1.1rem;
@@ -43,7 +43,7 @@ a {
   align-items: center;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-inline-start: 0;
 }
 
