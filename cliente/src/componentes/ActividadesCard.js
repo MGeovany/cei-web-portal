@@ -1,13 +1,16 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon
+} from 'react-share'
 import { Card, Center, Image, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import '../styles/Calendario.css'
-import {
-  IconBrandFacebook,
-  IconBrandInstagram,
-  IconBrandYoutube
-} from '@tabler/icons'
 const dataFromNextJS = {
   request: {
     path: 'https://cei-web-portal-mgeovany.vercel.app/'
@@ -74,9 +77,15 @@ export const ActividadesCard = ({ actividad }) => {
             <div className='actividad__card__content__button'>
               <div>Compartir:</div>
               <div className='actividad__socials'>
-                <IconBrandFacebook />
-                <IconBrandInstagram />
-                <IconBrandYoutube />
+                <FacebookShareButton url='https://cei-web-portal-mgeovany.vercel.app/calendario' >
+                  <FacebookIcon size={35} round={true}/>
+                  </FacebookShareButton>
+                  <TwitterShareButton url='https://cei-web-portal-mgeovany.vercel.app/calendario' >
+                  <TwitterIcon size={35} round={true}/>
+                  </TwitterShareButton>
+                  <WhatsappShareButton url='https://cei-web-portal-mgeovany.vercel.app/calendario' >
+                  <WhatsappIcon size={35} round={true} />
+                  </WhatsappShareButton>
               </div>
             </div>
           </div>
