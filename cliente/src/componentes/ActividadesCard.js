@@ -34,12 +34,11 @@ export const ActividadesCard = ({ actividad }) => {
         theme.colorScheme === 'dark'
           ? theme.colors.dark[9]
           : theme.colors.gray[2],
-      overlayOpacity: 0,
-      overlayBlur: 0,
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
       centered: true,
       padding: 'xl',
       overflow: 'outside',
-
       size: 'calc(100% - 2rem)',
       innerProps: {
         titulo: actividad.title,
