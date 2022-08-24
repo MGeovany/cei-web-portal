@@ -8,7 +8,7 @@
   align-items: center;
   background-color: var(--white);
   font-family: var(--sen-bold); 
-  padding-bottom: 30px;
+  padding: 80px 0px;
 }
 
 .titulo-calendario{
@@ -19,7 +19,8 @@
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  padding: 15px 15px;
+  margin-top: 50px;
+  padding-bottom: 20px;
   font-family: var(--sen-bold);
 }
 .title-special{

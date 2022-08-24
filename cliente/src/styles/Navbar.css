@@ -10,7 +10,7 @@ li {
 }
 
 a {
-  color: black;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ a {
 }
 
 .nav__menu {
-  color: black;
+  
   align-items: center;
   display: flex;
   width: 100%;
