@@ -129,7 +129,7 @@
 
 .container-carrousel {
   width: auto;
-  width: 100%;
+  width: 98%;
   max-width: 1600px;
   height: 550px;
   text-align: center;
@@ -137,11 +137,14 @@
 }
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   .container-carrousel {
     margin-left: 0px;
   }
+
 }
+
+
 
 .card-container {
   width: auto;

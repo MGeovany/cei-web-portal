@@ -45,7 +45,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   width: auto;
   margin-bottom: 50px;
   
@@ -277,6 +277,15 @@
   .integrantes__list {
     width: 100%;
   }
+
+
+  .slick-prev:before, .slick-next:before
+  {
+    display: none;
+  }
+
+
+  
 }
 
 
