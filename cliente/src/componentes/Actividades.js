@@ -46,7 +46,7 @@ export const Actividades = (props) => {
   return (
     <div className='actividades-container'>
       <div className='actividades-titulo'>
-        <h1>
+        <h1 className='actividades-title'>
           Actividades celebradas por el CEI
           <span className='actividades-flecha'>
             <Arrow height={30} width={30} fill='#e1575f' />
