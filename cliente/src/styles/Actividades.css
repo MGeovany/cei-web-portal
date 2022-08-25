@@ -6,14 +6,14 @@
     background-color: var(--white);
 }
 .actividades-titulo{
-    width: 100%;
+    
     z-index: 0;
     display: flex;
     justify-content: flex-start;
     justify-items: flex-start;
     align-items: flex-start;
     align-content: flex-start;
-    padding: 15px 15px;
+    margin: 15px 33px;
 }
 .actividades-title{
     font-family: var(--sen-bold);
