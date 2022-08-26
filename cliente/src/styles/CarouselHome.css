@@ -8,17 +8,15 @@
   justify-content: space-evenly;
 }
 
-.carousel-home-item {
+/* .carousel-home-item {
   width: 100%;
   min-height: 530px;
-  width: 85vw;
 }
-
+ */
 .carousel-title {
   padding-top: 1rem;
   text-align: center;
   line-height: 2;
-  width: 100%;
 }
 
 .carousel-card {

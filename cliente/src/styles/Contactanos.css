@@ -96,14 +96,12 @@
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   padding-top: 3rem;
 }
 
-.contactanos-btns > div {
-  cursor: pointer;
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+.contactanos-btns > button:nth-child(1) {
+  margin-right: 2rem;
 }
 
 .contactanos-btns > div:hover {

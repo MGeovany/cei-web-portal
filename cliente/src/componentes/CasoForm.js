@@ -1,13 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react'
-import {
-  NativeSelect,
-  InputWrapper,
-  Input,
-  Textarea,
-  TextInput
-} from '@mantine/core'
+import { NativeSelect, Input, Textarea, TextInput } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import { useForm } from '@mantine/form'
 
@@ -40,18 +34,18 @@ export const CasoForm = (props) => {
             />
           </div>
           <div className='form__main__section asset__m10 s1'>
-            <InputWrapper
+            <Input
               className='font-sen'
               id='input-nombre-proyecto'
               required
               label='Nombre del Proyecto'
             >
               <Input id='input-nombre-proyecto' placeholder='Mi Proyecto' />
-            </InputWrapper>
+            </Input>
           </div>
 
           <div className='form__main__section s2'>
-            <InputWrapper
+            <Input
               className='font-sen'
               id='input-demo'
               required
@@ -61,7 +55,7 @@ export const CasoForm = (props) => {
                 id='input-demo'
                 placeholder='Este es mi proyecto sobre tecnología'
               />
-            </InputWrapper>
+            </Input>
           </div>
           <div className='form__main__section s1'>
             <div className='form__main__file'>
@@ -95,7 +89,7 @@ export const CasoForm = (props) => {
           </div>
           <div className='form__int'>
             <div className='form__int__section s1'>
-              <InputWrapper
+              <Input
                 className='font-sen'
                 id='input-int-1'
                 required
@@ -105,7 +99,7 @@ export const CasoForm = (props) => {
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
                 />
-              </InputWrapper>
+              </Input>
             </div>
             <div className='form__int__section s2'>
               <TextInput
@@ -119,7 +113,7 @@ export const CasoForm = (props) => {
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
             <div className='form__int__section s1'>
-              <InputWrapper
+              <Input
                 className='font-sen'
                 id='input-int-1'
                 required
@@ -129,7 +123,7 @@ export const CasoForm = (props) => {
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
                 />
-              </InputWrapper>
+              </Input>
             </div>
             <div className='form__int__section s2'>
               <TextInput
@@ -144,7 +138,7 @@ export const CasoForm = (props) => {
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
             <div className='form__int__section s1'>
-              <InputWrapper
+              <Input
                 className='font-sen'
                 id='input-int-1'
                 required
@@ -154,7 +148,7 @@ export const CasoForm = (props) => {
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
                 />
-              </InputWrapper>
+              </Input>
             </div>
             <div className='form__int__section s2'>
               <TextInput
@@ -168,7 +162,7 @@ export const CasoForm = (props) => {
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
             <div className='form__int__section s1'>
-              <InputWrapper
+              <Input
                 className='font-sen'
                 id='input-int-1'
                 required
@@ -178,7 +172,7 @@ export const CasoForm = (props) => {
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
                 />
-              </InputWrapper>
+              </Input>
             </div>
             <div className='form__int__section s2'>
               <TextInput
