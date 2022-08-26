@@ -360,7 +360,7 @@ const casosSoc = [
 export const Casos = () => {
   return (
     <div className='casos'>
-      <div className='casos-container flex'>
+      <div className='casos-container'>
         <div className='casos-title section-title'>
           CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
         </div>
