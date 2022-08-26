@@ -3,8 +3,7 @@ import React from 'react'
 
 import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
 import { useModals } from '@mantine/modals'
-import { AlignLeft } from 'tabler-icons-react'
-import { Card, Image, useMantineTheme } from '@mantine/core'
+import { useMantineTheme } from '@mantine/core'
 
 export const BlogCard = ({ img, title, contenido, autor, fecha }) => {
   const modals = useModals()

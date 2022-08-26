@@ -1,7 +1,5 @@
 import React from 'react'
 import '../styles/Blog.css'
-import { Arrow } from '../utils/svgIcons'
-import Slider from 'react-slick'
 import { BlogCard } from './BlogCard'
 import { useMediaQuery } from '@mantine/hooks'
 import { useMantineTheme } from '@mantine/core'

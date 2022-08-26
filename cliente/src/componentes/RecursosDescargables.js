@@ -1,8 +1,5 @@
 import React from 'react'
 import '../styles/Blog.css'
-import { Arrow } from '../utils/svgIcons'
-import { DescargablesCard } from './DescargablesCard'
-import Slider from 'react-slick'
 import { DescargablesCarousel } from '../componentes/DescargablesCarousel'
 
 const descargables = [
@@ -41,10 +38,12 @@ const descargables = [
 ]
 
 export const RecursosDescargables = () => {
-
   return (
     <div className='casos'>
-        <DescargablesCarousel data={descargables } section={'Recursos Descargables'} />
+      <DescargablesCarousel
+        data={descargables}
+        section={'Recursos Descargables'}
+      />
     </div>
   )
 }

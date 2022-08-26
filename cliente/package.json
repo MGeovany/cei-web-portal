@@ -16,6 +16,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.4.3",
     "dayjs": "^1.11.5",
+    "embla-carousel-autoplay": "^7.0.1",
     "embla-carousel-react": "^7.0.1",
     "react": "^18.2.0",
     "react-big-calendar": "^1.5.0",
