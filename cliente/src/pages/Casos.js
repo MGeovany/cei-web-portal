@@ -1,7 +1,5 @@
 import React from 'react'
-import { CasoComercial } from '../componentes/CasoComercial'
-import { CasoSocial } from '../componentes/CasoSocial'
-import { CasoSalud } from '../componentes/CasoSalud'
+
 import { CasoCarousel } from '../componentes/CasoCarousel'
 
 import '../styles/Casos.css'

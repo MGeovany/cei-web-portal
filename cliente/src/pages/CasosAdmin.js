@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
+/* 
 import React from 'react'
 import { CasoComercial } from '../componentes/CasoComercial'
 import { CasoSocial } from '../componentes/CasoSocial'
@@ -466,4 +465,8 @@ export const CasosAdmin = () => {
       </MantineProvider>
     </div>
   )
+}
+ */
+export const CasosAdmin = () => {
+  return <div className='casos'></div>
 }

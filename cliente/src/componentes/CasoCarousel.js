@@ -17,7 +17,7 @@ export const CasoCarousel = ({ data, section }) => {
   ))
 
   return (
-    <div>
+    <div style={{ padding: '1rem', marginTop: '4rem' }}>
       <div className='casos-section-title'>{section}</div>
       <Carousel
         slideSize='25%'
