@@ -18,25 +18,25 @@ const casosTec = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       },
       {
         nombre: 'Pauline L Revilla',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
         email: 'Pauline.cro@hotmail.com'
       },
       {
         nombre: 'Idell J Thomas',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
         email: 'araceli.cro@hotmail.com'
       }
@@ -52,25 +52,25 @@ const casosTec = [
     integrantes: [
       {
         nombre: 'Juan',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Pedro',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Marlon',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       }
@@ -86,25 +86,25 @@ const casosTec = [
     integrantes: [
       {
         nombre: 'Juan',
-        image:
+        profile:
           'https://images.pexels.com/photos/4151965/pexels-photo-4151965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Pedro',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Marlon',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       }
@@ -120,25 +120,25 @@ const casosTec = [
     integrantes: [
       {
         nombre: 'Juan',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Pedro',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Marlon',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria',
-        image:
+        profile:
           'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
         email: 'marlongeo1999@gmail.com'
       }
@@ -155,25 +155,25 @@ const casosTec = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       },
       {
         nombre: 'Pauline L Revilla',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
         email: 'Pauline.cro@hotmail.com'
       },
       {
         nombre: 'Idell J Thomas',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
         email: 'araceli.cro@hotmail.com'
       }
@@ -190,25 +190,25 @@ const casosTec = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       },
       {
         nombre: 'Pauline L Revilla',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
         email: 'Pauline.cro@hotmail.com'
       },
       {
         nombre: 'Idell J Thomas',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
         email: 'araceli.cro@hotmail.com'
       }
@@ -228,13 +228,13 @@ const casosCom = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -251,13 +251,13 @@ const casosCom = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -274,13 +274,13 @@ const casosCom = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -297,13 +297,13 @@ const casosCom = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -320,13 +320,13 @@ const casosCom = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -345,13 +345,13 @@ const casosSal = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -368,13 +368,13 @@ const casosSal = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -391,13 +391,13 @@ const casosSal = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -414,13 +414,13 @@ const casosSal = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -439,13 +439,13 @@ const casosSoc = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -462,13 +462,13 @@ const casosSoc = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -485,13 +485,13 @@ const casosSoc = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }
@@ -508,13 +508,13 @@ const casosSoc = [
     integrantes: [
       {
         nombre: 'Marlon Geovany Castro Mejia',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
         email: 'marlongeo1999@gmail.com'
       },
       {
         nombre: 'Maria Fernanda Velasquez Amaya',
-        image:
+        profile:
           'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
         email: 'marifer@gmail.com'
       }

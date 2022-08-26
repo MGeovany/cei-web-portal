@@ -6,7 +6,7 @@ import { BlogCard } from './BlogCard'
 import { useMediaQuery } from '@mantine/hooks'
 import { useMantineTheme } from '@mantine/core'
 import { Carousel } from '@mantine/carousel'
-  
+
 const blogs = [
   {
     id: 1,
@@ -85,21 +85,15 @@ const blogs = [
   }
 ]
 
+export const BlogsRecientes = ({ section }) => {
+  const theme = useMantineTheme()
+  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
 
-
-  
-  
-  export const BlogsRecientes = ({ section }) => {
-    const theme = useMantineTheme()
-    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
-  
-    const slides = blogs.map((item, i) => (
-      <Carousel.Slide key={i}>
-        <BlogCard {...item} />
-      </Carousel.Slide>
-    ))
-  
-
+  const slides = blogs.map((item, i) => (
+    <Carousel.Slide key={i}>
+      <BlogCard {...item} />
+    </Carousel.Slide>
+  ))
 
   return (
     <div style={{ padding: '1rem', marginTop: '4rem' }}>
@@ -115,10 +109,9 @@ const blogs = [
       >
         {slides}
       </Carousel>
-    </div>  
-    )
+    </div>
+  )
 }
-
 
 // /* eslint-disable no-unused-vars */
 // /* eslint-disable react/prop-types */

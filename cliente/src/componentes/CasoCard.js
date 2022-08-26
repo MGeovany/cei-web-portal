@@ -1,7 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
+import { useModals } from '@mantine/modals'
 
-import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
+import {
+  createStyles,
+  Paper,
+  Text,
+  Title,
+  Button,
+  useMantineTheme
+} from '@mantine/core'
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -33,8 +41,39 @@ const useStyles = createStyles((theme) => ({
   }
 }))
 
-export const CasoCard = ({ image, title, desc }) => {
+export const CasoCard = ({
+  image,
+  title,
+  subtitulo,
+  descripcion,
+  desc,
+  integrantes
+}) => {
   const { classes } = useStyles()
+  const modals = useModals()
+  const theme = useMantineTheme()
+
+  const openCasosModal = () =>
+    modals.openContextModal('casoModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'xl',
+      overflow: 'outside',
+
+      size: 'calc(100% - 2rem)',
+      innerProps: {
+        titulo: title,
+        subtitulo: subtitulo,
+        desc: descripcion,
+        img: image,
+        integrantes: integrantes
+      }
+    })
 
   return (
     <Paper
@@ -52,7 +91,7 @@ export const CasoCard = ({ image, title, desc }) => {
           {desc}
         </Text>
       </div>
-      <Button variant='white' color='dark'>
+      <Button variant='white' color='dark' onClick={openCasosModal}>
         Leer Caso
       </Button>
     </Paper>
