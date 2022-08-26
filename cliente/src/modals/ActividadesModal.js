@@ -1,47 +1,59 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
-import Slider from 'react-slick'
+import { Carousel } from '@mantine/carousel'
+import React, { useRef } from 'react'
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  arrows: true,
-  vertical: false
-}
+import Autoplay from 'embla-carousel-autoplay'
+import { useMantineTheme } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 
-export const ActividadesModal = ({ context, id, innerProps }) => (
-  <>
-    <div className='add__asset__modal'>
-      <div className='asset__content'>
-        <div className='asset__modal__title'>
-          <div>{innerProps.titulo}</div>
-        </div>
-        <div className='asset__modal__subtitle'>
-          <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-            • {innerProps.fecha}
-          </span>
-        </div>
-        <div className='asset__modal__body lh-2'>{innerProps.desc}</div>
-        <div className='asset__modal__title'>
-          <div>Fotos del Evento</div>
-        </div>
+export const autoplayF = (props) => {}
+export const ActividadesModal = ({ context, id, innerProps }) => {
+  const autoplay = useRef(Autoplay({ delay: 2000 }))
+  const theme = useMantineTheme()
+  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
 
-        <div className='fotos_list'>
-          <Slider {...settings}>
-            {innerProps.photos.map((photo, index) => (
-              <div key={index}>
-                {' '}
-                <div className='foto__img'>
-                  <img src={photo.img} alt={photo.descrip} />
-                </div>
-              </div>
+  return (
+    <>
+      <div className='add__asset__modal'>
+        <div className='asset__content'>
+          <div className='asset__modal__title'>
+            <div>{innerProps.titulo}</div>
+          </div>
+          <div className='asset__modal__subtitle'>
+            <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
+              {innerProps.fecha}
+            </span>
+          </div>
+          <div className='asset__modal__body lh-2'>{innerProps.desc}</div>
+          <div className='asset__modal__title'>
+            <div>Fotos del Evento</div>
+          </div>
+
+          <Carousel
+            slideSize='25%'
+            height={200}
+            breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
+            slideGap='xl'
+            align='start'
+            loop
+            plugins={[autoplay.current]}
+            dragFree
+            onMouseEnter={autoplay.current.stop}
+            onMouseLeave={autoplay.current.reset}
+            slidesToScroll={mobile ? 1 : 2}
+          >
+            {innerProps.photos.map((item, i) => (
+              <Carousel.Slide key={i}>
+                <img
+                  src={item.img}
+                  alt={item.descrip}
+                  style={{ width: '100%' }}
+                />
+              </Carousel.Slide>
             ))}
-          </Slider>
+          </Carousel>
         </div>
       </div>
-    </div>
-  </>
-)
+    </>
+  )
+}
