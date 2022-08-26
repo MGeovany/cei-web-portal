@@ -1,9 +1,12 @@
 import React from 'react'
 import '../styles/Blog.css'
 import { Arrow } from '../utils/svgIcons'
-import { BlogCard } from './BlogCard'
 import Slider from 'react-slick'
-
+import { BlogCard } from './BlogCard'
+import { useMediaQuery } from '@mantine/hooks'
+import { useMantineTheme } from '@mantine/core'
+import { Carousel } from '@mantine/carousel'
+  
 const blogs = [
   {
     id: 1,
@@ -82,54 +85,73 @@ const blogs = [
   }
 ]
 
-export const BlogsRecientes = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    arrows: true,
-    vertical: false,
-    responsive:[
-      {breakpoint: 690,
-      settings: {slidesToShow: 1,  slidesToScroll: 1 }
 
-      },
-      {breakpoint: 1050,
-        settings: {slidesToShow: 2,  slidesToScroll: 2 }
+
   
-      },
-      {breakpoint: 1450,
-        settings: {slidesToShow:3,  slidesToScroll: 3 }
   
-      }
-      
-    ]
-  }
+  export const BlogsRecientes = ({ section }) => {
+    const theme = useMantineTheme()
+    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
+  
+    const slides = blogs.map((item, i) => (
+      <Carousel.Slide key={i}>
+        <BlogCard {...item} />
+      </Carousel.Slide>
+    ))
+  
+
 
   return (
-    <div className='casos-tecnologia'>
-      <div className='casos-container-section'>
-        <div className='blog-section-title'>
-          Blog recientemente publicados
-          <span>
-            <Arrow height={32} width={30} fill='#e1575f' />
-          </span>
-        </div>
-
-        <div className='casos-section-content'>
-          <div className='container-carrousel'>
-          <Slider {...settings}>
-          {blogs.map((blog, index) => (
-            <div key={blog.id}>
-              <BlogCard blog={blog} />
-            </div>
-          ))}
-          </Slider>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+    <div style={{ padding: '1rem', marginTop: '4rem' }}>
+      <div className='casos-section-title'>{section}</div>
+      <Carousel
+        slideSize='25%'
+        breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
+        slideGap='xl'
+        align='start'
+        loop
+        dragFree
+        slidesToScroll={mobile ? 1 : 2}
+      >
+        {slides}
+      </Carousel>
+    </div>  
+    )
 }
+
+
+// /* eslint-disable no-unused-vars */
+// /* eslint-disable react/prop-types */
+// import React from 'react'
+// import { CasoCard } from './CasoCard'
+// import { useMediaQuery } from '@mantine/hooks'
+// import { useMantineTheme } from '@mantine/core'
+// import { Carousel } from '@mantine/carousel'
+
+// export const CasoCarousel = ({ data, section }) => {
+//   const theme = useMantineTheme()
+//   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
+
+//   const slides = data.map((item, i) => (
+//     <Carousel.Slide key={i}>
+//       <CasoCard {...item} />
+//     </Carousel.Slide>
+//   ))
+
+//   return (
+//     <div style={{ padding: '1rem', marginTop: '4rem' }}>
+//       <div className='casos-section-title'>{section}</div>
+//       <Carousel
+//         slideSize='25%'
+//         breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
+//         slideGap='xl'
+//         align='start'
+//         loop
+//         dragFree
+//         slidesToScroll={mobile ? 1 : 2}
+//       >
+//         {slides}
+//       </Carousel>
+//     </div>
+//   )
+// }

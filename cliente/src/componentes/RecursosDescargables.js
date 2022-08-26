@@ -3,6 +3,7 @@ import '../styles/Blog.css'
 import { Arrow } from '../utils/svgIcons'
 import { DescargablesCard } from './DescargablesCard'
 import Slider from 'react-slick'
+import { DescargablesCarousel } from '../componentes/DescargablesCarousel'
 
 const descargables = [
   {
@@ -40,53 +41,10 @@ const descargables = [
 ]
 
 export const RecursosDescargables = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    arrows: true,
-    vertical: false,
-    responsive:[
-      {breakpoint: 690,
-      settings: {slidesToShow: 1,  slidesToScroll: 1 }
-
-      },
-      {breakpoint: 1050,
-        settings: {slidesToShow: 2,  slidesToScroll: 2 }
-  
-      },
-      {breakpoint: 1450,
-        settings: {slidesToShow:3,  slidesToScroll: 3 }
-  
-      }
-      
-    ]
-  }
 
   return (
-    <div className='casos-tecnologia'>
-      <div className='casos-container-section'>
-        <div className='blog-section-title'>
-          Recursos descargables
-          <span>
-            <Arrow height={32} width={30} fill='#e1575f' />
-          </span>
-        </div>
-
-        <div className='casos-section-content'>
-          <div className='container-carrousel'>
-            <Slider {...settings}>
-              {descargables.map((descargables, index) => (
-                <div key={descargables.id}>
-                  <DescargablesCard descargables={descargables} />
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-      </div>
+    <div className='casos'>
+        <DescargablesCarousel data={descargables } section={'Recursos Descargables'} />
     </div>
   )
 }

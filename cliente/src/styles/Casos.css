@@ -39,6 +39,7 @@
   font-family: var(--sen-bold);
   color: var(--black);
   margin-bottom: 50px;
+  text-align: left;
 }
 
 .casos-section-content {
