@@ -8,20 +8,6 @@ import {
   IconBrandInstagram,
   IconBrandYoutube
 } from '@tabler/icons'
-const dataFromNextJS = {
-  request: {
-    path: 'https://cei-web-portal-mgeovany.vercel.app/'
-  }
-}
-const dataFromAEM = {
-  pageproperties: {
-    title: 'content page'
-  },
-  email: {
-    subject: 'See this page: Centro de Emprendimiento CEI',
-    body: 'Mira esto: '
-  }
-}
 
 export const ActividadesCard = ({ actividad }) => {
   const modals = useModals()

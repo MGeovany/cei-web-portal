@@ -5,7 +5,6 @@ import {
   TextInput,
   Button,
   Group,
-  RadioGroup,
   Radio,
   NativeSelect,
   MultiSelect
@@ -124,7 +123,7 @@ export const Postulate = () => {
                 />
               </div>
               <div className='postulate-grid-item'>
-                <RadioGroup
+                <Radio
                   orientation='vertical'
                   className='text'
                   onChange={setValue}
@@ -134,10 +133,10 @@ export const Postulate = () => {
                 >
                   <Radio value='Si' label='Si' />
                   <Radio value='No' label='No' />
-                </RadioGroup>
+                </Radio>
               </div>
               <div className='postulate-grid-item'>
-                <RadioGroup
+                <Radio
                   orientation='vertical'
                   className='text'
                   onChange={setValue}
@@ -147,10 +146,10 @@ export const Postulate = () => {
                 >
                   <Radio value='Si' label='Si' />
                   <Radio value='No' label='No' />
-                </RadioGroup>
+                </Radio>
               </div>
               <div className='postulate-grid-item'>
-                <RadioGroup
+                <Radio
                   orientation='vertical'
                   className='text'
                   onChange={setValue}
@@ -175,7 +174,7 @@ export const Postulate = () => {
                     value='artesanal'
                     label='Artesanal (Productos elaborados comestibles y no comestibles)'
                   />
-                </RadioGroup>
+                </Radio>
               </div>
               <div className='postulate-grid-item'>
                 <MultiSelect

@@ -10,22 +10,12 @@ export const CasoSalud = (props) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
-    arrows: true,
+    arrows: false,
     vertical: false,
-    responsive:[
-      {breakpoint: 690,
-      settings: {slidesToShow: 1,  slidesToScroll: 1 }
-
-      },
-      {breakpoint: 1050,
-        settings: {slidesToShow: 2,  slidesToScroll: 2 }
-  
-      },
-      {breakpoint: 1450,
-        settings: {slidesToShow:3,  slidesToScroll: 3 }
-  
-      }
-      
+    responsive: [
+      { breakpoint: 690, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 1050, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+      { breakpoint: 1450, settings: { slidesToShow: 3, slidesToScroll: 3 } }
     ]
   }
 
@@ -36,14 +26,14 @@ export const CasoSalud = (props) => {
         <div className='casos-section-title'>SALUD</div>
         <div className='casos-section-content'>
           <div className='container-carrousel'>
-          <Slider {...settings}>
-          {casosSal.map((caso, index) => (
-            <div key={index}>
-              {' '}
-              <CasoCard caso={caso} />
-            </div>
-          ))}
-          </Slider>
+            <Slider {...settings}>
+              {casosSal.map((caso, index) => (
+                <div key={index}>
+                  {' '}
+                  <CasoCard caso={caso} />
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </div>

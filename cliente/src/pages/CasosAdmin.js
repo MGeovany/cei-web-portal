@@ -4,7 +4,7 @@ import React from 'react'
 import { CasoComercial } from '../componentes/CasoComercial'
 import { CasoSocial } from '../componentes/CasoSocial'
 import { CasoSalud } from '../componentes/CasoSalud'
-import { CasoTecnologia } from '../componentes/CasoTecnologia'
+import { CasoCarousel } from '../componentes/CasoCarousel'
 import { Button, MantineProvider, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import { NavbarAdmin } from '../componentes/NavbarAdmin'
@@ -455,7 +455,7 @@ export const CasosAdmin = () => {
 
             <div className='casos-content'>
               <div className='casos-section'>
-                <CasoTecnologia casosTec={casosTec} />
+                <CasoCarousel data={casosTec} />
                 <CasoComercial casosCom={casosCom} />
                 <CasoSocial casosSoc={casosSoc} />
                 <CasoSalud casosSal={casosSal} />
