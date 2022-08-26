@@ -1,67 +1,34 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { ActividadesCard } from './ActividadesCard'
-import { Arrow } from '../utils/svgIcons'
-import Slider from 'react-slick'
 import '../styles/Calendario.css'
+import { useMediaQuery } from '@mantine/hooks'
+import { useMantineTheme } from '@mantine/core'
+import { Carousel } from '@mantine/carousel'
 
-export const Actividades = (props) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    arrows: true,
-    vertical: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  }
+export const Actividades = ({ data, section }) => {
+  const theme = useMantineTheme()
+  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
 
-  const data = props.data
-
+  const slides = data.map((item, i) => (
+    <Carousel.Slide key={i}>
+      <ActividadesCard {...item} />
+    </Carousel.Slide>
+  ))
   return (
-    <div className='ctividades'>
-      <div className='actividades-container-section'>
-        <div className='actividades-section-title'>
-          Actividades celebradas por el CEI
-          <span style={{ marginLeft: '12px' }}>
-            <Arrow height={30} width={25} fill='#e1575f' />
-          </span>
-        </div>
-        <div className='container-carrouselact'>
-          <Slider {...settings}>
-            {data.map((actividad, index) => (
-              <div key={index}>
-                <ActividadesCard actividad={actividad} />
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </div>
+    <div style={{ padding: '1rem', marginTop: '4rem' }}>
+      <div className='casos-section-title'>{section}</div>
+      <Carousel
+        slideSize='25%'
+        breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
+        slideGap='xl'
+        align='start'
+        loop
+        dragFree
+        slidesToScroll={mobile ? 1 : 2}
+      >
+        {slides}
+      </Carousel>
     </div>
   )
 }

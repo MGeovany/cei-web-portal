@@ -22,7 +22,8 @@
 }
 
 .calendario-container {
-  width: 90vw;
+  margin: 2rem;
+  margin-top: 4rem;
   font-size: 20px;
   font-family: var(--poppins-regular);
 
@@ -123,10 +124,6 @@
   margin-left: 20px;
 }
 
-.actividades-container-section {
-  width: 1600px;
-}
-
 .container-carrousel {
   width: auto;
   width: 98%;
@@ -136,20 +133,15 @@
   margin-left: 50px;
 }
 
-
 @media screen and (max-width: 1024px) {
   .container-carrousel {
     margin-left: 0px;
   }
-
 }
-
-
 
 .card-container {
   width: auto;
   align-items: center;
-  
 }
 
 .actividades-section-title {
@@ -206,8 +198,10 @@
 }
 
 .container-actividades {
-  width: auto;
   background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .card-actividades {

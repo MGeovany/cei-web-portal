@@ -20,7 +20,6 @@
   }
 }
 
-
 .casos-content {
   display: flex;
   flex-direction: column;
@@ -28,7 +27,7 @@
   align-content: space-between;
 
   width: 95vw;
-  
+
   padding-left: 0px;
   margin-top: -50px;
 }
@@ -49,7 +48,6 @@
   justify-content: center;
   width: auto;
   margin-bottom: 50px;
-  
 }
 
 .casos__card__content__title {
@@ -279,22 +277,14 @@
     width: 100%;
   }
 
-
-  .slick-prev:before, .slick-next:before
-  {
+  .slick-prev:before,
+  .slick-next:before {
     display: none;
   }
-
-
-  
 }
 
-
-
 /* Style Carousel buttons */
-.slick-prev:before, .slick-next:before
-{
+.slick-prev:before,
+.slick-next:before {
   color: #cecece;
-
-
 }
