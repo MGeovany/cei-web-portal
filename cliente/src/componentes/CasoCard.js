@@ -5,7 +5,9 @@ import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
 
 const useStyles = createStyles((theme) => ({
   card: {
-    height: 440,
+    height: 500,
+    width: 430,
+
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -15,7 +17,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontFamily: theme.fontFamily,
     fontWeight: 900,
     color: theme.white,
     lineHeight: 1.2,
@@ -27,7 +29,7 @@ const useStyles = createStyles((theme) => ({
     color: theme.white,
     opacity: 0.7,
     fontWeight: 700,
-    textTransform: 'uppercase'
+    fontSize: 20
   }
 }))
 
@@ -43,15 +45,15 @@ export const CasoCard = ({ image, title, desc }) => {
       className={classes.card}
     >
       <div>
-        <Text className={classes.category} size='xs'>
-          {desc}
-        </Text>
         <Title order={3} className={classes.title}>
           {title}
         </Title>
+        <Text className={classes.category} size='xs'>
+          {desc}
+        </Text>
       </div>
       <Button variant='white' color='dark'>
-        Read article
+        Leer Caso
       </Button>
     </Paper>
   )

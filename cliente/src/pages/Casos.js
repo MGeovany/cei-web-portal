@@ -9,49 +9,214 @@ import '../styles/Casos.css'
 const casosTec = [
   {
     image:
-      'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best forests to visit in North America',
-    desc: 'Tecnología'
+      'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    title: 'BeLeaf',
+    subtitle: 'Tecnología',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        image:
+          'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      },
+      {
+        nombre: 'Pauline L Revilla',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
+        email: 'Pauline.cro@hotmail.com'
+      },
+      {
+        nombre: 'Idell J Thomas',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
+        email: 'araceli.cro@hotmail.com'
+      }
+    ]
   },
   {
     image:
-      'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Hawaii beaches review: better than you think',
-    desc: 'Tecnología'
+      'https://images.pexels.com/photos/12406415/pexels-photo-12406415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Cerebro de confianza',
+    subtitle: 'Tecnología',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
+    descripcion: 'Save hundreds of admin hours by reducing back and forth',
+    integrantes: [
+      {
+        nombre: 'Juan',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Pedro',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Marlon',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      }
+    ]
   },
   {
     image:
-      'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Mountains at night: 12 best locations to enjoy the view',
-    desc: 'Tecnología'
+      'https://images.pexels.com/photos/4151965/pexels-photo-4151965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Xchematic',
+    subtitle: 'Tecnología',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
+    descripcion: 'Save hundreds of admin hours by reducing back and forth',
+    integrantes: [
+      {
+        nombre: 'Juan',
+        image:
+          'https://images.pexels.com/photos/4151965/pexels-photo-4151965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Pedro',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Marlon',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      }
+    ]
   },
   {
     image:
-      'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Aurora in Norway: when to visit for best experience',
-    desc: 'Tecnología'
+      'https://images.pexels.com/photos/6942818/pexels-photo-6942818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'Planets Friend',
+    subtitle: 'Tecnología',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
+    descripcion: 'Save hundreds of admin hours by reducing back and forth',
+    integrantes: [
+      {
+        nombre: 'Juan',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Pedro',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Marlon',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria',
+        image:
+          'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        email: 'marlongeo1999@gmail.com'
+      }
+    ]
   },
   {
     image:
-      'https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best places to visit this winter',
-    desc: 'Tecnología'
+      'https://images.pexels.com/photos/1563563/pexels-photo-1563563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'BeLeaf',
+    subtitle: 'Tecnología',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        image:
+          'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      },
+      {
+        nombre: 'Pauline L Revilla',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
+        email: 'Pauline.cro@hotmail.com'
+      },
+      {
+        nombre: 'Idell J Thomas',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
+        email: 'araceli.cro@hotmail.com'
+      }
+    ]
   },
   {
     image:
-      'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Active volcanos reviews: travel at your own risk',
-    desc: 'Tecnología'
+      'https://images.pexels.com/photos/13162215/pexels-photo-13162215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    title: 'BeLeaf',
+    subtitle: 'Tecnología',
+    desc: 'Save hundreds of admin hours by reducing back and forth',
+    descripcion:
+      'Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Establecer valor (Costo) a cada oportunidad de negocio que llega a la empresa, a través de la aplicación de nuestra herramienta de BI (Business Intelligence) que busca establecer claridad en los distintos modelos de negocio de una empresa y la práctica generando una comparación entre ambas realidades con el fin de generar métricas que puedan determinar valores exactos y así valorar cada oportunidad de negocio o bien el número de negocios que se deben realizar con un determinado cliente para que la relación B2B sea rentable. Esto acompañado de servicios que ayudan a mejorar los procesos o las buenas prácticas de la gestión empresarial.',
+    integrantes: [
+      {
+        nombre: 'Marlon Geovany Castro Mejia',
+        image:
+          'https://www.fakepersongenerator.com/Face/male/male108589513154.jpg',
+        email: 'marlongeo1999@gmail.com'
+      },
+      {
+        nombre: 'Maria Fernanda Velasquez Amaya',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025604941864.jpg',
+        email: 'marifer@gmail.com'
+      },
+      {
+        nombre: 'Pauline L Revilla',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025402124543.jpg',
+        email: 'Pauline.cro@hotmail.com'
+      },
+      {
+        nombre: 'Idell J Thomas',
+        image:
+          'https://www.fakepersongenerator.com/Face/female/female20161025035765808.jpg',
+        email: 'araceli.cro@hotmail.com'
+      }
+    ]
   }
 ]
 
 const casosCom = [
-  {
-    image:
-      'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best forests to visit in North America',
-    desc: 'nature'
-  },
   {
     image:
       'https://images.pexels.com/photos/12168556/pexels-photo-12168556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
