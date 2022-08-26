@@ -8,22 +8,15 @@ import {
   IconBrandInstagram,
   IconBrandYoutube
 } from '@tabler/icons'
-const dataFromNextJS = {
-  request: {
-    path: 'https://cei-web-portal-mgeovany.vercel.app/'
-  }
-}
-const dataFromAEM = {
-  pageproperties: {
-    title: 'content page'
-  },
-  email: {
-    subject: 'See this page: Centro de Emprendimiento CEI',
-    body: 'Mira esto: '
-  }
-}
 
-export const ActividadesCard = ({ actividad }) => {
+export const ActividadesCard = ({
+  title,
+  fecha,
+  autor,
+  contenido,
+  photos,
+  img
+}) => {
   const modals = useModals()
 
   const theme = useMantineTheme()
@@ -42,11 +35,11 @@ export const ActividadesCard = ({ actividad }) => {
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: actividad.title,
-        fecha: actividad.fecha,
-        autor: actividad.autor,
-        desc: actividad.contenido,
-        photos: actividad.photos
+        titulo: title,
+        fecha: fecha,
+        autor: autor,
+        desc: contenido,
+        photos: photos
       }
     })
 
@@ -62,14 +55,14 @@ export const ActividadesCard = ({ actividad }) => {
       >
         <Card shadow='sm' p='sm'>
           <Card.Section onClick={openActividadesModal}>
-            <Image withPlaceholder src={actividad.img} height={150} alt='blg' />
+            <Image withPlaceholder src={img} height={150} alt='blg' />
           </Card.Section>
           <div className='card-actividades'>
             <div
               className='actividad__card__content__title'
               onClick={openActividadesModal}
             >
-              {actividad.title}
+              {title}
             </div>
 
             <div className='actividad__card__content__button'>

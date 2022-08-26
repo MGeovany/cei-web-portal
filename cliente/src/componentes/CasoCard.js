@@ -1,14 +1,59 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Card, Image, Group, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 
-export const CasoCard = (props) => {
-  const modals = useModals()
+import {
+  createStyles,
+  Paper,
+  Text,
+  Title,
+  Button,
+  useMantineTheme
+} from '@mantine/core'
 
+const useStyles = createStyles((theme) => ({
+  card: {
+    height: 500,
+    width: 430,
+
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  },
+
+  title: {
+    fontFamily: theme.fontFamily,
+    fontWeight: 900,
+    color: theme.white,
+    lineHeight: 1.2,
+    fontSize: 32,
+    marginTop: theme.spacing.xs
+  },
+
+  category: {
+    color: theme.white,
+    opacity: 0.7,
+    fontWeight: 700,
+    fontSize: 20
+  }
+}))
+
+export const CasoCard = ({
+  image,
+  title,
+  subtitulo,
+  descripcion,
+  desc,
+  integrantes
+}) => {
+  const { classes } = useStyles()
+  const modals = useModals()
   const theme = useMantineTheme()
 
-  const openCasoModal = () =>
+  const openCasosModal = () =>
     modals.openContextModal('casoModal', {
       overlayColor:
         theme.colorScheme === 'dark'
@@ -18,59 +63,37 @@ export const CasoCard = (props) => {
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
-      size: 'calc(100% - 1rem)',
+      overflow: 'outside',
+
+      size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: props.caso.titulo,
-        subtitulo: props.caso.subtitulo,
-        desc: props.caso.descripcion,
-        img: props.caso.img,
-        integrantes: props.caso.integrantes
+        titulo: title,
+        subtitulo: subtitulo,
+        desc: descripcion,
+        img: image,
+        integrantes: integrantes
       }
     })
 
   return (
-    <div className='card-container'>
-      <div style={{ width: 350, margin: '20px 0 20px', height: '60%' }}>
-        <Card >
-          <Card.Section>
-            <Image
-              withPlaceholder
-              src={props.caso.img}
-              height={160}
-              alt='Norway'
-            />
-          </Card.Section>
-
-          <Group
-            position='apart'
-            style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
-          >
-            <div className='casos__card__content__title'>
-              {props.caso.titulo}
-            </div>
-          </Group>
-
-          <div className='casos__card__content__desc'>{props.caso.desc}</div>
-
-          <hr className='hr__gray' id='hr__gray' />
-          <button
-            className='casos__card__content__button'
-            onClick={openCasoModal}
-          >
-            Leer Mas
-          </button>
-        </Card>
+    <Paper
+      shadow='md'
+      p='xl'
+      radius='md'
+      sx={{ backgroundImage: `url(${image})` }}
+      className={classes.card}
+    >
+      <div>
+        <Title order={3} className={classes.title}>
+          {title}
+        </Title>
+        <Text className={classes.category} size='xs'>
+          {desc}
+        </Text>
       </div>
-    </div>
+      <Button variant='white' color='dark' onClick={openCasosModal}>
+        Leer Caso
+      </Button>
+    </Paper>
   )
 }
-/*
-CasoCard.propTypes = {
-  img: PropTypes.string.isRequired,
-  titulo: PropTypes.string.isRequired,
-  descripcion: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  casosTec: PropTypes.array.isRequired,
-  caso: PropTypes.object.isRequired
-}
- */

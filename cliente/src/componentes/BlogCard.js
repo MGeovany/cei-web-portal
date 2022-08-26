@@ -1,12 +1,12 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Card, Image, useMantineTheme } from '@mantine/core'
+
+import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
 import { useModals } from '@mantine/modals'
+import { useMantineTheme } from '@mantine/core'
 
-export const BlogCard = ({ blog }) => {
+export const BlogCard = ({ img, title, contenido, autor, fecha }) => {
   const modals = useModals()
-
   const theme = useMantineTheme()
 
   const openBlogModal = () =>
@@ -23,30 +23,63 @@ export const BlogCard = ({ blog }) => {
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: blog.title,
-        autor: blog.autor,
-        fecha: blog.fecha,
-        desc: blog.contenido
+        titulo: title,
+        autor: autor,
+        fecha: fecha,
+        desc: contenido
       }
     })
+
+  const useStyles = createStyles((theme) => ({
+    card: {
+      height: 440,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    },
+
+    title: {
+      fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+      fontWeight: 900,
+      color: theme.white,
+      lineHeight: 1.2,
+      fontSize: 25,
+      marginTop: theme.spacing.xs,
+      textAlign: 'left'
+    },
+
+    category: {
+      color: theme.white,
+      opacity: 0.7,
+      fontWeight: 700,
+      textTransform: 'uppercase'
+    }
+  }))
+
+  const { classes } = useStyles()
+
   return (
-    <div className='card-container' onClick={openBlogModal}>
-      <div style={{ width: 350, margin: '10px 0 100px', height: '80%' }}>
-        <Card shadow='sm' p='lg'>
-          <Card.Section>
-            <Image withPlaceholder src={blog.img} height={200} alt='blg' />
-          </Card.Section>
-          <div className='card-50'>
-            <div className='blog__card__content__title'>{blog.title}</div>
-            <button className='blog__card__content__button '>
-              <span style={{ color: '#4a79cb' }}>{blog.autor} </span>
-              <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-                • {blog.fecha}
-              </span>
-            </button>
-          </div>
-        </Card>
+    <Paper
+      shadow='md'
+      p='xl'
+      radius='md'
+      sx={{ backgroundImage: `url(${img})` }}
+      className={classes.card}
+    >
+      <div>
+        <Text align='left' className={classes.category} size='xs'>
+          {fecha}
+        </Text>
+        <Title order={3} className={classes.title}>
+          {title}
+        </Title>
       </div>
-    </div>
+      <Button variant='white' color='dark' onClick={openBlogModal}>
+        Leer Articulo
+      </Button>
+    </Paper>
   )
 }

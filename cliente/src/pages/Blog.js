@@ -14,8 +14,8 @@ export const Blog = () => {
           </div>
           <div className='casos-content'>
             <div className='casos-section'>
-              <BlogsRecientes />
-              <RecursosDescargables/>
+              <BlogsRecientes section={'Blog Recientemente Publicados'} />
+              <RecursosDescargables />
             </div>
           </div>
         </div>
