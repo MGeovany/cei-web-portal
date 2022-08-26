@@ -276,15 +276,4 @@
   .integrantes__list {
     width: 100%;
   }
-
-  .slick-prev:before,
-  .slick-next:before {
-    display: none;
-  }
-}
-
-/* Style Carousel buttons */
-.slick-prev:before,
-.slick-next:before {
-  color: #cecece;
 }

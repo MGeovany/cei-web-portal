@@ -4,8 +4,6 @@ import { Calendario } from '../componentes/Calendario'
 import '../styles/Calendario.css'
 import { Navbar } from '../componentes/Navbar'
 import { Actividades } from '../componentes/Actividades'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 
 // static data, this will be loaded from a server in production.
 const data = [
