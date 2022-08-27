@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../styles/Footer.css'
-import { Facebook, Instagram, LinkdIn } from '../utils/svgIcons'
 import {
   IconBrandTelegram,
   IconBrandInstagram,
