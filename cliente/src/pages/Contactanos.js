@@ -1,17 +1,69 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/Contactanos.css'
-import { TextInput, Textarea } from '@mantine/core'
+import { TextInput, Textarea, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
+import { showNotification } from '@mantine/notifications'
+import {
+  IconCheck,
+  IconBrandTelegram,
+  IconBrandWhatsapp,
+  IconBrandFacebook
+} from '@tabler/icons'
 
 export const Contactanos = () => {
+  const [dataF, setDataF] = useState({})
+
+  useEffect(() => {}, [dataF])
+
   const form = useForm({
     initialValues: {
-      nombre_postulante: '',
-      correo: '',
-      celular: '',
+      nombre: '',
+      email: '',
+      telefono: '',
       comentario: ''
+    },
+    validate: {
+      nombre: (value) =>
+        value.length < 2 ? '*Nombre debe de contener mas de dos letras' : null,
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : '*email invalido'),
+      telefono: (value) =>
+        value.length < 8
+          ? '*Numero de telefono debe de contener mas de 8 digitos'
+          : null,
+      comentario: (value) =>
+        value.length < 10
+          ? '*Comentario debe de contener mas de 10 letras'
+          : null
     }
   })
+  const createPost = async (values) => {
+    showNotification({
+      icon: <IconCheck />,
+      title: 'Enviado',
+      color: 'green',
+      message:
+        'Gracias por contactarnos ! Nos pondremos en contacto contigo lo antes posible.'
+    })
+    form.setValues({
+      nombre: '',
+      email: '',
+      telefono: '',
+      comentario: ''
+    })
+    const response = await fetch(
+      'https://cei1.herokuapp.com/1.0.0/Contactanos/',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(values)
+      }
+    )
+    const data = await response.json()
+    console.log(data)
+    setDataF(data)
+  }
 
   return (
     <div className='contactanos'>
@@ -22,7 +74,7 @@ export const Contactanos = () => {
         <div className='contactanos-form'>
           <form
             className='form-contactanos'
-            onSubmit={form.onSubmit((values) => console.log(values))}
+            onSubmit={form.onSubmit((values) => createPost(values))}
           >
             <div className='form-input'>
               <div className='form-seccion'>
@@ -31,36 +83,80 @@ export const Contactanos = () => {
                   required
                   label='Tú Nombre:'
                   placeholder='Ingresa tu nombre'
+                  {...form.getInputProps('nombre')}
                 />
                 <TextInput
-                  className='text'
                   required
+                  className='text'
                   label='Correo Electronico: '
-                  placeholder='Ingrese su correo'
+                  placeholder='Ingrese su email'
+                  {...form.getInputProps('email')}
                 />
                 <TextInput
                   className='text'
                   required
                   label='Tú Numero:'
                   placeholder='Ingrese su número de telefono'
+                  {...form.getInputProps('telefono')}
                 />
+                <div
+                  className='contact-icons'
+                  style={{
+                    marginTop: '1rem',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}
+                >
+                  <span>Encuentranos en:</span>
+                  <span
+                    style={{
+                      marginTop: '0.5rem',
+                      display: 'flex',
+                      width: '40%',
+                      justifyContent: 'space-around',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <IconBrandTelegram />
+                    <IconBrandWhatsapp />
+                    <IconBrandFacebook />
+                  </span>
+                </div>
               </div>
               <div className='form-seccion'>
                 <Textarea
                   placeholder='Tus Comentarios Aqui'
                   label='Comentarios:'
                   className='contactanos-textarea'
-                  required
                   minRows={7}
+                  {...form.getInputProps('comentario')}
                 />
                 <div className='contactanos-btns'>
-                  <div className='btne'>Enviar</div>
-                  <div className='btnd'>Descartar</div>
+                  <Button
+                    type='submit'
+                    mt='sm'
+                    size='md'
+                    style={{
+                      boxShadow: '3px 3px 17px #00000029',
+                      backgroundColor: '#072958'
+                    }}
+                  >
+                    Enviar
+                  </Button>
+                  <Button
+                    type='reset'
+                    mt='sm'
+                    size='md'
+                    style={{
+                      boxShadow: '3px 3px 17px #00000029',
+                      backgroundColor: '#e1575f'
+                    }}
+                  >
+                    Cancelar
+                  </Button>
                 </div>
               </div>
-            </div>
-            <div className='form-socials'>
-              <div className='form-social-seccion'></div>
             </div>
           </form>
         </div>

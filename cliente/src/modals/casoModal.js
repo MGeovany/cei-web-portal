@@ -20,7 +20,7 @@ export const casoModal = ({ context, id, innerProps }) => (
             <div key={index}>
               <div className='integrante flex'>
                 <div className='integrante__img'>
-                  <img src={integrante.img} alt={integrante.nombre} />
+                  <img src={integrante.profile} alt={integrante.nombre} />
                 </div>
 
                 <div className='integrante__name flex'>{integrante.nombre}</div>

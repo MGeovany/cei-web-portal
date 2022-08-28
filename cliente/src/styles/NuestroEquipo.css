@@ -65,6 +65,7 @@
   border: 2px solid #a75bf2;
   opacity: 0.41;
   border-radius: 20px;
+  background-color: #a75bf2;
 }
 
 @media screen and (max-width: 1270px) {

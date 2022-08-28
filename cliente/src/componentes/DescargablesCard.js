@@ -1,10 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Card, Image, useMantineTheme } from '@mantine/core'
+import { useMantineTheme } from '@mantine/core'
+import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
 import { useModals } from '@mantine/modals'
-import { MdFileDownload } from 'react-icons/md'
 
-export const DescargablesCard = ({ descargables }) => {
+export const DescargablesCard = ({
+  img,
+  title,
+  desc,
+  autor,
+  fecha,
+  contenido
+}) => {
   const modals = useModals()
   const theme = useMantineTheme()
 
@@ -22,43 +29,64 @@ export const DescargablesCard = ({ descargables }) => {
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: descargables.title,
-        autor: descargables.autor,
-        fecha: descargables.fecha
+        titulo: title,
+        autor: autor,
+        fecha: fecha,
+        desc: contenido
       }
     })
 
+  const useStyles = createStyles((theme) => ({
+    card: {
+      height: 440,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    },
+
+    title: {
+      fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+      fontWeight: 900,
+      color: theme.white,
+      lineHeight: 1.2,
+      fontSize: 32,
+      marginTop: theme.spacing.xs,
+      textAlign: 'left'
+    },
+
+    category: {
+      color: theme.white,
+      opacity: 0.7,
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      textAlign: 'initial'
+    }
+  }))
+
+  const { classes } = useStyles()
+
   return (
-    <div className='card-container'>
-      <div style={{ width: 350, margin: '10px 0 10px', height: '80%' }}>
-        <Card shadow='sm' p='lg'>
-          <Card.Section>
-            <Image
-              withPlaceholder
-              src={descargables.img}
-              height={200}
-              alt='blg'
-            />
-          </Card.Section>
-          <div className='card-50'>
-            <div className='blog__card__content__title'>
-              {descargables.title}
-            </div>
-            <button className='blog__card__content__button '>
-              <span style={{ color: '#4a79cb' }}>{descargables.autor} </span>
-              <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-                • {descargables.fecha}
-              </span>
-              <span
-                className='btn_descarga'
-                style={{ color: '#AAAEB8', opacity: '0.6' }}
-              >
-                • <MdFileDownload width={50} height={50} />
-              </span>
-            </button>
-          </div>
-        </Card>
+    <Paper
+      shadow='md'
+      p='xl'
+      radius='md'
+      sx={{ backgroundImage: `url(${img})` }}
+      className={classes.card}
+    >
+      <div>
+        <Text className={classes.category} size='xs'>
+          {fecha}
+        </Text>
+        <Title order={3} className={classes.title}>
+          {title}
+        </Title>
       </div>
-    </div>
+      <Button variant='white' color='dark' onClick={openBlogModal}>
+        Descargar
+      </Button>
+    </Paper>
   )
 }

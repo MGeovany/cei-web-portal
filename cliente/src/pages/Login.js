@@ -1,3 +1,4 @@
+/* eslint-disable space-before-function-paren */
 import React from 'react'
 import {
   TextInput,
@@ -65,7 +66,7 @@ export function Login() {
                 <Checkbox label='Recordarme' />
                 <a
                   onClick={(event) => event.preventDefault()}
-                  href='#'
+                  href='/login'
                   size='sm'
                 >
                   Olvidó su contraseña?

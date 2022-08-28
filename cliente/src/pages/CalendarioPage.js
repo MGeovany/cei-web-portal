@@ -4,8 +4,6 @@ import { Calendario } from '../componentes/Calendario'
 import '../styles/Calendario.css'
 import { Navbar } from '../componentes/Navbar'
 import { Actividades } from '../componentes/Actividades'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 
 // static data, this will be loaded from a server in production.
 const data = [
@@ -289,18 +287,17 @@ const events = [
 
 export const CalendarioPage = () => {
   return (
-    <>
-      <div className='container-actividades'>
-        <div className='calendario'>
-          <div className='section-title calendario-title'>
-            CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
-          </div>
-          <Calendario events={events} />
+    <div className='casos'>
+      <div className='casos-container'>
+        <div className='casos-title section-title'>
+          CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
         </div>
-        <div >
-          <Actividades data={data}/>
-        </div>
+        <Calendario events={events} />
+        <Actividades
+          data={data}
+          section={' Actividades celebradas por el CEI'}
+        />
       </div>
-    </>
+    </div>
   )
 }

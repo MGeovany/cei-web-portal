@@ -1,6 +1,4 @@
-import React from 'react'
-
-import PropTypes from 'prop-types'
+import React,{PropTypes} from 'react'
 
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
 import format from 'date-fns/format'
