@@ -10,7 +10,7 @@ const data = [
   {
     id: 1,
     title: 'SHOW AND TELL 2022',
-    fecha: '18/05/2020',
+    fecha: '08/18/2020',
     autor: 'CEI CEUTEC',
     img: 'https://images.pexels.com/photos/7413868/pexels-photo-7413868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido:
@@ -53,7 +53,7 @@ const data = [
   {
     id: 2,
     title: 'CELEBRACION DEL DÍA MUNDIAL DEL EMPRENDIMIENTO',
-    fecha: '01/22/2020',
+    fecha: '08/08/2020',
     autor: 'CEI CEUTEC',
     img: 'https://images.pexels.com/photos/6340656/pexels-photo-6340656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 2',
@@ -87,7 +87,7 @@ const data = [
   {
     id: 3,
     title: 'SHOW DE EMPRENDEDORES',
-    fecha: '01/22/2020',
+    fecha: '08/20/2020',
     autor: 'CEI CEUTEC',
     img: 'https://images.pexels.com/photos/7433839/pexels-photo-7433839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 32',
@@ -122,7 +122,7 @@ const data = [
     id: 33,
     title: 'FERIA MICRO-EMPRESAS',
     autor: 'CEI CEUTEC',
-    fecha: '01/22/2020',
+    fecha: '08/22/2020',
     img: 'https://images.pexels.com/photos/6172540/pexels-photo-6172540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 3222',
     photos: [
@@ -155,7 +155,7 @@ const data = [
   {
     id: 332323,
     title: 'CELEBRACION DEL DÍA MUNDIAL DEL EMPRENDIMIENTO',
-    fecha: '01/22/2020',
+    fecha: '08/22/2020',
     autor: 'CEI CEUTEC',
     img: 'https://images.pexels.com/photos/6829536/pexels-photo-6829536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 3222',
@@ -181,7 +181,7 @@ const data = [
   {
     id: 3234,
     title: 'CELEBRACION DEL DÍA MUNDIAL DEL EMPRENDIMIENTO',
-    fecha: '01/22/2020',
+    fecha: '08/22/2020',
     autor: 'CEI CEUTEC',
     img: 'https://images.pexels.com/photos/7698815/pexels-photo-7698815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 3222',
@@ -207,7 +207,7 @@ const data = [
   {
     id: 332333423,
     title: 'CELEBRACION DEL DÍA MUNDIAL DEL EMPRENDIMIENTO',
-    fecha: '01/22/2020',
+    fecha: '22/08/2020',
     autor: 'CEI CEUTEC',
     img: 'https://images.pexels.com/photos/6914343/pexels-photo-6914343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     contenido: 'Contenido del blog 3222',
@@ -257,31 +257,31 @@ const data = [
     ]
   }
 ]
-
+const Title=()=><h3>Jaula de Jaguares</h3>
 const events = [
   {
-    title: 'Jaula de Jaguares',
+    title: 'Jaila de Jaguares',
     allDay: true,
-    start: new Date(2022, 5, 12),
-    end: new Date(2022, 5, 12)
+    start: new Date(2022,7, 12),
+    end: new Date(2022,7,12)
   },
   {
     title: 'Webinar de Emprendimiento',
     allDay: true,
-    start: new Date(2022, 6, 2),
-    end: new Date(2022, 6, 2)
+    start: new Date(2022, 7, 2),
+    end: new Date(2022, 7, 2)
   },
   {
     title: 'Celebración del dia del emprendedor',
     allDay: false,
-    start: new Date(2022, 5, 14),
-    end: new Date(2022, 5, 17)
+    start: new Date(2022, 7, 14),
+    end: new Date(2022, 7, 17)
   },
   {
     title: 'Feriado Nacional',
     allDay: true,
-    start: new Date(2022, 5, 23),
-    end: new Date(2022, 0, 2)
+    start: new Date(2022, 7, 29),
+    end: new Date(2022, 8, 2)
   }
 ]
 

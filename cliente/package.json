@@ -15,12 +15,20 @@
     "@tabler/icons": "^1.88.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
+
+    "@testing-library/user-event": "^13.5.0",
+    "dayjs": "^1.11.3",
+    "moment": "^2.29.4",
+    "react": "^18.1.0",
+    "react-big-calendar": "^0.40.1",
+
     "@testing-library/user-event": "^14.4.3",
     "dayjs": "^1.11.5",
     "embla-carousel-autoplay": "^7.0.1",
     "embla-carousel-react": "^7.0.1",
     "react": "^18.2.0",
     "react-big-calendar": "^1.5.0",
+
     "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
@@ -33,7 +41,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm install --no-fund --no-audit --no-package-lock --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [
