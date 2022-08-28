@@ -48,16 +48,17 @@ export const CalendarioAdmin = () => {
       overlayOpacity: 0.55,
       overlayBlur: 3,
       centered: true,
-      padding: 'xl',
+
       size: 'calc(90% - 6rem)',
-      innerProps: {}
+      innerProps: {
+      }
     })
 
   const OpenAddEventos = () =>
     modals.openContextModal('AgregarEventos', {
       overflow: 'inside',
       centered: true,
-      size: 'sm',
+      size: 'xl',
       overlayColor:
         theme.colorScheme === 'dark'
           ? theme.colors.dark[9]

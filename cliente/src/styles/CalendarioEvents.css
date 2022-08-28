@@ -23,3 +23,10 @@
   border-radius: 15px;
   opacity: 1;
 }
+
+.elipsis {
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
