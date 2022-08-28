@@ -3,20 +3,14 @@ import React from 'react'
 import { Card, Center, Image, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import '../styles/Calendario.css'
+import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
 import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandYoutube
 } from '@tabler/icons'
 
-export const ActividadesCard = ({
-  title,
-  fecha,
-  autor,
-  contenido,
-  photos,
-  img
-}) => {
+export const ActividadesCard = ({ title, fecha , autor , contenido ,photos ,img }) => {
   const modals = useModals()
 
   const theme = useMantineTheme()
@@ -43,39 +37,61 @@ export const ActividadesCard = ({
       }
     })
 
-  return (
-    <div className='card-actividades-container'>
-      <div
-        style={{
-          width: 350,
-          margin: '10px 0 10px',
-          height: '80%',
-          alignItems: Center
-        }}
-      >
-        <Card shadow='sm' p='sm'>
-          <Card.Section onClick={openActividadesModal}>
-            <Image withPlaceholder src={img} height={150} alt='blg' />
-          </Card.Section>
-          <div className='card-actividades'>
-            <div
-              className='actividad__card__content__title'
-              onClick={openActividadesModal}
-            >
-              {title}
-            </div>
+    const useStyles = createStyles((theme) => ({
+      card: {
+        height: 440,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      padding:"1rm"
+      },
+    
+      title: {
+        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        fontWeight: 900,
+        color: theme.white,
+        lineHeight: 1.2,
+        fontSize: 25,
+        marginTop: theme.spacing.xs
+      },
+    
+      category: {
+        color: theme.white,
+        opacity: 0.7,
+        fontWeight: 700,
+        textTransform: 'uppercase'
+      },
+  
+}))
 
-            <div className='actividad__card__content__button'>
-              <div>Compartir:</div>
-              <div className='actividad__socials'>
-                <IconBrandFacebook />
-                <IconBrandInstagram />
-                <IconBrandYoutube />
-              </div>
-            </div>
-          </div>
-        </Card>
-      </div>
+
+  const { classes } = useStyles()
+
+  return (
+    <Paper
+    shadow='md'
+    p='xl'
+    radius='md'
+    sx={{ backgroundImage: `url(${img})` }}
+    className={classes.card}
+  >
+    <div>
+      <Text
+      align="left"
+       className={classes.category} size='xs' >
+        {fecha}
+        {/* {contenido} */}
+      </Text>
+      <Title order={3} className={classes.title}>
+        {title}
+      </Title>
     </div>
+    <Button variant='white' color='dark' onClick={openActividadesModal}>
+     Leer Articulo
+    </Button>
+  </Paper>
   )
 }
