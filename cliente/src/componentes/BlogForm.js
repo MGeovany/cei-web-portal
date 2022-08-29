@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { InputWrapper, Input, Textarea } from '@mantine/core'
+import { Input, Textarea } from '@mantine/core'
 import { useForm } from '@mantine/form'
 
 export const BlogForm = () => {
@@ -22,25 +22,24 @@ export const BlogForm = () => {
         <div className='form__proyecto'>
           <div className='form__main__center'>
             <div className='form__main__section s1'>
-              <InputWrapper
+              <Input
                 className='font-sen'
                 id='input-nombre-proyecto'
                 required
                 label='Título'
               >
-
                 <Input id='input-nombre-proyecto' placeholder='Mi Blog' />
-              </InputWrapper>
+              </Input>
             </div>
             <div className='form__main__section asset__m10 s1'>
-              <InputWrapper
+              <Input
                 className='font-sen'
                 id='input-nombre-proyecto'
                 required
                 label='Autor'
               >
                 <Input className='font-sen' placeholder='CEI Ceutec' />
-              </InputWrapper>
+              </Input>
             </div>
 
             <div className='form__main__section s2'>

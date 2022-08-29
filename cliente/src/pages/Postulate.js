@@ -5,7 +5,6 @@ import {
   TextInput,
   Button,
   Group,
-  RadioGroup,
   Radio,
   NativeSelect,
   MultiSelect
@@ -79,7 +78,6 @@ export const Postulate = () => {
                   size='md'
                 />
               </div>
-
               <div className='postulate-grid-item'>
                 <NativeSelect
                   className='text'
@@ -123,8 +121,9 @@ export const Postulate = () => {
                   size='md'
                 />
               </div>
+
               <div className='postulate-grid-item'>
-                <RadioGroup
+                <Radio.Group
                   orientation='vertical'
                   className='text'
                   onChange={setValue}
@@ -134,10 +133,11 @@ export const Postulate = () => {
                 >
                   <Radio value='Si' label='Si' />
                   <Radio value='No' label='No' />
-                </RadioGroup>
+                </Radio.Group>
               </div>
+
               <div className='postulate-grid-item'>
-                <RadioGroup
+                <Radio.Group
                   orientation='vertical'
                   className='text'
                   onChange={setValue}
@@ -147,10 +147,10 @@ export const Postulate = () => {
                 >
                   <Radio value='Si' label='Si' />
                   <Radio value='No' label='No' />
-                </RadioGroup>
+                </Radio.Group>
               </div>
               <div className='postulate-grid-item'>
-                <RadioGroup
+                <Radio.Group
                   orientation='vertical'
                   className='text'
                   onChange={setValue}
@@ -175,7 +175,7 @@ export const Postulate = () => {
                     value='artesanal'
                     label='Artesanal (Productos elaborados comestibles y no comestibles)'
                   />
-                </RadioGroup>
+                </Radio.Group>
               </div>
               <div className='postulate-grid-item'>
                 <MultiSelect
@@ -186,6 +186,7 @@ export const Postulate = () => {
                   placeholder='Elige...'
                 />
               </div>
+
               <div className='postulate-grid-item'></div>
               <div className='postulate-grid-item'></div>
               <div className='postulate-grid-item'>
