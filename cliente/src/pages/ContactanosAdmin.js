@@ -71,10 +71,10 @@ export const ContactanosAdmin = () => {
   return (
     <>
       <div
-        className='casos'
+        className='contactanos-casos'
         style={{ paddingBottom: '2rem', minHeight: '100vh' }}
       >
-        <div className='casos-container flex'>
+        <div className='casos-container'>
           <div className='casos-title section-title'>
             PERSONAS QUE SE
             <span style={{ color: '#e1575f' }}> CONTACTARON</span>

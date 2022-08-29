@@ -66,7 +66,7 @@ export function Login() {
                 <Checkbox label='Recordarme' />
                 <a
                   onClick={(event) => event.preventDefault()}
-                  href='#'
+                  href='/login'
                   size='sm'
                 >
                   Olvidó su contraseña?
