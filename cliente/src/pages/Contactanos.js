@@ -61,7 +61,7 @@ export const Contactanos = () => {
       }
     )
     const data = await response.json()
-    console.log(data)
+
     setDataF(data)
   }
 

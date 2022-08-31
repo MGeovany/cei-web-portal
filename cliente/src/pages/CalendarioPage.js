@@ -4,7 +4,7 @@ import { Calendario } from '../componentes/Calendario'
 import '../styles/Calendario.css'
 import { Navbar } from '../componentes/Navbar'
 import { Actividades } from '../componentes/Actividades'
-
+import { Eventos } from '../API'
 // static data, this will be loaded from a server in production.
 const data = [
   {
@@ -258,45 +258,35 @@ const data = [
   }
 ]
 const Title=()=><h3>Jaula de Jaguares</h3>
-const events = [
-  {
-    title: 'Jaila de Jaguares',
-    allDay: true,
-    start: new Date(2022,7, 12),
-    end: new Date(2022,7,12)
-  },
-  {
-    title: 'Webinar de Emprendimiento',
-    allDay: true,
-    start: new Date(2022, 7, 2),
-    end: new Date(2022, 7, 2)
-  },
-  {
-    title: 'Celebración del dia del emprendedor',
-    allDay: false,
-    start: new Date(2022, 7, 14),
-    end: new Date(2022, 7, 17)
-  },
-  {
-    title: 'Feriado Nacional',
-    allDay: true,
-    start: new Date(2022, 7, 29),
-    end: new Date(2022, 8, 2)
-  }
-]
 
 export const CalendarioPage = () => {
+  const [eventos, setEventos] = React.useState([])
+  React.useState(()=>{
+    Eventos.calendarEvents().then(data =>{ 
+      let formattedData = data.map(evento => ({
+          title: evento.title,
+          start: new Date(evento.start),
+          end: new Date(evento.end),
+          allDay: evento.allDay > 480
+        }))
+
+        setEventos(formattedData)
+    })
+    .catch(err=>console.error(err))
+  },[])
+
+
   return (
     <div className='casos'>
       <div className='casos-container'>
         <div className='casos-title section-title'>
           CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
         </div>
-        <Calendario events={events} />
+        <Calendario events={eventos} />
         <Actividades
           data={data}
           section={' Actividades celebradas por el CEI'}
-        />
+        />  
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
-import React,{PropTypes} from 'react'
+/* eslint-disable react/prop-types */
+import React from 'react'
 
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
 import format from 'date-fns/format'
@@ -6,7 +7,7 @@ import parse from 'date-fns/parse'
 import startOfWeek from 'date-fns/startOfWeek'
 import getDay from 'date-fns/getDay'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import { Eventos } from '../API'
+
 const locales = {
   'en-US': require('date-fns/locale/en-US')
 }
@@ -19,21 +20,8 @@ const localizer = dateFnsLocalizer({
   locales
 })
 
-export const Calendario = (props) => {
-  const [eventos, setEventos] = React.useState([])
-  React.useState(()=>{
+export const Calendario = ({eventos}) => {
 
-    Eventos.calendarEvents().then(data =>{ 
-      let formattedData = data.map(evento => ({
-          title: evento.title,
-          start: new Date(evento.start),
-          end: new Date(evento.end),
-          allDay: evento.allDay > 480
-        }))
-        setEventos(formattedData)
-    })
-    .catch(err=>console.error(err))
-  },[])
   return (
     <div>
       <div className='calendario-container flex'>
@@ -48,7 +36,4 @@ export const Calendario = (props) => {
       </div>
     </div>
   )
-}
-Calendario.propTypes = {
-  events: PropTypes.array
 }

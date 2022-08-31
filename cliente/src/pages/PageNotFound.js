@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/PageNotFound.css'
 export const PageNotFound = () => {
   const rand = Math.floor(Math.random() * (1 - 33) + 33)
-  console.log('rand', rand)
+
   return (
     <div className='notfound'>
       <div className='notfound__container'>

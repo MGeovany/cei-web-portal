@@ -5,40 +5,42 @@ import '../styles/Calendario.css'
 import { Button, Group, useMantineTheme, MantineProvider } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import { NavbarAdmin } from '../componentes/NavbarAdmin'
-
-// static data, this will be loaded from a server in production.
-
-const events = [
-  {
-    title: 'Jaula de Jaguares',
-    allDay: true,
-    start: new Date(2022, 5, 12),
-    end: new Date(2022, 5, 12)
-  },
-  {
-    title: 'Webinar de Emprendimiento',
-    allDay: true,
-    start: new Date(2022, 6, 2),
-    end: new Date(2022, 6, 2)
-  },
-  {
-    title: 'Celebración del dia del emprendedor',
-    allDay: false,
-    start: new Date(2022, 5, 14),
-    end: new Date(2022, 5, 17)
-  },
-  {
-    title: 'Feriado Nacional',
-    allDay: true,
-    start: new Date(2022, 5, 23),
-    end: new Date(2022, 0, 2)
-  }
-]
+import { Eventos } from '../API'
+import { showNotification } from '@mantine/notifications'
 
 export const CalendarioAdmin = () => {
+  const [eventos, setEventos] = React.useState([])
   const modals = useModals()
   const theme = useMantineTheme()
 
+  React.useState(()=>{
+    Eventos.calendarEvents().then(data =>{ 
+      let formattedData = data.map(evento => ({
+          title: evento.title,
+          start: new Date(evento.start),
+          end: new Date(evento.end),
+          allDay: evento.allDay > 480
+        }))
+
+        setEventos(formattedData)
+    })
+    .catch(err=>console.error(err))
+  },[])
+
+  function onAddEvent(element){
+    Eventos.add(element).then(data => {
+      showNotification({
+        message: 'Evento agregado',
+        type: 'success',
+        duration: 3000
+      })
+    }).catch(err => { 
+      showNotification({
+      message: JSON.stringify(err),
+      type: 'error',
+      duration: 3000
+    }) })
+  }
   const OpenEventosCalendar = () =>
     modals.openContextModal('CalendarioEvents', {
       overlayColor:
@@ -48,15 +50,14 @@ export const CalendarioAdmin = () => {
       overlayOpacity: 0.55,
       overlayBlur: 3,
       centered: true,
-
       size: 'calc(90% - 6rem)',
       innerProps: {
+        action:(element)=>onAddEvent(element),
       }
     })
 
   const OpenAddEventos = () =>
     modals.openContextModal('AgregarEventos', {
-      overflow: 'inside',
       centered: true,
       size: 'xl',
       overlayColor:
@@ -64,7 +65,11 @@ export const CalendarioAdmin = () => {
           ? theme.colors.dark[9]
           : theme.colors.gray[2],
       overlayOpacity: 0.55,
-      overlayBlur: 3
+      overlayBlur: 3,
+      innerProps: {
+        action:(element)=>onAddEvent(element),
+      },
+
     })
 
   return (
@@ -103,7 +108,7 @@ export const CalendarioAdmin = () => {
                 </Button>
               </div>
             </div>
-            <Calendario events={events} />
+            <Calendario events={eventos} />
           </div>
         </div>
       </MantineProvider>
