@@ -110,3 +110,22 @@ Give a ⭐️ if you liked this project!
 <li class="has-line-data" data-line-start="51" data-line-end="52">contrasena varchar(150)</li>
 <li class="has-line-data" data-line-start="52" data-line-end="54">correo varchar(70)</li>
 </ul>
+<h3 class="code-line" data-line-start=20 data-line-end=21><a id="Casos__100Casos_20"></a>Casos --&gt; <code>/1.0.0/Casos</code></h3>
+<ul>
+<li class="has-line-data" data-line-start="21" data-line-end="22">id int PRIMARY KEY NOT NULL IDENTITY(1,1)</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23">tipo tinyint</li>
+<li class="has-line-data" data-line-start="23" data-line-end="24">titulo varchar(100)</li>
+<li class="has-line-data" data-line-start="24" data-line-end="25">imagenEncabezado varchar(200)</li>
+<li class="has-line-data" data-line-start="25" data-line-end="26">cuerpo ntext</li>
+<li class="has-line-data" data-line-start="26" data-line-end="27">usuarioCreador int,</li>
+<li class="has-line-data" data-line-start="27" data-line-end="28">fechaCreado datetime</li>
+<li class="has-line-data" data-line-start="28" data-line-end="29">proyecto VARCHAR(100)</li>
+</ul>
+<h3 class="code-line" data-line-start=55 data-line-end=56><a id="Integrantes__100Casosidproyectointegrantes_55"></a>Integrantes --&gt; <code>/1.0.0/Casos/:idproyecto/integrantes</code></h3>
+<ul>
+<li class="has-line-data" data-line-start="56" data-line-end="57">id integer PRIMARY KEY NOT NULL IDENTITY(1, 1),</li>
+<li class="has-line-data" data-line-start="57" data-line-end="58">nombre varchar(100),</li>
+<li class="has-line-data" data-line-start="58" data-line-end="59">correo nvarchar(255),</li>
+<li class="has-line-data" data-line-start="59" data-line-end="60">proyecto nvarchar(255),</li>
+<li class="has-line-data" data-line-start="60" data-line-end="61">idproyecto int,</li>
+</ul>
