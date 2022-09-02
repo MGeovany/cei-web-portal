@@ -50,8 +50,7 @@ export const CalendarioAdmin = () => {
       centered: true,
 
       size: 'calc(90% - 6rem)',
-      innerProps: {
-      }
+      innerProps: {}
     })
 
   const OpenAddEventos = () =>
