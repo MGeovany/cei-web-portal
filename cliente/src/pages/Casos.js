@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { CasoCarousel } from '../componentes/CasoCarousel'
 
 import '../styles/Casos.css'
-
 import { useCasos } from '../hooks/useCasos'
-
 // static data
 
 const casosTech = [
@@ -525,17 +523,17 @@ const casosSoc = [
 ]
 
 export const Casos = () => {
-  const { casosTec } = useCasos('casos')
   return (
     <div className='casos'>
       <div className='casos-container'>
         <div className='casos-title section-title'>
           CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
         </div>
-        <CasoCarousel data={casosTech} section={'Tecnología'} />
-        <CasoCarousel data={casosCom} section={'Comercial'} />
+
+        <CasoCarousel section={'casos'} />
+        {/*    <CasoCarousel data={casosCom} section={'Comercial'} />
         <CasoCarousel data={casosSoc} section={'Social'} />
-        <CasoCarousel data={casosSal} section={'Salud'} />
+        <CasoCarousel data={casosSal} section={'Salud'} /> */}
       </div>
     </div>
   )

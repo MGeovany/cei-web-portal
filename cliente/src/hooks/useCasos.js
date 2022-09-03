@@ -1,20 +1,24 @@
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
-export const useCasos = (module) => {
-  let url = `https://cei1.herokuapp.com/1.0.0/${module}`
-
-  const [data, setData] = useState([])
+export const useCasos = (url) => {
+  const [data, setData] = useState(null)
+  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    const getData = async () => {
-      const response = await fetch(url)
-      const data = await response.json()
-
-      setData(data)
-    }
-
-    getData()
+    ;(async function () {
+      try {
+        setLoading(true)
+        const response = await axios.get(url)
+        setData(response.data)
+      } catch (err) {
+        setError(err)
+      } finally {
+        setLoading(false)
+      }
+    })()
   }, [url])
 
-  return data
+  return { data, error, loading }
 }

@@ -41,19 +41,12 @@ const useStyles = createStyles((theme) => ({
   }
 }))
 
-export const CasoCard = ({
-  image,
-  title,
-  subtitulo,
-  descripcion,
-  desc,
-  integrantes
-}) => {
+export const CasoCard = ({ imagenEncabezado, titulo, cuerpo }) => {
   const { classes } = useStyles()
   const modals = useModals()
   const theme = useMantineTheme()
 
-  const openCasosModal = () =>
+  /* const openCasosModal = () =>
     modals.openContextModal('casoModal', {
       overlayColor:
         theme.colorScheme === 'dark'
@@ -67,31 +60,29 @@ export const CasoCard = ({
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: title,
-        subtitulo: subtitulo,
-        desc: descripcion,
-        img: image,
-        integrantes: integrantes
+        titulo: titulo,
+        cuerpo: cuerpo,
+        imagenEncabezado: imagenEncabezado
       }
-    })
+    }) */
 
   return (
     <Paper
       shadow='md'
       p='xl'
       radius='md'
-      sx={{ backgroundImage: `url(${image})` }}
+      // sx={{ backgroundImage: `url(${imagenEncabezado})` }}
       className={classes.card}
     >
       <div>
         <Title order={3} className={classes.title}>
-          {title}
+          {titulo}
         </Title>
         <Text className={classes.category} size='xs'>
-          {desc}
+          {cuerpo}
         </Text>
       </div>
-      <Button variant='white' color='dark' onClick={openCasosModal}>
+      <Button variant='white' color='dark'>
         Leer Caso
       </Button>
     </Paper>

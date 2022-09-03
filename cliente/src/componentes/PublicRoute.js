@@ -11,7 +11,7 @@ const useAuth = () => {
 }
 
 const PublicRoute = () => {
-  console.log('user', useAuth())
+  //console.log('user', useAuth())
   const isLogged = useAuth()
   return isLogged ? (
     <>
