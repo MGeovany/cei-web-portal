@@ -16,7 +16,7 @@ export const casoModal = ({ context, id, innerProps }) => (
           <hr id='hr__green' />
         </div>
         <div className='integrantes__list'>
-          {innerProps.integrantes.map((integrante, index) => (
+          {innerProps.integrantes?.map((integrante, index) => (
             <div key={index}>
               <div className='integrante flex'>
                 <div className='integrante__img'>

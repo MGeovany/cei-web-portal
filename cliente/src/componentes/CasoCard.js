@@ -27,14 +27,14 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontFamily: theme.fontFamily,
     fontWeight: 900,
-    color: theme.white,
+    color: theme.dark,
     lineHeight: 1.2,
     fontSize: 32,
     marginTop: theme.spacing.xs
   },
 
   category: {
-    color: theme.white,
+    color: theme.dark,
     opacity: 0.7,
     fontWeight: 700,
     fontSize: 20
@@ -46,7 +46,7 @@ export const CasoCard = ({ imagenEncabezado, titulo, cuerpo }) => {
   const modals = useModals()
   const theme = useMantineTheme()
 
-  /* const openCasosModal = () =>
+  const openCasosModal = () =>
     modals.openContextModal('casoModal', {
       overlayColor:
         theme.colorScheme === 'dark'
@@ -61,17 +61,19 @@ export const CasoCard = ({ imagenEncabezado, titulo, cuerpo }) => {
       size: 'calc(100% - 2rem)',
       innerProps: {
         titulo: titulo,
-        cuerpo: cuerpo,
-        imagenEncabezado: imagenEncabezado
+        subtitulo: titulo + ' ~ subtitulo',
+        desc: cuerpo
       }
-    }) */
+    })
 
   return (
     <Paper
       shadow='md'
       p='xl'
       radius='md'
-      // sx={{ backgroundImage: `url(${imagenEncabezado})` }}
+      sx={{
+        backgroundImage: imagenEncabezado ? `url(${imagenEncabezado}) ` : ''
+      }}
       className={classes.card}
     >
       <div>
@@ -82,7 +84,7 @@ export const CasoCard = ({ imagenEncabezado, titulo, cuerpo }) => {
           {cuerpo}
         </Text>
       </div>
-      <Button variant='white' color='dark'>
+      <Button variant='white' color='dark' onClick={openCasosModal}>
         Leer Caso
       </Button>
     </Paper>

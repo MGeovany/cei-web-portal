@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import { CasoCarousel } from '../componentes/CasoCarousel'
 
 import '../styles/Casos.css'
-import { useCasos } from '../hooks/useCasos'
+import { useFetch } from '../hooks/useFetch'
 // static data
 
 const casosTech = [
@@ -523,6 +523,15 @@ const casosSoc = [
 ]
 
 export const Casos = () => {
+  const { data, loading, error } = useFetch(
+    'https://cei1.herokuapp.com/1.0.0/casos'
+  )
+  if (loading) {
+    return <div>Loading...</div>
+  }
+  if (error) {
+    return <div>Error</div>
+  }
   return (
     <div className='casos'>
       <div className='casos-container'>
@@ -530,7 +539,7 @@ export const Casos = () => {
           CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
         </div>
 
-        <CasoCarousel section={'Tecnología'} />
+        <CasoCarousel data={data} section={'Tecnología'} />
         {/*    <CasoCarousel data={casosCom} section={'Comercial'} />
         <CasoCarousel data={casosSoc} section={'Social'} />
         <CasoCarousel data={casosSal} section={'Salud'} /> */}
