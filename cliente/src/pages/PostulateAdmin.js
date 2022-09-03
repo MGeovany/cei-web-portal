@@ -148,7 +148,7 @@ export const PostulateAdmin = () => {
 
   const rows_responsive = elements.map((element, index) =>    
    (
-      <div className='table_content'>
+      <div className='table_content' key={index}>
         <div className='td__content'>{element.titulo}</div>
         <div className='td__content'>{element.nombre}</div>
         <div className='td__content'>{element.apellido}</div>

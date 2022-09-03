@@ -1,14 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Card, Center, Image, useMantineTheme } from '@mantine/core'
+import {  useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import '../styles/Calendario.css'
 import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
-import {
-  IconBrandFacebook,
-  IconBrandInstagram,
-  IconBrandYoutube
-} from '@tabler/icons'
+
 
 export const ActividadesCard = ({ title, fecha , autor , contenido ,photos ,img }) => {
   const modals = useModals()
