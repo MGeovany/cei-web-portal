@@ -15,18 +15,29 @@ import '../styles/Login.css'
 
 import { useForm } from '@mantine/form'
 
+import { useDispatch } from 'react-redux';
+import { login } from '../store/slices/login/loginSlice'
+
 export function Login() {
+  const dispatch = useDispatch();
+
   const form = useForm({
     initialValues: {
       email: '',
       password: ''
     },
-
     validate: {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Correo Inválido')
     }
   })
 
+  const validateAuth = () => {
+    return form.onSubmit((values) => {
+      console.log(values);
+      dispatch(login({email: values.email, password: values.password}));
+    });
+  }
+  
   return (
     <>
       <div className='login-container'>
@@ -41,14 +52,8 @@ export function Login() {
           >
             Bienvenido de vuelta!
           </Title>
-          <Text color='dimmed' size='sm' align='center' mt={5}>
-            Aun no tienes una cuenta?
-            <a href='/admin/blog' size='sm'>
-              Crear cuenta
-            </a>
-          </Text>
           <Paper withBorder shadow='md' p={30} mt={30} radius='md'>
-            <form onSubmit={form.onSubmit((values) => console.log(values))}>
+            <form onSubmit={validateAuth()}>
               <TextInput
                 label='Correo'
                 placeholder='nombre@unitec.edu'

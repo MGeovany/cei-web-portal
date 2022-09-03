@@ -32,6 +32,7 @@ a:active {
   text-decoration: none;
   color: var(--black);
 }
+
 button,
 input[type='submit'],
 input[type='reset'] {
@@ -42,4 +43,12 @@ input[type='reset'] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+#alertSessionModalButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  width: 0;
 }

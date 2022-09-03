@@ -1,4 +1,4 @@
-import React,{PropTypes} from 'react'
+import React from 'react'
 
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
 import format from 'date-fns/format'
@@ -21,24 +21,24 @@ const localizer = dateFnsLocalizer({
 
 export const Calendario = (props) => {
   const [eventos, setEventos] = React.useState([])
-  React.useState(()=>{
-
-    Eventos.calendarEvents().then(data =>{ 
-      let formattedData = data.map(evento => ({
+  React.useState(() => {
+    Eventos.calendarEvents()
+      .then((data) => {
+        let formattedData = data.map((evento) => ({
           title: evento.title,
           start: new Date(evento.start),
           end: new Date(evento.end),
           allDay: evento.allDay > 480
         }))
         setEventos(formattedData)
-    })
-    .catch(err=>console.error(err))
-  },[])
+      })
+      .catch((err) => console.error(err))
+  }, [])
   return (
     <div>
       <div className='calendario-container flex'>
         <Calendar
-          onSelectEvent={event => console.log(event)}
+          onSelectEvent={(event) => console.log(event)}
           localizer={localizer}
           events={eventos}
           startAccessor='start'
@@ -48,7 +48,4 @@ export const Calendario = (props) => {
       </div>
     </div>
   )
-}
-Calendario.propTypes = {
-  events: PropTypes.array
 }
