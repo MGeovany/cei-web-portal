@@ -4,9 +4,11 @@ import { CasoCarousel } from '../componentes/CasoCarousel'
 
 import '../styles/Casos.css'
 
+import { useCasos } from '../hooks/useCasos'
+
 // static data
 
-const casosTec = [
+const casosTech = [
   {
     image:
       'https://images.pexels.com/photos/12081169/pexels-photo-12081169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
@@ -523,13 +525,14 @@ const casosSoc = [
 ]
 
 export const Casos = () => {
+  const { casosTec } = useCasos('casos')
   return (
     <div className='casos'>
       <div className='casos-container'>
         <div className='casos-title section-title'>
           CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
         </div>
-        <CasoCarousel data={casosTec} section={'Tecnología'} />
+        <CasoCarousel data={casosTech} section={'Tecnología'} />
         <CasoCarousel data={casosCom} section={'Comercial'} />
         <CasoCarousel data={casosSoc} section={'Social'} />
         <CasoCarousel data={casosSal} section={'Salud'} />
