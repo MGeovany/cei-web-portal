@@ -11,6 +11,7 @@
     "@mantine/hooks": "^5.2.3",
     "@mantine/modals": "^5.2.3",
     "@mantine/notifications": "^5.2.3",
+    "@mantine/rte": "^5.2.4",
     "@reduxjs/toolkit": "^1.8.5",
     "@tabler/icons": "^1.88.0",
     "@testing-library/jest-dom": "^5.16.5",

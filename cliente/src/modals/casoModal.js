@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
+import { RichTextEditor } from '@mantine/rte'
 
 export const casoModal = ({ context, id, innerProps }) => (
   <>
@@ -7,7 +8,9 @@ export const casoModal = ({ context, id, innerProps }) => (
       <div className='asset__content'>
         <div className='asset__modal__title'>{innerProps.titulo}</div>
         <div className='asset__modal__subtitle'>{innerProps.subtitulo}</div>
-        <div className='asset__modal__body'>{innerProps.desc}</div>
+        <div className='asset__modal__body'>
+          <RichTextEditor readOnly value={innerProps.desc} />
+        </div>
       </div>
 
       <div className='asset__modal__integrantes asset__modal__title'>

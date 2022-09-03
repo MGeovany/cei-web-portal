@@ -81,7 +81,7 @@ export const CasoCard = ({ imagenEncabezado, titulo, cuerpo }) => {
           {titulo}
         </Title>
         <Text className={classes.category} size='xs'>
-          {cuerpo}
+          {titulo + ' ~ description shorter'}
         </Text>
       </div>
       <Button variant='white' color='dark' onClick={openCasosModal}>
