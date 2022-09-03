@@ -530,7 +530,7 @@ export const Casos = () => {
           CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
         </div>
 
-        <CasoCarousel section={'casos'} />
+        <CasoCarousel section={'Tecnología'} />
         {/*    <CasoCarousel data={casosCom} section={'Comercial'} />
         <CasoCarousel data={casosSoc} section={'Social'} />
         <CasoCarousel data={casosSal} section={'Salud'} /> */}

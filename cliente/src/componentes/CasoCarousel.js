@@ -87,7 +87,7 @@ export const CasoCarousel = ({ section }) => {
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
   const { classes } = useStyles()
 
-  const [casos, setCasos] = useState([])
+  const [casos, setCasos] = useState([''])
   useEffect(() => {
     const getData = async () => {
       const response = await fetch('https://animechan.vercel.app/api/quotes')
@@ -99,7 +99,7 @@ export const CasoCarousel = ({ section }) => {
     getData()
   }, [])
 
-  const slides = casos.map((item, i) => (
+  const slides = casos?.map((item, i) => (
     <Carousel.Slide key={i}>
       <Card {...item} />
     </Carousel.Slide>
