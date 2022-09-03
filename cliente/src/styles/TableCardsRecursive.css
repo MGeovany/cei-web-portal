@@ -1,0 +1,61 @@
+.card_table_responsive
+{
+    border: 2px solid rgba(11, 74, 182, 0.426);
+    border-radius: 5px;
+
+}
+
+
+.header_nav_Class
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.title_card
+{
+    padding: 0px 15px 0 15px ;
+    background-color: rgb(240, 240, 240);
+    color: rgb(73, 73, 73);
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: calc(11.5px + .5vw);;
+
+}
+
+.title_card_autor
+{
+    background-color: rgb(203, 203, 203);
+    width: 100%;
+    font-size: calc(10px + .5vw);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+    color: grey;
+}
+
+.date_card
+{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.body_card_responsive
+{
+    color: rgb(157, 157, 157);
+    min-height: 250px;
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    font-size: calc(11px + .5vw);;
+
+}
+
+.cont_btn_card_responsive
+{
+    display: flex;
+    padding: 10px ;
+}

@@ -498,7 +498,7 @@ export const CasosAdmin = () => {
       centered: true,
       padding: 'xl',
       overflow: 'outside',
-      size: 'calc(100% - 6rem)',
+      size: 'calc(100% - 4rem)',
 
       innerProps: {}
     })

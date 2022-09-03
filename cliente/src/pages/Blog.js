@@ -1,6 +1,7 @@
 import React from 'react'
 import { BlogsRecientes } from '../componentes/BlogsRecientes'
 import '../styles/Blog.css'
+import '../styles/TableCardsRecursive.css'
 import { RecursosDescargables } from '../componentes/RecursosDescargables'
 
 export const Blog = () => {
