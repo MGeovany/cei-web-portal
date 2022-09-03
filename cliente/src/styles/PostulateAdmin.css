@@ -53,6 +53,12 @@
   font-weight: bold;
 }
 
+
+.table_noResponsive
+  {
+    width: 100%;
+  }
+
 @media screen and (max-width: 1350px) 
 {
   .table_noResponsive
