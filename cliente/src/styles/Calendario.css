@@ -124,6 +124,12 @@
   margin-left: 20px;
 }
 
+
+.actividades-container-section {
+  width: 100%;
+}
+
+
 .container-carrousel {
   width: auto;
   width: 98%;
@@ -192,9 +198,10 @@
 
 .container-carrouselact {
   width: auto;
-  width: 1600px;
+  width: 90%;
   height: 480px;
-  margin-left: 120px;
+  margin-left: 0;
+  margin-left: 5%;
 }
 
 .container-actividades {

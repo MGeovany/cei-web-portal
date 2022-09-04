@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-import { Table, useMantineTheme } from '@mantine/core'
+import { useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import { showNotification } from '@mantine/notifications'
+import { Carousel } from '@mantine/carousel';
+
 
 const elements = [
   {
@@ -44,10 +46,12 @@ const elements = [
   }
 ]
 
-export const BlogTabla = () => {
+export const BlogTablaResponsive = () => {
   const modals = useModals()
   const theme = useMantineTheme()
 
+
+  
   const EditarBlogModal = () =>
     modals.openContextModal('EditarBlogModal', {
       centered: true,
@@ -90,56 +94,54 @@ export const BlogTabla = () => {
     setEvents(elements)
   }, [events])
 
+
+
   const rows = elements.map((element) => (
-    <tr key={element.titulo}>
-      <td>
-        <div className='td__content'>{element.titulo}</div>
-      </td>
-      <td>
-        <div className='td__content'>{element.autor}</div>
-      </td>
-      <td>
-        <div className='td__content'>{element.fecha}</div>
-      </td>
-      <td>
-        <div className='td__content'>{element.detalles}</div>
-      </td>
-      <td>
-        <div className='tab__btns flex'>
-          <div className='btn__editar' onClick={EditarBlogModal}>
-            Editar
-          </div>
-          <div
-            className='btn__eliminar'
-            onClick={(e) => deleteElement(element.autor, e)}
-          >
-            Eliminar
-          </div>
+
+
+    <Carousel.Slide className='card_table_responsive'> 
+
+        <div key={element.titulo}>
+            <div className='header_nav_Class'>
+
+                <div className='title_card'>
+                {element.titulo}
+                </div>
+                <div className='title_card_autor'>
+                {element.autor}
+                    <span className='date_card'>
+                        {element.fecha}
+                    </span>
+                </div>
+            </div>
+            <div className='body_card_responsive'>
+                {element.detalles}
+            </div>
+                <div className='cont_btn_card_responsive'>
+                    <div className='btn__editar' onClick={EditarBlogModal}>
+                            Editar
+                    </div>
+                    <div className='btn__eliminar' onClick={(e) => deleteElement(element.autor, e)}>
+                            Eliminar
+                    </div>
+                </div>
+
         </div>
-      </td>
-    </tr>
+
+
+    </Carousel.Slide>
+
+
   ))
 
   return (
-    <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
-      <thead>
-        <tr>
-          <th>
-            <div className='th__title'>Título</div>
-          </th>
-          <th>
-            <div className='th__title'>Autor</div>
-          </th>
-          <th>
-            <div className='th__title'>Fecha</div>
-          </th>
-          <th>
-            <div className='th__title'>Detalles</div>
-          </th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </Table>
+
+
+        <Carousel slideSize="50%" height={700} orientation="vertical" slideGap="md" dragFree >
+          {rows}
+            
+        </Carousel>
+
+
   )
 }
