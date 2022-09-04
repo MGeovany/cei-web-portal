@@ -39,7 +39,7 @@ export const BlogAdmin = () => {
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
-      size: 'calc(100% - 6rem)',
+      size: 'calc(100% - 2rem)',
       innerProps: {}
     })
   }

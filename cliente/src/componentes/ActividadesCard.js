@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import React from 'react'
 import { Card, Center, Image, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'

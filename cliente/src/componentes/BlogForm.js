@@ -22,24 +22,24 @@ export const BlogForm = () => {
         <div className='form__proyecto'>
           <div className='form__main__center'>
             <div className='form__main__section s1'>
-              <Input
+              <Input.Wrapper
                 className='font-sen'
                 id='input-nombre-proyecto'
                 required
                 label='Título'
               >
                 <Input id='input-nombre-proyecto' placeholder='Mi Blog' />
-              </Input>
+              </Input.Wrapper>
             </div>
             <div className='form__main__section asset__m10 s1'>
-              <Input
+              <Input.Wrapper
                 className='font-sen'
                 id='input-nombre-proyecto'
                 required
                 label='Autor'
               >
                 <Input className='font-sen' placeholder='CEI Ceutec' />
-              </Input>
+              </Input.Wrapper>
             </div>
 
             <div className='form__main__section s2'>

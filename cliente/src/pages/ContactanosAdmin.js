@@ -4,6 +4,7 @@ import { Table } from '@mantine/core'
 import { showNotification } from '@mantine/notifications'
 import React, { useEffect, useState } from 'react'
 import { IconCheck } from '@tabler/icons'
+import { Carousel } from '@mantine/carousel';
 
 export const ContactanosAdmin = () => {
   const [contactanos, setContactanos] = useState([])
@@ -68,6 +69,58 @@ export const ContactanosAdmin = () => {
     </tr>
   ))
 
+  const rowsCard_responsive = contactanos.map((element, index) => (
+    <Carousel.Slide>
+    <div key={element.id} className='card_contactanos card_color'>
+        <div>
+          {element.nombre}
+        </div>
+        <div className='contactactos_card card_color'>
+          {element.email}
+          <span> +504 {element.telefono}</span>
+        </div>
+        <div className='contenido_card card_color'>
+          {element.comentario}
+        </div>
+        <div >
+           <div className='btn__editar'>Aceptar</div>
+           <div
+             className='btn__eliminar'
+             onClick={(e) => deleteContactanos(element.id, e)}
+           >Rechazar
+          </div>
+        </div>
+    </div>
+    </Carousel.Slide>
+
+    // <tr key={element.id}>
+    //   <td>
+    //     <div className='td__content'>{element.nombre}</div>
+    //   </td>
+    //   <td>
+    //     <div className='td__content'>{element.email}</div>
+    //   </td>
+    //   <td>
+    //     <div className='td__content'>+504 {element.telefono}</div>
+    //   </td>
+    //   <td>
+    //     <div className='td__content'>{element.comentario}</div>
+    //   </td>
+    //   <td>
+    //     <div className='tab__btns flex'>
+    //       <div className='btn__editar'>Aceptar</div>
+    //       <div
+    //         className='btn__eliminar'
+    //         onClick={(e) => deleteContactanos(element.id, e)}
+    //       >
+    //         Rechazar
+    //       </div>
+    //     </div>
+    //   </td>
+    // </tr>
+  ))
+
+
   return (
     <>
       <div
@@ -80,28 +133,37 @@ export const ContactanosAdmin = () => {
             <span style={{ color: '#e1575f' }}> CONTACTARON</span>
           </div>
           <div className='contactanos__table__container'>
-            <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
-              <thead>
-                <tr>
-                  <th>
-                    <div className='th__title'>Nombre</div>
-                  </th>
+            <div className='table_contactanos'>
+                <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
+                  <thead>
+                    <tr>
+                      <th>
+                        <div className='th__title'>Nombre</div>
+                      </th>
 
-                  <th>
-                    <div className='th__title'>Correo</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Celular</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Mensaje</div>
-                  </th>
+                      <th>
+                        <div className='th__title'>Correo</div>
+                      </th>
+                      <th>
+                        <div className='th__title'>Celular</div>
+                      </th>
+                      <th>
+                        <div className='th__title'>Mensaje</div>
+                      </th>
 
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>{rows}</tbody>
-            </Table>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>{rows}</tbody>
+                </Table>
+            </div>
+            <div className='table_contactosResponsive'>
+            <Carousel slideSize="85%" height={500} slideGap="md">
+              
+                {rowsCard_responsive}
+              
+            </Carousel>
+            </div>
           </div>
         </div>
       </div>

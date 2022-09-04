@@ -6,7 +6,7 @@ import { useModals } from '@mantine/modals'
 import { Eventos } from '../API'
 import {Grid} from '@mantine/core'
 import moment from 'moment'
-import { clampUseMovePosition } from '@mantine/hooks'
+// import { clampUseMovePosition } from '@mantine/hooks'
 
 export const CalendarioEvents = () => {
   const [events, setEvents] = useState([])
@@ -48,6 +48,12 @@ export const CalendarioEvents = () => {
 
     events.splice(name, 1)
   }
+
+
+
+
+
+  
   const rows = events.map((element, index) => (
     <tr key={index}>
       <td>
