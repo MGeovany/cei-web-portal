@@ -146,6 +146,22 @@ export const PostulateAdmin = () => {
     </tr>
   ))
 
+  const rows_responsive = elements.map((element, index) =>    
+   (
+      <div className='table_content' key={index}>
+        <div className='td__content'>{element.titulo}</div>
+        <div className='td__content'>{element.nombre}</div>
+        <div className='td__content'>{element.apellido}</div>
+        <div className='td__content'>{element.correo}</div>
+        <div className='td__content'>{element.celular}</div>
+        <div className='td__content'>{element.genero}</div>
+        <div className='td__content'>{element.equipo}</div>
+        <div className='td__content'>{element.comentario}</div>
+        <div className='td__content'>{element.fecha}</div>
+      </div>
+  ))
+
+
   return (
     <>
       <div className='casos'>
@@ -154,40 +170,56 @@ export const PostulateAdmin = () => {
             IDEAS <span style={{ color: '#e1575f' }}>POSTULADAS</span>
           </div>
           <div className='table__container'>
-            <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
-              <thead>
-                <tr>
-                  <th>
-                    <div className='th__title'>Título</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Nombre</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Apellido</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Correo</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Celular</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Género</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Equipo</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Comentario</div>
-                  </th>
-                  <th>
-                    <div className='th__title'>Fecha</div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>{rows}</tbody>
-            </Table>
+            <div className='table_noResponsive'>
+              <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
+                <thead>
+                  <tr>
+                    <th>
+                      <div className='th__title'>Título</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Nombre</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Apellido</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Correo</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Celular</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Género</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Equipo</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Comentario</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Fecha</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>{rows}</tbody>
+              </Table>
+            </div>
+            <div className='table_responsive'>
+                <div className='table_content titles_table'>
+                    <div className='td__content'>TITULO</div>
+                    <div className='td__content'>NOMBRE</div>
+                    <div className='td__content'>APELLIDO</div>
+                    <div className='td__content'>CORREO</div>
+                    <div className='td__content'>CELULAR</div>
+                    <div className='td__content'>GENERO</div>
+                    <div className='td__content'>EQUIPO</div>
+                    <div className='td__content'>COMENTARIO</div>
+                    <div className='td__content'>FECHA</div>
+                </div>
+                {rows_responsive}
+            </div>
           </div>
         </div>
       </div>
