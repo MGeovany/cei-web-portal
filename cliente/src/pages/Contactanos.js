@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import '../styles/Contactanos.css'
 import { TextInput, Textarea, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
@@ -11,10 +11,6 @@ import {
 } from '@tabler/icons'
 
 export const Contactanos = () => {
-  const [dataF, setDataF] = useState({})
-
-  useEffect(() => {}, [dataF])
-
   const form = useForm({
     initialValues: {
       nombre: '',
@@ -62,7 +58,6 @@ export const Contactanos = () => {
     )
     const data = await response.json()
     console.log(data)
-    setDataF(data)
   }
 
   return (
