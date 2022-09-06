@@ -27,10 +27,8 @@
 
 .carousel-card__img {
   height: 528px;
-  width: 100%;
 
   object-fit: cover;
-  position: relative;
 }
 
 .carousel-card img {
