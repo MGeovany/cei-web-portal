@@ -96,6 +96,7 @@
 
 .calendario__form {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .cal__modal__title {
@@ -105,6 +106,7 @@
 
   text-align: start;
   margin-bottom: 30px;
+  overflow-x: hidden;
 }
 
 .calendario__form > div {
@@ -124,11 +126,9 @@
   margin-left: 20px;
 }
 
-
 .actividades-container-section {
   width: 100%;
 }
-
 
 .container-carrousel {
   width: auto;

@@ -122,7 +122,6 @@ export const CasoForm = () => {
                 id='input-int-1'
                 label='Nombre'
                 placeholder='Nombre de integrante'
-                {...form.getInputProps('tipo')}
               />
             </div>
             <div className='form__int__section s2'>
@@ -130,7 +129,6 @@ export const CasoForm = () => {
                 className='font-sen'
                 label='Email'
                 placeholder='your@email.com'
-                {...form.getInputProps('usuarioCreador')}
               />
             </div>
             <div className='form__main__section'>
