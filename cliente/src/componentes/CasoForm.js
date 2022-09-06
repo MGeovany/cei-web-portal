@@ -22,9 +22,9 @@ export const CasoForm = (props) => {
       className='form__caso'
       onSubmit={form.onSubmit((values) => console.log(values))}
     >
-      <div className='form__proyecto'>
-        <div className='form__main'>
-          <div className='form__main__section s1'>
+      <div className='form__proyecto form__proyecto_responsive'>
+        <div className='form__main form__main_responsive'>
+          <div className='form__main__section form__main__section_responsive s1'>
             <NativeSelect
               data={['Tecnología', 'Comercial', 'Social', 'Salud']}
               placeholder='Select...'
@@ -33,7 +33,7 @@ export const CasoForm = (props) => {
               required
             />
           </div>
-          <div className='form__main__section asset__m10 s1'>
+          <div className='form__main__section form__main__section_responsive asset__m10_r s1'>
             <Input.Wrapper
               className='font-sen'
               id='input-nombre-proyecto'
@@ -44,7 +44,7 @@ export const CasoForm = (props) => {
             </Input.Wrapper>
           </div>
 
-          <div className='form__main__section s2'>
+          <div className='form__main__section form__main__section_responsive s2'>
             <Input.Wrapper
               className='font-sen'
               id='input-demo'
@@ -57,7 +57,7 @@ export const CasoForm = (props) => {
               />
             </Input.Wrapper>
           </div>
-          <div className='form__main__section s1'>
+          <div className='form__main__section form__main__section_responsive s1'>
             <div className='form__main__file'>
               <label htmlFor='file-btn-main' className='font-sen'>
                 Imagen de proyecto <span style={{ color: 'red' }}>*</span>{' '}
@@ -70,7 +70,7 @@ export const CasoForm = (props) => {
             </div>
           </div>
 
-          <div className='form__main__section s3'>
+          <div className='form__main__section form__main__section_responsive s3'>
             <Textarea
               minRows={10}
               maxRows={15}
@@ -88,7 +88,7 @@ export const CasoForm = (props) => {
             <hr id='hr__green' />
           </div>
           <div className='form__int'>
-            <div className='form__int__section s1'>
+            <div className='form__int__section form__main__section_responsive s1'>
               <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
@@ -101,7 +101,7 @@ export const CasoForm = (props) => {
                 />
               </Input.Wrapper>
             </div>
-            <div className='form__int__section s2'>
+            <div className='form__int__section form__main__section_responsive s2'>
               <TextInput
                 className='font-sen'
                 required
@@ -109,10 +109,10 @@ export const CasoForm = (props) => {
                 placeholder='your@email.com'
               />
             </div>
-            <div className='form__main__section'>
+            <div className='form__main__section form__main__section_responsive'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
-            <div className='form__int__section s1'>
+            <div className='form__int__section form__main__section_responsive s1'>
               <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
@@ -125,7 +125,7 @@ export const CasoForm = (props) => {
                 />
               </Input.Wrapper>
             </div>
-            <div className='form__int__section s2'>
+            <div className='form__int__section form__main__section_responsive s2'>
               <TextInput
                 className='font-sen'
                 required
@@ -134,10 +134,10 @@ export const CasoForm = (props) => {
                 {...form.getInputProps('email')}
               />
             </div>
-            <div className='form__main__section'>
+            <div className='form__main__section form__main__section_responsive'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
-            <div className='form__int__section s1'>
+            <div className='form__int__section form__main__section_responsive s1'>
               <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
@@ -150,7 +150,7 @@ export const CasoForm = (props) => {
                 />
               </Input.Wrapper>
             </div>
-            <div className='form__int__section s2'>
+            <div className='form__int__section form__main__section_responsive  s2'>
               <TextInput
                 className='font-sen'
                 required
@@ -158,10 +158,10 @@ export const CasoForm = (props) => {
                 placeholder='your@email.com'
               />
             </div>
-            <div className='form__main__section'>
+            <div className='form__main__section form__main__section_responsive'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
-            <div className='form__int__section s1'>
+            <div className='form__int__section form__main__section_responsive s1'>
               <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
@@ -174,7 +174,7 @@ export const CasoForm = (props) => {
                 />
               </Input.Wrapper>
             </div>
-            <div className='form__int__section s2'>
+            <div className='form__int__section form__main__section_responsive s2'>
               <TextInput
                 className='font-sen'
                 required
@@ -182,7 +182,7 @@ export const CasoForm = (props) => {
                 placeholder='your@email.com'
               />
             </div>
-            <div className='form__main__section'>
+            <div className='form__main__section form__main__section_responsive'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
           </div>
