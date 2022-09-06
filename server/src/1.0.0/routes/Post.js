@@ -2,7 +2,7 @@ const express= require('express');
 const router= express.Router();
 const config= require('../lib/config');
 const sql = require('mssql');
-const PostModule = require('../class/Post')
+const PostModule = require('../class/post')
 
 router.get('/post',async(req,res)=>{
     try {
@@ -45,6 +45,8 @@ router.post('/post',async(req,res)=>{ //agregar
             .input('tipo',sql.TinyInt,posts.tipo)
             .input('imagenEncabezado',sql.VarChar, posts.imagenEncabezado)
             .input('usuarioCreador',sql.Int,posts.usuarioCreador)
+            .input('proyecto',sql.VarChar(100),posts.proyecto)
+
             .query(posts.queryInsert);
         if (response.rowsAffected <= 0){ throw "No existe datos con esos parámetros"};
         res.status(200).json({message:"Registrado",data:data})
