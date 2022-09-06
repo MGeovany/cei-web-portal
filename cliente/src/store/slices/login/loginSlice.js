@@ -2,17 +2,36 @@
 
 import { createSlice } from '@reduxjs/toolkit'
 
+var CryptoJS = require("crypto-js");
 const maxMinutesSession = 15;
 
+const getSession = () => {
+  let session = localStorage.getItem("SESSION");
+  if(session){
+    var bytes  = CryptoJS.AES.decrypt(session, 'secret key 123');
+    return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+  }
+  return null;
+}
 
 const getMinutesSession = () => {
-  var startSession = new Date(localStorage.getItem("SESSION"));
-  var now = new Date();
-  return (now.getTime() - startSession.getTime())/ 1000 / 60;
+  let session = getSession();
+  if(session){
+    var startSession = new Date(session.expira);
+    var now = new Date();
+    return (now.getTime() - startSession.getTime())/ 1000 / 60;
+  }
+  return null;
 }
 
 export const newSession = () => {
-  localStorage.setItem("SESSION", new Date().toLocaleString());
+  let data = {
+    'expira': new Date().toLocaleString(),
+    'usuario': 'David Torres',
+    'id': 123
+  };
+  var ciphertext = CryptoJS.AES.encrypt(JSON.stringify(data), 'secret key 123').toString();
+  localStorage.setItem("SESSION", ciphertext);
   watchSession();
 }
 
@@ -22,7 +41,6 @@ export const removeSession = () => {
 
 const watchSession = () => {
   setTimeout(() => {
-    // console.log('minutes:' + getMinutesSession());
     if(!validateLogged()){
       alertSession();
     }
@@ -30,11 +48,15 @@ const watchSession = () => {
 }
 
 const alertSession = () => {
-  document.getElementById("alertSessionModalButton").click();
+  let modal = document.getElementById("alertSessionModalButton");
+  if(modal){
+    modal.click();
+  }
 }
 
 const validateLogged = () => {
-  const isLogged = getMinutesSession() > maxMinutesSession ? false : true;
+  let minutesSession = getMinutesSession();
+  const isLogged = (minutesSession > maxMinutesSession) || minutesSession == null ? false : true;
   isLogged ? watchSession() : removeSession();
   return isLogged;
 }
