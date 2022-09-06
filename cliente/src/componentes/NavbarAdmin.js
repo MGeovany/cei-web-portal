@@ -2,10 +2,25 @@ import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
 import React, { useState } from 'react'
 
+import { useDispatch } from 'react-redux';
+import { logout } from '../store/slices/login/loginSlice'
+
 export const NavbarAdmin = () => {
   const [active, setActive] = useState('nav__menu')
   const [icon, setIcon] = useState('nav__toggler')
-  const [isOpen, setIsOpen] = useState('')
+  const [isOpen, setIsOpen] = useState(window.location.pathname)
+  const dispatch = useDispatch();
+
+  const rutas = {
+    'inicio' : '/admin',
+    'calendario' : '/admin/calendario',
+    'casos-de-exito' : '/admin/casos-de-exito',
+    'blog' : '/admin/blog',
+  };
+
+  const salir = () => {
+      dispatch(logout());
+  }
 
   const navToggle = (e) => {
     if (active === 'nav__menu') {
@@ -16,17 +31,19 @@ export const NavbarAdmin = () => {
       setIcon('nav__toggler toggle')
     } else setIcon('nav__toggler')
 
-    setIsOpen(e.target.classList.value)
+    setTimeout(function () {
+      setIsOpen(window.location.pathname)
+    }, 200);
   }
   return (
     <nav className='nav'>
       <ul className={active}>
         <li className='nav__item'></li>
         <li className='nav__item'>
-          <Link to='/admin'>
+          <Link to={rutas['inicio']}>
             <div
               className={
-                isOpen === 'nav__link-home' ? 'nav__link dot' : 'nav__link-home'
+                isOpen === rutas['inicio'] ? 'nav__link dot' : 'nav__link-home'
               }
               onClick={(e) => navToggle(e)}
               value='home'
@@ -36,12 +53,10 @@ export const NavbarAdmin = () => {
           </Link>
         </li>
         <li className='nav__item'>
-          <Link to='/admin/calendario'>
+          <Link to={rutas['calendario']}>
             <div
               className={
-                isOpen === 'nav__link-calendario'
-                  ? 'nav__link dot'
-                  : 'nav__link-calendario'
+                isOpen === rutas['calendario'] ? 'nav__link dot' : 'nav__link-calendario'
               }
               onClick={(e) => navToggle(e)}
             >
@@ -50,10 +65,10 @@ export const NavbarAdmin = () => {
           </Link>
         </li>
         <li className='nav__item'>
-          <Link to='/admin/casos-de-exito'>
+          <Link to={rutas['casos-de-exito']}>
             <div
               className={
-                isOpen === 'nav__link-casos'
+                isOpen === rutas['casos-de-exito']
                   ? 'nav__link dot'
                   : 'nav__link-casos'
               }
@@ -64,10 +79,10 @@ export const NavbarAdmin = () => {
           </Link>
         </li>
         <li className='nav__item'>
-          <Link to='/admin/blog'>
+          <Link to={rutas['blog']}>
             <div
               className={
-                isOpen === 'nav__link-blog' ? 'nav__link dot' : 'nav__link-blog'
+                isOpen === rutas['blog'] ? 'nav__link dot' : 'nav__link-blog'
               }
               onClick={(e) => navToggle(e)}
             >
@@ -92,6 +107,12 @@ export const NavbarAdmin = () => {
             >
               Postulate
             </Link>
+          </div>
+        </li>
+        <li>
+          <div className='btn__postulate'
+          onClick={(()=> salir())}>
+            Salir
           </div>
         </li>
       </ul>
