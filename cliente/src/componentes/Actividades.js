@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
+import { useRef, React } from 'react'
 import { ActividadesCard } from './ActividadesCard'
 import { Arrow } from '../utils/svgIcons'
 import '../styles/Calendario.css'
 import { Carousel } from '@mantine/carousel'
 import { useMediaQuery } from '@mantine/hooks'
 import { useMantineTheme } from '@mantine/core'
+import Autoplay from 'embla-carousel-autoplay'
 
 
 export const Actividades = (props) => {
@@ -19,7 +20,7 @@ export const Actividades = (props) => {
       <ActividadesCard {...item} />
     </Carousel.Slide>
   ))
-
+  const autoplay = useRef(Autoplay({ delay: 2000 }));
   return (
     <div className='ctividades'>
       <div className='actividades-container-section'>
@@ -31,13 +32,21 @@ export const Actividades = (props) => {
         </div>
         <div className='container-carrouselact'>
         <Carousel
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={autoplay.current.reset}
         slideSize='25%'
-        breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
-        slideGap='xl'
-        align='start'
-        loop
+        slideGap='xs'
+        align='center'
         dragFree
-        slidesToScroll={mobile ? 1 : 2}
+        breakpoints={[
+          { maxWidth: 'xl', slideSize: '30%', slideGap: 'xs'},
+          { maxWidth: 'lg', slideSize: '35%', slideGap: 'xs'},
+          { maxWidth: 'md', slideSize: '45%', slideGap: 'xs'},
+          { maxWidth: 'sm', slideSize: '60%', slideGap: 'xs'},
+          { maxWidth: 'xs', slideSize: '80%', slideGap: 'xs'}
+        ]}
+        
       >
         {slides}
       </Carousel>

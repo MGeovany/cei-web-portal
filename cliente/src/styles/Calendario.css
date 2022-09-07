@@ -26,10 +26,14 @@
   margin-top: 4rem;
   font-size: 20px;
   font-family: var(--poppins-regular);
-
+z-index: 0;
   background-color: white;
   border-radius: 20px;
   box-shadow: 12px 14px 41px #00000029;
+}
+
+.rbc-calendar{
+  z-index: 0;
 }
 
 .rbc-header {
@@ -197,11 +201,7 @@
 }
 
 .container-carrouselact {
-  width: auto;
-  width: 90%;
-  height: 480px;
-  margin-left: 0;
-  margin-left: 5%;
+  
 }
 
 .container-actividades {

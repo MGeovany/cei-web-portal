@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/NuestroEquipo.css'
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const NuestroEquipo = () => {
+  useEffect(()=>{
+    Aos.init({duration: 3000});
+  }, []);
   return (
     <div>
       <div className='nuestro-equipo flex'>
@@ -9,7 +14,7 @@ export const NuestroEquipo = () => {
           NUESTRO <span style={{ color: '#E35961' }}> EQUIPO🏆</span>
         </div>
         <div className='nuestro-equipo-container '>
-          <div className='nuestro-equipo-item flex'>
+          <div data-aos="flip-right" className='nuestro-equipo-item flex'>
             <div className='nuestro-equipo-item-img'>
               <img
                 src='/assets/team/Claudia.jpg'
@@ -28,7 +33,7 @@ export const NuestroEquipo = () => {
               <hr style={{ border: '2px solid #a75bf2' }} />
             </div>
           </div>
-          <div className='nuestro-equipo-item flex'>
+          <div data-aos="flip-left" className='nuestro-equipo-item flex'>
             <div className='nuestro-equipo-item-img'>
               <img
                 src='/assets/team/Dax.jpg'
@@ -58,7 +63,7 @@ export const NuestroEquipo = () => {
               />
             </div>
           </div>
-          <div className='nuestro-equipo-item flex'>
+          <div data-aos="flip-right" className='nuestro-equipo-item flex'>
             <div className='nuestro-equipo-item-img '>
               <img
                 src='/assets/team/Carlos.jpg'

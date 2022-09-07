@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/QuienesSomos.css'
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+
 
 export const QuienesSomos = () => {
+  useEffect(()=>{
+    Aos.init({duration: 3000});
+  }, []);
   return (
     <div>
-      <div className='quienes-somos flex'>
-        <div className='section-title'>
+      <div data-aos="fade-up" className='quienes-somos flex'>
+        <div data-aos="fade-up" className='section-title'>
           QUIENES <span style={{ color: '#e1575f' }}>SOMOS</span>🍃
         </div>
-        <div className='quienes-somos-text flex'>
-          <div className='quienes-somos-text-title'>
+        <div data-aos="fade-up" className='quienes-somos-text flex'>
+          <div data-aos="fade-up" className='quienes-somos-text-title'>
             <h1>¿QUÉ ES EL CEI?</h1>
             <div>
               <hr />
             </div>
           </div>
-          <div className='quienes-somos-text-cnt'>
+          <div data-aos="fade-up" className='quienes-somos-text-cnt'>
             Es un espacio{' '}
             <span className='b' style={{ color: '#e1575f' }}>
               creativo

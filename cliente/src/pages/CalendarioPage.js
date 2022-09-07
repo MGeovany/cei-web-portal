@@ -289,7 +289,7 @@ export const CalendarioPage = () => {
   return (
     <div className='casos'>
       <div className='casos-container'>
-        <div className='casos-title section-title'>
+        <div className='title-calendario'>
           CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
         </div>
         <Calendario events={events} />

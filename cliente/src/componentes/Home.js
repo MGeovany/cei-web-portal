@@ -7,7 +7,7 @@ import { Arrow, HeroBanner } from '../utils/svgIcons'
 
 export const Home = () => {
   return (
-    <div className='home'>
+    <div  className='home'>
       <div className='home__banner'>
         <HeroBanner />
       </div>
