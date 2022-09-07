@@ -1,26 +1,59 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { NativeSelect, Input, Textarea, TextInput } from '@mantine/core'
-import { useModals } from '@mantine/modals'
+import { NativeSelect, Input, Textarea, TextInput, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
-
-export const CasoForm = (props) => {
-  const modals = useModals()
+import { showNotification } from '@mantine/notifications'
+import { IconCheck } from '@tabler/icons'
+export const CasoForm = () => {
   const form = useForm({
     initialValues: {
-      email: '',
-      termsOfService: false
+      titulo: '',
+      cuerpo: '',
+      seccionCasos: 'Social',
+      tipo: 3,
+      usuarioCreador: 3,
+      imagenEncabezado:
+        'https://images.pexels.com/photos/13260611/pexels-photo-13260611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     },
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Correo Invalido')
+      titulo: (value) =>
+        value.length < 2
+          ? '*Nombre del proyecto debe de ser mas extenso'
+          : null,
+      cuerpo: (value) =>
+        value.length < 10 ? '*Detalles debe de contener mas palabras' : null
     }
   })
+
+  const createCaso = async (values) => {
+    console.log(values)
+    showNotification({
+      icon: <IconCheck />,
+      title: 'Enviado',
+      color: 'green',
+      message: 'Se ha agregado exitosamente un nuevo caso'
+    })
+    form.setValues({
+      titulo: '',
+      cuerpo: '',
+      seccionCasos: 'Social'
+    })
+    const response = await fetch('https://cei1.herokuapp.com/1.0.0/casos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    })
+    const data = await response.json()
+    console.log(data)
+  }
 
   return (
     <form
       className='form__caso'
-      onSubmit={form.onSubmit((values) => console.log(values))}
+      onSubmit={form.onSubmit((values) => createCaso(values))}
     >
       <div className='form__proyecto'>
         <div className='form__main'>
@@ -30,32 +63,27 @@ export const CasoForm = (props) => {
               placeholder='Select...'
               className='font-sen'
               label='Sección de Caso'
-              required
+              {...form.getInputProps('seccionCasos')}
             />
           </div>
           <div className='form__main__section asset__m10 s1'>
-            <Input
+            <TextInput
               className='font-sen'
               id='input-nombre-proyecto'
-              required
               label='Nombre del Proyecto'
-            >
-              <Input id='input-nombre-proyecto' placeholder='Mi Proyecto' />
-            </Input>
+              placeholder='Mi Proyecto'
+              {...form.getInputProps('titulo')}
+            />
           </div>
 
           <div className='form__main__section s2'>
-            <Input
+            <TextInput
               className='font-sen'
               id='input-demo'
-              required
               label='Breve Descripción'
-            >
-              <Input
-                id='input-demo'
-                placeholder='Este es mi proyecto sobre tecnología'
-              />
-            </Input>
+              placeholder='Este es mi proyecto sobre tecnología'
+              {...form.getInputProps('imagenEncabezado')}
+            />
           </div>
           <div className='form__main__section s1'>
             <div className='form__main__file'>
@@ -77,7 +105,7 @@ export const CasoForm = (props) => {
               className='font-sen'
               placeholder='Más Detalles'
               label='Detalles'
-              required
+              {...form.getInputProps('cuerpo')}
             />
           </div>
         </div>
@@ -89,22 +117,16 @@ export const CasoForm = (props) => {
           </div>
           <div className='form__int'>
             <div className='form__int__section s1'>
-              <Input
+              <TextInput
                 className='font-sen'
                 id='input-int-1'
-                required
                 label='Nombre'
-              >
-                <Input
-                  id='input-nombre-proyecto'
-                  placeholder='Nombre de integrante'
-                />
-              </Input>
+                placeholder='Nombre de integrante'
+              />
             </div>
             <div className='form__int__section s2'>
               <TextInput
                 className='font-sen'
-                required
                 label='Email'
                 placeholder='your@email.com'
               />
@@ -113,22 +135,16 @@ export const CasoForm = (props) => {
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
             <div className='form__int__section s1'>
-              <Input
+              <TextInput
                 className='font-sen'
                 id='input-int-1'
-                required
                 label='Nombre'
-              >
-                <Input
-                  id='input-nombre-proyecto'
-                  placeholder='Nombre de integrante'
-                />
-              </Input>
+                placeholder='Nombre de integrante'
+              />
             </div>
             <div className='form__int__section s2'>
               <TextInput
                 className='font-sen'
-                required
                 label='Email'
                 placeholder='your@email.com'
                 {...form.getInputProps('email')}
@@ -138,22 +154,20 @@ export const CasoForm = (props) => {
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
             <div className='form__int__section s1'>
-              <Input
+              <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
-                required
                 label='Nombre'
               >
                 <Input
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
                 />
-              </Input>
+              </Input.Wrapper>
             </div>
             <div className='form__int__section s2'>
               <TextInput
                 className='font-sen'
-                required
                 label='Email'
                 placeholder='your@email.com'
               />
@@ -162,22 +176,20 @@ export const CasoForm = (props) => {
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
             <div className='form__int__section s1'>
-              <Input
+              <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
-                required
                 label='Nombre'
               >
                 <Input
                   id='input-nombre-proyecto'
                   placeholder='Nombre de integrante'
                 />
-              </Input>
+              </Input.Wrapper>
             </div>
             <div className='form__int__section s2'>
               <TextInput
                 className='font-sen'
-                required
                 label='Email'
                 placeholder='your@email.com'
               />
@@ -187,8 +199,29 @@ export const CasoForm = (props) => {
             </div>
           </div>
           <div className='form__int__section form__int__btns'>
-            <div className='form__caso__button'>Enviar</div>
-            <div className='form__desc__button'>Descartar</div>
+            <Button
+              type='submit'
+              mt='sm'
+              sx={{ marginRight: '20px' }}
+              size='md'
+              style={{
+                boxShadow: '3px 3px 17px #00000029',
+                backgroundColor: '#072958'
+              }}
+            >
+              Enviar
+            </Button>
+            <Button
+              type='reset'
+              mt='sm'
+              size='md'
+              style={{
+                boxShadow: '3px 3px 17px #00000029',
+                backgroundColor: '#e1575f'
+              }}
+            >
+              Cancelar
+            </Button>
           </div>
         </div>
       </div>

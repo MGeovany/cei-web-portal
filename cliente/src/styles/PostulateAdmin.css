@@ -7,9 +7,82 @@
   padding: 0 2rem;
   margin: 0 2rem;
   height: 100%;
-
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 3px 3px 27px #00000029;
   border-radius: 15px;
   opacity: 1;
+}
+.table_responsive
+{
+  width: 100%;
+  display: none;
+  overflow: auto;
+}
+
+.table_content
+{
+  display: flex;
+  height: 80px;
+}
+
+.table_content div
+{
+  border: #e8e8e8 solid 1px;
+  min-width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: calc(10px + .5vw);
+}
+
+.table_content div:nth-child(4)
+{
+  min-width: 300px;
+  width: 300px;
+  overflow: auto;
+}
+
+
+.titles_table div
+{
+  background-color: rgb(227, 227, 227);
+  color: black;
+  font-weight: bold;
+}
+
+
+.table_noResponsive
+  {
+    width: 100%;
+  }
+
+@media screen and (max-width: 1350px) 
+{
+  .table_noResponsive
+  {
+    display: none;
+  }
+  .table__container {
+    height: 500px;
+    width: calc(100% - 80px);
+    padding: 0;
+  }
+
+  .table_responsive
+  {
+    display: block;
+  }
+
+  .table_contactosResponsive
+  {
+    display: block;
+    width: 100%;
+  }
+  .contactanos__table__container {
+    padding: 0;
+  }
+
 }

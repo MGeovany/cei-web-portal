@@ -27,7 +27,6 @@
 
 .carousel-card__img {
   height: 528px;
-  width: 100%;
 
   object-fit: cover;
   position: relative;
@@ -67,4 +66,6 @@
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 0.55;
+
+  margin-right: 2rem;
 }
