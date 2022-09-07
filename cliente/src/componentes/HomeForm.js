@@ -127,36 +127,312 @@ export const HomeForm = () => {
           {/* 
               QuienesSomos CONTENT
           */}
+          <Grid.Col span={24}>
+            <Group position='left'>
+              <div className='asset__modal__title'>
+                Editar Contenido de{' '}
+                <span style={{ color: '#e1575f' }}>Quienes Somos</span>
+              </div>
+            </Group>
+          </Grid.Col>
+          <Grid.Col span={24}>
+            <Textarea
+              minRows={2}
+              maxRows={25}
+              className='font-sen'
+              placeholder='Es un espacio creativo ideal para que emprendedores...'
+              label='Descripción'
+              required
+            />
+          </Grid.Col>
+
           {/* 
               Integrantes CONTENT
           */}
+          <Grid.Col span={24}>
+            <Group position='left'>
+              <div className='asset__modal__title'>
+                Editar Contenido de{' '}
+                <span style={{ color: '#e1575f' }}>Nuesto Equipo</span>
+              </div>
+            </Group>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Integrante #1'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Jhon Doe' />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Descripción'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Coordinador del Centro de Emprendimiento e Innovación'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Subtitulo'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='CEUTEC Tegucigalpa '
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={24}>
+            <Group position='left'>
+              <Text className='font-sen'>Fotografia</Text>
+              <FileButton
+                resetRef={resetRef}
+                onChange={setFile}
+                accept='image/png,image/jpeg'
+                color='cyan'
+                radius='xl'
+                size='xs'
+              >
+                {(props) => <Button {...props}>Seleccionar imagen</Button>}
+              </FileButton>
+              <Button
+                disabled={!file}
+                onClick={clearFile}
+                color='red'
+                radius='xl'
+                size='xs'
+              >
+                Reiniciar
+              </Button>
+            </Group>
+            {file && (
+              <Text size='sm' align='left' mt='sm'>
+                Archivo seleccionado: {file.name}
+              </Text>
+            )}
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Integrante #2'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Jhon Doe' />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Descripción'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Coordinador del Centro de Emprendimiento e Innovación'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Subtitulo'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='CEUTEC Tegucigalpa '
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={24}>
+            <Group position='left'>
+              <Text className='font-sen'>Fotografia</Text>
+              <FileButton
+                resetRef={resetRef}
+                onChange={setFile}
+                accept='image/png,image/jpeg'
+                color='cyan'
+                radius='xl'
+                size='xs'
+              >
+                {(props) => <Button {...props}>Seleccionar imagen</Button>}
+              </FileButton>
+              <Button
+                disabled={!file}
+                onClick={clearFile}
+                color='red'
+                radius='xl'
+                size='xs'
+              >
+                Reiniciar
+              </Button>
+            </Group>
+            {file && (
+              <Text size='sm' align='left' mt='sm'>
+                Archivo seleccionado: {file.name}
+              </Text>
+            )}
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Integrante #3'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Jhon Doe' />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Descripción'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Coordinador del Centro de Emprendimiento e Innovación'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Subtitulo'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='CEUTEC Tegucigalpa '
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={24}>
+            <Group position='left'>
+              <Text className='font-sen'>Fotografia</Text>
+              <FileButton
+                resetRef={resetRef}
+                onChange={setFile}
+                accept='image/png,image/jpeg'
+                color='cyan'
+                radius='xl'
+                size='xs'
+              >
+                {(props) => <Button {...props}>Seleccionar imagen</Button>}
+              </FileButton>
+              <Button
+                disabled={!file}
+                onClick={clearFile}
+                color='red'
+                radius='xl'
+                size='xs'
+              >
+                Reiniciar
+              </Button>
+            </Group>
+            {file && (
+              <Text size='sm' align='left' mt='sm'>
+                Archivo seleccionado: {file.name}
+              </Text>
+            )}
+          </Grid.Col>
+
           {/* 
               Footer CONTENT
           */}
+
           <Grid.Col span={24}>
-            <Button
-              type='submit'
-              mt='sm'
-              sx={{ marginRight: '20px' }}
-              size='md'
-              style={{
-                boxShadow: '3px 3px 17px #00000029',
-                backgroundColor: '#072958'
-              }}
+            <Group position='left'>
+              <div className='asset__modal__title'>
+                Editar Contenido de{' '}
+                <span style={{ color: '#e1575f' }}>Footer</span>
+              </div>
+            </Group>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Facebook URL'
             >
-              Enviar
-            </Button>
-            <Button
-              type='reset'
-              mt='sm'
-              size='md'
-              style={{
-                boxShadow: '3px 3px 17px #00000029',
-                backgroundColor: '#e1575f'
-              }}
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='facebook.com/cei'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Instagram URL'
             >
-              Cancelar
-            </Button>
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='instagram.com/cei'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Telegram URL'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='telegram.com/cei'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          {/* 
+            BUTTONS CONTENT
+           */}
+          <Grid.Col span={24}>
+            <Group position='right'>
+              <Button
+                type='submit'
+                mt='sm'
+                sx={{ marginRight: '20px' }}
+                size='md'
+                style={{
+                  boxShadow: '3px 3px 17px #00000029',
+                  backgroundColor: '#072958'
+                }}
+              >
+                Enviar
+              </Button>
+              <Button
+                type='reset'
+                mt='sm'
+                size='md'
+                style={{
+                  boxShadow: '3px 3px 17px #00000029',
+                  backgroundColor: '#e1575f'
+                }}
+              >
+                Cancelar
+              </Button>
+            </Group>
           </Grid.Col>
         </Grid>
       </form>
