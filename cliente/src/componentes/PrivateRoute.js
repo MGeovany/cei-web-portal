@@ -3,24 +3,25 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 import { NavbarAdmin } from './NavbarAdmin'
+import { AlertSessionModal } from './AlertSessionModal'
 import { useSelector } from 'react-redux'
+
 
 const useAuth = () => {
   const user = useSelector((state) => state.login)
-  return user && user.isLogged
+  return user.isLogged;
 }
 
 const PrivateRoute = () => {
-  console.log('user', useAuth())
-  const isLogged = useAuth()
-  return isLogged ? (
+  return useAuth() ? (
     <>
       <NavbarAdmin />
       <Outlet />
+      <AlertSessionModal />
     </>
   ) : (
     <Navigate to='/login' />
   )
 }
 
-export default PrivateRoute
+export default PrivateRoute;

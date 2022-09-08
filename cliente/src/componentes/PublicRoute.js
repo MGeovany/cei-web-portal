@@ -7,19 +7,17 @@ import { useSelector } from 'react-redux'
 
 const useAuth = () => {
   const user = useSelector((state) => state.login)
-  return user && user.isLogged
+  return user.isLogged
 }
 
 const PublicRoute = () => {
-  console.log('user', useAuth())
-  const isLogged = useAuth()
-  return isLogged ? (
+  return useAuth() ? (
+    <Navigate to='/admin' />
+  ) : (
     <>
       <Navbar />
       <Outlet />
     </>
-  ) : (
-    <Navigate to='/login' />
   )
 }
 
