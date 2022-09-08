@@ -6,7 +6,6 @@ import {
   Checkbox,
   Paper,
   Title,
-  Text,
   Container,
   Group,
   Button
@@ -15,11 +14,11 @@ import '../styles/Login.css'
 
 import { useForm } from '@mantine/form'
 
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux'
 import { login } from '../store/slices/login/loginSlice'
 
 export function Login() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const form = useForm({
     initialValues: {
@@ -33,11 +32,11 @@ export function Login() {
 
   const validateAuth = () => {
     return form.onSubmit((values) => {
-      console.log(values);
-      dispatch(login({email: values.email, password: values.password}));
-    });
+      console.log(values)
+      dispatch(login({ email: values.email, password: values.password }))
+    })
   }
-  
+
   return (
     <>
       <div className='login-container'>
