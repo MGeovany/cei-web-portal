@@ -3,7 +3,7 @@ const router= express.Router();
 const config= require('../lib/config');
 const sql = require('mssql');
 const UsuarioModule = require('../class/Usuario')
-
+const crypt = require('../lib/crypt');
 router.post('/usuario', async (req, res) => {//agregar
    try {
     let data = {...req.body,...req.params}
@@ -15,7 +15,6 @@ router.post('/usuario', async (req, res) => {//agregar
         .input('contrasena',sql.VarChar,usuario.contrasena) 
         .input('correo',sql.VarChar,usuario.correo) 
         .query(usuario.querySave);
-
     if (result.rowsAffected <= 0){ throw "No existe datos con esos parámetros"};
     res.status(200).json({message:"Usuario creado correctamente"});
    } catch (error) {

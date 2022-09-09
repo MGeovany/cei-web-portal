@@ -13,16 +13,51 @@ CREATE TABLE Post(
 	imagenEncabezado varchar(200),
 	cuerpo ntext,
 	usuarioCreador int,
-	fechaCreado datetime 
+	fechaCreado datetime, 
+	proyecto VARCHAR(100),
+	seccionCasos VARCHAR
 );
-
 CREATE TABLE Evento(
 	id int PRIMARY KEY IDENTITY(1,1),
-	fecha date,
-	title varchar(50),
+	titulo varchar(100),
 	descripcion varchar(max),
+	horaInicio time,
+	duracion time,
+	fecha date,
+	semana varchar(20),
+	lugar int,
 	usuarioCreador int,
-	fechaCreado datetime
+	fechaCreado datetime,
+);
+
+CREATE TABLE SitioEvento(
+	id int PRIMARY KEY IDENTITY(1,1),
+	evento int,
+	lugarSede int,
+	sede int,
+)
+
+CREATE TABLE OrganizadorEvento(
+	id int PRIMARY KEY IDENTITY(1,1),
+	evento int,
+	organizador int,
+	sede int,
+)
+
+CREATE TABLE LugarSede (
+	id int PRIMARY KEY IDENTITY(1,1),
+	nombre varchar(100),
+  sede int,
+);
+
+CREATE TABLE Sede (
+		id int PRIMARY KEY IDENTITY(1,1),
+		nombre varchar(100),
+);
+
+CREATE TABLE Organizador (
+	id int PRIMARY KEY IDENTITY(1,1),
+	nombre varchar(100)
 );
 
 CREATE TABLE Postulacion(
@@ -39,8 +74,8 @@ CREATE TABLE Postulacion(
 	redesSociales tinyint, --si o no
 	rubro tinyint, -- de la tabla rubo
 	expectativas tinyint, -- de la tabla expectativas
-	fechaCreado datetime;
-	fechaCerrado datetime;
+	fechaCreado datetime,
+	fechaCerrado datetime,
 	estado tinyint --de la tabla estado
 );
 
@@ -75,4 +110,12 @@ CREATE TABLE Contactanos(
 	nombre varchar(50),
 	email varchar(70),
 	telefono varchar(20),
+);
+
+CREATE TABLE Integrantes (
+  [id] integer PRIMARY KEY NOT NULL IDENTITY(1, 1),
+  [nombre] varchar(100),
+  [correo] nvarchar(255),
+  [proyecto] nvarchar(255) 
+  
 );
