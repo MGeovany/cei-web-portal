@@ -3,20 +3,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 var CryptoJS = require("crypto-js");
-const key = 'CEI2022'
 const maxMinutesSession = 15;
 
-let dataSession = {
-  'expira': '',
-  'usuario': '',
-  'correo': '',
-  'nombre': ''
-};
-
-export const getSession = () => {
+const getSession = () => {
   let session = localStorage.getItem("SESSION");
   if(session){
-    var bytes  = CryptoJS.AES.decrypt(session, key);
+    var bytes  = CryptoJS.AES.decrypt(session, 'secret key 123');
     return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
   }
   return null;
@@ -33,8 +25,12 @@ const getMinutesSession = () => {
 }
 
 export const newSession = () => {
-  dataSession.expira = new Date().toLocaleString();
-  var ciphertext = CryptoJS.AES.encrypt(JSON.stringify(dataSession), key).toString();
+  let data = {
+    'expira': new Date().toLocaleString(),
+    'usuario': 'David Torres',
+    'id': 123
+  };
+  var ciphertext = CryptoJS.AES.encrypt(JSON.stringify(data), 'secret key 123').toString();
   localStorage.setItem("SESSION", ciphertext);
   watchSession();
 }
@@ -47,11 +43,6 @@ const watchSession = () => {
   setTimeout(() => {
     if(!validateLogged()){
       alertSession();
-    }else{
-      let session = getSession();
-      dataSession.usuario = session.usuario;
-      dataSession.correo = session.correo;
-      dataSession.nombre = session.nombre;
     }
   }, 25000);
 }
@@ -73,21 +64,21 @@ const validateLogged = () => {
 export const loginSlice = createSlice({
   name: 'user',
   initialState: {
+    email: '',
+    password: '',
     isLogged: validateLogged()
   },
   reducers: {
     login: (state, action) => {
-      dataSession.usuario = action.payload.usuario;
-      dataSession.correo = action.payload.correo;
-      dataSession.nombre = action.payload.nombre;
+      state.email = action.payload.email;
+      state.password = action.payload.password;
+      // conexion con el endpoint
       state.isLogged = true;
-      console.log(JSON.stringify(action.payload.usuario));
       newSession();
     },
     logout: (state, action) => {
-      dataSession.usuario = '';
-      dataSession.correo = '';
-      dataSession.nombre = '';
+      state.email = '';
+      state.password = '';
       state.isLogged = false;
       removeSession();
     }
@@ -96,5 +87,5 @@ export const loginSlice = createSlice({
 
 export const { login, logout, isAuth } = loginSlice.actions
 
-export const selectUser = (state) => state.user.usuario
+export const selectUser = (state) => state.user.email
 export default loginSlice.reducer
