@@ -4,9 +4,8 @@ import { Table, useMantineTheme } from '@mantine/core'
 import { showNotification } from '@mantine/notifications'
 import { useModals } from '@mantine/modals'
 import { Eventos } from '../API'
-import {Grid} from '@mantine/core'
+import { Grid } from '@mantine/core'
 import moment from 'moment'
-// import { clampUseMovePosition } from '@mantine/hooks'
 
 export const CalendarioEvents = () => {
   const [events, setEvents] = useState([])
@@ -14,9 +13,13 @@ export const CalendarioEvents = () => {
   const theme = useMantineTheme()
 
   useEffect(() => {
-    Eventos.get().then(data => {
-      setEvents(data)
-    }).catch(err => { console.log(err) })
+    Eventos.get()
+      .then((data) => {
+        setEvents(data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }, [])
 
   const OpenEditEventos = (selectedEvent) => {
@@ -44,20 +47,17 @@ export const CalendarioEvents = () => {
       title: 'Eliminado',
       color: 'blue',
       message: `Evento eliminado correctamente! ${name}`
-    })  
+    })
 
     events.splice(name, 1)
   }
 
-
-
-
-
-  
   const rows = events.map((element, index) => (
     <tr key={index}>
       <td>
-        <div className='td__content'>{moment(element.fechaInicio).format('D MMM YY, hh:mm a')}</div>
+        <div className='td__content'>
+          {moment(element.fechaInicio).format('D MMM YY, hh:mm a')}
+        </div>
       </td>
       <td>
         <div className='td__content elipsis'>{element.titulo}</div>
@@ -71,7 +71,10 @@ export const CalendarioEvents = () => {
 
       <td>
         <div className='tab__btns flex'>
-          <div className='btn__editar' onClick={(e) => OpenEditEventos(element)}>
+          <div
+            className='btn__editar'
+            onClick={(e) => OpenEditEventos(element)}
+          >
             Editar
           </div>
           <div
@@ -87,7 +90,10 @@ export const CalendarioEvents = () => {
 
   return (
     <Grid>
-      <div className='cal__modal__title'> VER PRÓXIMOS <span style={{ color: '#e1575f' }}>EVENTOS</span></div>
+      <div className='cal__modal__title'>
+        {' '}
+        VER PRÓXIMOS <span style={{ color: '#e1575f' }}>EVENTOS</span>
+      </div>
 
       <Table fontSize='md' highlightOnHover verticalSpacing='xs'>
         <thead>
@@ -111,6 +117,6 @@ export const CalendarioEvents = () => {
         </thead>
         <tbody>{rows}</tbody>
       </Table>
-      </Grid>
+    </Grid>
   )
 }

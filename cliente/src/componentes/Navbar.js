@@ -5,7 +5,14 @@ import React, { useState } from 'react'
 export const Navbar = () => {
   const [active, setActive] = useState('nav__menu')
   const [icon, setIcon] = useState('nav__toggler')
-  const [isOpen, setIsOpen] = useState('')
+  const [isOpen, setIsOpen] = useState(window.location.pathname)
+
+  const rutas = {
+    'inicio' : '/',
+    'calendario' : '/calendario',
+    'casos-de-exito' : '/casos-de-exito',
+    'blog' : '/blog',
+  };
 
   const navToggle = (e) => {
     if (active === 'nav__menu') {
@@ -16,17 +23,19 @@ export const Navbar = () => {
       setIcon('nav__toggler toggle')
     } else setIcon('nav__toggler')
 
-    setIsOpen(e.target.classList.value)
+    setTimeout(function () {
+      setIsOpen(window.location.pathname)
+    }, 200);
   }
   return (
     <div className='nav'>
       <ul className={active}>
         <li className='nav__item'></li>
         <li className='nav__item'>
-          <Link to='/'>
+          <Link to={rutas['inicio']}>
             <div
               className={
-                isOpen === 'nav__link-home' ? 'nav__link dot' : 'nav__link-home'
+                isOpen === rutas['inicio'] ? 'nav__link dot' : 'nav__link-home'
               }
               onClick={(e) => navToggle(e)}
               value='home'
@@ -36,12 +45,10 @@ export const Navbar = () => {
           </Link>
         </li>
         <li className='nav__item'>
-          <Link to='/calendario'>
+          <Link to={rutas['calendario']}>
             <div
               className={
-                isOpen === 'nav__link-calendario'
-                  ? 'nav__link dot'
-                  : 'nav__link-calendario'
+                isOpen === rutas['calendario'] ? 'nav__link dot' : 'nav__link-calendario'
               }
               onClick={(e) => navToggle(e)}
             >
@@ -50,12 +57,10 @@ export const Navbar = () => {
           </Link>
         </li>
         <li className='nav__item'>
-          <Link to='/casos-de-exito'>
+          <Link to={rutas['casos-de-exito']}>
             <div
               className={
-                isOpen === 'nav__link-casos'
-                  ? 'nav__link dot'
-                  : 'nav__link-casos'
+                isOpen === rutas['casos-de-exito'] ? 'nav__link dot' : 'nav__link-casos'
               }
               onClick={(e) => navToggle(e)}
             >
@@ -64,10 +69,10 @@ export const Navbar = () => {
           </Link>
         </li>
         <li className='nav__item'>
-          <Link to='/blog'>
+          <Link to={rutas['blog']}>
             <div
               className={
-                isOpen === 'nav__link-blog' ? 'nav__link dot' : 'nav__link-blog'
+                isOpen === rutas['blog'] ? 'nav__link dot' : 'nav__link-blog'
               }
               onClick={(e) => navToggle(e)}
             >

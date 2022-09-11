@@ -10,14 +10,22 @@ const useAuth = () => {
   return user.isLogged
 }
 
+const isLoginPage = () => {
+  return window.location.pathname == '/login' ? true : false;
+}
+
 const PublicRoute = () => {
   return useAuth() ? (
     <Navigate to='/admin' />
   ) : (
-    <>
-      <Navbar />
-      <Outlet />
-    </>
+    isLoginPage() ? (
+        <Outlet />
+    ) : (
+      <>
+        <Navbar />
+        <Outlet />
+      </>
+    )
   )
 }
 

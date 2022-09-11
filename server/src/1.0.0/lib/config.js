@@ -6,7 +6,7 @@ module.exports = {
   'options': {
       'encrypt': false,
       'enableArithAbort': true,
-      'requestTimeout': '130000'
+      'requestTimeout': 130000
     },
 
 };
