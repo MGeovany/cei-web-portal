@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
 import React, { useState } from 'react'
-
 import { useDispatch } from 'react-redux';
-import { logout } from '../store/slices/login/loginSlice'
+import { logout, getSession } from '../store/slices/login/loginSlice'
+import { Popover, Text, Button } from '@mantine/core';
+import { ThemeIcon, Space, Center } from '@mantine/core';
+import { IconAdjustments, IconLogout, IconUser } from '@tabler/icons';
+
 
 export const NavbarAdmin = () => {
   const [active, setActive] = useState('nav__menu')
@@ -110,10 +113,24 @@ export const NavbarAdmin = () => {
           </div>
         </li>
         <li>
-          <div className='btn__postulate'
-          onClick={(()=> salir())}>
-            Salir
-          </div>
+          <Popover width={200} position="bottom" withArrow shadow="md">
+            <Popover.Target>
+              <Button variant="light" color="red">
+              <ThemeIcon color="red" size="sm" radius="xl" variant="outline">
+                <IconUser size={34} />
+              </ThemeIcon>
+              <Space w="xs" />
+                {getSession().nombre}
+              </Button>
+            </Popover.Target>
+            <Popover.Dropdown>
+              <Center>
+                <Button color="red" leftIcon={<IconLogout size={14} />} size="md" compact onClick={(()=> salir())}>
+                  Cerrar session
+                </Button>
+              </Center>
+            </Popover.Dropdown>
+          </Popover>
         </li>
       </ul>
       <div onClick={(() => setIsOpen('home'), navToggle)} className={icon}>
