@@ -99,9 +99,9 @@ export const BlogTablaResponsive = () => {
   const rows = elements.map((element) => (
 
 
-    <Carousel.Slide className='card_table_responsive'> 
+    <Carousel.Slide className='card_table_responsive' key={element.titulo}> 
 
-        <div key={element.titulo}>
+        <div >
             <div className='header_nav_Class'>
 
                 <div className='title_card'>

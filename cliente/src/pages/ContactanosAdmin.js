@@ -70,8 +70,8 @@ export const ContactanosAdmin = () => {
   ))
 
   const rowsCard_responsive = contactanos.map((element, index) => (
-    <Carousel.Slide>
-    <div key={element.id} className='card_contactanos card_color'>
+    <Carousel.Slide key={element.id}>
+    <div  className='card_contactanos card_color'>
         <div>
           {element.nombre}
         </div>
