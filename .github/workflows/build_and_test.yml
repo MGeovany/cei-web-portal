@@ -16,13 +16,13 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      
+
       - name: Installation of Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install --no-audit --no-fund --no-optional
-      
+
       - name: Testing Linter
       - run: npm eslint
 
