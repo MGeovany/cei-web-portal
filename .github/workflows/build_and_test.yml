@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Moving to cliente folder
-        run: cd cliente
+        run: cd cliente/
       - name: checking folders
         run: ls -l
       - name: Installation of Node.js ${{ matrix.node-version }}
