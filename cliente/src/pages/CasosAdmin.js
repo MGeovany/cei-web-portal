@@ -436,7 +436,7 @@ export const CasosAdmin = () => {
   const theme = useMantineTheme()
 
   const agregarCasoModal = () => {
-    const id = modals.openContextModal('agregarCasoModal', {
+    modals.openContextModal('agregarCasoModal', {
       overlayColor:
         theme.colorScheme === 'dark'
           ? theme.colors.dark[9]
@@ -451,7 +451,7 @@ export const CasosAdmin = () => {
   }
 
   const verCasoModal = () => {
-    const id = modals.openContextModal('verCasoModal', {
+    modals.openContextModal('verCasoModal', {
       overlayColor:
         theme.colorScheme === 'dark'
           ? theme.colors.dark[9]
