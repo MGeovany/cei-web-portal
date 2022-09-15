@@ -23,7 +23,7 @@ jobs:
         working-directory: ./cliente
     
       - name: Testing Linter
-        run: npm eslint
+        run: npm run eslint
         working-directory: ./cliente
 
       - name: Testing Build
