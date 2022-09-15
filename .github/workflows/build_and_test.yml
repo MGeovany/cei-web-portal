@@ -20,7 +20,7 @@ jobs:
       - name: Moving to cliente folder
         run: cd cliente
       - name: checking folders
-        run: ls l
+        run: ls -l
       - name: Installation of Node.js ${{ matrix.node-version }}
         run: npm install --no-audit --no-fund --no-optional --force
       - name: Testing Linter
