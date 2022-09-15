@@ -1,28 +1,27 @@
 import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux'
 import { logout, getSession } from '../store/slices/login/loginSlice'
-import { Popover, Text, Button } from '@mantine/core';
-import { ThemeIcon, Space, Center } from '@mantine/core';
-import { IconAdjustments, IconLogout, IconUser } from '@tabler/icons';
-
+import { Popover, Button } from '@mantine/core'
+import { ThemeIcon, Space, Center } from '@mantine/core'
+import { IconLogout, IconUser } from '@tabler/icons'
 
 export const NavbarAdmin = () => {
   const [active, setActive] = useState('nav__menu')
   const [icon, setIcon] = useState('nav__toggler')
   const [isOpen, setIsOpen] = useState(window.location.pathname)
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const rutas = {
-    'inicio' : '/admin',
-    'calendario' : '/admin/calendario',
-    'casos-de-exito' : '/admin/casos-de-exito',
-    'blog' : '/admin/blog',
-  };
+    inicio: '/admin',
+    calendario: '/admin/calendario',
+    'casos-de-exito': '/admin/casos-de-exito',
+    blog: '/admin/blog'
+  }
 
   const salir = () => {
-      dispatch(logout());
+    dispatch(logout())
   }
 
   const navToggle = (e) => {
@@ -36,7 +35,7 @@ export const NavbarAdmin = () => {
 
     setTimeout(function () {
       setIsOpen(window.location.pathname)
-    }, 200);
+    }, 200)
   }
   return (
     <nav className='nav'>
@@ -59,7 +58,9 @@ export const NavbarAdmin = () => {
           <Link to={rutas['calendario']}>
             <div
               className={
-                isOpen === rutas['calendario'] ? 'nav__link dot' : 'nav__link-calendario'
+                isOpen === rutas['calendario']
+                  ? 'nav__link dot'
+                  : 'nav__link-calendario'
               }
               onClick={(e) => navToggle(e)}
             >
@@ -113,19 +114,25 @@ export const NavbarAdmin = () => {
           </div>
         </li>
         <li>
-          <Popover width={200} position="bottom" withArrow shadow="md">
+          <Popover width={200} position='bottom' withArrow shadow='md'>
             <Popover.Target>
-              <Button variant="light" color="red">
-              <ThemeIcon color="red" size="sm" radius="xl" variant="outline">
-                <IconUser size={34} />
-              </ThemeIcon>
-              <Space w="xs" />
+              <Button variant='light' color='red'>
+                <ThemeIcon color='red' size='sm' radius='xl' variant='outline'>
+                  <IconUser size={34} />
+                </ThemeIcon>
+                <Space w='xs' />
                 {getSession().nombre}
               </Button>
             </Popover.Target>
             <Popover.Dropdown>
               <Center>
-                <Button color="red" leftIcon={<IconLogout size={14} />} size="md" compact onClick={(()=> salir())}>
+                <Button
+                  color='red'
+                  leftIcon={<IconLogout size={14} />}
+                  size='md'
+                  compact
+                  onClick={() => salir()}
+                >
                   Cerrar session
                 </Button>
               </Center>

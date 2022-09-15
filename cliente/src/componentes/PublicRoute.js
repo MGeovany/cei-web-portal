@@ -11,21 +11,19 @@ const useAuth = () => {
 }
 
 const isLoginPage = () => {
-  return window.location.pathname == '/login' ? true : false;
+  return window.location.pathname === '/login' ? true : false
 }
 
 const PublicRoute = () => {
   return useAuth() ? (
     <Navigate to='/admin' />
+  ) : isLoginPage() ? (
+    <Outlet />
   ) : (
-    isLoginPage() ? (
-        <Outlet />
-    ) : (
-      <>
-        <Navbar />
-        <Outlet />
-      </>
-    )
+    <>
+      <Navbar />
+      <Outlet />
+    </>
   )
 }
 
