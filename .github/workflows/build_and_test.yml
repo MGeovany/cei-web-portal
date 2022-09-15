@@ -19,8 +19,13 @@ jobs:
           fetch-depth: 0
           node-version: ${{ matrix.node-version }}
       - name: Installation of Node.js ${{ matrix.node-version }}
-        run: npm install --no-audit --no-fund --no-optional
+        run: cd cliente npm install --no-audit --no-fund --no-optional --force
       - name: Testing Linter
         run: npm eslint
       - name: Testing Build
         run: npm run build --if-present
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npx playwright test
+  
