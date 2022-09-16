@@ -26,5 +26,13 @@ jobs:
         run: npm run eslint
         working-directory: ./cliente
 
+      - name: Running Test End to End
+        uses: cypress-io/github-action@v4
+        with:
+          command: npm run test:e2e
+          start: npm start
+          wait-on: http://localhost:3000
+          working-directory: ./cliente
+
       
   

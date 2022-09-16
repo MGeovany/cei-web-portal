@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Card, Center, Image, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
@@ -8,11 +7,6 @@ import {
   IconBrandTwitter,
   IconBrandWhatsapp
 } from '@tabler/icons'
-import { 
-  FacebookShareButton,
-  WhatsappShareButton,
-  TwitterShareButton
-} from 'react-share'
 
 export const ActividadesCard = ({
   title,
@@ -23,7 +17,6 @@ export const ActividadesCard = ({
   img
 }) => {
   const modals = useModals()
-  const urlActividades= 'http://localhost:3000/calendario';
   const theme = useMantineTheme()
 
   const openActividadesModal = () =>
@@ -73,29 +66,11 @@ export const ActividadesCard = ({
             <div className='actividad__card__content__button'>
               <div>Compartir:</div>
               <div className='actividad__socials'>
-                <TwitterShareButton 
-                url={urlActividades} 
-                title={title}
-                className='actividad__socials'
-                >
-                 <IconBrandTwitter />
+                <IconBrandTwitter />
 
-                 </TwitterShareButton>
-                <FacebookShareButton 
-                url={urlActividades} 
-                quote={title}
-                className='actividad__socials'
-                >
                 <IconBrandFacebook />
-                
-                </FacebookShareButton>
-                <WhatsappShareButton 
-                url={urlActividades} 
-                title={title}
-                className='actividad__socials'
-                >
-                 <IconBrandWhatsapp />
-                </WhatsappShareButton>                
+
+                <IconBrandWhatsapp />
               </div>
             </div>
           </div>
