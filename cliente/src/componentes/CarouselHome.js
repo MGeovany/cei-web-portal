@@ -43,7 +43,7 @@ export const CarouselHome = () => {
   ))
   return (
     <div className='carousel-home'>
-      <div className='section-title  carousel-title'>
+      <div className='section-title'>
         Te mantenemos al tanto de lo que sucede <br /> a tu alrededor 🤠
       </div>
       <Carousel
