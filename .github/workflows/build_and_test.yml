@@ -26,17 +26,11 @@ jobs:
         run: npm run eslint
         working-directory: ./cliente
 
-      - name: Install Playwright Browsers
-        run: npx playwright install chromium
-        working-directory: ./cliente
-    
-      - name: Run app for tests
-        run: npm start  
-        working-directory: ./cliente
-
       - name: Run Playwright tests
-        run: npm run test  
-        working-directory: ./cliente
+        uses: maxmilton/action-setup-playwright@v1
+        with:
+          browsers: chromium
 
-
+      - run: npm install --frozen-lockfile
+      - run: npm run test
   
