@@ -26,10 +26,13 @@
   margin-top: 4rem;
   font-size: 20px;
   font-family: var(--poppins-regular);
-
+  z-index: 0;
   background-color: white;
   border-radius: 20px;
   box-shadow: 12px 14px 41px #00000029;
+}
+.rbc-calendar{
+  z-index: 0;
 }
 
 .rbc-header {

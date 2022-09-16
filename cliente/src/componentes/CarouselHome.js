@@ -34,7 +34,7 @@ const data = [
   }
 ]
 export const CarouselHome = () => {
-  const autoplay = useRef(Autoplay({ delay: 2000 }))
+  const autoplay = useRef(Autoplay({ delay: 3000 }))
 
   const slides = data.map((item, i) => (
     <Carousel.Slide key={i}>
@@ -47,18 +47,18 @@ export const CarouselHome = () => {
         Te mantenemos al tanto de lo que sucede <br /> a tu alrededor 🤠
       </div>
       <Carousel
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={autoplay.current.reset}
         slideSize='100%'
         breakpoints={[{ maxWidth: 'sm', slideSize: '100%' }]}
         slideGap='xl'
         align='start'
         loop
         dragFree
-        slidesToScroll={1}
+        
         nextControlIcon={<IconArrowRight size={16} />}
-        previousControlIcon={<IconArrowLeft size={16} />}
-        plugins={[autoplay.current]}
-        onMouseEnter={autoplay.current.stop}
-        onMouseLeave={autoplay.current.reset}
+        previousControlIcon={<IconArrowLeft size={16} />}       
       >
         {slides}
       </Carousel>

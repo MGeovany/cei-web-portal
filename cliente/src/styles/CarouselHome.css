@@ -2,6 +2,7 @@
   background-color: var(--white);
   min-height: 100vh;
   font-family: var(--sen-bold);
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
