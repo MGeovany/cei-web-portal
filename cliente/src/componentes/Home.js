@@ -27,7 +27,7 @@ export const Home = () => {
           </Link>
         </div>
 
-        <div className='home__cnt'>
+        <div className='home__subtitle'>
           Te lanzamos con toda la fuerza posible, <br />
           porque sabemos que la necesitas y porque no es <br />
           momento de ponerse límites.
