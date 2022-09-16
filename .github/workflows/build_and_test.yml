@@ -2,9 +2,9 @@ name: Build and Test PR to Stagging
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, stagging ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, stagging ]
 
 jobs:
   build:
@@ -26,9 +26,8 @@ jobs:
         run: npm run eslint
         working-directory: ./cliente
 
-    
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: npx playwright install chromium
         working-directory: ./cliente
     
       - name: Run Playwright tests
