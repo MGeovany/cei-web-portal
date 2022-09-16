@@ -34,7 +34,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npx playwright test",
     "eject": "react-scripts eject",
     "eslint": "eslint './**/*.{js,jsx}'",
     "phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm install --no-fund --no-audit --no-package-lock --legacy-peer-deps"
@@ -58,7 +57,6 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.25.2",
     "eslint": "^8.23.1",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
