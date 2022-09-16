@@ -31,7 +31,7 @@ jobs:
         working-directory: ./cliente
     
       - name: Run Playwright tests
-        run: npx playwright test     
+        run: npm run test  
         working-directory: ./cliente
 
 
