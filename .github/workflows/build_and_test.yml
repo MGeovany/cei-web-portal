@@ -30,6 +30,10 @@ jobs:
         run: npx playwright install chromium
         working-directory: ./cliente
     
+      - name: Run app for tests
+        run: npm start  
+        working-directory: ./cliente
+
       - name: Run Playwright tests
         run: npm run test  
         working-directory: ./cliente
