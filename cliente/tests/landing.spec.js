@@ -21,10 +21,6 @@ describe('Home Section', () => {
 
 describe('Carousel Section', () => {
   test('Section Carousel, subttitle is showing', async ({ page }) => {
-    await expect(page.locator('.section-title')).toContainText([
-      /\w/g,
-      /\w/g,
-      /\w/g
-    ])
+    await expect(page.locator('.section-title')).toContainText([/\w/g])
   })
 })
