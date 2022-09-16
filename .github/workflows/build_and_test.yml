@@ -31,8 +31,6 @@ jobs:
         with:
           browsers: chromium
 
-      - run: npm install --frozen-lockfile
-        working-directory: ./cliente
       - run: npm run test
         working-directory: ./cliente
   
