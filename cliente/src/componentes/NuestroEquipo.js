@@ -1,14 +1,17 @@
 import React from 'react'
 import '../styles/NuestroEquipo.css'
+import { motion } from "framer-motion"
 
 export const NuestroEquipo = () => {
   return (
     <div className='nuestro-equipo flex'>
-      <div className='section-title'>
+      <motion.div className='section-title'
+      whileInView={{ scale: [2, 1] }}>
         NUESTRO <span style={{ color: '#E35961' }}> EQUIPO🏆</span>
-      </div>
+      </motion.div>
       <div className='nuestro-equipo-container '>
-        <div className='nuestro-equipo-item flex'>
+        <motion.div className='nuestro-equipo-item flex'
+        whileInView={{ x: [-450, 0] }}>
           <div className='nuestro-equipo-item-img'>
             <img
               src='/assets/team/Claudia.jpg'
@@ -16,7 +19,8 @@ export const NuestroEquipo = () => {
               style={{ border: '7px solid #a75bf2' }}
             />
           </div>
-          <div className='nuestro-equipo-item-container'>
+          <div className='nuestro-equipo-item-container'
+          >
             <div className='nuestro-equipo-item-name'>Claudia Pagoaga</div>
             <div className='nuestro-equipo-item-job'>
               Coordinador del Centro de Emprendimiento <br /> e Innovación
@@ -26,8 +30,9 @@ export const NuestroEquipo = () => {
             </div>
             <hr style={{ border: '2px solid #a75bf2' }} />
           </div>
-        </div>
-        <div className='nuestro-equipo-item flex'>
+        </motion.div>
+        <motion.div className='nuestro-equipo-item flex'
+        whileInView={{ x: [450, 0] }}>
           <div className='nuestro-equipo-item-img'>
             <img
               src='/assets/team/Dax.jpg'
@@ -56,8 +61,9 @@ export const NuestroEquipo = () => {
               }}
             />
           </div>
-        </div>
-        <div className='nuestro-equipo-item flex'>
+        </motion.div>
+        <motion.div className='nuestro-equipo-item flex'
+        whileInView={{ x: [-450, 0] }}>
           <div className='nuestro-equipo-item-img '>
             <img
               src='/assets/team/Carlos.jpg'
@@ -80,7 +86,7 @@ export const NuestroEquipo = () => {
               }}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

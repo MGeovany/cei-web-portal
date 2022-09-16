@@ -4,16 +4,10 @@ import { ActividadesCard } from './ActividadesCard'
 import { Arrow } from '../utils/svgIcons'
 import '../styles/Calendario.css'
 import { Carousel } from '@mantine/carousel'
-import { useMediaQuery } from '@mantine/hooks'
-import { useMantineTheme } from '@mantine/core'
 import Autoplay from 'embla-carousel-autoplay'
 
 
 export const Actividades = (props) => {
-  const theme = useMantineTheme()
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
-  
-  
   const data = props.data
   const slides = data.map((item, i) => (
     <Carousel.Slide key={i}>

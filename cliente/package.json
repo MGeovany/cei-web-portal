@@ -20,6 +20,7 @@
     "dayjs": "^1.11.5",
     "embla-carousel-autoplay": "^7.0.3",
     "embla-carousel-react": "^7.0.3",
+    "framer-motion": "^7.3.5",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-big-calendar": "^1.5.0",
