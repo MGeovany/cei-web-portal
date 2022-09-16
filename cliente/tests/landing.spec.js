@@ -1,16 +1,14 @@
 // @ts-check
-
 const { test, expect } = require('@playwright/test')
-const { describe } = test
 
 test.beforeEach(async ({ page, browserName }) => {
+  test.skip(browserName === 'firefox', 'Firefox is not supported yet')
+  test.skip(browserName === 'webkit', 'Webkit is not supported yet')
   await page.goto('http://localhost:3000/')
-  test.skip(browserName === 'firefox', 'Still working on it')
-  test.skip(browserName === 'webkit', 'Still working on it')
 })
 
-describe('Home Section', () => {
-  test('Section Home, title is showing', async ({ page }) => {
+test.describe('Home Section', () => {
+  test('Section Home, title should be showing', async ({ page }) => {
     await expect(page.locator('.home__title')).toContainText(/\w/g)
   })
 
@@ -19,7 +17,7 @@ describe('Home Section', () => {
   })
 })
 
-describe('Carousel Section', () => {
+test.describe('Carousel Section', () => {
   test('Section Carousel, subttitle is showing', async ({ page }) => {
     await expect(page.locator('.section-title')).toContainText([/\w/g])
   })
