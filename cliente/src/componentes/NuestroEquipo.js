@@ -6,12 +6,12 @@ export const NuestroEquipo = () => {
   return (
     <div className='nuestro-equipo flex'>
       <motion.div className='section-title'
-      whileInView={{ scale: [2, 1] }}>
+      whileInView={{ rotate: [10,-10,10,0] }}>
         NUESTRO <span style={{ color: '#E35961' }}> EQUIPO🏆</span>
       </motion.div>
       <div className='nuestro-equipo-container '>
         <motion.div className='nuestro-equipo-item flex'
-        whileInView={{ x: [-450, 0] }}>
+        whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>
           <div className='nuestro-equipo-item-img'>
             <img
               src='/assets/team/Claudia.jpg'
@@ -32,7 +32,7 @@ export const NuestroEquipo = () => {
           </div>
         </motion.div>
         <motion.div className='nuestro-equipo-item flex'
-        whileInView={{ x: [450, 0] }}>
+        whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>
           <div className='nuestro-equipo-item-img'>
             <img
               src='/assets/team/Dax.jpg'
@@ -63,7 +63,7 @@ export const NuestroEquipo = () => {
           </div>
         </motion.div>
         <motion.div className='nuestro-equipo-item flex'
-        whileInView={{ x: [-450, 0] }}>
+        whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>
           <div className='nuestro-equipo-item-img '>
             <img
               src='/assets/team/Carlos.jpg'

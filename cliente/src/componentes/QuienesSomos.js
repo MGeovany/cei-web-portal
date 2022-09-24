@@ -1,6 +1,10 @@
-import React from 'react'
+import {React } from "react";
 import '../styles/QuienesSomos.css'
-import { motion } from "framer-motion"
+import { motion} from "framer-motion";
+
+
+
+
 
 export const QuienesSomos = () => {
   return (
@@ -8,9 +12,7 @@ export const QuienesSomos = () => {
       <motion.div className='section-title' whileInView={{ scale: [1.0, 1.3, 1.0] }}>
         QUIENES <span style={{ color: '#e1575f' }}>SOMOS</span>🍃
       </motion.div>
-      <motion.div className='quienes-somos-text flex'
-      whileInView={{ x: [-450, 0] }}
-      >
+      <motion.div className='quienes-somos-text flex' whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>
         <div className='quienes-somos-text-title'>
           <h1>¿QUÉ ES EL CEI?</h1>
           <div>

@@ -3,6 +3,7 @@ import '../styles/CarouselHome.css'
 import { Carousel } from '@mantine/carousel'
 import { CarouselCard } from './CarouselCard'
 import { IconArrowRight, IconArrowLeft } from '@tabler/icons'
+import { motion } from "framer-motion"
 import Autoplay from 'embla-carousel-autoplay'
 import { useRef } from 'react'
 const data = [
@@ -43,9 +44,9 @@ export const CarouselHome = () => {
   ))
   return (
     <div className='carousel-home'>
-      <div className='section-title'>
+        <motion.div whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }} className='section-title'>
         Te mantenemos al tanto de lo que sucede <br /> a tu alrededor 🤠
-      </div>
+      </motion.div>
       <Carousel
         plugins={[autoplay.current]}
         onMouseEnter={autoplay.current.stop}

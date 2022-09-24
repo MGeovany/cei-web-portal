@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from "framer-motion"
+
 
 import '../styles/Home.css'
 
@@ -27,11 +29,11 @@ export const Home = () => {
           </Link>
         </div>
 
-        <div className='home__subtitle'>
+        <motion.div  whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }} className='home__subtitle'>
           Te lanzamos con toda la fuerza posible, <br />
           porque sabemos que la necesitas y porque no es <br />
           momento de ponerse límites.
-        </div>
+        </motion.div>
       </div>
       <div className='home__img'>
         <img src='/assets/people/Startup.png' alt='Startup' />
