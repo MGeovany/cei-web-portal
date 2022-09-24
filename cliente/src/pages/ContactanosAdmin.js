@@ -5,26 +5,19 @@ import { showNotification } from '@mantine/notifications'
 import React, { useEffect, useState } from 'react'
 import { IconCheck } from '@tabler/icons'
 import { Carousel } from '@mantine/carousel';
+import { useModals } from '@mantine/modals'
+import { useMantineTheme } from '@mantine/core'
+
+
+
+const  sizemodal = window.innerWidth > 1000 ? 'calc(31%)' : 'calc(80% - 0rem)';
+
 
 export const ContactanosAdmin = () => {
   const [contactanos, setContactanos] = useState([])
+  const modals = useModals()
+  const theme = useMantineTheme()
 
-  const deleteContactanos = async (id) => {
-    try {
-      await fetch(`https://cei1.herokuapp.com/1.0.0/Contactanos/${id}`, {
-        method: 'DELETE'
-      })
-      setContactanos(contactanos.filter((contactanos) => contactanos.id !== id))
-      showNotification({
-        icon: <IconCheck />,
-        title: 'Rechazado',
-        color: 'green',
-        message: 'Contacto eliminado correctamente!'
-      })
-    } catch (err) {
-      console.error(err.message)
-    }
-  }
 
   useEffect(() => {
     setContactanos(contactanos)
@@ -40,6 +33,28 @@ export const ContactanosAdmin = () => {
     }
     fetchContactanos()
   }, [])
+
+
+  const verEliminarContactoModal = (id_contacto) => {
+    const id = modals.openContextModal('EliminarContactoModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'sm',
+      size: sizemodal,
+      innerProps: {
+        id:id_contacto,
+        contactanos,
+        setContactanos
+      }
+    })
+  }
+
+
 
   const rows = contactanos.map((element, index) => (
     <tr key={element.id}>
@@ -60,7 +75,7 @@ export const ContactanosAdmin = () => {
           <div className='btn__editar'>Aceptar</div>
           <div
             className='btn__eliminar'
-            onClick={(e) => deleteContactanos(element.id, e)}
+            onClick={(e) => verEliminarContactoModal(element.id, e)}
           >
             Rechazar
           </div>
@@ -86,7 +101,7 @@ export const ContactanosAdmin = () => {
            <div className='btn__editar'>Aceptar</div>
            <div
              className='btn__eliminar'
-             onClick={(e) => deleteContactanos(element.id, e)}
+             onClick={(e) => verEliminarContactoModal(element.id, e)}
            >Rechazar
           </div>
         </div>
