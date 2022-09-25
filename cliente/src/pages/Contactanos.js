@@ -3,6 +3,7 @@ import '../styles/Contactanos.css'
 import { TextInput, Textarea, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
 import { showNotification } from '@mantine/notifications'
+import { motion } from "framer-motion"
 import {
   IconCheck,
   IconBrandTelegram,
@@ -63,9 +64,9 @@ export const Contactanos = () => {
   return (
     <div className='contactanos'>
       <div className='container_contactanos flex'>
-        <div className='section-title titulo_contactanos'>
+        <motion.div animate={{ rotateX: 360 }} transition={{  duration: 1, repeat: Infinity, repeatDelay: 5, delay: 0.2 }} className='section-title titulo_contactanos'>
           PONTE EN <span style={{ color: '#e1575f' }}>CONTACTO📢</span>
-        </div>
+        </motion.div>
         <div className='contactanos-form'>
           <form
             className='form-contactanos'

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { CasoCarousel } from '../componentes/CasoCarousel'
+import { motion } from "framer-motion"
 
 import '../styles/Casos.css'
 
@@ -526,9 +527,10 @@ export const Casos = () => {
   return (
     <div className='casos'>
       <div className='casos-container'>
-        <div className='casos-title section-title'>
+        <motion.div animate={{ scale: [1,1.2,1] }}
+                transition={{ type: "spring", duration: 5, bounce: 0.6 }} className='casos-title section-title'>
           CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
-        </div>
+        </motion.div>
         <CasoCarousel data={casosTec} section={'Tecnología'} />
         <CasoCarousel data={casosCom} section={'Comercial'} />
         <CasoCarousel data={casosSoc} section={'Social'} />

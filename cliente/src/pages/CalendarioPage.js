@@ -3,6 +3,7 @@ import React from 'react'
 import { Calendario } from '../componentes/Calendario'
 import '../styles/Calendario.css'
 import { Navbar } from '../componentes/Navbar'
+import { motion } from "framer-motion"
 import { Actividades } from '../componentes/Actividades'
 
 // static data, this will be loaded from a server in production.
@@ -289,9 +290,9 @@ export const CalendarioPage = () => {
   return (
     <div className='casos'>
       <div className='casos-container'>
-        <div className='title-calendario'>
+        <motion.div animate={{ rotateX: 360 }} transition={{  duration: 1, repeat: Infinity, repeatDelay: 5, delay: 0.2 }} className='title-calendario'>
           CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
-        </div>
+        </motion.div>
         <Calendario events={events} />
         <Actividades
           data={data}

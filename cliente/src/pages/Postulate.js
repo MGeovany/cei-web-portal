@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import '../styles/Postulate.css'
+import { motion } from "framer-motion"
 import {
   TextInput,
   Button,
@@ -36,10 +37,10 @@ export const Postulate = () => {
     <div>
       <div className='postulate'>
         <div className='container_postulate flex'>
-          <div className='section-title '>
+          <motion.div animate={{ rotateX: -360 }} transition={{  duration: 1, repeat: Infinity, repeatDelay: 5, delay: 0.2 }} className='section-title '>
             POSTULA TU
             <span style={{ color: '#e1575f' }}> IDEA💡</span>
-          </div>
+          </motion.div>
           <form className='form-postulate'>
             <div className='postulate-grid'>
               <div className='postulate-grid-item'>

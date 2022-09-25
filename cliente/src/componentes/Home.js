@@ -20,12 +20,12 @@ export const Home = () => {
 
         <div className='home__btns'>
           <Link to='/postulate'>
-            <div className='home__btn__propuesta'>Enviar Propuesta</div>
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} className='home__btn__propuesta'>Enviar Propuesta</motion.div>
           </Link>
           <Link to='/blog'>
-            <div className='home__btn__blog'>
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} className='home__btn__blog'>
               Ver Nuestro Blog <Arrow fill='#ffffff' width={24} height={23} />{' '}
-            </div>
+            </motion.div>
           </Link>
         </div>
 
