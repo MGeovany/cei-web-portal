@@ -1,23 +1,17 @@
 /* eslint space-before-function-paren: ["error", { "anonymous": "never", "named": "always" }] */
 import '../styles/ContactanosAdmin.css'
 import { Table } from '@mantine/core'
-import { showNotification } from '@mantine/notifications'
 import React, { useEffect, useState } from 'react'
-import { IconCheck } from '@tabler/icons'
-import { Carousel } from '@mantine/carousel';
+import { Carousel } from '@mantine/carousel'
 import { useModals } from '@mantine/modals'
 import { useMantineTheme } from '@mantine/core'
 
-
-
-const  sizemodal = window.innerWidth > 1000 ? 'calc(31%)' : 'calc(80% - 0rem)';
-
+const sizemodal = window.innerWidth > 1000 ? 'calc(31%)' : 'calc(80% - 0rem)'
 
 export const ContactanosAdmin = () => {
   const [contactanos, setContactanos] = useState([])
   const modals = useModals()
   const theme = useMantineTheme()
-
 
   useEffect(() => {
     setContactanos(contactanos)
@@ -34,9 +28,8 @@ export const ContactanosAdmin = () => {
     fetchContactanos()
   }, [])
 
-
   const verEliminarContactoModal = (id_contacto) => {
-    const id = modals.openContextModal('EliminarContactoModal', {
+    modals.openContextModal('EliminarContactoModal', {
       overlayColor:
         theme.colorScheme === 'dark'
           ? theme.colors.dark[9]
@@ -47,14 +40,12 @@ export const ContactanosAdmin = () => {
       padding: 'sm',
       size: sizemodal,
       innerProps: {
-        id:id_contacto,
+        id: id_contacto,
         contactanos,
         setContactanos
       }
     })
   }
-
-
 
   const rows = contactanos.map((element, index) => (
     <tr key={element.id}>
@@ -86,55 +77,25 @@ export const ContactanosAdmin = () => {
 
   const rowsCard_responsive = contactanos.map((element, index) => (
     <Carousel.Slide key={element.id}>
-    <div  className='card_contactanos card_color'>
-        <div>
-          {element.nombre}
-        </div>
+      <div className='card_contactanos card_color'>
+        <div>{element.nombre}</div>
         <div className='contactactos_card card_color'>
           {element.email}
           <span> +504 {element.telefono}</span>
         </div>
-        <div className='contenido_card card_color'>
-          {element.comentario}
-        </div>
-        <div >
-           <div className='btn__editar'>Aceptar</div>
-           <div
-             className='btn__eliminar'
-             onClick={(e) => verEliminarContactoModal(element.id, e)}
-           >Rechazar
+        <div className='contenido_card card_color'>{element.comentario}</div>
+        <div>
+          <div className='btn__editar'>Aceptar</div>
+          <div
+            className='btn__eliminar'
+            onClick={(e) => verEliminarContactoModal(element.id, e)}
+          >
+            Rechazar
           </div>
         </div>
-    </div>
+      </div>
     </Carousel.Slide>
-
-    // <tr key={element.id}>
-    //   <td>
-    //     <div className='td__content'>{element.nombre}</div>
-    //   </td>
-    //   <td>
-    //     <div className='td__content'>{element.email}</div>
-    //   </td>
-    //   <td>
-    //     <div className='td__content'>+504 {element.telefono}</div>
-    //   </td>
-    //   <td>
-    //     <div className='td__content'>{element.comentario}</div>
-    //   </td>
-    //   <td>
-    //     <div className='tab__btns flex'>
-    //       <div className='btn__editar'>Aceptar</div>
-    //       <div
-    //         className='btn__eliminar'
-    //         onClick={(e) => deleteContactanos(element.id, e)}
-    //       >
-    //         Rechazar
-    //       </div>
-    //     </div>
-    //   </td>
-    // </tr>
   ))
-
 
   return (
     <>
@@ -149,35 +110,33 @@ export const ContactanosAdmin = () => {
           </div>
           <div className='contactanos__table__container'>
             <div className='table_contactanos'>
-                <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
-                  <thead>
-                    <tr>
-                      <th>
-                        <div className='th__title'>Nombre</div>
-                      </th>
+              <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
+                <thead>
+                  <tr>
+                    <th>
+                      <div className='th__title'>Nombre</div>
+                    </th>
 
-                      <th>
-                        <div className='th__title'>Correo</div>
-                      </th>
-                      <th>
-                        <div className='th__title'>Celular</div>
-                      </th>
-                      <th>
-                        <div className='th__title'>Mensaje</div>
-                      </th>
+                    <th>
+                      <div className='th__title'>Correo</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Celular</div>
+                    </th>
+                    <th>
+                      <div className='th__title'>Mensaje</div>
+                    </th>
 
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>{rows}</tbody>
-                </Table>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>{rows}</tbody>
+              </Table>
             </div>
             <div className='table_contactosResponsive'>
-            <Carousel slideSize="85%" height={500} slideGap="md">
-              
+              <Carousel slideSize='85%' height={500} slideGap='md'>
                 {rowsCard_responsive}
-              
-            </Carousel>
+              </Carousel>
             </div>
           </div>
         </div>

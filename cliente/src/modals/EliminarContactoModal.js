@@ -1,27 +1,9 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { showNotification } from '@mantine/notifications'
 import { IconCheck } from '@tabler/icons'
-import { createStyles } from '@mantine/core'
 import '../styles/EliminarContactoModal.css'
 import { closeModal } from '@mantine/modals'
-
-// const use_Styles = createStyles((theme, _params, getRef) => ({
-//   blogTablastyle:{
-//     padding:'0px',
-//     width:'100%',
-//     '@media (max-width: 550px)': {
-//       display:'none'
-//       },
-//   },
-//   blogTablastyleR:{
-//     padding:'0px',
-//     width:'100%',
-//     '@media (min-width: 550px)': {
-//       display:'none'
-//       },
-//   }
-// }));
 
 export const EliminarContactoModal = ({ context, id, innerProps }) => {
   console.log(innerProps.id)
@@ -47,7 +29,6 @@ export const EliminarContactoModal = ({ context, id, innerProps }) => {
 
     closeModal()
   }
-  // const { classes } = use_Styles();
 
   return (
     <>
