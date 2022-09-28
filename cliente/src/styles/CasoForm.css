@@ -1,122 +1,185 @@
-.asset__col {
-  flex-direction: column;
-  align-items: center;
+
+  .asset__col {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .form__desc__button {
+    padding-top: 100px;
+    color: var(--orange);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding-left: 20px;
+  }
+
+  .form__desc__button:hover {
+    transition: all 0.3s ease-in-out;
+    opacity: 0.6;
+  }
+
+  .form__int__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .form__caso__button {
+    padding-top: 100px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .form__caso__button:hover {
+    transition: all 0.3s ease-in-out;
+    opacity: 0.6;
+  }
+
+  .file-btn {
+    margin-top: 10px;
+  }
+
+  .file-btn-main {
+    font-family: var(--poppins-regular);
+  }
+
+  .form__main__file {
+    padding-top: 5px;
+  }
+  .form__main__file > input {
+    padding-top: 10px;
+  }
+
+
+@media only screen and  (min-width: 1050px) {
+
+
+  .form__caso {
+    width: 100%;
+
+    font-family: var(--poppins-regular);
+  }
+
+  .form__proyecto {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .form__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 540px;
+    flex-wrap: wrap;
+
+    padding: 0px 90px 0px 0;
+  }
+
+  .form__main__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .s1 {
+    width: 45%;
+  }
+  .s2 {
+    width: 50%;
+  }
+  .s3 {
+    width: 100%;
+  }
+
+  .form__main__section > div {
+    width: 100%;
+  }
+
+  .file-btn {
+    font-family: var(--poppins-regular);
+  }
+
+  .form__integrantes {
+    display: flex;
+    flex-direction: column;
+
+    width: 70%;
+    height: 100%;
+
+    padding: 20px 30px;
+
+    border-left: 2px solid rgba(36, 95, 66, 0.1);
+  }
+
+  .form__int {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+
+  .asset__m10_r
+  {
+    margin-left: 30px;
+  }
+
 }
 
-.form__caso {
-  width: 100%;
+/* Responsive form */
 
-  font-family: var(--poppins-regular);
-}
 
-.form__proyecto {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
 
-.form__main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  height: 540px;
-  flex-wrap: wrap;
+@media only screen and  (max-width: 1050px) {
+  .form__proyecto_responsive{
 
-  padding: 0px 90px 0px 0;
-}
+  }
+  
+  .form__main_responsive
+  {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .form__main__section_responsive
+  {
+     width: 90%;
+  }
+  
+  
+  
+  
+  .responsive_btn_file{
+    border: solid;
+  
+  }
+  
+  
+  
+  .form__integrantes_responsive
+  {
+  
+  }
 
-.form__main__section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
+  .btn_responsive
+  {
+    padding-bottom: 20px;
+  }
 
-.s1 {
-  width: 45%;
-}
-.s2 {
-  width: 50%;
-}
-.s3 {
-  width: 100%;
-}
+  .textarea_responsive
+  {
+    height: 200px;
+  }
 
-.form__main__section > div {
-  width: 100%;
-}
-
-.file-btn {
-  font-family: var(--poppins-regular);
-}
-
-.form__integrantes {
-  display: flex;
-  flex-direction: column;
-
-  width: 70%;
-  height: 100%;
-
-  padding: 20px 30px;
-
-  border-left: 2px solid rgba(36, 95, 66, 0.1);
-}
-
-.form__int {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.form__int__btns {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.form__caso__button {
-  padding-top: 100px;
-  color: var(--primary-color);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.form__caso__button:hover {
-  transition: all 0.3s ease-in-out;
-  opacity: 0.6;
-}
-
-.file-btn {
-  margin-top: 10px;
-}
-
-.file-btn-main {
-  font-family: var(--poppins-regular);
-}
-
-.form__main__file {
-  padding-top: 5px;
-}
-.form__main__file > input {
-  padding-top: 10px;
-}
-
-.form__desc__button {
-  padding-top: 100px;
-  color: var(--orange);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  padding-left: 20px;
-}
-
-.form__desc__button:hover {
-  transition: all 0.3s ease-in-out;
-  opacity: 0.6;
 }

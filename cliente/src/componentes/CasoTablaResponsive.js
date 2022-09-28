@@ -94,7 +94,7 @@ export const CasoTablaResponsive = () => {
   const rows = elements.map((element) => (
 
 
-    <Carousel.Slide className='card_table_responsive'> 
+    <Carousel.Slide className='card_table_responsive' key={element.nombre}> 
 
         <div>
             <div className='header_nav_Class'>

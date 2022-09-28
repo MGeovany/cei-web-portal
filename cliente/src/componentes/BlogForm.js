@@ -4,6 +4,10 @@ import { Input, Textarea } from '@mantine/core'
 import { useForm } from '@mantine/form'
 
 export const BlogForm = () => {
+
+  const  min_rows = window.innerWidth > 1000 ? 10 : 5;
+
+
   const form = useForm({
     initialValues: {
       email: '',
@@ -19,9 +23,9 @@ export const BlogForm = () => {
         className='form__caso__center'
         onSubmit={form.onSubmit((values) => console.log(values))}
       >
-        <div className='form__proyecto'>
-          <div className='form__main__center'>
-            <div className='form__main__section s1'>
+        <div className='form__proyecto form__proyecto_responsive '>
+          <div className='form__main__center ' >
+            <div className='form__main__section form__main__section_responsive'>
               <Input.Wrapper
                 className='font-sen'
                 id='input-nombre-proyecto'
@@ -31,7 +35,7 @@ export const BlogForm = () => {
                 <Input id='input-nombre-proyecto' placeholder='Mi Blog' />
               </Input.Wrapper>
             </div>
-            <div className='form__main__section asset__m10 s1'>
+            <div className='form__main__section form__main__section_responsive'>
               <Input.Wrapper
                 className='font-sen'
                 id='input-nombre-proyecto'
@@ -42,7 +46,7 @@ export const BlogForm = () => {
               </Input.Wrapper>
             </div>
 
-            <div className='form__main__section s2'>
+            <div className='form__main__section s2 form__main__section_responsive'>
               <Textarea
                 minRows={2}
                 maxRows={15}
@@ -52,7 +56,7 @@ export const BlogForm = () => {
                 required
               />
             </div>
-            <div className='form__main__section s1'>
+            <div className='form__main__section s1 form__main__section_responsive'>
               <div className='form__main__file'>
                 <label htmlFor='file-btn-main' className='font-sen'>
                   Imagen <span style={{ color: 'red' }}>*</span>{' '}
@@ -65,19 +69,21 @@ export const BlogForm = () => {
               </div>
             </div>
 
-            <div className='form__main__section s3'>
+            <div className='form__main__section s3 form__main__section_responsive textarea_responsive'>
               <Textarea
-                minRows={13}
-                maxRows={15}
+                minRows={min_rows}
+                maxRows={10}
                 placeholder='Más Detalles'
                 label='Detalles'
                 className='font-sen'
                 required
               />
             </div>
-          </div>
+            <div className='add-blog font-sen form__main__section_responsive btn_responsive'>Agregar Blog</div>
         </div>
-        <div className='add-blog font-sen'>Agregar Blog</div>
+          </div>
+      
+  
       </form>
     </div>
   )

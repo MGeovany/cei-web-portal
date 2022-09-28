@@ -55,9 +55,9 @@ export const CasoForm = () => {
       className='form__caso'
       onSubmit={form.onSubmit((values) => createCaso(values))}
     >
-      <div className='form__proyecto'>
-        <div className='form__main'>
-          <div className='form__main__section s1'>
+      <div className='form__proyecto form__proyecto_responsive'>
+        <div className='form__main form__main_responsive'>
+          <div className='form__main__section form__main__section_responsive s1'>
             <NativeSelect
               data={['Tecnología', 'Comercial', 'Social', 'Salud']}
               placeholder='Select...'
@@ -66,8 +66,8 @@ export const CasoForm = () => {
               {...form.getInputProps('seccionCasos')}
             />
           </div>
-          <div className='form__main__section asset__m10 s1'>
-            <TextInput
+          <div className='form__main__section form__main__section_responsive asset__m10_r s1'>
+            <Input.Wrapper
               className='font-sen'
               id='input-nombre-proyecto'
               label='Nombre del Proyecto'
@@ -76,8 +76,8 @@ export const CasoForm = () => {
             />
           </div>
 
-          <div className='form__main__section s2'>
-            <TextInput
+          <div className='form__main__section form__main__section_responsive s2'>
+            <Input.Wrapper
               className='font-sen'
               id='input-demo'
               label='Breve Descripción'
@@ -85,7 +85,7 @@ export const CasoForm = () => {
               {...form.getInputProps('imagenEncabezado')}
             />
           </div>
-          <div className='form__main__section s1'>
+          <div className='form__main__section form__main__section_responsive s1'>
             <div className='form__main__file'>
               <label htmlFor='file-btn-main' className='font-sen'>
                 Imagen de proyecto <span style={{ color: 'red' }}>*</span>{' '}
@@ -98,7 +98,7 @@ export const CasoForm = () => {
             </div>
           </div>
 
-          <div className='form__main__section s3'>
+          <div className='form__main__section form__main__section_responsive s3'>
             <Textarea
               minRows={10}
               maxRows={15}
@@ -116,33 +116,33 @@ export const CasoForm = () => {
             <hr id='hr__green' />
           </div>
           <div className='form__int'>
-            <div className='form__int__section s1'>
-              <TextInput
+            <div className='form__int__section form__main__section_responsive s1'>
+              <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
                 label='Nombre'
                 placeholder='Nombre de integrante'
               />
             </div>
-            <div className='form__int__section s2'>
+            <div className='form__int__section form__main__section_responsive s2'>
               <TextInput
                 className='font-sen'
                 label='Email'
                 placeholder='your@email.com'
               />
             </div>
-            <div className='form__main__section'>
+            <div className='form__main__section form__main__section_responsive'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
-            <div className='form__int__section s1'>
-              <TextInput
+            <div className='form__int__section form__main__section_responsive s1'>
+              <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
                 label='Nombre'
                 placeholder='Nombre de integrante'
               />
             </div>
-            <div className='form__int__section s2'>
+            <div className='form__int__section form__main__section_responsive s2'>
               <TextInput
                 className='font-sen'
                 label='Email'
@@ -150,10 +150,10 @@ export const CasoForm = () => {
                 {...form.getInputProps('email')}
               />
             </div>
-            <div className='form__main__section'>
+            <div className='form__main__section form__main__section_responsive'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
-            <div className='form__int__section s1'>
+            <div className='form__int__section form__main__section_responsive s1'>
               <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
@@ -165,17 +165,17 @@ export const CasoForm = () => {
                 />
               </Input.Wrapper>
             </div>
-            <div className='form__int__section s2'>
+            <div className='form__int__section form__main__section_responsive  s2'>
               <TextInput
                 className='font-sen'
                 label='Email'
                 placeholder='your@email.com'
               />
             </div>
-            <div className='form__main__section'>
+            <div className='form__main__section form__main__section_responsive'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
-            <div className='form__int__section s1'>
+            <div className='form__int__section form__main__section_responsive s1'>
               <Input.Wrapper
                 className='font-sen'
                 id='input-int-1'
@@ -187,14 +187,14 @@ export const CasoForm = () => {
                 />
               </Input.Wrapper>
             </div>
-            <div className='form__int__section s2'>
+            <div className='form__int__section form__main__section_responsive s2'>
               <TextInput
                 className='font-sen'
                 label='Email'
                 placeholder='your@email.com'
               />
             </div>
-            <div className='form__main__section'>
+            <div className='form__main__section form__main__section_responsive'>
               <input className='file-btn' type='file' name='archivosubido' />
             </div>
           </div>
