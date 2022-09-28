@@ -257,13 +257,13 @@ const data = [
     ]
   }
 ]
-const Title=()=><h3>Jaula de Jaguares</h3>
+const Title = () => <h3>Jaula de Jaguares</h3>
 const events = [
   {
     title: 'Jaila de Jaguares',
     allDay: true,
-    start: new Date(2022,7, 12),
-    end: new Date(2022,7,12)
+    start: new Date(2022, 7, 12),
+    end: new Date(2022, 7, 12)
   },
   {
     title: 'Webinar de Emprendimiento',
@@ -289,7 +289,7 @@ export const CalendarioPage = () => {
   return (
     <div className='casos'>
       <div className='casos-container'>
-        <div className='casos-title section-title'>
+        <div className='title-calendario'>
           CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
         </div>
         <Calendario events={events} />

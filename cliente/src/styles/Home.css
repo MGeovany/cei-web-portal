@@ -97,7 +97,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-.home__cnt {
+.home__subtitle {
   margin-top: 110px;
 
   font-size: 19px;
@@ -129,7 +129,7 @@
     font-size: 1.3rem;
     width: 100%;
   }
-  .home__cnt {
+  .home__subtitle {
     width: 100%;
   }
   .home__img > img {

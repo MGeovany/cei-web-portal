@@ -1,0 +1,38 @@
+name: Build and Test PR to Stagging
+
+on:
+  push:
+    branches: [ main, stagging ]
+  pull_request:
+    branches: [ main, stagging ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+    
+      - name: Installation of Node.js ${{ matrix.node-version }}
+        run: npm install --no-audit --no-fund --no-optional --force
+        working-directory: ./cliente
+    
+      - name: Testing Linter
+        run: npm run eslint
+        working-directory: ./cliente
+
+      - name: Running Test End to End
+        uses: cypress-io/github-action@v4
+        with:
+          command: npm run test:e2e
+          start: npm start
+          wait-on: http://localhost:3000
+          working-directory: ./cliente
+
+      
+  
