@@ -71,23 +71,30 @@ export const BlogTablaResponsive = () => {
     })
 
   const [events, setEvents] = useState(elements)
+  const sizemodal = window.innerWidth > 1000 ? 'calc(31%)' : 'calc(80% - 0rem)'
 
   const deleteElement = (name, e) => {
-    e.preventDefault()
 
-    showNotification({
-      id: 'load-data',
 
-      title: 'Eliminado',
-      color: 'blue',
-      message: `Blog eliminado correctamente! Blog de ${name}`
+    console.log(name)
+    modals.openContextModal('EliminarBlogsModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'sm',
+      size: sizemodal,
+      innerProps: {
+        name:name,
+        events:events,
+        setEvents:setEvents,
+        elements:elements
+      }
     })
 
-    const newEvents = [...events]
-    newEvents.splice(name, 1)
-    setEvents(newEvents)
-
-    elements.splice(name, 1)
   }
 
   useEffect(() => {

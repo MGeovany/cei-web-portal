@@ -70,19 +70,26 @@ export const CasoTablaResponsive = () => {
 
 
   const [events, setEvents] = useState(elements)
+  const sizemodal = window.innerWidth > 1000 ? 'calc(31%)' : 'calc(80% - 0rem)'
 
   const deleteElement = (name, e) => {
-    e.preventDefault()
-
-    showNotification({
-      id: 'load-data',
-
-      title: 'Eliminado',
-      color: 'blue',
-      message: `Caso eliminado correctamente! Nombre: ${name}`
+    modals.openContextModal('EliminarCasosModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'sm',
+      size: sizemodal,
+      innerProps: {
+        name:name,
+        events:events,
+        setEvents:setEvents,
+        elements:elements
+      }
     })
-
-    elements.splice(name, 1)
   }
 
   useEffect(() => {
@@ -116,7 +123,7 @@ export const CasoTablaResponsive = () => {
                     <div className='btn__editar' onClick={EditarBlogModal}>
                             Editar
                     </div>
-                    <div className='btn__eliminar' onClick={(e) => deleteElement(element.autor, e)}>
+                    <div className='btn__eliminar' onClick={(e) => deleteElement(element.nombre, e)}>
                             Eliminar
                     </div>
                 </div>

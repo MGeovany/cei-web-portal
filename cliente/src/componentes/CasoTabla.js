@@ -66,19 +66,28 @@ export const CasoTabla = () => {
   }
 
   const [events, setEvents] = useState(elements)
-  const deleteElement = (name, e) => {
-    e.preventDefault()
-    const newEvents = [...events]
-    newEvents.splice(name, 1)
-    setEvents(newEvents)
 
-    showNotification({
-      title: 'Eliminado',
-      color: 'blue',
-      message: `Caso eliminado correctamente! Nombre: ${name}`
+  const sizemodal = window.innerWidth > 1000 ? 'calc(31%)' : 'calc(80% - 0rem)'
+
+  const deleteElement = (name, e) => {
+    modals.openContextModal('EliminarCasosModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'sm',
+      size: sizemodal,
+      innerProps: {
+        name:name,
+        events:events,
+        setEvents:setEvents,
+        elements:elements
+      }
     })
 
-    elements.splice(name, 1)
   }
 
   useEffect(() => {
