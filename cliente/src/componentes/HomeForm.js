@@ -3,7 +3,7 @@ import { useForm } from '@mantine/form'
 import React from 'react'
 import { useState, useRef } from 'react'
 import { FileButton, Group, Text } from '@mantine/core'
-export const HomeForm = () => {
+export const HomeForm = ({ setOpened }) => {
   const [file, setFile] = useState(null)
   const resetRef = useRef(null)
 
@@ -429,6 +429,7 @@ export const HomeForm = () => {
                   boxShadow: '3px 3px 17px #00000029',
                   backgroundColor: '#e1575f'
                 }}
+                onClick={() => setOpened()}
               >
                 Cancelar
               </Button>
