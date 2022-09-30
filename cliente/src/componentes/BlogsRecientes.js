@@ -84,7 +84,7 @@ const blogs = [
 ]
 
 export const BlogsRecientes = () => {
-  const [dataBlog, setDataBlog] = useState({})
+  const [dataBlog, setDataBlog] = useState(blogs)
 
   useEffect(() => {
     const fetchContactanos = async () => {
@@ -95,11 +95,12 @@ export const BlogsRecientes = () => {
     fetchContactanos()
   }, [])
 
-  console.log('dataBlog', dataBlog)
+  console.log('dataBlog object', Object.values(dataBlog))
+  console.log('blog madafukin real', blogs)
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
 
-  const slides = Object.values(blogs).map((item, i) => (
+  const slides = Object.values(dataBlog)?.map((item, i) => (
     <Carousel.Slide key={i}>
       <BlogCard {...item} />
     </Carousel.Slide>

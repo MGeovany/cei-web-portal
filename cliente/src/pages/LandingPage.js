@@ -13,7 +13,7 @@ export const LandingPage = () => {
     const fetchContactanos = async () => {
       const response = await fetch('https://cei1.herokuapp.com/1.0.0/inicio')
       const data = await response.json()
-      setDataHome(data[1])
+      setDataHome(data[0])
     }
     fetchContactanos()
   }, [])

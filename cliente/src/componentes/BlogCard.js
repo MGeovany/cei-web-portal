@@ -5,7 +5,15 @@ import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import { useMantineTheme } from '@mantine/core'
 
-export const BlogCard = ({ dataBlog }) => {
+export const BlogCard = ({
+  cuerpo,
+  fechaCreado,
+  id,
+  imagenEncabezado,
+  tipo,
+  titulo,
+  usuarioCreador
+}) => {
   const modals = useModals()
   const theme = useMantineTheme()
 
@@ -23,10 +31,10 @@ export const BlogCard = ({ dataBlog }) => {
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: dataBlog?.titulo,
-        autor: dataBlog?.usuarioCreador,
-        fecha: dataBlog?.fechaCreador,
-        desc: dataBlog?.cuerpo
+        titulo: titulo,
+        autor: usuarioCreador,
+        fecha: fechaCreado,
+        desc: cuerpo
       }
     })
 
@@ -44,7 +52,7 @@ export const BlogCard = ({ dataBlog }) => {
     title: {
       fontFamily: `Greycliff CF, ${theme.fontFamily}`,
       fontWeight: 900,
-      color: theme.white,
+      color: theme.black,
       lineHeight: 1.2,
       fontSize: 25,
       marginTop: theme.spacing.xs,
@@ -52,8 +60,8 @@ export const BlogCard = ({ dataBlog }) => {
     },
 
     category: {
-      color: theme.white,
-      opacity: 0.7,
+      color: theme.gray,
+      opacity: 0.2,
       fontWeight: 700,
       textTransform: 'uppercase'
     }
@@ -66,15 +74,15 @@ export const BlogCard = ({ dataBlog }) => {
       shadow='md'
       p='xl'
       radius='md'
-      sx={{ backgroundImage: `url(${dataBlog?.imgenEncabezado})` }}
+      sx={{ backgroundImage: `url(${imagenEncabezado})` }}
       className={classes.card}
     >
       <div>
         <Text align='left' className={classes.category} size='xs'>
-          {dataBlog?.fechaCreado}
+          {fechaCreado}
         </Text>
         <Title order={3} className={classes.title}>
-          {dataBlog?.titulo}
+          {titulo}
         </Title>
       </div>
       <Button variant='white' color='dark' onClick={openBlogModal}>

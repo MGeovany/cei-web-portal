@@ -43,7 +43,7 @@ export const CarouselHome = ({ dataHome }) => {
   ))
   return (
     <div className='carousel-home'>
-      <div className='section-title'>{dataHome.titulo_carousel}</div>
+      <div className='section-title'>{dataHome?.titulo_carousel}</div>
       <Carousel
         plugins={[autoplay.current]}
         onMouseEnter={autoplay.current.stop}
