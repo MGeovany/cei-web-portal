@@ -53,7 +53,7 @@ export const HomeAdmin = () => {
             <span style={{ color: '#e1575f' }}>Pagina Inicio</span>
           </div>
         </Group>
-        <HomeForm />
+        <HomeForm setOpened={setOpened} />
       </Modal>
     </>
   )

@@ -1,0 +1,83 @@
+
+.cont-principal
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cont-butons
+{
+    width:  60%;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+
+.cont-butons button
+{
+    padding: 10px ;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.cont-butons button:nth-child(1)
+{
+    background-color: rgb(255, 104, 104);
+    color: white;
+}
+
+.cont-butons button:nth-child(1):hover
+{
+    background-color: rgb(247, 82, 82);
+}
+
+
+.cont-butons button:nth-child(2)
+{
+    background-color: rgb(104, 174, 255);
+    color: white;
+}
+
+.cont-butons button:nth-child(2):hover
+{
+    background-color: rgb(82, 151, 247);
+}
+
+
+@media screen and (max-width:1024px) {
+    
+    .cont-butons
+{
+    width:  100%;
+
+}
+
+
+}
+
+
+@media screen and (max-width:688px) {
+    
+    .cont-butons
+    {
+        flex-direction: column;
+    }
+    
+    
+
+    .cont-butons button
+    {
+        width: 100%;
+        margin-top: 20px;
+
+    }
+
+}
