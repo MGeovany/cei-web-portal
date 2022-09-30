@@ -124,6 +124,74 @@ export const HomeForm = ({ setOpened }) => {
               required
             />
           </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Título'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Proyecto Manos de Vida'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Sección'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={24}>
+            <Textarea
+              minRows={2}
+              maxRows={15}
+              className='font-sen'
+              placeholder='Manos de Vida es una plataforma...'
+              label='Detalles'
+              required
+            />
+          </Grid.Col>
+
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Título'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Proyecto Manos de Vida'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Sección'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={24}>
+            <Textarea
+              minRows={2}
+              maxRows={15}
+              className='font-sen'
+              placeholder='Manos de Vida es una plataforma...'
+              label='Detalles'
+              required
+            />
+          </Grid.Col>
+
           {/* 
               QuienesSomos CONTENT
           */}
