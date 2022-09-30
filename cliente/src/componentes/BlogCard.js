@@ -5,7 +5,7 @@ import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import { useMantineTheme } from '@mantine/core'
 
-export const BlogCard = ({ img, title, contenido, autor, fecha }) => {
+export const BlogCard = ({ dataBlog }) => {
   const modals = useModals()
   const theme = useMantineTheme()
 
@@ -23,10 +23,10 @@ export const BlogCard = ({ img, title, contenido, autor, fecha }) => {
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: title,
-        autor: autor,
-        fecha: fecha,
-        desc: contenido
+        titulo: dataBlog?.titulo,
+        autor: dataBlog?.usuarioCreador,
+        fecha: dataBlog?.fechaCreador,
+        desc: dataBlog?.cuerpo
       }
     })
 
@@ -66,15 +66,15 @@ export const BlogCard = ({ img, title, contenido, autor, fecha }) => {
       shadow='md'
       p='xl'
       radius='md'
-      sx={{ backgroundImage: `url(${img})` }}
+      sx={{ backgroundImage: `url(${dataBlog?.imgenEncabezado})` }}
       className={classes.card}
     >
       <div>
         <Text align='left' className={classes.category} size='xs'>
-          {fecha}
+          {dataBlog?.fechaCreado}
         </Text>
         <Title order={3} className={classes.title}>
-          {title}
+          {dataBlog?.titulo}
         </Title>
       </div>
       <Button variant='white' color='dark' onClick={openBlogModal}>

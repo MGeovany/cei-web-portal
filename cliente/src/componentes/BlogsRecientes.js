@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/Blog.css'
 import { BlogCard } from './BlogCard'
 import { useMediaQuery } from '@mantine/hooks'
@@ -83,11 +83,23 @@ const blogs = [
   }
 ]
 
-export const BlogsRecientes = ({ section }) => {
+export const BlogsRecientes = () => {
+  const [dataBlog, setDataBlog] = useState({})
+
+  useEffect(() => {
+    const fetchContactanos = async () => {
+      const response = await fetch('https://cei1.herokuapp.com/1.0.0/Post')
+      const data = await response.json()
+      setDataBlog(data[0])
+    }
+    fetchContactanos()
+  }, [])
+
+  console.log('dataBlog', dataBlog)
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
 
-  const slides = blogs.map((item, i) => (
+  const slides = Object.values(blogs).map((item, i) => (
     <Carousel.Slide key={i}>
       <BlogCard {...item} />
     </Carousel.Slide>
@@ -95,7 +107,7 @@ export const BlogsRecientes = ({ section }) => {
 
   return (
     <div style={{ padding: '1rem', marginTop: '4rem' }}>
-      <div className='casos-section-title'>{section}</div>
+      <div className='casos-section-title'>Blog Recientemente Publicados</div>
       <Carousel
         slideSize='25%'
         breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
@@ -110,39 +122,3 @@ export const BlogsRecientes = ({ section }) => {
     </div>
   )
 }
-
-// /* eslint-disable no-unused-vars */
-// /* eslint-disable react/prop-types */
-// import React from 'react'
-// import { CasoCard } from './CasoCard'
-// import { useMediaQuery } from '@mantine/hooks'
-// import { useMantineTheme } from '@mantine/core'
-// import { Carousel } from '@mantine/carousel'
-
-// export const CasoCarousel = ({ data, section }) => {
-//   const theme = useMantineTheme()
-//   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
-
-//   const slides = data.map((item, i) => (
-//     <Carousel.Slide key={i}>
-//       <CasoCard {...item} />
-//     </Carousel.Slide>
-//   ))
-
-//   return (
-//     <div style={{ padding: '1rem', marginTop: '4rem' }}>
-//       <div className='casos-section-title'>{section}</div>
-//       <Carousel
-//         slideSize='25%'
-//         breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
-//         slideGap='xl'
-//         align='start'
-//         loop
-//         dragFree
-//         slidesToScroll={mobile ? 1 : 2}
-//       >
-//         {slides}
-//       </Carousel>
-//     </div>
-//   )
-// }
