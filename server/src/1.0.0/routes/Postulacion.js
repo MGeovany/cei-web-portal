@@ -11,7 +11,6 @@ router.get('/postulacion',async(req,res)=>{
         let postulacion = new PostulacionModule(data);
         let pool =  await sql.connect(config);
         let response = await pool.request().query(postulacion.queryGet);
-        console.log(postulacion.queryGet)
         if (response.rowsAffected <= 0){ throw "No existe datos con esos parámetros"};
         res.status(200).json(response.recordsets)
     } catch (error) {
