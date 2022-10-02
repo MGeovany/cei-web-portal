@@ -91,6 +91,35 @@ export const HomeForm = ({ setOpened }) => {
               </div>
             </Group>
           </Grid.Col>
+
+          <Group>
+            <Text className='font-sen'>Imagen principal</Text>
+            <FileButton
+              resetRef={resetRef}
+              onChange={setFile}
+              accept='image/png,image/jpeg'
+              color='cyan'
+              radius='xl'
+              size='xs'
+            >
+              {(props) => <Button {...props}>Seleccionar imagen</Button>}
+            </FileButton>
+            <Button
+              disabled={!file}
+              onClick={clearFile}
+              color='red'
+              radius='xl'
+              size='xs'
+            >
+              Reiniciar
+            </Button>
+          </Group>
+          {file && (
+            <Text size='sm' align='left' mt='sm'>
+              Archivo seleccionado: {file.name}
+            </Text>
+          )}
+
           <Grid.Col span={6}>
             <Input.Wrapper
               className='font-sen'
