@@ -8,6 +8,7 @@ module.exports = class Post{
         this.imagenEncabezado= data.imagenEncabezado || '';
         this.usuarioCreador= data.usuarioCreador || '';
         this.fechaCreado= data.fechaCreado || '';
+        this.descripcion_corta= data.descripcion_corta || '';
 
         this.queryGetFirst10=`
         SELECT TOP 10
@@ -18,6 +19,7 @@ module.exports = class Post{
             ,imagenEncabezado
             ,usuarioCreador
             ,fechaCreado
+            ,descripcion_corta
             FROM Post WHERE tipo = 1
             ORDER BY fechaCreado;`
 
@@ -29,20 +31,22 @@ module.exports = class Post{
             ,imagenEncabezado
             ,usuarioCreador
             ,fechaCreado
+            ,descripcion_corta
             FROM Post
             WHERE id=@id AND tipo = 1
             ORDER BY fechaCreado;`
         
         this.queryInsert=`INSERT INTO ${this.db} 
-        (tipo ,titulo,cuerpo,imagenEncabezado,usuarioCreador,fechaCreado) 
+        (tipo ,titulo,cuerpo,imagenEncabezado,usuarioCreador,fechaCreado, ,descripcion_corta) 
         VALUES 
-        ( 1 ,@titulo,@cuerpo,@imagenEncabezado,@usuarioCreador,GETDATE());`
+        ( 1 ,@titulo,@cuerpo,@imagenEncabezado,@usuarioCreador,GETDATE(), @descripcion_corta);`
 
         this.queryUpdate=`UPDATE ${this.db} SET 
             titulo=@titulo,
             cuerpo=@cuerpo,
             imagenEncabezado=@imagenEncabezado,
             usuarioCreador=@usuarioCreador,
+            descripcion_corta=@descripcion_corta
             WHERE id=@id AND tipo = 1;`
         this.queryDelete = `DELETE FROM ${this.db} WHERE id=@id AND tipo = 1`   
     }

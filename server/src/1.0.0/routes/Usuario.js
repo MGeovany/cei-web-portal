@@ -4,7 +4,6 @@ const config= require('../lib/config');
 const sql = require('mssql');
 const UsuarioModule = require('../class/Usuario')
 const crypt = require('../lib/crypt');
-
 router.post('/usuario', async (req, res) => {//agregar
    try {
     let data = {...req.body,...req.params}
