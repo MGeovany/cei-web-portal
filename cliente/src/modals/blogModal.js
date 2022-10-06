@@ -18,7 +18,7 @@ export const blogModal = ({ context, id, innerProps }) => (
           </span>
         </div>
         <div className='asset__modal__body lh-2'>
-          <RichTextEditor readOnly value={innerProps.desc} id='rte' />;
+          <RichTextEditor readOnly value={innerProps.desc} id='rte' />
         </div>
       </div>
     </div>
