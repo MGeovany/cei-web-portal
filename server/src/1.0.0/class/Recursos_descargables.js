@@ -1,6 +1,7 @@
 module.exports = class Recursos{
     constructor(data){
         this.db = "Archivos";
+        this.id= data.id || '';
         this.nombre_archivo= data.nombre_archivo || '';
         this.descripcion= data.descripcion || '';
         this.titulo= data.titulo || '';
@@ -17,5 +18,15 @@ module.exports = class Recursos{
         (nombre_archivo, @descripcion,@titulo, GETDATE(), @imagen_tarjeta, @autor)`;
 
         this.queryDelete = `DELETE FROM ${this.db} WHERE id=@id`
+
+        this.queryUpdate = `UPDATE ${this.db} SET
+        nombre_archivo=@nombre_archivo,
+        descripcion=@descripcion,
+        titulo=@titulo,
+        imagen_tarjeta=@imagen_tarjeta,
+        autor=@autor
+        WHERE id = @id`
+
+        this.queryGetById = `SELECT * FROM ${this.db} WHERE id = @id`
     }
 }
