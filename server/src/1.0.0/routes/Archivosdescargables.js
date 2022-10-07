@@ -2,14 +2,14 @@ const express = require("express");
 const router = express.Router();
 const config = require("../lib/config");
 const sql = require("mssql");
-const RecursosModule = require("../class/Recursos_descargables");
+const ArchivosModule = require("../class/Archivosdescargables");
 
-router.get("/recursos", async (req, res) => {
+router.get("/archivos", async (req, res) => {
   try {
     let data = { ...req.body, ...req.params };
-    let recurso = new RecursosModule(data);
+    let archivo = new ArchivosModule(data);
     let pool = await sql.connect(config);
-    let response = await pool.request().query(recurso.queryGet);
+    let response = await pool.request().query(archivo.queryGet);
     if (response.rowsAffected <= 0) {
       throw "No existe datos con esos parámetros";
     }
@@ -20,19 +20,19 @@ router.get("/recursos", async (req, res) => {
   }
 });
 
-router.post("/recursos", async (req, res) => {
+router.post("/archivos", async (req, res) => {
   try {
     let data = { ...req.body, ...req.params };
-    let recurso = new RecursosModule(data);
+    let archivo = new ArchivosModule(data);
     let pool = await sql.connect(config);
     let response = await pool
       .request()
-      .input("nombre_archivo", sql.VarChar(250), recurso.nombre_archivo)
-      .input("descripcion", sql.VarChar(250), recurso.descripcion)
-      .input("descripcion", sql.VarChar(250), recurso.descripcion)
-      .input("imagen_tarjeta", sql.VarChar(250), recurso.imagen_tarjeta)
-      .input("autor", sql.VarChar(250), recurso.autor)
-      .query(recurso.queryGet);
+      .input("nombre_archivo", sql.VarChar(250), archivo.nombre_archivo)
+      .input("descripcion", sql.VarChar(250), archivo.descripcion)
+      .input("descripcion", sql.VarChar(250), archivo.descripcion)
+      .input("imagen_tarjeta", sql.VarChar(250), archivo.imagen_tarjeta)
+      .input("autor", sql.VarChar(250), archivo.autor)
+      .query(archivo.queryGet);
       res.status(200).json({ message: "Agregado correctamente" });
   } catch (error) {
     console.error(`Hay clavo tio ${error}`);
@@ -40,15 +40,15 @@ router.post("/recursos", async (req, res) => {
   }
 });
 
-router.delete("/recursos/:id", async (req, res) => {
+router.delete("/archivos/:id", async (req, res) => {
   try {
     let data = { ...req, ...res };
-    let recurso = new RecursosModule(data);
+    let archivo = new ArchivosModule(data);
     let pool = await sql.connect(config);
     await pool
       .request()
-      .input("id", sql.Int, recurso.id)
-      .query(recurso.queryDelete);
+      .input("id", sql.Int, archivo.id)
+      .query(archivo.queryDelete);
 
     res.status(200).json({ message: "Datos han sido Eliminados" });
   } catch (error) {
@@ -57,14 +57,14 @@ router.delete("/recursos/:id", async (req, res) => {
   }
 });
 
-router.get("/recursos/:id", async (req, res) => {
+router.get("/archivos/:id", async (req, res) => {
     try {
       let data = { ...req.body, ...req.params };
-      let recurso = new RecursosModule(data);
+      let archivo = new ArchivosModule(data);
       let pool = await sql.connect(config);
       let response = await pool.request()
-      .input('id', sql.Int, recurso.id)
-      .query(recurso.queryGetById);
+      .input('id', sql.Int, archivo.id)
+      .query(archivo.queryGetById);
       if (response.rowsAffected <= 0) {
         throw "No existe datos con esos parámetros";
       }
@@ -75,20 +75,20 @@ router.get("/recursos/:id", async (req, res) => {
     }
   });
 
-  router.put("/recursos/:id", async (req, res) => {
+  router.put("/archivos/:id", async (req, res) => {
     try {
       let data = { ...req.body, ...req.params };
-      let recurso = new RecursosModule(data);
+      let archivo = new ArchivosModule(data);
       let pool = await sql.connect(config);
       let response = await pool
         .request()
-        .input('id', sql.Int, recurso.id)
-        .input("nombre_archivo", sql.VarChar(250), recurso.nombre_archivo)
-        .input("descripcion", sql.VarChar(250), recurso.descripcion)
-        .input("descripcion", sql.VarChar(250), recurso.descripcion)
-        .input("imagen_tarjeta", sql.VarChar(250), recurso.imagen_tarjeta)
-        .input("autor", sql.VarChar(250), recurso.autor)
-        .query(recurso.queryUpdate);
+        .input('id', sql.Int, archivo.id)
+        .input("nombre_archivo", sql.VarChar(250), archivo.nombre_archivo)
+        .input("descripcion", sql.VarChar(250), archivo.descripcion)
+        .input("descripcion", sql.VarChar(250), archivo.descripcion)
+        .input("imagen_tarjeta", sql.VarChar(250), archivo.imagen_tarjeta)
+        .input("autor", sql.VarChar(250), archivo.autor)
+        .query(archivo.queryUpdate);
         res.status(200).json({data:data,message:"Modificado exitosamente"})
 
     } catch (error) {

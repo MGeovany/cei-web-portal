@@ -20,7 +20,7 @@ app.use('/1.0.0',require('./src/1.0.0/routes/Integrantes'))
 app.use('/1.0.0',require('./src/1.0.0/routes/login'))
 app.use('/1.0.0',require('./src/1.0.0/routes/Opciones'))
 app.use('/1.0.0',require('./src/1.0.0/routes/Inicio'))
-app.use('/1.0.0',require('./src/1.0.0/routes/Recursos_descargables'))
+app.use('/1.0.0',require('./src/1.0.0/routes/Archivosdescargables'))
 
 const server = app.listen(app.get('port'),(req,res)=>{
     console.log(`Server started at http://localhost:${app.get('port')}`)

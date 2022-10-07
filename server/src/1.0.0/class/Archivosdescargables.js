@@ -1,4 +1,4 @@
-module.exports = class Recursos{
+module.exports = class Archivos{
     constructor(data){
         this.db = "Archivos";
         this.id= data.id || '';
