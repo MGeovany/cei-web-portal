@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 
 import { Table, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
-import { showNotification } from '@mantine/notifications'
+import { Carousel } from '@mantine/carousel';
+import '../styles/VerCasoStyle.css'
+// import { showNotification } from '@mantine/notifications'
 
 const elements = [
   {
@@ -90,6 +92,9 @@ export const CasoTabla = () => {
 
   }
 
+
+  
+
   useEffect(() => {
     setEvents(elements)
   }, [events])
@@ -124,26 +129,76 @@ export const CasoTabla = () => {
     </tr>
   ))
 
+
+  const rowsR = elements.map((element) => (
+
+
+    <Carousel.Slide className='card_table_responsive' key={element.nombre}> 
+
+        <div>
+            <div className='header_nav_Class'>
+
+                <div className='title_card'>
+                {element.nombre}
+                </div>
+                <div className='title_card_autor'>
+                {element.seccion}
+                    <span className='date_card'>
+                        {element.fecha}
+                    </span>
+                </div>
+            </div>
+            <div className='body_card_responsive'>
+                {element.detalles}
+            </div>
+                <div className='cont_btn_card_responsive'>
+                    <div className='btn__editar' onClick={EditarCasoModal}>
+                            Editar
+                    </div>
+                    <div className='btn__eliminar' onClick={(e) => deleteElement(element.nombre, e)}>
+                            Eliminar
+                    </div>
+                </div>
+
+        </div>
+
+
+    </Carousel.Slide>
+
+
+  ))
+
+
+
   return (
-    <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
-      <thead>
-        <tr>
-          <th>
-            <div className='th__title'>Nombre</div>
-          </th>
-          <th>
-            <div className='th__title'>Fecha de Registro</div>
-          </th>
-          <th>
-            <div className='th__title'>Sección de Casos</div>
-          </th>
-          <th>
-            <div className='th__title'>Detalles</div>
-          </th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </Table>
+    <>
+    <div className='casosTablastyle'>
+      <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
+        <thead>
+          <tr>
+            <th>
+              <div className='th__title'>Nombre</div>
+            </th>
+            <th>
+              <div className='th__title'>Fecha de Registro</div>
+            </th>
+            <th>
+              <div className='th__title'>Sección de Casos</div>
+            </th>
+            <th>
+              <div className='th__title'>Detalles</div>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </Table>
+    </div>
+    <div className='casosTablastyleR'>
+    <Carousel slideSize="50%" height={700} orientation="vertical" slideGap="md" dragFree >
+        {rowsR}
+    </Carousel>
+    </div>
+    </>
   )
 }

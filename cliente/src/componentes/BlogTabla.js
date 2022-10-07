@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react'
 
 import { Table, useMantineTheme } from '@mantine/core'
 import { useModals } from '@mantine/modals'
-import { showNotification } from '@mantine/notifications'
+// import { showNotification } from '@mantine/notifications'
+import { Carousel } from '@mantine/carousel';
+
+import '../styles/VerBlogStyle.css'
 
 const elements = [
   {
@@ -130,26 +133,76 @@ export const BlogTabla = () => {
     </tr>
   ))
 
+
+  const rowsR = elements.map((element) => (
+
+
+    <Carousel.Slide className='card_table_responsive ' key={element.titulo}> 
+
+        <div >
+            <div className='header_nav_Class'>
+
+                <div className='title_card'>
+                {element.titulo}
+                </div>
+                <div className='title_card_autor'>
+                {element.autor}
+                    <span className='date_card'>
+                        {element.fecha}
+                    </span>
+                </div>
+            </div>
+            <div className='body_card_responsive'>
+                {element.detalles}
+            </div>
+                <div className='cont_btn_card_responsive'>
+                    <div className='btn__editar' onClick={EditarBlogModal}>
+                            Editar
+                    </div>
+                    <div className='btn__eliminar' onClick={(e) => deleteElement(element.autor, e)}>
+                            Eliminar
+                    </div>
+                </div>
+
+        </div>
+
+
+    </Carousel.Slide>
+
+
+  ))
+
+
+
   return (
-    <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
-      <thead>
-        <tr>
-          <th>
-            <div className='th__title'>Título</div>
-          </th>
-          <th>
-            <div className='th__title'>Autor</div>
-          </th>
-          <th>
-            <div className='th__title'>Fecha</div>
-          </th>
-          <th>
-            <div className='th__title'>Detalles</div>
-          </th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </Table>
+    <>
+    <div className='blogTablastyle'>
+      <Table fontSize='md' highlightOnHover verticalSpacing='xl' >
+        <thead>
+          <tr>
+            <th>
+              <div className='th__title'>Título</div>
+            </th>
+            <th>
+              <div className='th__title'>Autor</div>
+            </th>
+            <th>
+              <div className='th__title'>Fecha</div>
+            </th>
+            <th>
+              <div className='th__title'>Detalles</div>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </Table>
+    </div>
+    <div className='blogTablastyleR'>
+    <Carousel slideSize="50%" height={700} orientation="vertical" slideGap="md" dragFree >
+      {rowsR}
+    </Carousel>
+    </div>
+    </>
   )
 }

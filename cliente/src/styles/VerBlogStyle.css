@@ -1,0 +1,32 @@
+.blogTablastyle
+{
+    padding: 0px;
+    width: 100%;
+}
+
+
+.blogTablastyleR
+{
+    padding: 0px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .blogTablastyle
+    {
+        display: none;
+    }
+
+    
+}
+@media screen and (min-width: 1050px) {
+
+    .blogTablastyleR
+    {
+        display: none;
+    }
+
+    
+}
+

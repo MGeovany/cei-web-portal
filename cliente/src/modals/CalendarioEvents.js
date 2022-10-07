@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/CalendarioEvents.css'
 import { Table, useMantineTheme } from '@mantine/core'
-import { showNotification } from '@mantine/notifications'
 import { useModals } from '@mantine/modals'
 import { Eventos } from '../API'
 import { Grid } from '@mantine/core'

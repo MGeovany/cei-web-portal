@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React , {useState} from 'react'
+import React  from 'react'
 import { showNotification } from '@mantine/notifications'
 import '../styles/EliminarContactoModal.css'
-import { closeAllModals, closeModal } from '@mantine/modals'
+import {  closeModal } from '@mantine/modals'
 
 export const EliminarCasosModal = ({ name , id , innerProps}) => {
 
