@@ -33,7 +33,7 @@ const data = [
       'https://images.pexels.com/photos/12879613/pexels-photo-12879613.jpeg'
   }
 ]
-export const CarouselHome = () => {
+export const CarouselHome = ({ dataHome }) => {
   const autoplay = useRef(Autoplay({ delay: 3000 }))
 
   const slides = data.map((item, i) => (
@@ -43,9 +43,7 @@ export const CarouselHome = () => {
   ))
   return (
     <div className='carousel-home'>
-      <div className='section-title'>
-        Te mantenemos al tanto de lo que sucede <br /> a tu alrededor 🤠
-      </div>
+      <div className='section-title'>{dataHome?.titulo_carousel}</div>
       <Carousel
         plugins={[autoplay.current]}
         onMouseEnter={autoplay.current.stop}
@@ -56,9 +54,8 @@ export const CarouselHome = () => {
         align='start'
         loop
         dragFree
-        
         nextControlIcon={<IconArrowRight size={16} />}
-        previousControlIcon={<IconArrowLeft size={16} />}       
+        previousControlIcon={<IconArrowLeft size={16} />}
       >
         {slides}
       </Carousel>

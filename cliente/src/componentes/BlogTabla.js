@@ -61,12 +61,7 @@ export const BlogTabla = () => {
           : theme.colors.gray[2],
       overlayOpacity: 0.55,
       overlayBlur: 3,
-      responsive:[
-        {breakpoint: 690,
-        
-  
-        }
-      ]
+      responsive: [{ breakpoint: 690 }]
     })
 
   const [events, setEvents] = useState(elements)

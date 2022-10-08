@@ -5,16 +5,14 @@ import '../styles/Home.css'
 
 import { Arrow, HeroBanner } from '../utils/svgIcons'
 
-export const Home = () => {
+export const Home = ({ dataHome }) => {
   return (
     <div className='home'>
       <div className='home__banner'>
         <HeroBanner />
       </div>
       <div className='home__text'>
-        <h1 className='home__title'>
-          AMAMOS AYUDARTE <br />A <span>CRECER</span>
-        </h1>
+        <h1 className='home__title'>{dataHome?.titulo_inicio}</h1>
 
         <div className='home__btns'>
           <Link to='/postulate'>
@@ -27,14 +25,10 @@ export const Home = () => {
           </Link>
         </div>
 
-        <div className='home__subtitle'>
-          Te lanzamos con toda la fuerza posible, <br />
-          porque sabemos que la necesitas y porque no es <br />
-          momento de ponerse límites.
-        </div>
+        <div className='home__subtitle'>{dataHome?.subtitulo_inicio}</div>
       </div>
       <div className='home__img'>
-        <img src='/assets/people/Startup.png' alt='Startup' />
+        <img src={dataHome?.imagen} alt='Startup' />
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import { useForm } from '@mantine/form'
 import React from 'react'
 import { useState, useRef } from 'react'
 import { FileButton, Group, Text } from '@mantine/core'
-export const HomeForm = () => {
+export const HomeForm = ({ setOpened }) => {
   const [file, setFile] = useState(null)
   const resetRef = useRef(null)
 
@@ -91,6 +91,35 @@ export const HomeForm = () => {
               </div>
             </Group>
           </Grid.Col>
+
+          <Group>
+            <Text className='font-sen'>Imagen principal</Text>
+            <FileButton
+              resetRef={resetRef}
+              onChange={setFile}
+              accept='image/png,image/jpeg'
+              color='cyan'
+              radius='xl'
+              size='xs'
+            >
+              {(props) => <Button {...props}>Seleccionar imagen</Button>}
+            </FileButton>
+            <Button
+              disabled={!file}
+              onClick={clearFile}
+              color='red'
+              radius='xl'
+              size='xs'
+            >
+              Reiniciar
+            </Button>
+          </Group>
+          {file && (
+            <Text size='sm' align='left' mt='sm'>
+              Archivo seleccionado: {file.name}
+            </Text>
+          )}
+
           <Grid.Col span={6}>
             <Input.Wrapper
               className='font-sen'
@@ -124,6 +153,74 @@ export const HomeForm = () => {
               required
             />
           </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Título'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Proyecto Manos de Vida'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Sección'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={24}>
+            <Textarea
+              minRows={2}
+              maxRows={15}
+              className='font-sen'
+              placeholder='Manos de Vida es una plataforma...'
+              label='Detalles'
+              required
+            />
+          </Grid.Col>
+
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Título'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Proyecto Manos de Vida'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Sección'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={24}>
+            <Textarea
+              minRows={2}
+              maxRows={15}
+              className='font-sen'
+              placeholder='Manos de Vida es una plataforma...'
+              label='Detalles'
+              required
+            />
+          </Grid.Col>
+
           {/* 
               QuienesSomos CONTENT
           */}
@@ -429,6 +526,7 @@ export const HomeForm = () => {
                   boxShadow: '3px 3px 17px #00000029',
                   backgroundColor: '#e1575f'
                 }}
+                onClick={() => setOpened()}
               >
                 Cancelar
               </Button>
