@@ -19,13 +19,13 @@ export const Actividades = (props) => {
   return (
     <div className='ctividades'>
       <div className='actividades-container-section'>
-        <motion.div whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }} className='actividades-section-title'>
+        <div className='actividades-section-title'>
           Actividades celebradas por el CEI
           <motion.span animate={{ scale: [1,1.2,1.3,1.4,1.3,1.2,1] }}
                 transition={{ ease: "linear", duration: 1, repeat: Infinity }} style={{ marginLeft: '12px' }}>
             <Arrow height={30} width={25} fill='#e1575f' />
           </motion.span>
-        </motion.div>
+        </div>
         <div className='container-carrouselact'>
         <Carousel
         plugins={[autoplay.current]}

@@ -5,10 +5,9 @@ import { motion } from "framer-motion"
 export const NuestroEquipo = () => {
   return (
     <div className='nuestro-equipo flex'>
-      <motion.div className='section-title'
-      whileInView={{ rotate: [10,-10,10,0] }}>
+      <div className='section-title'>
         NUESTRO <span style={{ color: '#E35961' }}> EQUIPO🏆</span>
-      </motion.div>
+      </div>
       <div className='nuestro-equipo-container '>
         <motion.div className='nuestro-equipo-item flex'
         whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>

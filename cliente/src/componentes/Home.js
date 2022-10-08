@@ -20,16 +20,16 @@ export const Home = () => {
 
         <div className='home__btns'>
           <Link to='/postulate'>
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} className='home__btn__propuesta'>Enviar Propuesta</motion.div>
+            <div className='home__btn__propuesta'>Enviar Propuesta</div>
           </Link>
           <Link to='/blog'>
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} className='home__btn__blog'>
+            <div className='home__btn__blog'>
               Ver Nuestro Blog <Arrow fill='#ffffff' width={24} height={23} />{' '}
-            </motion.div>
+            </div>
           </Link>
         </div>
 
-        <motion.div  whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }} className='home__subtitle'>
+        <motion.div whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }} className='home__subtitle'>
           Te lanzamos con toda la fuerza posible, <br />
           porque sabemos que la necesitas y porque no es <br />
           momento de ponerse límites.

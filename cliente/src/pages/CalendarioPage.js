@@ -288,17 +288,19 @@ const events = [
 
 export const CalendarioPage = () => {
   return (
+    <div className='emerge-down'>
     <div className='casos'>
       <div className='casos-container'>
-        <motion.div animate={{ rotateX: 360 }} transition={{  duration: 1, repeat: Infinity, repeatDelay: 5, delay: 0.2 }} className='title-calendario'>
+        <div className='title-calendario'>
           CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
-        </motion.div>
+        </div>
         <Calendario events={events} />
         <Actividades
           data={data}
           section={' Actividades celebradas por el CEI'}
         />
       </div>
+    </div>
     </div>
   )
 }

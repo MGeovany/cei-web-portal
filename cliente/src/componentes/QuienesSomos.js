@@ -9,9 +9,9 @@ import { motion} from "framer-motion";
 export const QuienesSomos = () => {
   return (
     <div className='quienes-somos flex'>
-      <motion.div className='section-title' whileInView={{ scale: [1.0, 1.3, 1.0] }}>
+      <div className='section-title' >
         QUIENES <span style={{ color: '#e1575f' }}>SOMOS</span>🍃
-      </motion.div>
+      </div>
       <motion.div className='quienes-somos-text flex' whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>
         <div className='quienes-somos-text-title'>
           <h1>¿QUÉ ES EL CEI?</h1>

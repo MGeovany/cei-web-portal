@@ -5,7 +5,7 @@ import '../styles/Calendario.css'
 import { Button, Group, useMantineTheme, MantineProvider } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import { NavbarAdmin } from '../componentes/NavbarAdmin'
-import { motion } from "framer-motion"
+
 
 // static data, this will be loaded from a server in production.
 
@@ -75,9 +75,9 @@ export const CalendarioAdmin = () => {
       >
         <div className='casos '>
           <div className='casos-container flex'>
-            <motion.div animate={{ rotateX: 360 }} className='title-calendario'>
+            <div className='title-calendario'>
               CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>{' '}
-            </motion.div>
+            </div>
             <div className='casos-admin-btns'>
               <div>
                 <Button

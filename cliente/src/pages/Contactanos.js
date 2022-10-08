@@ -64,10 +64,10 @@ export const Contactanos = () => {
   return (
     <div className='contactanos'>
       <div className='container_contactanos flex'>
-        <motion.div animate={{ rotateX: 360 }} transition={{  duration: 1, repeat: Infinity, repeatDelay: 5, delay: 0.2 }} className='section-title titulo_contactanos'>
+        <div className='section-title titulo_contactanos'>
           PONTE EN <span style={{ color: '#e1575f' }}>CONTACTO📢</span>
-        </motion.div>
-        <div className='contactanos-form'>
+        </div>
+        <div className='contactanos-form emerge-down'>
           <form
             className='form-contactanos'
             onSubmit={form.onSubmit((values) => createPost(values))}

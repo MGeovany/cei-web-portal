@@ -19,7 +19,7 @@ export const CasoCarousel = ({ data, section }) => {
 
   return (
     <div style={{ padding: '1rem', marginTop: '4rem' }}>
-      <motion.div whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}  className='casos-section-title'>{section}</motion.div>
+      <motion.div className='casos-section-title'>{section}</motion.div>
       <Carousel
         slideSize='25%'
         breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}

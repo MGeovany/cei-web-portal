@@ -525,17 +525,18 @@ const casosSoc = [
 
 export const Casos = () => {
   return (
+    <div className='emerge-down'>
     <div className='casos'>
       <div className='casos-container'>
-        <motion.div animate={{ scale: [1,1.2,1] }}
-                transition={{ type: "spring", duration: 5, bounce: 0.6 }} className='casos-title section-title'>
+        <div className='casos-title section-title'>
           CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
-        </motion.div>
+        </div>
         <CasoCarousel data={casosTec} section={'Tecnología'} />
         <CasoCarousel data={casosCom} section={'Comercial'} />
         <CasoCarousel data={casosSoc} section={'Social'} />
         <CasoCarousel data={casosSal} section={'Salud'} />
       </div>
+    </div>
     </div>
   )
 }
