@@ -15,9 +15,9 @@ module.exports = class Archivos{
         this.queryInsert = `INSERT INTO ${this.db} 
         (nombre_archivo ,descripcion,titulo, fecha_creado, imagen_tarjeta, autor) 
         VALUES 
-        (nombre_archivo, @descripcion,@titulo, GETDATE(), @imagen_tarjeta, @autor)`;
+        (@nombre_archivo, @descripcion, @titulo, GETDATE(), @imagen_tarjeta, @autor)`;
 
-        this.queryDelete = `DELETE FROM ${this.db} WHERE id=@id`
+        this.queryDelete = `DELETE FROM ${this.db} WHERE id = @id`;
 
         this.queryUpdate = `UPDATE ${this.db} SET
         nombre_archivo=@nombre_archivo,
@@ -25,8 +25,8 @@ module.exports = class Archivos{
         titulo=@titulo,
         imagen_tarjeta=@imagen_tarjeta,
         autor=@autor
-        WHERE id = @id`
+        WHERE id = @id`;
 
-        this.queryGetById = `SELECT * FROM ${this.db} WHERE id = @id`
+        this.queryGetById = `SELECT * FROM ${this.db} WHERE id = @id`;
     }
 }

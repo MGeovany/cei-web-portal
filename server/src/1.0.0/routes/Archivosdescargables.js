@@ -4,7 +4,7 @@ const config = require("../lib/config");
 const sql = require("mssql");
 const ArchivosModule = require("../class/Archivosdescargables");
 
-router.get("/archivos", async (req, res) => {
+router.get("/archivosdescargables", async (req, res) => {
   try {
     let data = { ...req.body, ...req.params };
     let archivo = new ArchivosModule(data);
@@ -20,19 +20,18 @@ router.get("/archivos", async (req, res) => {
   }
 });
 
-router.post("/archivos", async (req, res) => {
+router.post("/archivosdescargables", async (req, res) => {
   try {
     let data = { ...req.body, ...req.params };
     let archivo = new ArchivosModule(data);
     let pool = await sql.connect(config);
-    let response = await pool
-      .request()
+    let response = await pool.request()
       .input("nombre_archivo", sql.VarChar(250), archivo.nombre_archivo)
       .input("descripcion", sql.VarChar(250), archivo.descripcion)
-      .input("descripcion", sql.VarChar(250), archivo.descripcion)
+      .input("titulo", sql.VarChar(250), archivo.titulo)
       .input("imagen_tarjeta", sql.VarChar(250), archivo.imagen_tarjeta)
       .input("autor", sql.VarChar(250), archivo.autor)
-      .query(archivo.queryGet);
+      .query(archivo.queryInsert);
       res.status(200).json({ message: "Agregado correctamente" });
   } catch (error) {
     console.error(`Hay clavo tio ${error}`);
@@ -40,24 +39,23 @@ router.post("/archivos", async (req, res) => {
   }
 });
 
-router.delete("/archivos/:id", async (req, res) => {
+router.delete("/archivosdescargables/:id", async (req, res) => {
   try {
-    let data = { ...req, ...res };
+    let data = { ...req.body, ...req.params };
     let archivo = new ArchivosModule(data);
     let pool = await sql.connect(config);
-    await pool
-      .request()
-      .input("id", sql.Int, archivo.id)
+    let response = await pool.request()
+      .input("id",sql.Int,archivo.id)
       .query(archivo.queryDelete);
 
     res.status(200).json({ message: "Datos han sido Eliminados" });
   } catch (error) {
     console.error(`Hay clavo tio ${error}`);
-    res.status(300).json({ error: `Hay clavo tio ${error}` });
+    res.status(400).json({ error: `Hay clavo tio ${error}` });
   }
 });
 
-router.get("/archivos/:id", async (req, res) => {
+router.get("/archivosdescargables/:id", async (req, res) => {
     try {
       let data = { ...req.body, ...req.params };
       let archivo = new ArchivosModule(data);
@@ -75,7 +73,7 @@ router.get("/archivos/:id", async (req, res) => {
     }
   });
 
-  router.put("/archivos/:id", async (req, res) => {
+router.put("/archivosdescargables/:id", async (req, res) => {
     try {
       let data = { ...req.body, ...req.params };
       let archivo = new ArchivosModule(data);
@@ -85,7 +83,7 @@ router.get("/archivos/:id", async (req, res) => {
         .input('id', sql.Int, archivo.id)
         .input("nombre_archivo", sql.VarChar(250), archivo.nombre_archivo)
         .input("descripcion", sql.VarChar(250), archivo.descripcion)
-        .input("descripcion", sql.VarChar(250), archivo.descripcion)
+        .input("titulo", sql.VarChar(250), archivo.titulo)
         .input("imagen_tarjeta", sql.VarChar(250), archivo.imagen_tarjeta)
         .input("autor", sql.VarChar(250), archivo.autor)
         .query(archivo.queryUpdate);
