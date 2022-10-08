@@ -7,7 +7,6 @@ import { Carousel } from '@mantine/carousel'
 import Autoplay from 'embla-carousel-autoplay'
 import { motion } from "framer-motion"
 
-
 export const Actividades = (props) => {
   const data = props.data
   const slides = data.map((item, i) => (
@@ -15,7 +14,7 @@ export const Actividades = (props) => {
       <ActividadesCard {...item} />
     </Carousel.Slide>
   ))
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
+  const autoplay = useRef(Autoplay({ delay: 2000 }))
   return (
     <div className='ctividades'>
       <div className='actividades-container-section'>
@@ -27,25 +26,25 @@ export const Actividades = (props) => {
           </motion.span>
         </div>
         <div className='container-carrouselact'>
-        <Carousel
-        plugins={[autoplay.current]}
-        onMouseEnter={autoplay.current.stop}
-        onMouseLeave={autoplay.current.reset}
-        slideSize='25%'
-        slideGap='xs'
-        align='center'
-        dragFree
-        loop
-        breakpoints={[
-          { maxWidth: 'xl', slideSize: '30%', slideGap: 'xs'},
-          { maxWidth: 'lg', slideSize: '35%', slideGap: 'xs'},
-          { maxWidth: 'md', slideSize: '45%', slideGap: 'xs'},
-          { maxWidth: 'sm', slideSize: '60%', slideGap: 'xs'},
-          { maxWidth: 'xs', slideSize: '100%', slideGap: 'xs'}
-        ]}
-      >
-        {slides}
-      </Carousel>
+          <Carousel
+            plugins={[autoplay.current]}
+            onMouseEnter={autoplay.current.stop}
+            onMouseLeave={autoplay.current.reset}
+            slideSize='25%'
+            slideGap='xs'
+            align='center'
+            dragFree
+            loop
+            breakpoints={[
+              { maxWidth: 'xl', slideSize: '30%', slideGap: 'xs' },
+              { maxWidth: 'lg', slideSize: '35%', slideGap: 'xs' },
+              { maxWidth: 'md', slideSize: '45%', slideGap: 'xs' },
+              { maxWidth: 'sm', slideSize: '60%', slideGap: 'xs' },
+              { maxWidth: 'xs', slideSize: '100%', slideGap: 'xs' }
+            ]}
+          >
+            {slides}
+          </Carousel>
         </div>
       </div>
     </div>

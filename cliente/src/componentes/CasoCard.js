@@ -27,27 +27,30 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontFamily: theme.fontFamily,
     fontWeight: 900,
-    color: theme.white,
+    color: theme.black,
     lineHeight: 1.2,
     fontSize: 32,
     marginTop: theme.spacing.xs
   },
 
   category: {
-    color: theme.white,
-    opacity: 0.7,
+    color: theme.gray,
+    opacity: 0.2,
     fontWeight: 700,
-    fontSize: 20
+    fontSize: 20,
+    textTransform: 'uppercase'
   }
 }))
 
 export const CasoCard = ({
-  image,
-  title,
-  subtitulo,
-  descripcion,
-  desc,
-  integrantes
+  id,
+  tipo,
+  titulo,
+  cuerpo,
+  imagenEncabezado,
+  usuarioCreador,
+  fechaCreado,
+  seccionCasos
 }) => {
   const { classes } = useStyles()
   const modals = useModals()
@@ -67,11 +70,13 @@ export const CasoCard = ({
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: title,
-        subtitulo: subtitulo,
-        desc: descripcion,
-        img: image,
-        integrantes: integrantes
+        type: tipo,
+        title: titulo,
+        description: cuerpo,
+        image: imagenEncabezado,
+        user: usuarioCreador,
+        dateCreated: fechaCreado,
+        section: seccionCasos
       }
     })
 
@@ -80,15 +85,18 @@ export const CasoCard = ({
       shadow='md'
       p='xl'
       radius='md'
-      sx={{ backgroundImage: `url(${image})` }}
+      sx={{ backgroundImage: `url(${imagenEncabezado})` }}
       className={classes.card}
     >
       <div>
+        <Text align='left' className={classes.category} size='xs'>
+          {fechaCreado}
+        </Text>
         <Title order={3} className={classes.title}>
-          {title}
+          {titulo}
         </Title>
         <Text className={classes.category} size='xs'>
-          {desc}
+          {seccionCasos}
         </Text>
       </div>
       <Button variant='white' color='dark' onClick={openCasosModal}>

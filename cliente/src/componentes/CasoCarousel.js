@@ -11,8 +11,9 @@ export const CasoCarousel = ({ data, section }) => {
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
 
-  const slides = data.map((item, i) => (
+  const slides = data?.map((item, i) => (
     <Carousel.Slide key={i}>
+      {console.log(item)}
       <CasoCard {...item} />
     </Carousel.Slide>
   ))

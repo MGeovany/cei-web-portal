@@ -25,7 +25,6 @@ const use_Styles = createStyles((theme, _params, getRef) => ({
 export const verBlogModal = ({ context, id, innerProps }) => {
 
  
- 
   const { classes } = use_Styles();
 
 

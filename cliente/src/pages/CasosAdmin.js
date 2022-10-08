@@ -436,6 +436,9 @@ export const CasosAdmin = () => {
   const theme = useMantineTheme()
 
   const agregarCasoModal = () => {
+    const sizemodal =
+      window.innerWidth > 1000 ? 'calc(100% - 4rem)' : 'calc(100% - 0rem)'
+
     modals.openContextModal('agregarCasoModal', {
       overlayColor:
         theme.colorScheme === 'dark'
@@ -445,7 +448,7 @@ export const CasosAdmin = () => {
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
-      size: 'calc(100% - 6rem)',
+      size: sizemodal,
       innerProps: {}
     })
   }
