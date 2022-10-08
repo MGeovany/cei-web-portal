@@ -6,8 +6,7 @@ import '../styles/Calendario.css'
 import { Carousel } from '@mantine/carousel'
 import Autoplay from 'embla-carousel-autoplay'
 
-export const Actividades = (props) => {
-  const data = props.data
+export const Actividades = ({ data }) => {
   const slides = data.map((item, i) => (
     <Carousel.Slide key={i}>
       <ActividadesCard {...item} />

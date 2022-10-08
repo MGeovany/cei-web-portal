@@ -6,7 +6,6 @@ import Autoplay from 'embla-carousel-autoplay'
 import { useMantineTheme } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 
-export const autoplayF = (props) => {}
 export const ActividadesModal = ({ context, id, innerProps }) => {
   const autoplay = useRef(Autoplay({ delay: 2000 }))
   const theme = useMantineTheme()
@@ -17,11 +16,11 @@ export const ActividadesModal = ({ context, id, innerProps }) => {
       <div className='add__asset__modal'>
         <div className='asset__content'>
           <div className='asset__modal__title'>
-            <div>{innerProps.titulo}</div>
+            <div>{innerProps.title}</div>
           </div>
           <div className='asset__modal__subtitle'>
             <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-              {innerProps.fecha}
+              {innerProps.createdDate}
             </span>
           </div>
           <div className='asset__modal__body lh-2'>{innerProps.desc}</div>
@@ -29,7 +28,7 @@ export const ActividadesModal = ({ context, id, innerProps }) => {
             <div>Fotos del Evento</div>
           </div>
 
-          <Carousel
+          {/*     <Carousel
             slideSize='25%'
             height={200}
             breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
@@ -51,7 +50,7 @@ export const ActividadesModal = ({ context, id, innerProps }) => {
                 />
               </Carousel.Slide>
             ))}
-          </Carousel>
+          </Carousel> */}
         </div>
       </div>
     </>
