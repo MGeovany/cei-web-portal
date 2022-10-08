@@ -7,14 +7,14 @@ export const blogModal = ({ context, id, innerProps }) => (
     <div className='add__asset__modal'>
       <div className='asset__content'>
         <div className='asset__modal__title'>
-          <div className='title-50'>{innerProps.titulo}</div>
+          <div className='title-50'>{innerProps.title}</div>
         </div>
         <div className='asset__modal__subtitle'>
           <span style={{ color: '#e1575f', fonWeight: 'bold' }}>
-            {innerProps.autor}
+            {innerProps.author}
           </span>
           <span style={{ color: '#AAAEB8', opacity: '0.6' }}>
-            • {innerProps.fecha}
+            • {innerProps.date}
           </span>
         </div>
         <div className='asset__modal__body lh-2'>

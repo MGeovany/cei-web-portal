@@ -5,12 +5,13 @@ import { createStyles, Paper, Text, Title, Button } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 
 export const DescargablesCard = ({
-  img,
-  title,
-  desc,
   autor,
-  fecha,
-  contenido
+  descripcion,
+  fecha_creado,
+  id,
+  imagen_tarjeta,
+  nombre_archivo,
+  titulo
 }) => {
   const modals = useModals()
   const theme = useMantineTheme()
@@ -29,10 +30,13 @@ export const DescargablesCard = ({
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: title,
-        autor: autor,
-        fecha: fecha,
-        desc: contenido
+        author: autor,
+        desc: descripcion,
+        date: fecha_creado,
+        id: id,
+        image: imagen_tarjeta,
+        file: nombre_archivo,
+        title: titulo
       }
     })
 
@@ -50,7 +54,7 @@ export const DescargablesCard = ({
     title: {
       fontFamily: `Greycliff CF, ${theme.fontFamily}`,
       fontWeight: 900,
-      color: theme.white,
+      color: theme.black,
       lineHeight: 1.2,
       fontSize: 32,
       marginTop: theme.spacing.xs,
@@ -58,8 +62,8 @@ export const DescargablesCard = ({
     },
 
     category: {
-      color: theme.white,
-      opacity: 0.7,
+      color: theme.gray,
+      opacity: 0.3,
       fontWeight: 700,
       textTransform: 'uppercase',
       textAlign: 'initial'
@@ -73,15 +77,15 @@ export const DescargablesCard = ({
       shadow='md'
       p='xl'
       radius='md'
-      sx={{ backgroundImage: `url(${img})` }}
+      sx={{ backgroundImage: `url(${imagen_tarjeta})` }}
       className={classes.card}
     >
       <div>
         <Text className={classes.category} size='xs'>
-          {fecha}
+          {fecha_creado}
         </Text>
         <Title order={3} className={classes.title}>
-          {title}
+          {titulo}
         </Title>
       </div>
       <Button variant='white' color='dark' onClick={openBlogModal}>

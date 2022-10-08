@@ -12,6 +12,8 @@ export const DescargablesCarousel = ({ data, section }) => {
 
   const slides = data.map((item, i) => (
     <Carousel.Slide key={i}>
+      {console.log(item.title)}
+
       <DescargablesCard {...item} />
     </Carousel.Slide>
   ))
