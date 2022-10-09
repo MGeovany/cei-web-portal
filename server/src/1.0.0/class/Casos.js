@@ -9,7 +9,8 @@ module.exports = class Casos{
         this.usuarioCreador= data.usuarioCreador || '';
         this.fechaCreado= data.fechaCreado || '';
         this.proyecto= data.proyecto || '';
-
+        this.seccionCasos = data.seccionCasos || '';
+        
         this.queryGetFirst10=`
         SELECT 
         id

@@ -72,6 +72,7 @@ router.post("/eventos", async (req, res) => {
       .input("sede", sql.Int, eventos.sede)
       .input("usuarioCreador", sql.Int, eventos.usuarioCreador)
       .input("fechaCreado", sql.VarChar, eventos.fechaCreado)
+      .input("imagen", sql.VarChar, eventos.imagen)
       .query(eventos.querySave);
     if (response.rowsAffected <= 0) {
       throw "No existe datos con esos parámetros";
@@ -96,6 +97,7 @@ router.put("/eventos/:id", async (req, res) => { //modificar
       .input("descripcion", sql.VarChar(sql.MAX), eventos.descripcion)
       .input("semana", sql.VarChar, eventos.semana)
       .input("sede", sql.Int, eventos.sede)
+      .input("imagen", sql.VarChar, eventos.imagen)
       .query(eventos.queryUpdate);
       if (response.rowsAffected <= 0) {
         throw "No existe datos con esos parámetros";
