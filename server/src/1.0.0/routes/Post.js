@@ -46,6 +46,7 @@ router.post('/post',async(req,res)=>{ //agregar
             .input('imagenEncabezado',sql.VarChar, posts.imagenEncabezado)
             .input('usuarioCreador',sql.Int,posts.usuarioCreador)
             .input('proyecto',sql.VarChar(100),posts.proyecto)
+            .input('descripcion_corta',sql.VarChar(200),posts.descripcion_corta)
 
             .query(posts.queryInsert);
         if (response.rowsAffected <= 0){ throw "No existe datos con esos parámetros"};
@@ -68,6 +69,8 @@ router.put('/post/:id',async(req,res)=>{ //modificar
             .input('cuerpo',sql.NText,posts.cuerpo)
             .input('imagenEncabezado',sql.VarChar,posts.imagenEncabezado)
             .input('usuarioCreador',sql.Int,posts.usuarioCreador)
+            .input('descripcion_corta',sql.VarChar(200),posts.descripcion_corta)
+
             .query(posts.queryUpdate);
         res.status(200).json({message: "Modificado correctamente",data:data})
     } catch (e) {

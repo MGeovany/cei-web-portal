@@ -6,6 +6,7 @@ module.exports = class Integrantes{
         this.correo = data.correo || '';
         this.proyecto= data.proyecto || '';
         this.idproyecto= data.idproyecto || '';
+        
         this.queryGet=`
         SELECT 
         id
@@ -31,6 +32,12 @@ module.exports = class Integrantes{
         VALUES 
         (@nombre,@correo, @idproyecto);`
 
+        this.queryUpdateIntegrantes=`UPDATE dbo.Integrantes SET 
+        nombre = @nombre,
+        correo = @correo,
+        proyecto = @proyecto,
+        seccionCasos = @seccionCasos
+        WHERE id = @id_ ;`
        
             
         this.queryDelete = `DELETE FROM ${this.db} WHERE id=@id`

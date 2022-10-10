@@ -119,3 +119,20 @@ CREATE TABLE Integrantes (
   [proyecto] nvarchar(255) 
   
 );
+
+--tablas nuevas agregadas
+CREATE TABLE [Inicio] (
+  [id] integer PRIMARY KEY NOT NULL IDENTITY(1, 1),
+  [titulo_inicio] varchar(250),
+  [subtitulo_inicio] varchar(250),
+  [imagen] varchar(250),
+  [titulo_carousel] varchar(250),
+  [seccion_carousel] varchar(100),
+  [detalles_carousel] varchar(250),
+  [descripcion_quienessomos] varchar(300),
+  [integrante] varchar(250),
+  [descripcion_nuestroequipo] varchar(300),
+  [subtitulo_nuestroequipo] varchar(250)
+)
+GO
+

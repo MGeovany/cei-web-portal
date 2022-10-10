@@ -9,7 +9,8 @@ module.exports = class Casos{
         this.usuarioCreador= data.usuarioCreador || '';
         this.fechaCreado= data.fechaCreado || '';
         this.proyecto= data.proyecto || '';
-
+        this.seccionCasos = data.seccionCasos || '';
+        
         this.queryGetFirst10=`
         SELECT 
         id
@@ -51,11 +52,6 @@ module.exports = class Casos{
             WHERE id=@id AND tipo=2;`
         this.queryDelete = `DELETE FROM ${this.db} WHERE id=@id AND tipo = 2`//LISTO
 
-        this.queryUpdateIntegrantes=`UPDATE dbo.Integrantes SET 
-        nombre = @nombre,
-        correo = @correo,
-        proyecto = @proyecto,
-        seccionCasos = @seccionCasos
-        WHERE id = @id_ ;`
+       
     }
 }
