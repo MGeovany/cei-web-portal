@@ -48,6 +48,8 @@ import { NotificationsProvider } from '@mantine/notifications'
 import { ActividadesModal } from './modals/ActividadesModal'
 
 import { EliminarContactoModal } from './modals/EliminarContactoModal'
+import { EliminarBlogsModal } from './modals/EliminarBlogsModal'
+import { EliminarCasosModal } from './modals/EliminarCasosModal'
 
 import { Login } from './pages/Login'
 import { NavbarAdmin } from './componentes/NavbarAdmin'
@@ -70,7 +72,9 @@ function App() {
             EditarCasoModal,
             EditarBlogModal,
             ActividadesModal,
-            EliminarContactoModal
+            EliminarContactoModal,
+            EliminarBlogsModal,
+            EliminarCasosModal
           }}
         >
           <Router>

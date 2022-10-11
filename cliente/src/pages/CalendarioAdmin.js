@@ -34,6 +34,7 @@ const events = [
     end: new Date(2022, 0, 2)
   }
 ]
+const sizemodal = window.innerWidth > 1000 ? 'calc(90% - 6rem)' : 'calc(100% - 0rem)'
 
 export const CalendarioAdmin = () => {
   const modals = useModals()
@@ -49,7 +50,7 @@ export const CalendarioAdmin = () => {
       overlayBlur: 3,
       centered: true,
 
-      size: 'calc(90% - 6rem)',
+      size: sizemodal,
       innerProps: {}
     })
 
