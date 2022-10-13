@@ -8,13 +8,17 @@ const IntegrantesModule = require("../class/Integrantes");
 router.get("/casos", async (req, res) => {
   // get all
   try {
-    let data = { ...req.body, ...req.params };
+    let data = { ...req.body, ...req.query };
     let casos = new CasosModule(data);
 
     let pool = await sql.connect(config);
-    let response = await pool.request().query(casos.queryGetFirst10);
+    console.log(casos.seccionCasos);
+    let response = await pool
+      .request()
+      .input("seccionCasos", sql.VarChar, casos.seccionCasos)
+      .query(casos.queryGetFirst10);
 
-    if (response.rowsAffected <= 0 && result.rowsAffected <= 0) {
+    if (response.rowsAffected <= 0 && response.rowsAffected <= 0) {
       throw "No existe datos con esos parámetros";
     }
     res.status(200).json(response.recordsets[0]);
@@ -51,6 +55,7 @@ router.post("/casos", async (req, res) => {
     let data = { ...req.body, ...req.params };
     let casos = new CasosModule(data);
     let pool = await sql.connect(config);
+
     let response = await pool
       .request()
       .input("titulo", sql.NVarChar(100), casos.titulo)
