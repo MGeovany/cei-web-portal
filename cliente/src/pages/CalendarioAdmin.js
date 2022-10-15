@@ -103,8 +103,9 @@ export const CalendarioAdmin = () => {
                 </Button>
               </div>
             </div>
-            <Calendario events={events} />
+            
           </div>
+          <Calendario events={events} />
         </div>
       </MantineProvider>
     </div>
