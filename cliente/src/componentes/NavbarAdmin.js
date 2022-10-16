@@ -131,9 +131,10 @@ export const NavbarAdmin = () => {
                   leftIcon={<IconLogout size={14} />}
                   size='md'
                   compact
+                  style={{ zIndex: 100 }}
                   onClick={() => salir()}
                 >
-                  Cerrar session
+                  Cerrar sesion
                 </Button>
               </Center>
             </Popover.Dropdown>

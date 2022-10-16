@@ -3,6 +3,7 @@ import React from 'react'
 import { Calendario } from '../componentes/Calendario'
 import '../styles/Calendario.css'
 import { Navbar } from '../componentes/Navbar'
+import { motion } from "framer-motion"
 import { Actividades } from '../componentes/Actividades'
 
 // static data, this will be loaded from a server in production.
@@ -287,6 +288,7 @@ const events = [
 
 export const CalendarioPage = () => {
   return (
+    <div className='emerge-down'>
     <div className='casos'>
       <div className='casos-container'>
         <div className='title-calendario'>
@@ -298,6 +300,7 @@ export const CalendarioPage = () => {
           section={' Actividades celebradas por el CEI'}
         />
       </div>
+    </div>
     </div>
   )
 }

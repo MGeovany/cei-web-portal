@@ -4,9 +4,10 @@ import '../styles/Blog.css'
 import '../styles/TableCardsRecursive.css'
 import { RecursosDescargables } from '../componentes/RecursosDescargables'
 
+
 export const Blog = () => {
   return (
-    <div>
+    <div className='emerge-down'>
       <div className='blog'>
         <div className='blog-container flex'>
           <div className='casos-title section-title'>
@@ -15,7 +16,7 @@ export const Blog = () => {
           </div>
           <div className='casos-content'>
             <div className='casos-section'>
-              <BlogsRecientes section={'Blog Recientemente Publicados'} />
+              <BlogsRecientes />
               <RecursosDescargables />
             </div>
           </div>

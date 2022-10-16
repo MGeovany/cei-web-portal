@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
 import React, { useState } from 'react'
+import { motion } from "framer-motion"
 
 export const Navbar = () => {
   const [active, setActive] = useState('nav__menu')
@@ -33,7 +34,9 @@ export const Navbar = () => {
         <li className='nav__item'></li>
         <li className='nav__item'>
           <Link to={rutas['inicio']}>
-            <div
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
               className={
                 isOpen === rutas['inicio'] ? 'nav__link dot' : 'nav__link-home'
               }
@@ -41,47 +44,55 @@ export const Navbar = () => {
               value='home'
             >
               Inicio
-            </div>
+            </motion.div>
           </Link>
         </li>
         <li className='nav__item'>
           <Link to={rutas['calendario']}>
-            <div
+            <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
               className={
                 isOpen === rutas['calendario'] ? 'nav__link dot' : 'nav__link-calendario'
               }
               onClick={(e) => navToggle(e)}
             >
               Actividades
-            </div>
+            </motion.div>
           </Link>
         </li>
         <li className='nav__item'>
           <Link to={rutas['casos-de-exito']}>
-            <div
+            <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
               className={
                 isOpen === rutas['casos-de-exito'] ? 'nav__link dot' : 'nav__link-casos'
               }
               onClick={(e) => navToggle(e)}
             >
               Casos de Éxito
-            </div>
+            </motion.div>
           </Link>
         </li>
         <li className='nav__item'>
           <Link to={rutas['blog']}>
-            <div
+            <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
               className={
                 isOpen === rutas['blog'] ? 'nav__link dot' : 'nav__link-blog'
               }
               onClick={(e) => navToggle(e)}
             >
               Recursos
-            </div>
+            </motion.div>
           </Link>
         </li>
         <li>
-          <div className='navbar-btns'>
+          <motion.div
+         
+          className='navbar-btns'>
             <Link
               to='/contactanos'
               value='contactanos'
@@ -97,7 +108,7 @@ export const Navbar = () => {
             >
               Postulate
             </Link>
-          </div>
+          </motion.div>
         </li>
       </ul>
       <div onClick={(() => setIsOpen('home'), navToggle)} className={icon}>

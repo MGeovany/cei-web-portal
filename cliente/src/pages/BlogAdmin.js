@@ -11,6 +11,8 @@ import { NavbarAdmin } from '../componentes/NavbarAdmin'
 import { Button, MantineProvider, useMantineTheme } from '@mantine/core'
 
 export const BlogAdmin = () => {
+  const  sizemodal = window.innerWidth > 1000 ? 'calc(80% - 4rem)' : 'calc(100% - 0rem)';
+
   const modals = useModals()
   const theme = useMantineTheme()
 
@@ -24,7 +26,7 @@ export const BlogAdmin = () => {
       overlayBlur: 3,
       centered: true,
       padding: 'xl',
-      size: '1080px',
+      size: sizemodal,
       innerProps: {}
     })
   }
