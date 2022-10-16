@@ -300,16 +300,18 @@ export const CalendarioPage = () => {
   }, [])
 
   return (
-    <div className='casos'>
-      <div className='casos-container'>
-        <div className='title-calendario'>
-          CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
+    <div className='emerge-down'>
+      <div className='casos'>
+        <div className='casos-container'>
+          <div className='title-calendario'>
+            CALENDARIO DE <span style={{ color: '#e1575f' }}> EVENTOS🎯</span>
+          </div>
+          <Calendario events={events} />
+          <Actividades
+            data={activities}
+            section={'Actividades celebradas por el CEI'}
+          />
         </div>
-        <Calendario events={events} />
-        <Actividades
-          data={activities}
-          section={'Actividades celebradas por el CEI'}
-        />
       </div>
     </div>
   )

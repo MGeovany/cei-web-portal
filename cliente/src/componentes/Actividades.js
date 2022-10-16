@@ -5,6 +5,7 @@ import { Arrow } from '../utils/svgIcons'
 import '../styles/Calendario.css'
 import { Carousel } from '@mantine/carousel'
 import Autoplay from 'embla-carousel-autoplay'
+import { motion } from "framer-motion"
 
 export const Actividades = ({ data }) => {
   const slides = data.map((item, i) => (
@@ -18,9 +19,10 @@ export const Actividades = ({ data }) => {
       <div className='actividades-container-section'>
         <div className='actividades-section-title'>
           Actividades celebradas por el CEI
-          <span style={{ marginLeft: '12px' }}>
+          <motion.span animate={{ scale: [1,1.2,1.3,1.4,1.3,1.2,1] }}
+                transition={{ ease: "linear", duration: 1, repeat: Infinity }} style={{ marginLeft: '12px' }}>
             <Arrow height={30} width={25} fill='#e1575f' />
-          </span>
+          </motion.span>
         </div>
         <div className='container-carrouselact'>
           <Carousel

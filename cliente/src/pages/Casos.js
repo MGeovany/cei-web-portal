@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { CasoCarousel } from '../componentes/CasoCarousel'
+import { motion } from "framer-motion"
 
 import '../styles/Casos.css'
 
@@ -535,6 +536,7 @@ export const Casos = () => {
   }, [])
 
   return (
+    <div className='emerge-down'>
     <div className='casos'>
       <div className='casos-container'>
         <div className='casos-title section-title'>
@@ -545,6 +547,7 @@ export const Casos = () => {
         <CasoCarousel data={casosSoc} section={'Social'} />
         <CasoCarousel data={casosSal} section={'Salud'} />
       </div>
+    </div>
     </div>
   )
 }

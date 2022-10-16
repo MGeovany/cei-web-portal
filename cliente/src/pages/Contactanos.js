@@ -3,6 +3,7 @@ import '../styles/Contactanos.css'
 import { TextInput, Textarea, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
 import { showNotification } from '@mantine/notifications'
+import { motion } from "framer-motion"
 import {
   IconCheck,
   IconBrandTelegram,
@@ -66,7 +67,7 @@ export const Contactanos = () => {
         <div className='section-title titulo_contactanos'>
           PONTE EN <span style={{ color: '#e1575f' }}>CONTACTO📢</span>
         </div>
-        <div className='contactanos-form'>
+        <div className='contactanos-form emerge-down'>
           <form
             className='form-contactanos'
             onSubmit={form.onSubmit((values) => createPost(values))}

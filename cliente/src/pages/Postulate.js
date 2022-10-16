@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import '../styles/Postulate.css'
+import { motion } from "framer-motion"
 import {
   TextInput,
   Button,
@@ -40,7 +41,7 @@ export const Postulate = () => {
             POSTULA TU
             <span style={{ color: '#e1575f' }}> IDEA💡</span>
           </div>
-          <form className='form-postulate'>
+          <form className='form-postulate emerge-down'>
             <div className='postulate-grid'>
               <div className='postulate-grid-item'>
                 <TextInput

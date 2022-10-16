@@ -1,3 +1,7 @@
+.emerge-down{
+    animation: emerge-down 1200ms ease-in-out forwards;
+  }
+
 .casos {
   color: var(--black);
   font-family: var(--sen-bold);

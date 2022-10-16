@@ -6,6 +6,7 @@ import { Button, Group, useMantineTheme, MantineProvider } from '@mantine/core'
 import { useModals } from '@mantine/modals'
 import { NavbarAdmin } from '../componentes/NavbarAdmin'
 
+
 // static data, this will be loaded from a server in production.
 
 const events = [

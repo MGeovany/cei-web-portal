@@ -5,6 +5,7 @@ import { CasoCard } from './CasoCard'
 import { useMediaQuery } from '@mantine/hooks'
 import { useMantineTheme } from '@mantine/core'
 import { Carousel } from '@mantine/carousel'
+import { motion } from "framer-motion"
 
 export const CasoCarousel = ({ data, section }) => {
   const theme = useMantineTheme()
@@ -19,7 +20,7 @@ export const CasoCarousel = ({ data, section }) => {
 
   return (
     <div style={{ padding: '1rem', marginTop: '4rem' }}>
-      <div className='casos-section-title'>{section}</div>
+      <motion.div className='casos-section-title'>{section}</motion.div>
       <Carousel
         slideSize='25%'
         breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}

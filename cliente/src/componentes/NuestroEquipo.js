@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/NuestroEquipo.css'
+import { motion } from "framer-motion"
 
 export const NuestroEquipo = () => {
   return (
@@ -8,7 +9,8 @@ export const NuestroEquipo = () => {
         NUESTRO <span style={{ color: '#E35961' }}> EQUIPO🏆</span>
       </div>
       <div className='nuestro-equipo-container '>
-        <div className='nuestro-equipo-item flex'>
+        <motion.div className='nuestro-equipo-item flex'
+        whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>
           <div className='nuestro-equipo-item-img'>
             <img
               src='/assets/team/Claudia.jpg'
@@ -16,7 +18,8 @@ export const NuestroEquipo = () => {
               style={{ border: '7px solid #a75bf2' }}
             />
           </div>
-          <div className='nuestro-equipo-item-container'>
+          <div className='nuestro-equipo-item-container'
+          >
             <div className='nuestro-equipo-item-name'>Claudia Pagoaga</div>
             <div className='nuestro-equipo-item-job'>
               Coordinador del Centro de Emprendimiento <br /> e Innovación
@@ -26,8 +29,9 @@ export const NuestroEquipo = () => {
             </div>
             <hr style={{ border: '2px solid #a75bf2' }} />
           </div>
-        </div>
-        <div className='nuestro-equipo-item flex'>
+        </motion.div>
+        <motion.div className='nuestro-equipo-item flex'
+        whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>
           <div className='nuestro-equipo-item-img'>
             <img
               src='/assets/team/Dax.jpg'
@@ -56,8 +60,9 @@ export const NuestroEquipo = () => {
               }}
             />
           </div>
-        </div>
-        <div className='nuestro-equipo-item flex'>
+        </motion.div>
+        <motion.div className='nuestro-equipo-item flex'
+        whileInView={{ opacity: [0,0,0,0.3,0.5,0.8, 1] }}>
           <div className='nuestro-equipo-item-img '>
             <img
               src='/assets/team/Carlos.jpg'
@@ -80,7 +85,7 @@ export const NuestroEquipo = () => {
               }}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
