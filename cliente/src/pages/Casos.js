@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
 import { CasoCarousel } from '../componentes/CasoCarousel'
-import { motion } from "framer-motion"
 
 import '../styles/Casos.css'
 
@@ -527,7 +526,9 @@ export const Casos = () => {
 
   useEffect(() => {
     const fetchContactanos = async () => {
-      const response = await fetch('https://cei1.herokuapp.com/1.0.0/casos')
+      const response = await fetch(
+        'https://cei1.herokuapp.com/1.0.0/casos?seccionCasos=Social'
+      )
       const data = await response.json()
       setCasosTec(data)
       console.log(data)
@@ -537,17 +538,17 @@ export const Casos = () => {
 
   return (
     <div className='emerge-down'>
-    <div className='casos'>
-      <div className='casos-container'>
-        <div className='casos-title section-title'>
-          CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
+      <div className='casos'>
+        <div className='casos-container'>
+          <div className='casos-title section-title'>
+            CASOS QUE <span style={{ color: '#e1575f' }}>INSPIRAN🥇</span>
+          </div>
+          <CasoCarousel data={casosTecD} section={'Tecnología'} />
+          <CasoCarousel data={casosCom} section={'Comercial'} />
+          <CasoCarousel data={casosSoc} section={'Social'} />
+          <CasoCarousel data={casosSal} section={'Salud'} />
         </div>
-        <CasoCarousel data={casosTecD} section={'Tecnología'} />
-        <CasoCarousel data={casosCom} section={'Comercial'} />
-        <CasoCarousel data={casosSoc} section={'Social'} />
-        <CasoCarousel data={casosSal} section={'Salud'} />
       </div>
-    </div>
     </div>
   )
 }

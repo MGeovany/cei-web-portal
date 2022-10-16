@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
-import { Carousel } from '@mantine/carousel'
+/* import { Carousel } from '@mantine/carousel'
 import React, { useRef } from 'react'
 
 import Autoplay from 'embla-carousel-autoplay'
 import { useMantineTheme } from '@mantine/core'
-import { useMediaQuery } from '@mantine/hooks'
+import { useMediaQuery } from '@mantine/hooks' */
 
 export const ActividadesModal = ({ context, id, innerProps }) => {
-  const autoplay = useRef(Autoplay({ delay: 2000 }))
+  /*   const autoplay = useRef(Autoplay({ delay: 2000 }))
   const theme = useMantineTheme()
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
+  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`) */
 
   return (
     <>

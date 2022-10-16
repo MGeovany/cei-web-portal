@@ -18,7 +18,7 @@ export const LandingPage = () => {
     fetchContactanos()
   }, [])
 
-  console.log('data', dataHome)
+  console.log('dataHome', dataHome)
   return (
     <>
       <Home dataHome={dataHome} />
