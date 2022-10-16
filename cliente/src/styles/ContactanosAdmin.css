@@ -73,6 +73,16 @@
   }
 }
 
+
+.table_contactanos
+{
+  height: 100%;
+  overflow: auto;
+}
+
+
+
+
 @media screen and (max-width: 1050px) 
 {
   .table_contactanos
