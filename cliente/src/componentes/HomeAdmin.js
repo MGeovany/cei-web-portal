@@ -5,8 +5,18 @@ import { Group, Modal } from '@mantine/core'
 import { HomeForm } from './HomeForm'
 import '../styles/Home.css'
 
+import { useDispatch } from 'react-redux'
+import { logout, getSession } from '../store/slices/login/loginSlice'
+
+
 export const HomeAdmin = () => {
   const [opened, setOpened] = useState(false)
+  const dispatch = useDispatch()
+
+  const salir = () => {
+    dispatch(logout())
+    window.location.pathname = '/'
+  }
 
   return (
       <div className='home'>
@@ -25,12 +35,12 @@ export const HomeAdmin = () => {
               Editar Contenido
             </div>
 
-            <Link to='/'>
+            <button onClick={salir} >
               <div className='home__btn__blog'>
                 Ver Vista Principal
                 <Arrow fill='#ffffff' width={24} height={23} />
               </div>
-            </Link>
+            </button>
           </div>
         </div>
         <div className='home__img'>
