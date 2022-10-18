@@ -42,7 +42,14 @@ router.get("/casos/:id", async (req, res) => {
     if (response.rowsAffected <= 0) {
       throw "No existe datos con esos parámetros";
     }
-    res.status(200).json(response.recordsets);
+
+    res.status(200).json(response.recordsets) ; 
+    {
+      nombre:response.nombre
+      descripcion:response.descripcion
+      integrantes : [...responseintegrantes]
+    }
+
   } catch (error) {
     console.error(`Hay clavo tio ${error}`);
     res.status(300).json({ error: `Hay clavo tio ${error}` });
