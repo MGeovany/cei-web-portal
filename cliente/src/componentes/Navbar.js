@@ -34,9 +34,8 @@ export const Navbar = () => {
         <li className='nav__item'></li>
         <li className='nav__item'>
           <Link to={rutas['inicio']}>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8 }}
+            <div
+              
               className={
                 isOpen === rutas['inicio'] ? 'nav__link dot' : 'nav__link-home'
               }
@@ -44,53 +43,49 @@ export const Navbar = () => {
               value='home'
             >
               Inicio
-            </motion.div>
+            </div>
           </Link>
         </li>
         <li className='nav__item'>
           <Link to={rutas['calendario']}>
-            <motion.div
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
+            <div
+            
               className={
                 isOpen === rutas['calendario'] ? 'nav__link dot' : 'nav__link-calendario'
               }
               onClick={(e) => navToggle(e)}
             >
               Actividades
-            </motion.div>
+            </div>
           </Link>
         </li>
         <li className='nav__item'>
           <Link to={rutas['casos-de-exito']}>
-            <motion.div
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
+            <div
               className={
                 isOpen === rutas['casos-de-exito'] ? 'nav__link dot' : 'nav__link-casos'
               }
               onClick={(e) => navToggle(e)}
             >
               Casos de Éxito
-            </motion.div>
+            </div>
           </Link>
         </li>
         <li className='nav__item'>
           <Link to={rutas['blog']}>
-            <motion.div
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
+            <div
+            
               className={
                 isOpen === rutas['blog'] ? 'nav__link dot' : 'nav__link-blog'
               }
               onClick={(e) => navToggle(e)}
             >
               Recursos
-            </motion.div>
+            </div>
           </Link>
         </li>
         <li>
-          <motion.div
+          <div
          
           className='navbar-btns'>
             <Link
@@ -108,7 +103,7 @@ export const Navbar = () => {
             >
               Postulate
             </Link>
-          </motion.div>
+          </div>
         </li>
       </ul>
       <div onClick={(() => setIsOpen('home'), navToggle)} className={icon}>
