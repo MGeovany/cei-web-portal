@@ -3,12 +3,22 @@ import { Link } from 'react-router-dom'
 import { Arrow, HeroBanner } from '../utils/svgIcons'
 import { Group, Modal } from '@mantine/core'
 import { HomeForm } from './HomeForm'
+import '../styles/Home.css'
+
+import { useDispatch } from 'react-redux'
+import { logout, getSession } from '../store/slices/login/loginSlice'
+
 
 export const HomeAdmin = () => {
   const [opened, setOpened] = useState(false)
+  const dispatch = useDispatch()
+
+  const salir = () => {
+    dispatch(logout())
+    window.location.pathname = '/'
+  }
 
   return (
-    <>
       <div className='home'>
         <div className='home__banner'>
           <HeroBanner />
@@ -25,26 +35,24 @@ export const HomeAdmin = () => {
               Editar Contenido
             </div>
 
-            <Link to='/'>
+            <button onClick={salir} >
               <div className='home__btn__blog'>
                 Ver Vista Principal
                 <Arrow fill='#ffffff' width={24} height={23} />
               </div>
-            </Link>
+            </button>
           </div>
         </div>
         <div className='home__img'>
           <img src='/assets/people/Startup.png' alt='Startup' />
         </div>
-      </div>
-
-      <Modal
+        <Modal
         opened={opened}
         onClose={() => setOpened(false)}
         overlayOpacity={0.55}
         centered={true}
         padding={'xl'}
-        size={'1080px'}
+        size={'calc(100% - 1rem)'}
         overlayBlur={3}
       >
         <Group position='left'>
@@ -55,6 +63,6 @@ export const HomeAdmin = () => {
         </Group>
         <HomeForm setOpened={setOpened} />
       </Modal>
-    </>
+      </div>
   )
 }

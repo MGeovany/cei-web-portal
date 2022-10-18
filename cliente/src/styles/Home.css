@@ -32,6 +32,7 @@
   color: white;
   font-family: var(--sen-bold);
   padding-top: 2rem;
+  
 }
 
 .home__text {
@@ -128,6 +129,9 @@
   .home__text {
     font-size: 1.3rem;
     width: 100%;
+  }
+  .home__title{
+    font-size: 45px;
   }
   .home__subtitle {
     width: 100%;
