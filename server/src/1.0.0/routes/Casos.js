@@ -3,7 +3,7 @@ const router = express.Router();
 const config = require("../lib/config");
 const sql = require("mssql");
 const CasosModule = require("../class/Casos");
-const IntegrantesModule = require("../class/Integrantes");
+const CasosIntegrantesModule = require("../class/CasosIntegrantes");
 
 router.get("/casos", async (req, res) => {
   // get all
@@ -33,23 +33,37 @@ router.get("/casos/:id", async (req, res) => {
   try {
     let data = { ...req.body, ...req.params };
     let casos = new CasosModule(data);
+    let casosIntegrantes = new CasosIntegrantesModule(data);
     let pool = await sql.connect(config);
+    
     let response = await pool
       .request()
       .input("id", sql.Int, casos.id)
       .query(casos.queryGetById);
 
+    let responseIntegrantes = await pool.request()
+    .input("caso",sql.Int,casos.id)
+    .query(casosIntegrantes.queryGetByPost)
+
     if (response.rowsAffected <= 0) {
       throw "No existe datos con esos parámetros";
     }
 
-    res.status(200).json(response.recordsets) ; 
-    {
-      nombre:response.nombre
-      descripcion:response.descripcion
-      integrantes : [...responseintegrantes]
-    }
+    let caso = response.recordsets[0][0]
+    let integrantes = responseIntegrantes.recordsets[0]
+    console.log(caso)
+    res.status(200).json({
+        id:caso.id,
+        tipo:caso.titulo,
+        titutlo:caso.titulo,
+        cuerpo:caso.cuerpo,
+        usuarioCreador:caso.usuarioCreador,
+        fechaCreado:caso.fechaCreado,
+        seccionCasos:caso.seccionCasos,
+        integrantes:[...integrantes]
 
+    }) ; 
+  
   } catch (error) {
     console.error(`Hay clavo tio ${error}`);
     res.status(300).json({ error: `Hay clavo tio ${error}` });

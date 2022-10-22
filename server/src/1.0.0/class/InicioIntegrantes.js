@@ -2,7 +2,7 @@ module.exports = class InicioIntegrantes {
   constructor(data, filter) {
     this.db = "InicioIntegrantes";
 
-    this.imagen = data?.tipo || "";
+    this.imagen = data?.imagen || "";
     this.nombre = data?.nombre || "";
     this.titulo = data?.titulo || "";
     this.descripcion = data?.descripcion || "";
@@ -18,7 +18,10 @@ module.exports = class InicioIntegrantes {
             imagen=@imagen,
             nombre=@nombre,
             titulo=@titulo,
-            descripcion=@descripcion`;
+            descripcion=@descripcion
+            where imagen=@imagen,
+            nombre=@nombre,
+            `;
     this.queryDelete = `DELETE FROM ${this.db} WHERE id=@id `;
   }
 };
