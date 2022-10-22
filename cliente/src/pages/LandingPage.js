@@ -11,7 +11,7 @@ export const LandingPage = () => {
 
   useEffect(() => {
     const fetchContactanos = async () => {
-      const response = await fetch('https://cei1.herokuapp.com/1.0.0/inicio')
+      const response = await fetch('http://localhost:5000/1.0.0/inicio')
       const data = await response.json()
       setDataHome(data[0])
     }
