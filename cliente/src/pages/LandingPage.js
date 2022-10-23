@@ -18,12 +18,17 @@ export const LandingPage = () => {
     fetchContactanos()
   }, [])
 
+  const { carousel, titulo_seccion_carousel, integrantes, cei_descripcion } =
+    dataHome
   return (
     <>
       <Home dataHome={dataHome} />
-      <CarouselHome dataHome={dataHome} />
-      <QuienesSomos dataHome={dataHome} />
-      <NuestroEquipo dataHome={dataHome} />
+      <CarouselHome
+        carousel={carousel}
+        titulo_seccion_carousel={titulo_seccion_carousel}
+      />
+      <QuienesSomos cei_descripcion={cei_descripcion} />
+      <NuestroEquipo integrantes={integrantes} />
     </>
   )
 }

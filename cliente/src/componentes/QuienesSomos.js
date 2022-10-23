@@ -2,7 +2,7 @@ import { React } from 'react'
 import '../styles/QuienesSomos.css'
 import { motion } from 'framer-motion'
 
-export const QuienesSomos = ({ dataHome }) => {
+export const QuienesSomos = ({ cei_descripcion }) => {
   return (
     <div className='quienes-somos flex'>
       <div className='section-title'>
@@ -18,9 +18,7 @@ export const QuienesSomos = ({ dataHome }) => {
             <hr />
           </div>
         </div>
-        <div className='quienes-somos-text-cnt'>
-          {dataHome?.cei_descripcion}
-        </div>
+        <div className='quienes-somos-text-cnt'>{cei_descripcion}</div>
       </motion.div>
     </div>
   )

@@ -33,8 +33,7 @@ const data = [
       'https://images.pexels.com/photos/12879613/pexels-photo-12879613.jpeg'
   }
 ]
-export const CarouselHome = ({ dataHome }) => {
-  const { titulo_seccion_carousel, carousel } = dataHome
+export const CarouselHome = ({ titulo_seccion_carousel, carousel }) => {
   const autoplay = useRef(Autoplay({ delay: 3000 }))
 
   const slides = carousel?.map((item, i) => (
