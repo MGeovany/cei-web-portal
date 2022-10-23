@@ -3,8 +3,49 @@ import { useForm } from '@mantine/form'
 import React from 'react'
 import { useState, useRef } from 'react'
 import { FileButton, Group, Text } from '@mantine/core'
+import { showNotification } from '@mantine/notifications'
+import { IconCheck } from '@tabler/icons'
 export const HomeForm = ({ setOpened }) => {
+  const form = useForm({
+    initialValues: {
+      titulo: '',
+      subtitulo: '',
+      imagen: '',
+      titulo_seccion_carousel: '',
+      cei_descripcion: '',
+      carousel: [''],
+      integrantes: ['']
+    }
+  })
+  const createPost = async (values) => {
+    showNotification({
+      icon: <IconCheck />,
+      title: 'Enviado',
+      color: 'green',
+      message: 'Edito exitosamente!'
+    })
+    form.setValues({
+      titulo: '',
+      subtitulo: '',
+      imagen: '',
+      titulo_seccion_carousel: '',
+      cei_descripcion: '',
+      carousel: [''],
+      integrantes: ['']
+    })
+    const response = await fetch('http://localhost:5000/1.0.0/Inicio', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    })
+    const data = await response.json()
+    console.log(data)
+  }
+
   const [file, setFile] = useState(null)
+  const [imageCarousel, setImageCarousel] = useState(null)
   const resetRef = useRef(null)
 
   const clearFile = () => {
@@ -12,32 +53,19 @@ export const HomeForm = ({ setOpened }) => {
     resetRef.current?.()
   }
 
-  const form = useForm({
-    initialValues: {
-      email: '',
-      termsOfService: false
-    },
-    validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Correo Invalido')
-    }
-  })
   return (
     <div>
       <form
         className='form__caso__center'
-        onSubmit={form.onSubmit((values) => console.log(values))}
+        onSubmit={form.onSubmit((values) => createPost(values))}
       >
         <Grid grow columns={24}>
           <Grid.Col span={12}>
-            <Input.Wrapper
-              className='font-sen'
-              id='input-nombre-proyecto'
-              required
-              label='Título'
-            >
+            <Input.Wrapper className='font-sen' id='input-title' label='Título'>
               <Input
-                id='input-nombre-proyecto'
+                id='input-title'
                 placeholder='Bienvenidos al CEI'
+                {...form.getInputProps('titulo')}
               />
             </Input.Wrapper>
           </Grid.Col>
@@ -48,7 +76,7 @@ export const HomeForm = ({ setOpened }) => {
               className='font-sen'
               placeholder='Sitio Web del Centro de Emprendimiento e Innovación'
               label='Subtitulo'
-              required
+              {...form.getInputProps('subtitulo')}
             />
           </Grid.Col>
           <Grid.Col span={24}>
@@ -66,7 +94,7 @@ export const HomeForm = ({ setOpened }) => {
               </FileButton>
               <Button
                 disabled={!file}
-                onClick={clearFile}
+                onClick={() => setFile(null)}
                 color='red'
                 radius='xl'
                 size='xs'
@@ -92,6 +120,57 @@ export const HomeForm = ({ setOpened }) => {
             </Group>
           </Grid.Col>
 
+          <Group>
+            <Text className='font-sen'>Imagen Carousel</Text>
+            <FileButton
+              resetRef={resetRef}
+              onChange={setFile}
+              accept='image/png,image/jpeg'
+              color='cyan'
+              radius='xl'
+              size='xs'
+            >
+              {(props) => <Button {...props}>Seleccionar imagen</Button>}
+            </FileButton>
+            <Button
+              disabled={!file}
+              onClick={clearFile}
+              color='red'
+              radius='xl'
+              size='xs'
+            >
+              Reiniciar
+            </Button>
+          </Group>
+          {file && (
+            <Text size='sm' align='left' mt='sm'>
+              Archivo seleccionado: {file.name}
+            </Text>
+          )}
+
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Título'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Proyecto Manos de Vida'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Descripcion'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
+            </Input.Wrapper>
+          </Grid.Col>
           <Group>
             <Text className='font-sen'>Imagen principal</Text>
             <FileButton
@@ -138,54 +217,38 @@ export const HomeForm = ({ setOpened }) => {
               className='font-sen'
               id='input-nombre-proyecto'
               required
-              label='Sección'
+              label='Descripcion'
             >
               <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
             </Input.Wrapper>
           </Grid.Col>
-          <Grid.Col span={24}>
-            <Textarea
-              minRows={2}
-              maxRows={15}
-              className='font-sen'
-              placeholder='Manos de Vida es una plataforma...'
-              label='Detalles'
-              required
-            />
-          </Grid.Col>
-          <Grid.Col span={6}>
-            <Input.Wrapper
-              className='font-sen'
-              id='input-nombre-proyecto'
-              required
-              label='Título'
+          <Group>
+            <Text className='font-sen'>Imagen principal</Text>
+            <FileButton
+              resetRef={resetRef}
+              onChange={setFile}
+              accept='image/png,image/jpeg'
+              color='cyan'
+              radius='xl'
+              size='xs'
             >
-              <Input
-                id='input-nombre-proyecto'
-                placeholder='Proyecto Manos de Vida'
-              />
-            </Input.Wrapper>
-          </Grid.Col>
-          <Grid.Col span={6}>
-            <Input.Wrapper
-              className='font-sen'
-              id='input-nombre-proyecto'
-              required
-              label='Sección'
+              {(props) => <Button {...props}>Seleccionar imagen</Button>}
+            </FileButton>
+            <Button
+              disabled={!file}
+              onClick={clearFile}
+              color='red'
+              radius='xl'
+              size='xs'
             >
-              <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
-            </Input.Wrapper>
-          </Grid.Col>
-          <Grid.Col span={24}>
-            <Textarea
-              minRows={2}
-              maxRows={15}
-              className='font-sen'
-              placeholder='Manos de Vida es una plataforma...'
-              label='Detalles'
-              required
-            />
-          </Grid.Col>
+              Reiniciar
+            </Button>
+          </Group>
+          {file && (
+            <Text size='sm' align='left' mt='sm'>
+              Archivo seleccionado: {file.name}
+            </Text>
+          )}
 
           <Grid.Col span={6}>
             <Input.Wrapper
@@ -205,20 +268,61 @@ export const HomeForm = ({ setOpened }) => {
               className='font-sen'
               id='input-nombre-proyecto'
               required
-              label='Sección'
+              label='Descripcion'
             >
               <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
             </Input.Wrapper>
           </Grid.Col>
-          <Grid.Col span={24}>
-            <Textarea
-              minRows={2}
-              maxRows={15}
+          <Group>
+            <Text className='font-sen'>Imagen principal</Text>
+            <FileButton
+              resetRef={resetRef}
+              onChange={setFile}
+              accept='image/png,image/jpeg'
+              color='cyan'
+              radius='xl'
+              size='xs'
+            >
+              {(props) => <Button {...props}>Seleccionar imagen</Button>}
+            </FileButton>
+            <Button
+              disabled={!file}
+              onClick={clearFile}
+              color='red'
+              radius='xl'
+              size='xs'
+            >
+              Reiniciar
+            </Button>
+          </Group>
+          {file && (
+            <Text size='sm' align='left' mt='sm'>
+              Archivo seleccionado: {file.name}
+            </Text>
+          )}
+
+          <Grid.Col span={6}>
+            <Input.Wrapper
               className='font-sen'
-              placeholder='Manos de Vida es una plataforma...'
-              label='Detalles'
+              id='input-nombre-proyecto'
               required
-            />
+              label='Título'
+            >
+              <Input
+                id='input-nombre-proyecto'
+                placeholder='Proyecto Manos de Vida'
+              />
+            </Input.Wrapper>
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <Input.Wrapper
+              className='font-sen'
+              id='input-nombre-proyecto'
+              required
+              label='Descripcion'
+            >
+              <Input id='input-nombre-proyecto' placeholder='Casos de exito' />
+            </Input.Wrapper>
           </Grid.Col>
 
           {/* 
@@ -238,7 +342,7 @@ export const HomeForm = ({ setOpened }) => {
               maxRows={25}
               className='font-sen'
               placeholder='Es un espacio creativo ideal para que emprendedores...'
-              label='Descripción'
+              label='Descripcion'
               required
             />
           </Grid.Col>
@@ -269,7 +373,7 @@ export const HomeForm = ({ setOpened }) => {
               className='font-sen'
               id='input-nombre-proyecto'
               required
-              label='Descripción'
+              label='Titulo'
             >
               <Input
                 id='input-nombre-proyecto'
@@ -334,7 +438,7 @@ export const HomeForm = ({ setOpened }) => {
               className='font-sen'
               id='input-nombre-proyecto'
               required
-              label='Descripción'
+              label='Titulo'
             >
               <Input
                 id='input-nombre-proyecto'
@@ -399,7 +503,7 @@ export const HomeForm = ({ setOpened }) => {
               className='font-sen'
               id='input-nombre-proyecto'
               required
-              label='Descripción'
+              label='Titulo'
             >
               <Input
                 id='input-nombre-proyecto'
@@ -450,57 +554,6 @@ export const HomeForm = ({ setOpened }) => {
             )}
           </Grid.Col>
 
-          {/* 
-              Footer CONTENT
-          */}
-
-          <Grid.Col span={24}>
-            <Group position='left'>
-              <div className='asset__modal__title'>
-                Editar Contenido de{' '}
-                <span style={{ color: '#e1575f' }}>Footer</span>
-              </div>
-            </Group>
-          </Grid.Col>
-          <Grid.Col span={6}>
-            <Input.Wrapper
-              className='font-sen'
-              id='input-nombre-proyecto'
-              required
-              label='Facebook URL'
-            >
-              <Input
-                id='input-nombre-proyecto'
-                placeholder='facebook.com/cei'
-              />
-            </Input.Wrapper>
-          </Grid.Col>
-          <Grid.Col span={6}>
-            <Input.Wrapper
-              className='font-sen'
-              id='input-nombre-proyecto'
-              required
-              label='Instagram URL'
-            >
-              <Input
-                id='input-nombre-proyecto'
-                placeholder='instagram.com/cei'
-              />
-            </Input.Wrapper>
-          </Grid.Col>
-          <Grid.Col span={6}>
-            <Input.Wrapper
-              className='font-sen'
-              id='input-nombre-proyecto'
-              required
-              label='Telegram URL'
-            >
-              <Input
-                id='input-nombre-proyecto'
-                placeholder='telegram.com/cei'
-              />
-            </Input.Wrapper>
-          </Grid.Col>
           {/* 
             BUTTONS CONTENT
            */}
