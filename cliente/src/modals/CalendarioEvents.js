@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/CalendarioEvents.css'
 import { Table, useMantineTheme } from '@mantine/core'
-import { showNotification } from '@mantine/notifications'
 import { useModals } from '@mantine/modals'
 import { Eventos } from '../API'
 import { Grid } from '@mantine/core'
 import moment from 'moment'
+import '../styles/recursiveEvents.css'
 
 export const CalendarioEvents = () => {
   const [events, setEvents] = useState([])
@@ -37,22 +37,62 @@ export const CalendarioEvents = () => {
       }
     })
   }
+  const sizemodal = window.innerWidth > 1000 ? 'calc(31%)' : 'calc(90% - 0rem)'
 
   const deleteElement = (name, e) => {
-    e.preventDefault()
-    const newEvents = [...events]
-    newEvents.splice(name, 1)
-    setEvents(newEvents)
-    showNotification({
-      title: 'Eliminado',
-      color: 'blue',
-      message: `Evento eliminado correctamente! ${name}`
+    console.log(name)
+    modals.openContextModal('EliminarBlogsModal', {
+      overlayColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[9]
+          : theme.colors.gray[2],
+      overlayOpacity: 0.55,
+      overlayBlur: 3,
+      centered: true,
+      padding: 'sm',
+      size: sizemodal,
+      innerProps: {
+        name:name,
+        events:events,
+        setEvents:setEvents,
+        elements:element
+      }
     })
 
-    events.splice(name, 1)
   }
 
-  const rows = events.map((element, index) => (
+
+  const element = [
+    {
+      fechaInicio:'20-02-2000',
+      titulo:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting' +
+        ' industry. Lorem Ipsum has been the industrys standard dummy text ever since',
+      semana: 'semana 10',
+      nombreSede: 'sps',
+     
+    }, {
+      fechaInicio:'20-02-2000',
+      titulo:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting' +
+        ' industry. Lorem Ipsum has been the industrys standard dummy text ever since',
+      semana: 'semana 10',
+      nombreSede: 'sps',
+     
+    }, {
+      fechaInicio:'20-02-2000',
+      titulo:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting' +
+        ' industry. Lorem Ipsum has been the industrys standard dummy text ever since',
+      semana: 'semana 10',
+      nombreSede: 'sps',
+     
+    }
+  ]
+
+
+
+  const rows = element.map((element, index) => (
     <tr key={index}>
       <td>
         <div className='td__content'>
@@ -72,7 +112,7 @@ export const CalendarioEvents = () => {
       <td>
         <div className='tab__btns flex'>
           <div
-            className='btn__editar'
+            className='btn__editar '
             onClick={(e) => OpenEditEventos(element)}
           >
             Editar
@@ -88,6 +128,34 @@ export const CalendarioEvents = () => {
     </tr>
   ))
 
+
+
+
+  const rows_recursive = element.map((element, index) => (
+    <div key={index} className='event-recursive'>
+        <div className='td__content' style={{ color: '#717171' , fontWeight:'lighter'}}>
+          {moment(element.fechaInicio).format('D MMM YY, hh:mm a')}
+        </div>
+        <div className='td__content elipsis'><span style={{ color: '#e1575f' , fontWeight:'bold'}}> Titulo : </span>{element.titulo}</div>
+        <div className='td__content'><span style={{ color: '#339BFF' , fontWeight:'bold'}}> Semana : </span>{element.semana}</div>
+        <div className='td__content'><span style={{ color: '#68BB91' , fontWeight:'bold'}}> nombre de sede : </span>{element.nombreSede}</div>
+        <div className='tab__btns btn-container-event'>
+          <div
+            className='btn-editar-recursive btn-recursive-event'
+            onClick={(e) => OpenEditEventos(element)}
+            
+          >
+            Editar
+          </div>
+          <div
+            className='btn-eliminar-recursive btn-recursive-event'
+            onClick={(e) => deleteElement(element.titulo, e)}
+          >
+            Eliminar
+          </div>
+        </div>
+    </div>
+  ))
   return (
     <Grid>
       <div className='cal__modal__title'>
@@ -95,7 +163,7 @@ export const CalendarioEvents = () => {
         VER PRÓXIMOS <span style={{ color: '#e1575f' }}>EVENTOS</span>
       </div>
 
-      <Table fontSize='md' highlightOnHover verticalSpacing='xs'>
+      <Table fontSize='md' highlightOnHover verticalSpacing='xs' className='normal-events-cont'>
         <thead>
           <tr className='text'>
             <th>
@@ -116,7 +184,11 @@ export const CalendarioEvents = () => {
           </tr>
         </thead>
         <tbody>{rows}</tbody>
-      </Table>
+      </Table> 
+      <div className='recursive-events-cont'>
+        {rows_recursive}
+      </div>
+      
     </Grid>
   )
 }

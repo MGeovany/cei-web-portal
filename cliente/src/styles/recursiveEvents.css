@@ -1,0 +1,98 @@
+
+
+.recursive-events-cont
+{
+    width: 100%;
+}
+
+.event-recursive
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px 2px rgb(217, 217, 217);
+
+}
+
+
+.btn-container-event
+{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-right: 10px;
+
+}
+
+.btn-recursive-event
+{
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn-editar-recursive
+{
+    background-color: rgb(98, 174, 227);
+    user-select: none;
+}
+
+.btn-editar-recursive:hover
+{
+    background-color: rgb(58, 133, 186);
+
+}
+
+
+.btn-eliminar-recursive
+{
+    background-color: rgb(227, 98, 98);
+    user-select: none;
+
+}
+
+.btn-eliminar-recursive:hover
+{
+    background-color: rgb(215, 62, 62);
+
+}
+
+@media screen and (min-width:1150px){
+    
+    .recursive-events-cont
+    {
+        display: none;
+    }
+    
+
+    .normal-events-cont
+    {
+        display:table;
+    }
+
+}
+
+
+@media screen and (max-width:1150px) {
+
+    .recursive-events-cont
+    {
+        display: block;
+    }
+    
+
+    .normal-events-cont
+    {
+        display:none;
+    }
+
+    
+}

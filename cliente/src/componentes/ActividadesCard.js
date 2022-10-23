@@ -9,12 +9,17 @@ import {
 } from '@tabler/icons'
 
 export const ActividadesCard = ({
-  title,
-  fecha,
-  autor,
-  contenido,
-  photos,
-  img
+  descripcion,
+  duracion,
+  fechaCreado,
+  fechafin,
+  fechaInicio,
+  id,
+  nombreSede,
+  sede,
+  semana,
+  titulo,
+  usuarioCreador
 }) => {
   const modals = useModals()
   const theme = useMantineTheme()
@@ -33,11 +38,17 @@ export const ActividadesCard = ({
 
       size: 'calc(100% - 2rem)',
       innerProps: {
-        titulo: title,
-        fecha: fecha,
-        autor: autor,
-        desc: contenido,
-        photos: photos
+        desc: descripcion,
+        duration: duracion,
+        createdDate: fechaCreado,
+        endDate: fechafin,
+        startDate: fechaInicio,
+        id: id,
+        sede: nombreSede,
+        sedeId: sede,
+        week: semana,
+        title: titulo,
+        author: usuarioCreador
       }
     })
 
@@ -53,23 +64,21 @@ export const ActividadesCard = ({
       >
         <Card shadow='sm' p='sm'>
           <Card.Section onClick={openActividadesModal}>
-            <Image withPlaceholder src={img} height={150} alt='blg' />
+            <Image withPlaceholder height={150} alt='blg' />
           </Card.Section>
           <div className='card-actividades'>
             <div
               className='actividad__card__content__title'
               onClick={openActividadesModal}
             >
-              {title}
+              {titulo}
             </div>
 
             <div className='actividad__card__content__button'>
               <div>Compartir:</div>
               <div className='actividad__socials'>
                 <IconBrandTwitter />
-
                 <IconBrandFacebook />
-
                 <IconBrandWhatsapp />
               </div>
             </div>

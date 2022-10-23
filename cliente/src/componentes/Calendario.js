@@ -19,7 +19,7 @@ const localizer = dateFnsLocalizer({
   locales
 })
 
-export const Calendario = (props) => {
+export const Calendario = () => {
   const [eventos, setEventos] = React.useState([])
   React.useState(() => {
     Eventos.calendarEvents()

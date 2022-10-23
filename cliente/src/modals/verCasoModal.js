@@ -1,25 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { CasoTabla } from '../componentes/CasoTabla'
-import { CasoTablaResponsive } from '../componentes/CasoTablaResponsive'
 import { createStyles } from '@mantine/core';
 
 
 const use_Styles = createStyles((theme, _params, getRef) => ({
   casosTablastyle:{
     padding:'0px',
-    width:'100%',
-    '@media (max-width: 1050px)': {
-      display:'none'
-      },
-  },
-  casosTablastyleR:{
-    padding:'0px',
-    width:'100%',
-    '@media (min-width: 1050px)': {
-      display:'none'
-      },
+    width:'100%'
   }
+
 }));
 
 
@@ -37,9 +27,6 @@ export const verCasoModal = ({ context, id, innerProps }) => {
       </div>
       <div className={classes.casosTablastyle}>
       <CasoTabla />
-      </div>
-      <div className={classes.casosTablastyleR}>
-      <CasoTablaResponsive />
       </div>
     </div>
   </>

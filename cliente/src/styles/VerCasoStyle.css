@@ -1,0 +1,32 @@
+.casosTablastyle
+{
+    padding: 0px;
+    width: 100%;
+}
+
+
+.casosTablastyleR
+{
+    padding: 0px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .casosTablastyle
+    {
+        display: none;
+    }
+
+    
+}
+@media screen and (min-width: 1050px) {
+
+    .casosTablastyleR
+    {
+        display: none;
+    }
+
+    
+}
+

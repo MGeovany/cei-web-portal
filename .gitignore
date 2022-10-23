@@ -3,3 +3,6 @@ node_modules/
 cypress/pluggins
 cypress/support
 cypress/videos
+
+.env.production
+.env.development

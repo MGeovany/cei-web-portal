@@ -10,8 +10,8 @@ module.exports = class Usuario {
     this.correo = data.correo || '';
     this.nombre = data.nombre || '';
 
-    this.queryGet = `SELECT * FROM ${this.db}`;
-    this.queryGetByID = `SELECT id, usuario, contrasena, correo FROM ${this.db} WHERE id = @id`;
+    this.queryGet = `SELECT id, nombre, usuario, correo FROM ${this.db}`;
+    this.queryGetByID = `SELECT id, usuario, correo FROM ${this.db} WHERE id = @id`;
     this.querySave = `INSERT INTO ${this.db} (nombre,usuario, contrasena, correo) VALUES (@nombre,@usuario, @contrasena, @correo)`;
     this.queryDelete = `DELETE FROM ${this.db} WHERE id=@id`;
     this.queryUpdate = `UPDATE ${this.db} SET 

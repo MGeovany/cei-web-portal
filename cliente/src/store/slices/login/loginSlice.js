@@ -27,7 +27,8 @@ const getMinutesSession = () => {
   if (session) {
     var startSession = new Date(session.expira)
     var now = new Date()
-    return (now.getTime() - startSession.getTime()) / 1000 / 60
+    return (now.getMinutes() - startSession.getMinutes()) 
+
   }
   return null
 }

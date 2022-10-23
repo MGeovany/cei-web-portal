@@ -95,8 +95,6 @@ export const BlogsRecientes = () => {
     fetchContactanos()
   }, [])
 
-  console.log('dataBlog object', Object.values(dataBlog))
-  console.log('blog madafukin real', blogs)
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`)
 

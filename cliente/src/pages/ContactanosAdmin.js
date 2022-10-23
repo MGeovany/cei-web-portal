@@ -103,13 +103,13 @@ export const ContactanosAdmin = () => {
         className='contactanos-casos'
         style={{ paddingBottom: '2rem', minHeight: '100vh' }}
       >
-        <div className='casos-container'>
+        <div className='casos-container flex'>
           <div className='casos-title section-title'>
             PERSONAS QUE SE
             <span style={{ color: '#e1575f' }}> CONTACTARON</span>
           </div>
-          <div className='contactanos__table__container'>
-            <div className='table_contactanos'>
+          <div className='table__container'>
+            <div className='table_noResponsive'>
               <Table fontSize='md' highlightOnHover verticalSpacing='xl'>
                 <thead>
                   <tr>

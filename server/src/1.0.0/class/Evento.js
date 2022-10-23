@@ -8,6 +8,7 @@ module.exports = class Evento{
         this.descripcion = data.descripcion;
         this.sede = data.sede;
         this.semana = data.semana;
+        this.imagen = data.imagen;
         
         this.usuarioCreador = data.usuarioCreador;
         this.fechaCreado = data.fechaCreado;
@@ -21,8 +22,8 @@ module.exports = class Evento{
             ON E.sede = S.id`;
 
         this.querySave = 
-        `INSERT INTO ${this.db} (fechaInicio, fechaFin, titulo,descripcion,semana, sede, usuarioCreador) VALUES 
-        (@fechaInicio, @fechaFin, @titulo,@descripcion,@semana,@sede,@usuarioCreador)`;
+        `INSERT INTO ${this.db} (fechaInicio, fechaFin, titulo,descripcion,semana, sede, usuarioCreador, imagen) VALUES 
+        (@fechaInicio, @fechaFin, @titulo,@descripcion,@semana,@sede,@usuarioCreador, @imagen)`;
     
         this.queryGetById = `${this.queryGet} WHERE E.id = @id`;
     
@@ -34,7 +35,8 @@ module.exports = class Evento{
             titulo=@titulo,
             descripcion=@descripcion,
             semana=@semana,
-            sede=@sede
+            sede=@sede,
+            imagen = @imagen
         WHERE id = @id`
 
 
