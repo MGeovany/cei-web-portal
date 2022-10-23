@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import { Calendario } from '../componentes/Calendario'
-import '../styles/Calendario.css'
 import { Actividades } from '../componentes/Actividades'
+import '../styles/Calendario.css'
 
 // static data, this will be loaded from a server in production.
 
@@ -33,7 +33,7 @@ const events = [
   }
 ]
 
-const API_URL = 'https://cei1.herokuapp.com/1.0.0/eventos'
+const API_URL = 'http://localhost:5000/1.0.0/Eventos'
 export const CalendarioPage = () => {
   const prevActivities = [
     {
