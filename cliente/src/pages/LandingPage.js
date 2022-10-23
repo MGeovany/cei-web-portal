@@ -13,12 +13,11 @@ export const LandingPage = () => {
     const fetchContactanos = async () => {
       const response = await fetch('http://localhost:5000/1.0.0/inicio')
       const data = await response.json()
-      setDataHome(data[0])
+      setDataHome(data)
     }
     fetchContactanos()
   }, [])
 
-  console.log('dataHome', dataHome)
   return (
     <>
       <Home dataHome={dataHome} />

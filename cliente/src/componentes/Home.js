@@ -13,7 +13,7 @@ export const Home = ({ dataHome }) => {
         <HeroBanner />
       </div>
       <div className='home__text'>
-        <h1 className='home__title'>{dataHome?.titulo_inicio}</h1>
+        <h1 className='home__title'>{dataHome?.titulo}</h1>
 
         <div className='home__btns'>
           <Link to='/postulate'>
@@ -30,7 +30,7 @@ export const Home = ({ dataHome }) => {
           whileInView={{ opacity: [0, 0, 0, 0.3, 0.5, 0.8, 1] }}
           className='home__subtitle'
         >
-          {dataHome?.subtitulo_inicio}
+          {dataHome?.subtitulo}
         </motion.div>
       </div>
       <div className='home__img'>
