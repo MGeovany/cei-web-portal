@@ -20,16 +20,39 @@ describe('App should do the main job', () => {
     cy.get('#mantine-r8').select('San Pedro Sula')
 
     cy.get(
-      '.mantine-InputWrapper-root > .mantine-Stack-root > .mantine-Radio-radioWrapper > .mantine-qqmv3w > #mantine-r9'
+      '.mantine-Stack-root > .mantine-Radio-root > .mantine-15e18iv > .mantine-dwgv7v > #mantine-ra'
+    ).click()
+
+    cy.get(
+      '.mantine-Stack-root > .mantine-Radio-root > .mantine-15e18iv > .mantine-dwgv7v > #mantine-ra'
     ).type('Si')
 
-    cy.get('#mantine-r9').click()
-    cy.get('#mantine-rb').click()
-    cy.get('#mantine-rf').click()
-    cy.get('#mantine-ri').click()
-    cy.get('.mantine-Group-root').click()
-    cy.get('.mantine-qo1k2').click()
+    cy.get(
+      '.mantine-Stack-root > .mantine-Radio-root > .mantine-15e18iv > .mantine-dwgv7v > #mantine-rd'
+    ).click()
 
-    cy.get('.mantine-qo1k2').click()
+    cy.get(
+      '.mantine-Stack-root > .mantine-Radio-root > .mantine-15e18iv > .mantine-dwgv7v > #mantine-rd'
+    ).type('Si')
+
+    cy.get(
+      '.mantine-Stack-root > .mantine-Radio-root > .mantine-15e18iv > .mantine-dwgv7v > #mantine-rg'
+    ).click()
+
+    cy.get(
+      '.mantine-Stack-root > .mantine-Radio-root > .mantine-15e18iv > .mantine-dwgv7v > #mantine-rg'
+    ).type('comercial')
+
+    cy.get(
+      '.mantine-qqmv3w > .mantine-Input-wrapper > .mantine-MultiSelect-input > .mantine-g4bz4 > #mantine-rl'
+    ).click()
+
+    cy.get(
+      '.postulate-grid-item > .mantine-Group-root > .mantine-UnstyledButton-root > .mantine-3xbgk5 > .mantine-qo1k2'
+    ).click()
+
+    cy.get(
+      '.postulate-grid-item > .mantine-Group-root > .mantine-UnstyledButton-root > .mantine-3xbgk5 > .mantine-qo1k2'
+    ).click()
   })
 })

@@ -38,6 +38,7 @@
     "eject": "react-scripts eject",
     "test:e2e": "npx cypress run",
     "eslint": "eslint './**/*.{js,jsx}'",
+    "cypress:open": "cypress open",
     "phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm install --no-fund --no-audit --no-package-lock --legacy-peer-deps"
   },
   "eslintConfig": {
