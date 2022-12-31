@@ -45,7 +45,6 @@ export const HomeForm = ({ setOpened }) => {
   }
 
   const [file, setFile] = useState(null)
-  const [imageCarousel, setImageCarousel] = useState(null)
   const resetRef = useRef(null)
 
   const clearFile = () => {

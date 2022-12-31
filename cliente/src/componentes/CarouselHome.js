@@ -5,7 +5,7 @@ import { CarouselCard } from './CarouselCard'
 import { IconArrowRight, IconArrowLeft } from '@tabler/icons'
 import Autoplay from 'embla-carousel-autoplay'
 import { useRef } from 'react'
-const data = [
+/* const data = [
   {
     titulo: 'static',
     descripcion:
@@ -32,7 +32,7 @@ const data = [
     imagen:
       'https://images.pexels.com/photos/12879613/pexels-photo-12879613.jpeg'
   }
-]
+] */
 export const CarouselHome = ({ titulo_seccion_carousel, carousel }) => {
   const autoplay = useRef(Autoplay({ delay: 3000 }))
 

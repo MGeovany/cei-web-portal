@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
 import React, { useState } from 'react'
-import { motion } from "framer-motion"
 
 export const Navbar = () => {
   const [active, setActive] = useState('nav__menu')
@@ -9,11 +8,11 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(window.location.pathname)
 
   const rutas = {
-    'inicio' : '/',
-    'calendario' : '/calendario',
-    'casos-de-exito' : '/casos-de-exito',
-    'blog' : '/blog',
-  };
+    inicio: '/',
+    calendario: '/calendario',
+    'casos-de-exito': '/casos-de-exito',
+    blog: '/blog'
+  }
 
   const navToggle = (e) => {
     if (active === 'nav__menu') {
@@ -26,7 +25,7 @@ export const Navbar = () => {
 
     setTimeout(function () {
       setIsOpen(window.location.pathname)
-    }, 200);
+    }, 200)
   }
   return (
     <div className='nav'>
@@ -35,7 +34,6 @@ export const Navbar = () => {
         <li className='nav__item'>
           <Link to={rutas['inicio']}>
             <div
-              
               className={
                 isOpen === rutas['inicio'] ? 'nav__link dot' : 'nav__link-home'
               }
@@ -49,9 +47,10 @@ export const Navbar = () => {
         <li className='nav__item'>
           <Link to={rutas['calendario']}>
             <div
-            
               className={
-                isOpen === rutas['calendario'] ? 'nav__link dot' : 'nav__link-calendario'
+                isOpen === rutas['calendario']
+                  ? 'nav__link dot'
+                  : 'nav__link-calendario'
               }
               onClick={(e) => navToggle(e)}
             >
@@ -63,7 +62,9 @@ export const Navbar = () => {
           <Link to={rutas['casos-de-exito']}>
             <div
               className={
-                isOpen === rutas['casos-de-exito'] ? 'nav__link dot' : 'nav__link-casos'
+                isOpen === rutas['casos-de-exito']
+                  ? 'nav__link dot'
+                  : 'nav__link-casos'
               }
               onClick={(e) => navToggle(e)}
             >
@@ -74,7 +75,6 @@ export const Navbar = () => {
         <li className='nav__item'>
           <Link to={rutas['blog']}>
             <div
-            
               className={
                 isOpen === rutas['blog'] ? 'nav__link dot' : 'nav__link-blog'
               }
@@ -85,9 +85,7 @@ export const Navbar = () => {
           </Link>
         </li>
         <li>
-          <div
-         
-          className='navbar-btns'>
+          <div className='navbar-btns'>
             <Link
               to='/contactanos'
               value='contactanos'

@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Arrow, HeroBanner } from '../utils/svgIcons'
 import { Group, Modal } from '@mantine/core'
 import { HomeForm } from './HomeForm'
 import '../styles/Home.css'
 
 import { useDispatch } from 'react-redux'
-import { logout, getSession } from '../store/slices/login/loginSlice'
+import { logout } from '../store/slices/login/loginSlice'
 
 export const HomeAdmin = () => {
   const [opened, setOpened] = useState(false)
