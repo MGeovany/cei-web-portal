@@ -7,9 +7,6 @@ module.exports = {
 
     setupNodeEvents(on, config) {
       // implement node event listeners here
-    },
-    env: {
-      BASE_URL: 'http://localhost:3000/'
     }
   }
 }
