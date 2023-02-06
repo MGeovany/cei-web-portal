@@ -25,7 +25,14 @@ jobs:
       - name: Testing Linter
         run: npm run eslint
         working-directory: ./cliente
-
+        
+      - name: Cypress E2E
+        uses: cypress-io/github-action@v5.0.8
+        env:
+           BASE_URL: "http://localhost:3000/"
+        with:
+          command: npm run test:e2e
+          start: npm start
      
       
   
